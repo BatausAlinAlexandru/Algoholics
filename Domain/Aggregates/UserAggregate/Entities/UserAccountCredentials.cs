@@ -7,7 +7,8 @@
 
         public UserAccountCredentials(string email, string password)
         {
-
+            this.Email = email;
+            this.Password = password;
         }
     }
 }

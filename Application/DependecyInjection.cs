@@ -6,8 +6,9 @@ namespace Application
     {
         public static IServiceCollection AddApplication(this IServiceCollection services)
         {
-            // aici adaugati dependentele pe care le folositi
+            services.AddMediatR(cfg => cfg.RegisterServicesFromAssembly(typeof(DependecyInjection).Assembly));
 
+            // aici adaugati dependentele pe care le folositi
 
             return services;
         }
