@@ -12,10 +12,10 @@ namespace Domain.Aggregates.OrderAggregate.Entities
 
         public Order() { }
 
-        public Order(List<OrderDetail> orderDetails, DateTime orderDate, OrderStatus orderStatus)
+        public Order(List<OrderDetail> orderDetails, OrderStatus orderStatus)
         {
             OrderDetails = orderDetails;
-            OrderDate = orderDate;
+            OrderDate = DateTime.Now;
             OrderTotalPrice = CalculateTotalPrice();
             OrderStatus = orderStatus;
         }
