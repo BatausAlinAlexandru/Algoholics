@@ -1,9 +1,13 @@
-﻿namespace Domain.Aggregates.UserAggregate.Entities
+﻿using Domain.Aggregates.UserAggregate.Value_Objects;
+
+namespace Domain.Aggregates.UserAggregate.Entities
 {
     public class UserAccountCredentials
     {
-        public string Email { get; set; } = String.Empty;
-        public string Password { get; set; } = String.Empty;
+        public Guid Id { get; set; }
+        public string Email { get; set; }
+        public string Password { get; set; }
+        public UserAccountRole UserAccountRole { get; set; } = UserAccountRole.User;
 
         public UserAccountCredentials(string email, string password)
         {

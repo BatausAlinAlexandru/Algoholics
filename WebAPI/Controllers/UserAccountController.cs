@@ -34,9 +34,9 @@ namespace WebAPI.Controllers
         }
 
         [HttpPost]
-        public async Task<IActionResult> AddUserAccount(UserAccount userAccount)
+        public async Task<IActionResult> AddUserAccount(AddUserAccountCommand userAccount)
         {
-            var command = new AddUserAccountCommand(userAccount.UserAccountCredentials.Email, userAccount.UserAccountCredentials.Password);
+            var command = new AddUserAccountCommand(userAccount.Email, userAccount.Password);
             var result = await _mediator.Send(command);
 
             if (result.IsSuccess)

@@ -16,13 +16,16 @@ namespace Application.User.Handlers
 
         public async Task<List<UserAccountDTO>> Handle(GetAllUserAccountsQuery request, CancellationToken cancellationToken)
         {
-            var userAccounts = await _userAccountRepository.GetUserAccountsAsync();
-            return userAccounts.Select(userAccount => new UserAccountDTO
+
+            var userAccounts = await _userAccountRepository.GetUserAccountsAsyncV2();
+            return userAccounts.Select(ua => new UserAccountDTO
             {
-                Email = userAccount.UserAccountCredentials.Email,
-                Password = userAccount.UserAccountCredentials.Password,
-                UserAccountRole = userAccount.UserAccountRole
+                Id = ua.Id,
+                Email = ua.UserAccountCredentials.Email,
+                Password = ua.UserAccountCredentials.Password,
+                UserAccountRole = ua.UserAccountCredentials.UserAccountRole,
             }).ToList();
+
         }
     }
 }

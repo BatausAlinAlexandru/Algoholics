@@ -4,8 +4,10 @@ namespace Application.User.DTO
 {
     public class UserAccountDTO
     {
-        public string Email { get; set; } = String.Empty;
-        public string Password { get; set; } = String.Empty;
+        public Guid Id { get; set; }
+        public string Email { get; set; }
+        public string Password { get; set; }
         public UserAccountRole UserAccountRole { get; set; }
+
     }
 }

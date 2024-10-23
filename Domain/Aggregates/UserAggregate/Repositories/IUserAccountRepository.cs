@@ -25,20 +25,15 @@ namespace Domain.Aggregates.UserAggregate.Repositories
         public Task<bool> AddUserAccountAsync(UserAccountCredentials userAccountCredentials);
 
         /// <summary>
-        /// Update user account credentials
-        /// </summary>
-        /// <param name="idUserAccount">Id user that will be updated</param>
-        /// <param name="newUserAccountCredentials">New user account credentials</param>
-        /// <returns></returns>
-        public Task<bool> UpdateUserAccountCredentialEmailAsync(Guid idUserAccount, string email);
-
-        public Task<bool> UpdateUserAccountCredentialPasswordAsync(Guid idUserAccount, string password);
-
-        /// <summary>
         /// Delete a user account
         /// </summary>
         /// <param name="idUserAccount"></param>
         /// <returns></returns>
         public Task<bool> DeleteUserAccountAsync(Guid idUserAccount);
+
+
+
+        public Task<List<UserAccount>> GetUserAccountsAsyncV2();
+
     }
 }

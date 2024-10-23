@@ -1,5 +1,4 @@
 ﻿using Domain.Aggregates.UserAggregate.Entities;
-using Domain.Aggregates.UserAggregate.Value_Objects;
 using Microsoft.EntityFrameworkCore;
 
 namespace Infrastructure.Data
@@ -15,10 +14,31 @@ namespace Infrastructure.Data
             base.OnModelCreating(modelBuilder);
 
             modelBuilder.Entity<UserAccount>().ToTable("users");
+            modelBuilder.Entity<UserAccountCredentials>().ToTable("users_credentials");
+            modelBuilder.Entity<UserAccountSettings>().ToTable("users_settings");
 
             modelBuilder.Entity<UserAccount>().HasKey(u => u.Id);
-            modelBuilder.Entity<UserAccountCredentials>().HasKey(u => u.Email);
+            modelBuilder.Entity<UserAccountCredentials>().HasKey(u => u.Id);
+            modelBuilder.Entity<UserAccountCredentials>().HasIndex(c => c.Email).IsUnique();
+            modelBuilder.Entity<UserAccountSettings>().HasKey(s => s.Id);
 
+            modelBuilder.Entity<UserAccount>()
+                .HasOne(u => u.UserAccountCredentials)
+                .WithOne()
+                .HasForeignKey<UserAccountCredentials>(c => c.Id);
+
+            modelBuilder.Entity<UserAccount>()
+                .HasOne(u => u.UserAccountSettings)
+                .WithOne()
+                .HasForeignKey<UserAccountSettings>(s => s.Id);
+
+
+
+
+
+            // Remove the problematic line
+            // modelBuilder.Entity<UserAccountSettings>()
+            //     .HasConstructorBinding(c => new UserAccountSettings(c.EmailNotifications, c.SMSNotifications));
         }
     }
 }

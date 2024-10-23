@@ -5,8 +5,8 @@ namespace Application.User.Commands
 {
     public class AddUserAccountCommand : IRequest<Result>
     {
-        public string Email { get; set; } = String.Empty;
-        public string Password { get; set; } = String.Empty;
+        public string Email { get; set; }
+        public string Password { get; set; }
 
         public AddUserAccountCommand(string email, string password)
         {

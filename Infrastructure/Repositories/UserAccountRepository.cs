@@ -32,10 +32,12 @@ namespace Infrastructure.Repositories
         
         public async Task<bool> AddUserAccountAsync(UserAccountCredentials userAccountCredentials)
         {
+            await _applicationDbContext.SaveChangesAsync();
             try
             {
-                UserAccount userAccount = new UserAccount(userAccountCredentials.Email, userAccountCredentials.Password);
-                _applicationDbContext.Users.Add(userAccount);
+                UserAccount UserAccount = new UserAccount();
+                UserAccount.AddUserAccountCredentials(userAccountCredentials);
+                _applicationDbContext.Users.Add(UserAccount);
                 await _applicationDbContext.SaveChangesAsync();
                 return true;
             }
@@ -44,30 +46,6 @@ namespace Infrastructure.Repositories
                 throw new UserAccountException("An error occurred while adding the user account.", ex);
             }
 
-        }
-
-        public async Task<bool> UpdateUserAccountCredentialEmailAsync(Guid idUserAccount, string email)
-        {
-            var userAccount = _applicationDbContext.Users.Find(idUserAccount);
-            if (userAccount is not null)
-            {
-                userAccount.UpdateUserAccountCredentialEmail(email);
-                await _applicationDbContext.SaveChangesAsync();
-                return true;
-            }
-            return false;
-        }
-
-        public async Task<bool> UpdateUserAccountCredentialPasswordAsync(Guid idUserAccount, string password)
-        {
-            var userAccount = _applicationDbContext.Users.Find(idUserAccount);
-            if (userAccount is not null)
-            {
-                userAccount.UpdateUserAccountCredentialEmail(password);
-                await _applicationDbContext.SaveChangesAsync();
-                return true;
-            }
-            return false;
         }
 
         public async Task<bool> DeleteUserAccountAsync(Guid idUserAccount)
@@ -81,5 +59,18 @@ namespace Infrastructure.Repositories
             }
             return false;
         }
+
+
+
+        public Task<List<UserAccount>> GetUserAccountsAsyncV2()
+        {
+            var userAccounts = _applicationDbContext.Users
+                .Include(u => u.UserAccountCredentials)
+                .Include(u => u.UserAccountSettings)
+                .ToList();
+
+            return Task.FromResult(userAccounts);
+        }
+
     }
 }

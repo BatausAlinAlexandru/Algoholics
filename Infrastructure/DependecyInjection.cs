@@ -1,5 +1,4 @@
-﻿using Domain.Aggregates.UserAggregate.Entities;
-using Domain.Aggregates.UserAggregate.Repositories;
+﻿using Domain.Aggregates.UserAggregate.Repositories;
 using Infrastructure.Data;
 using Infrastructure.Repositories;
 using Microsoft.EntityFrameworkCore;
@@ -12,7 +11,7 @@ namespace Application
         public static IServiceCollection AddInfrastructure(this IServiceCollection services)
         {
             services.AddDbContext<ApplicationDbContext>(options =>
-                options.UseSqlServer("Server=localhost;Database=AlgoholicsDB;Integrated Security=True;Trust Server Certificate=True"));
+                options.UseSqlServer("Server=172.28.144.1, 1433;Database=AlgoholicsDB;User Id=sa;Password=ParolaComplexa123!; TrustServerCertificate=true;"));
 
             services.AddTransient<IUserAccountRepository, UserAccountRepository>();
 

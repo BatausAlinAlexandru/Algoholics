@@ -1,16 +1,22 @@
-﻿using Domain.Aggregates.UserAggregate.Value_Objects;
-
-namespace Domain.Aggregates.UserAggregate.Entities
+﻿namespace Domain.Aggregates.UserAggregate.Entities
 {
     public class UserAccountSettings
     {
-        public string UserAccountUsername { get; set; } = String.Empty;
+        public Guid Id { get; set; }
+        public bool EmailNotifications { get; set; }
+        public bool SMSNotifications { get; set; }
 
-        public UserAccountGender UserAccountGender { get; set; }
-
-        public UserAccountSettings(string userAccountUsername)
+        public UserAccountSettings()
         {
-            UserAccountUsername = userAccountUsername;
+            this.EmailNotifications = false;
+            this.SMSNotifications = false;
         }
+
+        public UserAccountSettings(bool emailNotification, bool smsNotification)
+        {
+            this.EmailNotifications = emailNotification;
+            this.SMSNotifications = smsNotification;
+        }
+        
     }
 }

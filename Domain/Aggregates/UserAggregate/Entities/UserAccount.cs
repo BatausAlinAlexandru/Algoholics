@@ -1,47 +1,37 @@
-﻿using Domain.Aggregates.UserAggregate.Value_Objects;
-
-namespace Domain.Aggregates.UserAggregate.Entities
+﻿namespace Domain.Aggregates.UserAggregate.Entities
 {
     public class UserAccount : BaseEntity,  IAggregateRoot
     {
         public UserAccountCredentials UserAccountCredentials { get; set; }
+        public UserAccountSettings UserAccountSettings { get; set; }
+        public UserAccountInfo UserAccountInfo { get; set; }
 
-        public UserAccountRole UserAccountRole { get; set; } = UserAccountRole.User;
+        
 
         public UserAccount() : base() { }
-        public UserAccount(string email, string password): base() 
+      
+        public void AddUserAccountCredentials(UserAccountCredentials userAccountCredentials)
         {
-            this.UserAccountCredentials = new UserAccountCredentials(email, password);
+            this.UserAccountCredentials = userAccountCredentials;
+            this.UserAccountCredentials.Id = this.Id;
         }
 
-        public UserAccount(UserAccountCredentials userAccountCredentials)
+        public void AddUserAccountCredentials(string email, string passowrd)
         {
-            UserAccountCredentials = new UserAccountCredentials(userAccountCredentials.Email, userAccountCredentials.Password);
+            this.UserAccountCredentials = new UserAccountCredentials(email, passowrd);
+            this.UserAccountCredentials.Id = this.Id;
         }
 
-        public void AddUserAccountCredentials(UserAccountCredentials userAccountSettings)
+        public void AddUserAccountSettings(UserAccountSettings userAccountSettings)
         {
-            this.UserAccountCredentials = userAccountSettings;
+            this.UserAccountSettings = userAccountSettings;
+            this.UserAccountSettings.Id = this.Id;
         }
 
-        public void AddUserAccountCredentials(string email, string password)
+        public void AddUserAccountSettings(bool emailNotifications, bool smsNotifications)
         {
-            this.UserAccountCredentials = new UserAccountCredentials(email, password);
-        }
-
-        public void UpdateUserAccountCredentialEmail(string email)
-        {
-            this.UserAccountCredentials.Email = email;
-        }
-
-        public void UpdateUserAccountCredentialPassowrd(string passowrd)
-        {
-            this.UserAccountCredentials.Password = passowrd;
-        }
-
-        public void UpdateUserAccountRole(UserAccountRole role)
-        {
-            this.UserAccountRole = role;
+            this.UserAccountSettings = new UserAccountSettings(emailNotifications, smsNotifications);
+            this.UserAccountSettings.Id = this.Id;
         }
     }
 }
