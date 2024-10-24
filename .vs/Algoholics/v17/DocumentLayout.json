@@ -3,40 +3,40 @@
   "WorkspaceRootPath": "C:\\Users\\batau\\Desktop\\PROIECTE\\Algoholics\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\batau\\Desktop\\PROIECTE\\Algoholics\\Infrastructure\\Data\\ApplicationDbContext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Infrastructure\\Data\\ApplicationDbContext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{9033680D-41B7-4969-82A0-822C14922691}|Infrastructure\\Infrastructure.csproj|c:\\users\\batau\\desktop\\proiecte\\algoholics\\infrastructure\\data\\applicationdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9033680D-41B7-4969-82A0-822C14922691}|Infrastructure\\Infrastructure.csproj|solutionrelative:infrastructure\\data\\applicationdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\batau\\Desktop\\PROIECTE\\Algoholics\\Domain\\Aggregates\\UserAggregate\\Entities\\UserAccountPaymantInfo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Domain\\Aggregates\\UserAggregate\\Entities\\UserAccountPaymantInfo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{5FC4EFF2-3693-4709-A38A-24556500EA02}|Domain\\Domain.csproj|c:\\users\\batau\\desktop\\proiecte\\algoholics\\domain\\aggregates\\useraggregate\\entities\\useraccountpaymantinfo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5FC4EFF2-3693-4709-A38A-24556500EA02}|Domain\\Domain.csproj|solutionrelative:domain\\aggregates\\useraggregate\\entities\\useraccountpaymantinfo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\batau\\Desktop\\PROIECTE\\Algoholics\\Domain\\Aggregates\\UserAggregate\\Entities\\UserAccountInfo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Domain\\Aggregates\\UserAggregate\\Entities\\UserAccountInfo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{5FC4EFF2-3693-4709-A38A-24556500EA02}|Domain\\Domain.csproj|c:\\users\\batau\\desktop\\proiecte\\algoholics\\domain\\aggregates\\useraggregate\\entities\\useraccountinfo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5FC4EFF2-3693-4709-A38A-24556500EA02}|Domain\\Domain.csproj|solutionrelative:domain\\aggregates\\useraggregate\\entities\\useraccountinfo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\batau\\Desktop\\PROIECTE\\Algoholics\\Domain\\Aggregates\\UserAggregate\\Entities\\UserAccountCredentials.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Domain\\Aggregates\\UserAggregate\\Entities\\UserAccountCredentials.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{5FC4EFF2-3693-4709-A38A-24556500EA02}|Domain\\Domain.csproj|c:\\users\\batau\\desktop\\proiecte\\algoholics\\domain\\aggregates\\useraggregate\\entities\\useraccountcredentials.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5FC4EFF2-3693-4709-A38A-24556500EA02}|Domain\\Domain.csproj|solutionrelative:domain\\aggregates\\useraggregate\\entities\\useraccountcredentials.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\batau\\Desktop\\PROIECTE\\Algoholics\\Domain\\Aggregates\\UserAggregate\\Entities\\UserAccountSettings.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Domain\\Aggregates\\UserAggregate\\Entities\\UserAccountSettings.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{5FC4EFF2-3693-4709-A38A-24556500EA02}|Domain\\Domain.csproj|c:\\users\\batau\\desktop\\proiecte\\algoholics\\domain\\aggregates\\useraggregate\\entities\\useraccountsettings.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5FC4EFF2-3693-4709-A38A-24556500EA02}|Domain\\Domain.csproj|solutionrelative:domain\\aggregates\\useraggregate\\entities\\useraccountsettings.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\batau\\Desktop\\PROIECTE\\Algoholics\\Domain\\Aggregates\\UserAggregate\\Entities\\UserAccount.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Domain\\Aggregates\\UserAggregate\\Entities\\UserAccount.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{5FC4EFF2-3693-4709-A38A-24556500EA02}|Domain\\Domain.csproj|c:\\users\\batau\\desktop\\proiecte\\algoholics\\domain\\aggregates\\useraggregate\\entities\\useraccount.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5FC4EFF2-3693-4709-A38A-24556500EA02}|Domain\\Domain.csproj|solutionrelative:domain\\aggregates\\useraggregate\\entities\\useraccount.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\batau\\Desktop\\PROIECTE\\Algoholics\\Infrastructure\\Repositories\\UserAccountRepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Infrastructure\\Repositories\\UserAccountRepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{9033680D-41B7-4969-82A0-822C14922691}|Infrastructure\\Infrastructure.csproj|c:\\users\\batau\\desktop\\proiecte\\algoholics\\infrastructure\\repositories\\useraccountrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9033680D-41B7-4969-82A0-822C14922691}|Infrastructure\\Infrastructure.csproj|solutionrelative:infrastructure\\repositories\\useraccountrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\batau\\Desktop\\PROIECTE\\Algoholics\\Domain\\Aggregates\\UserAggregate\\Repositories\\IUserAccountRepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Domain\\Aggregates\\UserAggregate\\Repositories\\IUserAccountRepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{5FC4EFF2-3693-4709-A38A-24556500EA02}|Domain\\Domain.csproj|c:\\users\\batau\\desktop\\proiecte\\algoholics\\domain\\aggregates\\useraggregate\\repositories\\iuseraccountrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5FC4EFF2-3693-4709-A38A-24556500EA02}|Domain\\Domain.csproj|solutionrelative:domain\\aggregates\\useraggregate\\repositories\\iuseraccountrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\batau\\Desktop\\PROIECTE\\Algoholics\\Application\\User\\Handlers\\GetAllUserAccountHandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Application\\User\\Handlers\\GetAllUserAccountHandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{906114DB-2F7E-4DCD-BCCA-3D7FF67263C1}|Application\\Application.csproj|c:\\users\\batau\\desktop\\proiecte\\algoholics\\application\\user\\handlers\\getalluseraccounthandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{906114DB-2F7E-4DCD-BCCA-3D7FF67263C1}|Application\\Application.csproj|solutionrelative:application\\user\\handlers\\getalluseraccounthandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -120,8 +120,10 @@
               "RelativeDocumentMoniker": "Infrastructure\\Data\\ApplicationDbContext.cs",
               "ToolTip": "C:\\Users\\batau\\Desktop\\PROIECTE\\Algoholics\\Infrastructure\\Data\\ApplicationDbContext.cs",
               "RelativeToolTip": "Infrastructure\\Data\\ApplicationDbContext.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAA1AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-21T11:27:59.128Z"
+              "WhenOpened": "2024-10-21T11:27:59.128Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
