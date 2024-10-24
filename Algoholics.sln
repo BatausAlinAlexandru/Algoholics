@@ -13,10 +13,6 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Infrastructure", "Infrastru
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WebAPI", "WebAPI\WebAPI.csproj", "{E1672985-58DC-47E4-899B-35507D6C4ADF}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "frontend", "frontend", "{858D0DF2-A82E-4D2E-97FF-FFA00E3F71F0}"
-EndProject
-Project("{54A90642-561A-4BB1-A94E-469ADEE60C69}") = "AlgoholicsFrontend", "AlgoholicsFrontend\AlgoholicsFrontend.esproj", "{00A995C8-060F-4726-BB85-B718B2894415}"
-EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -39,12 +35,6 @@ Global
 		{E1672985-58DC-47E4-899B-35507D6C4ADF}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{E1672985-58DC-47E4-899B-35507D6C4ADF}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{E1672985-58DC-47E4-899B-35507D6C4ADF}.Release|Any CPU.Build.0 = Release|Any CPU
-		{00A995C8-060F-4726-BB85-B718B2894415}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{00A995C8-060F-4726-BB85-B718B2894415}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{00A995C8-060F-4726-BB85-B718B2894415}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
-		{00A995C8-060F-4726-BB85-B718B2894415}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{00A995C8-060F-4726-BB85-B718B2894415}.Release|Any CPU.Build.0 = Release|Any CPU
-		{00A995C8-060F-4726-BB85-B718B2894415}.Release|Any CPU.Deploy.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -54,7 +44,6 @@ Global
 		{906114DB-2F7E-4DCD-BCCA-3D7FF67263C1} = {43EE0F8D-BD1E-4DED-98E7-1ACB0C07F1C2}
 		{9033680D-41B7-4969-82A0-822C14922691} = {43EE0F8D-BD1E-4DED-98E7-1ACB0C07F1C2}
 		{E1672985-58DC-47E4-899B-35507D6C4ADF} = {43EE0F8D-BD1E-4DED-98E7-1ACB0C07F1C2}
-		{00A995C8-060F-4726-BB85-B718B2894415} = {858D0DF2-A82E-4D2E-97FF-FFA00E3F71F0}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {AB919BA7-E9D9-4D24-BB98-B42A0E250F13}
