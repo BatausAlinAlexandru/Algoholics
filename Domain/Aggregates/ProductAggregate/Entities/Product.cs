@@ -14,10 +14,10 @@ namespace Domain.Aggregates.ProductAggregate
     {
         public class Product
         {
-            private readonly List<DetaliiProduct> products = new List<DetaliiProduct>();
+            public List<ProductDetails> products { set; get; } = new List<ProductDetails>();
 
-            // Method to add a new Product
-            public void AddProduct(DetaliiProduct product)
+
+            public void AddProduct(ProductDetails product)
             {
                 if (product == null)
                     throw new ArgumentNullException(nameof(product));
@@ -26,7 +26,7 @@ namespace Domain.Aggregates.ProductAggregate
             }
 
           
-            public bool UpdateProduct(DetaliiProduct product, string name, string description, decimal price, int stockQuantity, string category)
+            public bool UpdateProduct(ProductDetails product, string name, string description, decimal price, int stockQuantity, string category)
             {
                 if (product == null || !products.Contains(product))
                     return false;
@@ -34,14 +34,14 @@ namespace Domain.Aggregates.ProductAggregate
                 product.Update(name, description, price, stockQuantity, category);
                 return true;
             }
-            public bool DeleteProduct(DetaliiProduct product)
+            public bool DeleteProduct(ProductDetails product)
             {
                 return products.Remove(product);
             }
 
-            public DetaliiProduct GetProductByName(string name)
+            public ProductDetails GetProductByName(string name)
             {
-                return products.FirstOrDefault(p => p.GetName().Equals(name, StringComparison.OrdinalIgnoreCase));
+                return products.FirstOrDefault(p => p.name.Equals(name, StringComparison.OrdinalIgnoreCase));
             }
         }
     }

@@ -1,6 +1,7 @@
 {
   "format": 1,
   "restore": {
+<<<<<<< Updated upstream
     "C:\\Users\\butun\\Source\\Repos\\Algohol\\Infrastructure\\Infrastructure.csproj": {}
   },
   "projects": {
@@ -12,6 +13,19 @@
         "projectPath": "C:\\Users\\butun\\Source\\Repos\\Algohol\\Domain\\Domain.csproj",
         "packagesPath": "C:\\Users\\butun\\.nuget\\packages\\",
         "outputPath": "C:\\Users\\butun\\Source\\Repos\\Algohol\\Domain\\obj\\",
+=======
+    "C:\\Users\\butun\\OneDrive\\Desktop\\Algoholics\\Infrastructure\\Infrastructure.csproj": {}
+  },
+  "projects": {
+    "C:\\Users\\butun\\OneDrive\\Desktop\\Algoholics\\Domain\\Domain.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\butun\\OneDrive\\Desktop\\Algoholics\\Domain\\Domain.csproj",
+        "projectName": "Domain",
+        "projectPath": "C:\\Users\\butun\\OneDrive\\Desktop\\Algoholics\\Domain\\Domain.csproj",
+        "packagesPath": "C:\\Users\\butun\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\butun\\OneDrive\\Desktop\\Algoholics\\Domain\\obj\\",
+>>>>>>> Stashed changes
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -69,6 +83,7 @@
         }
       }
     },
+<<<<<<< Updated upstream
     "C:\\Users\\butun\\Source\\Repos\\Algohol\\Infrastructure\\Infrastructure.csproj": {
       "version": "1.0.0",
       "restore": {
@@ -77,6 +92,16 @@
         "projectPath": "C:\\Users\\butun\\Source\\Repos\\Algohol\\Infrastructure\\Infrastructure.csproj",
         "packagesPath": "C:\\Users\\butun\\.nuget\\packages\\",
         "outputPath": "C:\\Users\\butun\\Source\\Repos\\Algohol\\Infrastructure\\obj\\",
+=======
+    "C:\\Users\\butun\\OneDrive\\Desktop\\Algoholics\\Infrastructure\\Infrastructure.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\butun\\OneDrive\\Desktop\\Algoholics\\Infrastructure\\Infrastructure.csproj",
+        "projectName": "Infrastructure",
+        "projectPath": "C:\\Users\\butun\\OneDrive\\Desktop\\Algoholics\\Infrastructure\\Infrastructure.csproj",
+        "packagesPath": "C:\\Users\\butun\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\butun\\OneDrive\\Desktop\\Algoholics\\Infrastructure\\obj\\",
+>>>>>>> Stashed changes
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -98,8 +123,13 @@
           "net8.0": {
             "targetAlias": "net8.0",
             "projectReferences": {
+<<<<<<< Updated upstream
               "C:\\Users\\butun\\Source\\Repos\\Algohol\\Domain\\Domain.csproj": {
                 "projectPath": "C:\\Users\\butun\\Source\\Repos\\Algohol\\Domain\\Domain.csproj"
+=======
+              "C:\\Users\\butun\\OneDrive\\Desktop\\Algoholics\\Domain\\Domain.csproj": {
+                "projectPath": "C:\\Users\\butun\\OneDrive\\Desktop\\Algoholics\\Domain\\Domain.csproj"
+>>>>>>> Stashed changes
               }
             }
           }

@@ -1,8 +1,14 @@
 {
   "version": 2,
+<<<<<<< Updated upstream
   "dgSpecHash": "rq9PVOaMNqM=",
   "success": true,
   "projectFilePath": "C:\\Users\\butun\\Source\\Repos\\Algohol\\Application\\Application.csproj",
+=======
+  "dgSpecHash": "wRCFYhWs18U=",
+  "success": true,
+  "projectFilePath": "C:\\Users\\butun\\OneDrive\\Desktop\\Algoholics\\Application\\Application.csproj",
+>>>>>>> Stashed changes
   "expectedPackageFiles": [
     "C:\\Users\\butun\\.nuget\\packages\\csharpfunctionalextensions\\3.1.0\\csharpfunctionalextensions.3.1.0.nupkg.sha512",
     "C:\\Users\\butun\\.nuget\\packages\\mediatr\\12.4.1\\mediatr.12.4.1.nupkg.sha512",

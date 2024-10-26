@@ -1,8 +1,14 @@
 {
   "version": 2,
+<<<<<<< Updated upstream
   "dgSpecHash": "E4S0qFDSGa0=",
   "success": true,
   "projectFilePath": "C:\\Users\\butun\\Source\\Repos\\Algohol\\WebAPI\\WebAPI.csproj",
+=======
+  "dgSpecHash": "WMFfMSr8Tkg=",
+  "success": true,
+  "projectFilePath": "C:\\Users\\butun\\OneDrive\\Desktop\\Algoholics\\WebAPI\\WebAPI.csproj",
+>>>>>>> Stashed changes
   "expectedPackageFiles": [
     "C:\\Users\\butun\\.nuget\\packages\\azure.core\\1.35.0\\azure.core.1.35.0.nupkg.sha512",
     "C:\\Users\\butun\\.nuget\\packages\\azure.identity\\1.10.3\\azure.identity.1.10.3.nupkg.sha512",
