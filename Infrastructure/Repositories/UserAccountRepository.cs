@@ -26,13 +26,17 @@ namespace Infrastructure.Repositories
         
         public async Task<UserAccount?> GetUserAccountByIdAsync(Guid idUserAccount)
         {
-            return await _applicationDbContext.Users.FindAsync(idUserAccount);
+            var userAccount = await _applicationDbContext.Users
+                .Include(u => u.UserAccountCredentials)
+                .Include(u => u.UserAccountSettings)
+                .FirstOrDefaultAsync(u => u.Id == idUserAccount);
+
+            return userAccount;
         }
 
         
         public async Task<bool> AddUserAccountAsync(UserAccountCredentials userAccountCredentials)
         {
-            await _applicationDbContext.SaveChangesAsync();
             try
             {
                 UserAccount UserAccount = new UserAccount();
@@ -60,7 +64,10 @@ namespace Infrastructure.Repositories
             return false;
         }
 
-
+        public async Task SaveUserAccountAsync()
+        {
+            await _applicationDbContext.SaveChangesAsync();
+        }
 
         public Task<List<UserAccount>> GetUserAccountsAsyncV2()
         {

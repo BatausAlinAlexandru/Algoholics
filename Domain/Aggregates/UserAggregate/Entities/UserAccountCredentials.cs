@@ -14,5 +14,15 @@ namespace Domain.Aggregates.UserAggregate.Entities
             this.Email = email;
             this.Password = password;
         }
+
+        public void UpdateEmail(string email)
+        {
+            this.Email = email;
+        }
+
+        public void UpdatePassword(string password)
+        {
+            this.Password = password;
+        }
     }
 }

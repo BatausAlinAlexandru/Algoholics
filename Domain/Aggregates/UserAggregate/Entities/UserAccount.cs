@@ -4,8 +4,6 @@
     {
         public UserAccountCredentials UserAccountCredentials { get; set; }
         public UserAccountSettings UserAccountSettings { get; set; }
-        public UserAccountInfo UserAccountInfo { get; set; }
-
         
 
         public UserAccount() : base() { }

@@ -1,5 +1,6 @@
 ﻿using Domain.Aggregates.UserAggregate.Entities;
 using Microsoft.EntityFrameworkCore;
+using System.Runtime.CompilerServices;
 
 namespace Infrastructure.Data
 {
@@ -30,15 +31,7 @@ namespace Infrastructure.Data
             modelBuilder.Entity<UserAccount>()
                 .HasOne(u => u.UserAccountSettings)
                 .WithOne()
-                .HasForeignKey<UserAccountSettings>(s => s.Id);
-
-
-
-
-
-            // Remove the problematic line
-            // modelBuilder.Entity<UserAccountSettings>()
-            //     .HasConstructorBinding(c => new UserAccountSettings(c.EmailNotifications, c.SMSNotifications));
+                .HasForeignKey<UserAccountSettings>(s => s.Id);    
         }
     }
 }
