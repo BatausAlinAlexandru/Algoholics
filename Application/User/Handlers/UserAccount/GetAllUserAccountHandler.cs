@@ -3,7 +3,7 @@ using Application.User.Queries;
 using Domain.Aggregates.UserAggregate.Repositories;
 using MediatR;
 
-namespace Application.User.Handlers
+namespace Application.User.Handlers.UserAccount
 {
     public class GetAllUserAccountHandler : IRequestHandler<GetAllUserAccountsQuery, List<UserAccountDTO>>
     {

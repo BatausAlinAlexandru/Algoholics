@@ -31,7 +31,7 @@ namespace Domain.Aggregates.UserAggregate.Repositories
         /// <returns></returns>
         public Task<bool> DeleteUserAccountAsync(Guid idUserAccount);
 
-
+        public Task SaveUserAccountAsync();
 
         public Task<List<UserAccount>> GetUserAccountsAsyncV2();
 

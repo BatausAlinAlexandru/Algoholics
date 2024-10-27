@@ -3,40 +3,68 @@
   "WorkspaceRootPath": "C:\\Users\\batau\\Desktop\\PROIECTE\\Algoholics\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{9033680D-41B7-4969-82A0-822C14922691}|Infrastructure\\Infrastructure.csproj|c:\\users\\batau\\desktop\\proiecte\\algoholics\\infrastructure\\data\\applicationdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{9033680D-41B7-4969-82A0-822C14922691}|Infrastructure\\Infrastructure.csproj|solutionrelative:infrastructure\\data\\applicationdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{5FC4EFF2-3693-4709-A38A-24556500EA02}|Domain\\Domain.csproj|c:\\users\\batau\\desktop\\proiecte\\algoholics\\domain\\aggregates\\useraggregate\\entities\\useraccountpaymantinfo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{5FC4EFF2-3693-4709-A38A-24556500EA02}|Domain\\Domain.csproj|solutionrelative:domain\\aggregates\\useraggregate\\entities\\useraccountpaymantinfo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{5FC4EFF2-3693-4709-A38A-24556500EA02}|Domain\\Domain.csproj|c:\\users\\batau\\desktop\\proiecte\\algoholics\\domain\\aggregates\\useraggregate\\entities\\useraccountinfo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{5FC4EFF2-3693-4709-A38A-24556500EA02}|Domain\\Domain.csproj|solutionrelative:domain\\aggregates\\useraggregate\\entities\\useraccountinfo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{5FC4EFF2-3693-4709-A38A-24556500EA02}|Domain\\Domain.csproj|c:\\users\\batau\\desktop\\proiecte\\algoholics\\domain\\aggregates\\useraggregate\\entities\\useraccountcredentials.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{5FC4EFF2-3693-4709-A38A-24556500EA02}|Domain\\Domain.csproj|solutionrelative:domain\\aggregates\\useraggregate\\entities\\useraccountcredentials.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{5FC4EFF2-3693-4709-A38A-24556500EA02}|Domain\\Domain.csproj|c:\\users\\batau\\desktop\\proiecte\\algoholics\\domain\\aggregates\\useraggregate\\entities\\useraccountsettings.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{5FC4EFF2-3693-4709-A38A-24556500EA02}|Domain\\Domain.csproj|solutionrelative:domain\\aggregates\\useraggregate\\entities\\useraccountsettings.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{906114DB-2F7E-4DCD-BCCA-3D7FF67263C1}|Application\\Application.csproj|c:\\users\\batau\\desktop\\proiecte\\algoholics\\application\\application.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
+      "RelativeMoniker": "D:0:0:{906114DB-2F7E-4DCD-BCCA-3D7FF67263C1}|Application\\Application.csproj|solutionrelative:application\\application.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
     },
     {
       "AbsoluteMoniker": "D:0:0:{5FC4EFF2-3693-4709-A38A-24556500EA02}|Domain\\Domain.csproj|c:\\users\\batau\\desktop\\proiecte\\algoholics\\domain\\aggregates\\useraggregate\\entities\\useraccount.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{5FC4EFF2-3693-4709-A38A-24556500EA02}|Domain\\Domain.csproj|solutionrelative:domain\\aggregates\\useraggregate\\entities\\useraccount.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{9033680D-41B7-4969-82A0-822C14922691}|Infrastructure\\Infrastructure.csproj|c:\\users\\batau\\desktop\\proiecte\\algoholics\\infrastructure\\repositories\\useraccountrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{9033680D-41B7-4969-82A0-822C14922691}|Infrastructure\\Infrastructure.csproj|solutionrelative:infrastructure\\repositories\\useraccountrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{5FC4EFF2-3693-4709-A38A-24556500EA02}|Domain\\Domain.csproj|c:\\users\\batau\\desktop\\proiecte\\algoholics\\domain\\aggregates\\useraggregate\\repositories\\iuseraccountrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{5FC4EFF2-3693-4709-A38A-24556500EA02}|Domain\\Domain.csproj|solutionrelative:domain\\aggregates\\useraggregate\\repositories\\iuseraccountrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{906114DB-2F7E-4DCD-BCCA-3D7FF67263C1}|Application\\Application.csproj|c:\\users\\batau\\desktop\\proiecte\\algoholics\\application\\user\\handlers\\getalluseraccounthandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{906114DB-2F7E-4DCD-BCCA-3D7FF67263C1}|Application\\Application.csproj|solutionrelative:application\\user\\handlers\\getalluseraccounthandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{5FC4EFF2-3693-4709-A38A-24556500EA02}|Domain\\Domain.csproj|c:\\users\\batau\\desktop\\proiecte\\algoholics\\domain\\aggregates\\orderaggregate\\repositories\\iorderrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5FC4EFF2-3693-4709-A38A-24556500EA02}|Domain\\Domain.csproj|solutionrelative:domain\\aggregates\\orderaggregate\\repositories\\iorderrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5FC4EFF2-3693-4709-A38A-24556500EA02}|Domain\\Domain.csproj|c:\\users\\batau\\desktop\\proiecte\\algoholics\\domain\\aggregates\\orderaggregate\\value objects\\orderstatus.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5FC4EFF2-3693-4709-A38A-24556500EA02}|Domain\\Domain.csproj|solutionrelative:domain\\aggregates\\orderaggregate\\value objects\\orderstatus.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5FC4EFF2-3693-4709-A38A-24556500EA02}|Domain\\Domain.csproj|c:\\users\\batau\\desktop\\proiecte\\algoholics\\domain\\aggregates\\orderaggregate\\entities\\order.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5FC4EFF2-3693-4709-A38A-24556500EA02}|Domain\\Domain.csproj|solutionrelative:domain\\aggregates\\orderaggregate\\entities\\order.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5FC4EFF2-3693-4709-A38A-24556500EA02}|Domain\\Domain.csproj|c:\\users\\batau\\desktop\\proiecte\\algoholics\\domain\\aggregates\\orderaggregate\\entities\\orderdetail.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5FC4EFF2-3693-4709-A38A-24556500EA02}|Domain\\Domain.csproj|solutionrelative:domain\\aggregates\\orderaggregate\\entities\\orderdetail.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{906114DB-2F7E-4DCD-BCCA-3D7FF67263C1}|Application\\Application.csproj|c:\\users\\batau\\desktop\\proiecte\\algoholics\\application\\user\\handlers\\useraccount\\adduseraccounthandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{906114DB-2F7E-4DCD-BCCA-3D7FF67263C1}|Application\\Application.csproj|solutionrelative:application\\user\\handlers\\useraccount\\adduseraccounthandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{906114DB-2F7E-4DCD-BCCA-3D7FF67263C1}|Application\\Application.csproj|c:\\users\\batau\\desktop\\proiecte\\algoholics\\application\\user\\commands\\useraccount\\adduseraccountcommand.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{906114DB-2F7E-4DCD-BCCA-3D7FF67263C1}|Application\\Application.csproj|solutionrelative:application\\user\\commands\\useraccount\\adduseraccountcommand.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E1672985-58DC-47E4-899B-35507D6C4ADF}|WebAPI\\WebAPI.csproj|c:\\users\\batau\\desktop\\proiecte\\algoholics\\webapi\\controllers\\useraccountcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E1672985-58DC-47E4-899B-35507D6C4ADF}|WebAPI\\WebAPI.csproj|solutionrelative:webapi\\controllers\\useraccountcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{906114DB-2F7E-4DCD-BCCA-3D7FF67263C1}|Application\\Application.csproj|c:\\users\\batau\\desktop\\proiecte\\algoholics\\application\\user\\dto\\useraccountdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{906114DB-2F7E-4DCD-BCCA-3D7FF67263C1}|Application\\Application.csproj|solutionrelative:application\\user\\dto\\useraccountdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9033680D-41B7-4969-82A0-822C14922691}|Infrastructure\\Infrastructure.csproj|c:\\users\\batau\\desktop\\proiecte\\algoholics\\infrastructure\\repositories\\useraccountrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9033680D-41B7-4969-82A0-822C14922691}|Infrastructure\\Infrastructure.csproj|solutionrelative:infrastructure\\repositories\\useraccountrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{906114DB-2F7E-4DCD-BCCA-3D7FF67263C1}|Application\\Application.csproj|c:\\users\\batau\\desktop\\proiecte\\algoholics\\application\\user\\handlers\\useraccountcredentials\\modifyuseraccountemailhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{906114DB-2F7E-4DCD-BCCA-3D7FF67263C1}|Application\\Application.csproj|solutionrelative:application\\user\\handlers\\useraccountcredentials\\modifyuseraccountemailhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{906114DB-2F7E-4DCD-BCCA-3D7FF67263C1}|Application\\Application.csproj|c:\\users\\batau\\desktop\\proiecte\\algoholics\\application\\user\\commands\\useraccountcredentials\\modifyuseraccountemailcommand.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{906114DB-2F7E-4DCD-BCCA-3D7FF67263C1}|Application\\Application.csproj|solutionrelative:application\\user\\commands\\useraccountcredentials\\modifyuseraccountemailcommand.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{906114DB-2F7E-4DCD-BCCA-3D7FF67263C1}|Application\\Application.csproj|c:\\users\\batau\\desktop\\proiecte\\algoholics\\application\\user\\commands\\useraccountcredentials\\modifyuseraccountcredentialscommand.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{906114DB-2F7E-4DCD-BCCA-3D7FF67263C1}|Application\\Application.csproj|solutionrelative:application\\user\\commands\\useraccountcredentials\\modifyuseraccountcredentialscommand.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{906114DB-2F7E-4DCD-BCCA-3D7FF67263C1}|Application\\Application.csproj|c:\\users\\batau\\desktop\\proiecte\\algoholics\\application\\user\\commands\\useraccount\\deleteuseraccountcommand.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{906114DB-2F7E-4DCD-BCCA-3D7FF67263C1}|Application\\Application.csproj|solutionrelative:application\\user\\commands\\useraccount\\deleteuseraccountcommand.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -46,7 +74,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 6,
+          "SelectedChildIndex": 1,
           "Children": [
             {
               "$type": "Bookmark",
@@ -54,112 +82,211 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "UserAccountPaymantInfo.cs",
-              "DocumentMoniker": "C:\\Users\\batau\\Desktop\\PROIECTE\\Algoholics\\Domain\\Aggregates\\UserAggregate\\Entities\\UserAccountPaymantInfo.cs",
-              "RelativeDocumentMoniker": "Domain\\Aggregates\\UserAggregate\\Entities\\UserAccountPaymantInfo.cs",
-              "ToolTip": "C:\\Users\\batau\\Desktop\\PROIECTE\\Algoholics\\Domain\\Aggregates\\UserAggregate\\Entities\\UserAccountPaymantInfo.cs",
-              "RelativeToolTip": "Domain\\Aggregates\\UserAggregate\\Entities\\UserAccountPaymantInfo.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAAkAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-21T11:46:51.919Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "UserAccountInfo.cs",
-              "DocumentMoniker": "C:\\Users\\batau\\Desktop\\PROIECTE\\Algoholics\\Domain\\Aggregates\\UserAggregate\\Entities\\UserAccountInfo.cs",
-              "RelativeDocumentMoniker": "Domain\\Aggregates\\UserAggregate\\Entities\\UserAccountInfo.cs",
-              "ToolTip": "C:\\Users\\batau\\Desktop\\PROIECTE\\Algoholics\\Domain\\Aggregates\\UserAggregate\\Entities\\UserAccountInfo.cs",
-              "RelativeToolTip": "Domain\\Aggregates\\UserAggregate\\Entities\\UserAccountInfo.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABoAAACIAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-21T11:39:52.276Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "UserAccountCredentials.cs",
-              "DocumentMoniker": "C:\\Users\\batau\\Desktop\\PROIECTE\\Algoholics\\Domain\\Aggregates\\UserAggregate\\Entities\\UserAccountCredentials.cs",
-              "RelativeDocumentMoniker": "Domain\\Aggregates\\UserAggregate\\Entities\\UserAccountCredentials.cs",
-              "ToolTip": "C:\\Users\\batau\\Desktop\\PROIECTE\\Algoholics\\Domain\\Aggregates\\UserAggregate\\Entities\\UserAccountCredentials.cs",
-              "RelativeToolTip": "Domain\\Aggregates\\UserAggregate\\Entities\\UserAccountCredentials.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAABUAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-21T11:38:38.84Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "UserAccountSettings.cs",
-              "DocumentMoniker": "C:\\Users\\batau\\Desktop\\PROIECTE\\Algoholics\\Domain\\Aggregates\\UserAggregate\\Entities\\UserAccountSettings.cs",
-              "RelativeDocumentMoniker": "Domain\\Aggregates\\UserAggregate\\Entities\\UserAccountSettings.cs",
-              "ToolTip": "C:\\Users\\batau\\Desktop\\PROIECTE\\Algoholics\\Domain\\Aggregates\\UserAggregate\\Entities\\UserAccountSettings.cs",
-              "RelativeToolTip": "Domain\\Aggregates\\UserAggregate\\Entities\\UserAccountSettings.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAA4AAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-21T11:38:36.076Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "UserAccount.cs",
-              "DocumentMoniker": "C:\\Users\\batau\\Desktop\\PROIECTE\\Algoholics\\Domain\\Aggregates\\UserAggregate\\Entities\\UserAccount.cs",
-              "RelativeDocumentMoniker": "Domain\\Aggregates\\UserAggregate\\Entities\\UserAccount.cs",
-              "ToolTip": "C:\\Users\\batau\\Desktop\\PROIECTE\\Algoholics\\Domain\\Aggregates\\UserAggregate\\Entities\\UserAccount.cs",
-              "RelativeToolTip": "Domain\\Aggregates\\UserAggregate\\Entities\\UserAccount.cs",
-              "ViewState": "AgIAAAYAAAAAAAAAAAAowA8AAAA1AAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-21T11:37:25.368Z"
-            },
-            {
-              "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "ApplicationDbContext.cs",
-              "DocumentMoniker": "C:\\Users\\batau\\Desktop\\PROIECTE\\Algoholics\\Infrastructure\\Data\\ApplicationDbContext.cs",
-              "RelativeDocumentMoniker": "Infrastructure\\Data\\ApplicationDbContext.cs",
-              "ToolTip": "C:\\Users\\batau\\Desktop\\PROIECTE\\Algoholics\\Infrastructure\\Data\\ApplicationDbContext.cs",
-              "RelativeToolTip": "Infrastructure\\Data\\ApplicationDbContext.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAA1AAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-21T11:27:59.128Z",
+              "Title": "Application",
+              "DocumentMoniker": "C:\\Users\\batau\\Desktop\\PROIECTE\\Algoholics\\Application\\Application.csproj",
+              "RelativeDocumentMoniker": "Application\\Application.csproj",
+              "ToolTip": "C:\\Users\\batau\\Desktop\\PROIECTE\\Algoholics\\Application\\Application.csproj",
+              "RelativeToolTip": "Application\\Application.csproj",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2024-10-27T00:37:52.173Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "UserAccountRepository.cs",
-              "DocumentMoniker": "C:\\Users\\batau\\Desktop\\PROIECTE\\Algoholics\\Infrastructure\\Repositories\\UserAccountRepository.cs",
-              "RelativeDocumentMoniker": "Infrastructure\\Repositories\\UserAccountRepository.cs",
-              "ToolTip": "C:\\Users\\batau\\Desktop\\PROIECTE\\Algoholics\\Infrastructure\\Repositories\\UserAccountRepository.cs",
-              "RelativeToolTip": "Infrastructure\\Repositories\\UserAccountRepository.cs",
-              "ViewState": "AgIAADIAAAAAAAAAAAAIwEYAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-20T23:54:54.685Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 2,
               "Title": "IUserAccountRepository.cs",
               "DocumentMoniker": "C:\\Users\\batau\\Desktop\\PROIECTE\\Algoholics\\Domain\\Aggregates\\UserAggregate\\Repositories\\IUserAccountRepository.cs",
               "RelativeDocumentMoniker": "Domain\\Aggregates\\UserAggregate\\Repositories\\IUserAccountRepository.cs",
               "ToolTip": "C:\\Users\\batau\\Desktop\\PROIECTE\\Algoholics\\Domain\\Aggregates\\UserAggregate\\Repositories\\IUserAccountRepository.cs",
               "RelativeToolTip": "Domain\\Aggregates\\UserAggregate\\Repositories\\IUserAccountRepository.cs",
-              "ViewState": "AgIAAAMAAAAAAAAAAAAAACMAAAAIAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAIAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-20T23:54:29.23Z"
+              "WhenOpened": "2024-10-27T00:14:41.677Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "IOrderRepository.cs",
+              "DocumentMoniker": "C:\\Users\\batau\\Desktop\\PROIECTE\\Algoholics\\Domain\\Aggregates\\OrderAggregate\\Repositories\\IOrderRepository.cs",
+              "RelativeDocumentMoniker": "Domain\\Aggregates\\OrderAggregate\\Repositories\\IOrderRepository.cs",
+              "ToolTip": "C:\\Users\\batau\\Desktop\\PROIECTE\\Algoholics\\Domain\\Aggregates\\OrderAggregate\\Repositories\\IOrderRepository.cs",
+              "RelativeToolTip": "Domain\\Aggregates\\OrderAggregate\\Repositories\\IOrderRepository.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAA5AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-27T00:12:27.778Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "OrderStatus.cs",
+              "DocumentMoniker": "C:\\Users\\batau\\Desktop\\PROIECTE\\Algoholics\\Domain\\Aggregates\\OrderAggregate\\Value Objects\\OrderStatus.cs",
+              "RelativeDocumentMoniker": "Domain\\Aggregates\\OrderAggregate\\Value Objects\\OrderStatus.cs",
+              "ToolTip": "C:\\Users\\batau\\Desktop\\PROIECTE\\Algoholics\\Domain\\Aggregates\\OrderAggregate\\Value Objects\\OrderStatus.cs",
+              "RelativeToolTip": "Domain\\Aggregates\\OrderAggregate\\Value Objects\\OrderStatus.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAEAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-27T00:12:00.983Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "OrderDetail.cs",
+              "DocumentMoniker": "C:\\Users\\batau\\Desktop\\PROIECTE\\Algoholics\\Domain\\Aggregates\\OrderAggregate\\Entities\\OrderDetail.cs",
+              "RelativeDocumentMoniker": "Domain\\Aggregates\\OrderAggregate\\Entities\\OrderDetail.cs",
+              "ToolTip": "C:\\Users\\batau\\Desktop\\PROIECTE\\Algoholics\\Domain\\Aggregates\\OrderAggregate\\Entities\\OrderDetail.cs",
+              "RelativeToolTip": "Domain\\Aggregates\\OrderAggregate\\Entities\\OrderDetail.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-27T00:11:38.312Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "Order.cs",
+              "DocumentMoniker": "C:\\Users\\batau\\Desktop\\PROIECTE\\Algoholics\\Domain\\Aggregates\\OrderAggregate\\Entities\\Order.cs",
+              "RelativeDocumentMoniker": "Domain\\Aggregates\\OrderAggregate\\Entities\\Order.cs",
+              "ToolTip": "C:\\Users\\batau\\Desktop\\PROIECTE\\Algoholics\\Domain\\Aggregates\\OrderAggregate\\Entities\\Order.cs",
+              "RelativeToolTip": "Domain\\Aggregates\\OrderAggregate\\Entities\\Order.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-27T00:11:37.249Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "AddUserAccountHandler.cs",
+              "DocumentMoniker": "C:\\Users\\batau\\Desktop\\PROIECTE\\Algoholics\\Application\\User\\Handlers\\UserAccount\\AddUserAccountHandler.cs",
+              "RelativeDocumentMoniker": "Application\\User\\Handlers\\UserAccount\\AddUserAccountHandler.cs",
+              "ToolTip": "C:\\Users\\batau\\Desktop\\PROIECTE\\Algoholics\\Application\\User\\Handlers\\UserAccount\\AddUserAccountHandler.cs",
+              "RelativeToolTip": "Application\\User\\Handlers\\UserAccount\\AddUserAccountHandler.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABUAAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-26T23:51:20.105Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "UserAccountRepository.cs",
+              "DocumentMoniker": "C:\\Users\\batau\\Desktop\\PROIECTE\\Algoholics\\Infrastructure\\Repositories\\UserAccountRepository.cs",
+              "RelativeDocumentMoniker": "Infrastructure\\Repositories\\UserAccountRepository.cs",
+              "ToolTip": "C:\\Users\\batau\\Desktop\\PROIECTE\\Algoholics\\Infrastructure\\Repositories\\UserAccountRepository.cs",
+              "RelativeToolTip": "Infrastructure\\Repositories\\UserAccountRepository.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABoAAAAPAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-26T23:03:23.171Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "ModifyUserAccountCredentialsCommand.cs",
+              "DocumentMoniker": "C:\\Users\\batau\\Desktop\\PROIECTE\\Algoholics\\Application\\User\\Commands\\UserAccountCredentials\\ModifyUserAccountCredentialsCommand.cs",
+              "RelativeDocumentMoniker": "Application\\User\\Commands\\UserAccountCredentials\\ModifyUserAccountCredentialsCommand.cs",
+              "ToolTip": "C:\\Users\\batau\\Desktop\\PROIECTE\\Algoholics\\Application\\User\\Commands\\UserAccountCredentials\\ModifyUserAccountCredentialsCommand.cs",
+              "RelativeToolTip": "Application\\User\\Commands\\UserAccountCredentials\\ModifyUserAccountCredentialsCommand.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAhAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-26T23:00:27.417Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "UserAccount.cs",
+              "DocumentMoniker": "C:\\Users\\batau\\Desktop\\PROIECTE\\Algoholics\\Domain\\Aggregates\\UserAggregate\\Entities\\UserAccount.cs",
+              "RelativeDocumentMoniker": "Domain\\Aggregates\\UserAggregate\\Entities\\UserAccount.cs",
+              "ToolTip": "C:\\Users\\batau\\Desktop\\PROIECTE\\Algoholics\\Domain\\Aggregates\\UserAggregate\\Entities\\UserAccount.cs",
+              "RelativeToolTip": "Domain\\Aggregates\\UserAggregate\\Entities\\UserAccount.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-26T23:00:34.482Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "UserAccountDTO.cs",
+              "DocumentMoniker": "C:\\Users\\batau\\Desktop\\PROIECTE\\Algoholics\\Application\\User\\DTO\\UserAccountDTO.cs",
+              "RelativeDocumentMoniker": "Application\\User\\DTO\\UserAccountDTO.cs",
+              "ToolTip": "C:\\Users\\batau\\Desktop\\PROIECTE\\Algoholics\\Application\\User\\DTO\\UserAccountDTO.cs",
+              "RelativeToolTip": "Application\\User\\DTO\\UserAccountDTO.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAA8AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-26T23:49:56.498Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
+              "Title": "DeleteUserAccountCommand.cs",
+              "DocumentMoniker": "C:\\Users\\batau\\Desktop\\PROIECTE\\Algoholics\\Application\\User\\Commands\\UserAccount\\DeleteUserAccountCommand.cs",
+              "RelativeDocumentMoniker": "Application\\User\\Commands\\UserAccount\\DeleteUserAccountCommand.cs",
+              "ToolTip": "C:\\Users\\batau\\Desktop\\PROIECTE\\Algoholics\\Application\\User\\Commands\\UserAccount\\DeleteUserAccountCommand.cs",
+              "RelativeToolTip": "Application\\User\\Commands\\UserAccount\\DeleteUserAccountCommand.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-26T23:00:15.209Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 8,
-              "Title": "GetAllUserAccountHandler.cs",
-              "DocumentMoniker": "C:\\Users\\batau\\Desktop\\PROIECTE\\Algoholics\\Application\\User\\Handlers\\GetAllUserAccountHandler.cs",
-              "RelativeDocumentMoniker": "Application\\User\\Handlers\\GetAllUserAccountHandler.cs",
-              "ToolTip": "C:\\Users\\batau\\Desktop\\PROIECTE\\Algoholics\\Application\\User\\Handlers\\GetAllUserAccountHandler.cs",
-              "RelativeToolTip": "Application\\User\\Handlers\\GetAllUserAccountHandler.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABUAAAANAAAAAAAAAA==",
+              "Title": "AddUserAccountCommand.cs",
+              "DocumentMoniker": "C:\\Users\\batau\\Desktop\\PROIECTE\\Algoholics\\Application\\User\\Commands\\UserAccount\\AddUserAccountCommand.cs",
+              "RelativeDocumentMoniker": "Application\\User\\Commands\\UserAccount\\AddUserAccountCommand.cs",
+              "ToolTip": "C:\\Users\\batau\\Desktop\\PROIECTE\\Algoholics\\Application\\User\\Commands\\UserAccount\\AddUserAccountCommand.cs",
+              "RelativeToolTip": "Application\\User\\Commands\\UserAccount\\AddUserAccountCommand.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABUAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-20T23:53:12.341Z"
+              "WhenOpened": "2024-10-26T23:00:11.74Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "UserAccountController.cs",
+              "DocumentMoniker": "C:\\Users\\batau\\Desktop\\PROIECTE\\Algoholics\\WebAPI\\Controllers\\UserAccountController.cs",
+              "RelativeDocumentMoniker": "WebAPI\\Controllers\\UserAccountController.cs",
+              "ToolTip": "C:\\Users\\batau\\Desktop\\PROIECTE\\Algoholics\\WebAPI\\Controllers\\UserAccountController.cs",
+              "RelativeToolTip": "WebAPI\\Controllers\\UserAccountController.cs",
+              "ViewState": "AgIAAA4AAAAAAAAAAAAQwB4AAAANAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-26T22:55:50.823Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "ModifyUserAccountEmailCommand.cs",
+              "DocumentMoniker": "C:\\Users\\batau\\Desktop\\PROIECTE\\Algoholics\\Application\\User\\Commands\\UserAccountCredentials\\ModifyUserAccountEmailCommand.cs",
+              "RelativeDocumentMoniker": "Application\\User\\Commands\\UserAccountCredentials\\ModifyUserAccountEmailCommand.cs",
+              "ToolTip": "C:\\Users\\batau\\Desktop\\PROIECTE\\Algoholics\\Application\\User\\Commands\\UserAccountCredentials\\ModifyUserAccountEmailCommand.cs",
+              "RelativeToolTip": "Application\\User\\Commands\\UserAccountCredentials\\ModifyUserAccountEmailCommand.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAASAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-26T22:55:14.422Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "ModifyUserAccountEmailHandler.cs",
+              "DocumentMoniker": "C:\\Users\\batau\\Desktop\\PROIECTE\\Algoholics\\Application\\User\\Handlers\\UserAccountCredentials\\ModifyUserAccountEmailHandler.cs",
+              "RelativeDocumentMoniker": "Application\\User\\Handlers\\UserAccountCredentials\\ModifyUserAccountEmailHandler.cs",
+              "ToolTip": "C:\\Users\\batau\\Desktop\\PROIECTE\\Algoholics\\Application\\User\\Handlers\\UserAccountCredentials\\ModifyUserAccountEmailHandler.cs",
+              "RelativeToolTip": "Application\\User\\Handlers\\UserAccountCredentials\\ModifyUserAccountEmailHandler.cs",
+              "ViewState": "AgIAAAEAAAAAAAAAAAAewBMAAABPAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-26T22:54:45.413Z",
+              "EditorCaption": ""
             }
           ]
         }

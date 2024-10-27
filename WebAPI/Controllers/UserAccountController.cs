@@ -1,4 +1,6 @@
 ﻿using Application.User.Commands;
+using Application.User.Commands.UserAccount;
+using Application.User.Commands.UserAccountCredentials;
 using Application.User.Queries;
 using Domain.Aggregates.UserAggregate.Entities;
 using MediatR;
@@ -37,6 +39,38 @@ namespace WebAPI.Controllers
         public async Task<IActionResult> AddUserAccount(AddUserAccountCommand userAccount)
         {
             var command = new AddUserAccountCommand(userAccount.Email, userAccount.Password);
+            var result = await _mediator.Send(command);
+
+            if (result.IsSuccess)
+            {
+                return Ok();
+            }
+            else
+            {
+                return BadRequest(result.Error);
+            }
+        }
+
+        [HttpDelete]
+        public async Task<IActionResult> DeleteUserAccount(Guid id)
+        {
+            var command = new DeleteUserAccountCommand(id);
+            var result = await _mediator.Send(command);
+
+            if (result.IsSuccess)
+            {
+                return Ok();
+            }
+            else
+            {
+                return BadRequest(result.Error);
+            }
+        }
+
+        [HttpPut]
+        public async Task<IActionResult> UpdateUserAccountEmail(ModifyUserAccountEmailCommand userAccount)
+        {
+            var command = new ModifyUserAccountEmailCommand(userAccount.Id, userAccount.Email);
             var result = await _mediator.Send(command);
 
             if (result.IsSuccess)

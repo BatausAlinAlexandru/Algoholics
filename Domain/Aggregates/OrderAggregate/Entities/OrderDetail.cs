@@ -12,11 +12,11 @@ namespace Domain.Aggregates.OrderAggregate.Entities
         public OrderDetail() { }
 
         // inca nu ne-am definit clasa Product, pentru a extrage numele si pretul
-        public OrderDetail(Product product, int quantity)
+        /*public OrderDetail(Product product, int quantity)
         {
             ProductName = product.Name;
             Quantity = quantity;
             UnitPrice = product.UnitPrice;
-        }
+        }*/
     }
 }

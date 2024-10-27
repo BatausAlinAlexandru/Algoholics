@@ -1,10 +1,9 @@
 ﻿using Domain.Aggregates.UserAggregate.Repositories;
-using Domain.Aggregates.UserAggregate.Entities;
 using MediatR;
 using CSharpFunctionalExtensions;
-using Application.User.Commands;
+using Application.User.Commands.UserAccount;
 
-namespace Application.User.Handlers
+namespace Application.User.Handlers.UserAccountHandler
 {
     public class AddUserAccountHandler : IRequestHandler<AddUserAccountCommand, Result>
     {
@@ -17,7 +16,7 @@ namespace Application.User.Handlers
 
         public async Task<Result> Handle(AddUserAccountCommand request, CancellationToken cancellationToken)
         {
-            var success = await _userAccountRepository.AddUserAccountAsync(new UserAccountCredentials(request.Email, request.Password));
+            var success = await _userAccountRepository.AddUserAccountAsync(new Domain.Aggregates.UserAggregate.Entities.UserAccountCredentials(request.Email, request.Password));
             return success ? Result.Success() : Result.Failure("Failed to add user account");
         }
     }
