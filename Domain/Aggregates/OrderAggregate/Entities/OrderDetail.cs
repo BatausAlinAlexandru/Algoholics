@@ -1,6 +1,4 @@
-﻿using System;
-using Domain;
-using Domain.Aggregates.ProductAggregate.Entities;
+﻿using Domain.Aggregates.ProductAggregate.Entities;
 namespace Domain.Aggregates.OrderAggregate.Entities
 {
     public class OrderDetail: BaseEntity
@@ -14,9 +12,9 @@ namespace Domain.Aggregates.OrderAggregate.Entities
 
         public OrderDetail(ProductDetail product, int quantity)
         {
-            ProductName = product.name;
+            ProductName = product.Name;
             Quantity = quantity;
-            UnitPrice = product.price;
+            UnitPrice = product.Price;
         }
     }
 }

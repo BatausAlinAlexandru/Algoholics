@@ -4059,23 +4059,23 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\butun\\.nuget\\packages\\": {},
+    "C:\\Users\\User\\.nuget\\packages\\": {},
     "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\butun\\OneDrive\\Desktop\\Algoholics\\Infrastructure\\Infrastructure.csproj",
+      "projectUniqueName": "C:\\Users\\User\\Desktop\\New folder\\Infrastructure\\Infrastructure.csproj",
       "projectName": "Infrastructure",
-      "projectPath": "C:\\Users\\butun\\OneDrive\\Desktop\\Algoholics\\Infrastructure\\Infrastructure.csproj",
-      "packagesPath": "C:\\Users\\butun\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\butun\\OneDrive\\Desktop\\Algoholics\\Infrastructure\\obj\\",
+      "projectPath": "C:\\Users\\User\\Desktop\\New folder\\Infrastructure\\Infrastructure.csproj",
+      "packagesPath": "C:\\Users\\User\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\User\\Desktop\\New folder\\Infrastructure\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
       ],
       "configFilePaths": [
-        "C:\\Users\\butun\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\User\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
@@ -4091,8 +4091,8 @@
         "net8.0": {
           "targetAlias": "net8.0",
           "projectReferences": {
-            "C:\\Users\\butun\\OneDrive\\Desktop\\Algoholics\\Domain\\Domain.csproj": {
-              "projectPath": "C:\\Users\\butun\\OneDrive\\Desktop\\Algoholics\\Domain\\Domain.csproj"
+            "C:\\Users\\User\\Desktop\\New folder\\Domain\\Domain.csproj": {
+              "projectPath": "C:\\Users\\User\\Desktop\\New folder\\Domain\\Domain.csproj"
             }
           }
         }
@@ -4160,13 +4160,5 @@
         "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.403/PortableRuntimeIdentifierGraph.json"
       }
     }
-  },
-  "logs": [
-    {
-      "code": "Undefined",
-      "level": "Warning",
-      "warningLevel": 1,
-      "message": "Problem reading the cache file C:\\Users\\butun\\OneDrive\\Desktop\\Algoholics\\Infrastructure\\obj\\project.nuget.cache : Invalid property identifier character: <. Path 'version', line 3, position 0."
-    }
-  ]
+  }
 }

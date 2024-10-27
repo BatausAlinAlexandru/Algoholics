@@ -8,31 +8,19 @@ namespace Domain.Aggregates.ProductAggregate.Entities
     public class Product:BaseEntity,IAggregateRoot
     {
          
-        public void AddProduct(ProductDetail product)
-        {
-            if (product == null)
-                throw new ArgumentNullException(nameof(product));
+        public ProductDetail ProductDetail { get; set; }
 
-            Products.Add(product);
+        public void AddProductDetail(ProductDetail productDetail)
+        {
+            this.ProductDetail = productDetail;
+            this.ProductDetail.Id = productDetail.Id;
         }
 
-
-        public bool UpdateProduct(ProductDetail product, string name, string description, decimal price)
+        public void AddProductDetail(string name, decimal price, string description)
         {
-            if (product == null || !Products.Contains(product))
-                return false;
-
-            product.UpdateProductDetails(name, price, description);
-            return true;
-        }
-        public bool DeleteProduct(ProductDetail product)
-        {
-            return Products.Remove(product);
+            this.ProductDetail = new ProductDetail(name, price, description);
+            this.ProductDetail.Id = this.Id;
         }
 
-        public ProductDetail GetProductByName(string name)
-        {
-            return Products.FirstOrDefault(p => p.Name.Equals(name, StringComparison.OrdinalIgnoreCase));
-        }
     }
 }
