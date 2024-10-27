@@ -1,5 +1,6 @@
 ﻿using System;
 using Domain;
+using Domain.Aggregates.ProductAggregate.Entities;
 namespace Domain.Aggregates.OrderAggregate.Entities
 {
     public class OrderDetail: BaseEntity
@@ -11,12 +12,11 @@ namespace Domain.Aggregates.OrderAggregate.Entities
 
         public OrderDetail() { }
 
-        // inca nu ne-am definit clasa Product, pentru a extrage numele si pretul
-        public OrderDetail(Product product, int quantity)
+        public OrderDetail(ProductDetail product, int quantity)
         {
-            ProductName = product.Name;
+            ProductName = product.name;
             Quantity = quantity;
-            UnitPrice = product.UnitPrice;
+            UnitPrice = product.price;
         }
     }
 }
