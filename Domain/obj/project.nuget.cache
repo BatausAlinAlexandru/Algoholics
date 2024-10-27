@@ -1,14 +1,15 @@
 {
   "version": 2,
-<<<<<<< Updated upstream
-  "dgSpecHash": "qW7jz24e6IA=",
-  "success": true,
-  "projectFilePath": "C:\\Users\\butun\\Source\\Repos\\Algohol\\Domain\\Domain.csproj",
-=======
   "dgSpecHash": "nMR3KWAHGJI=",
   "success": true,
   "projectFilePath": "C:\\Users\\butun\\OneDrive\\Desktop\\Algoholics\\Domain\\Domain.csproj",
->>>>>>> Stashed changes
   "expectedPackageFiles": [],
-  "logs": []
+  "logs": [
+    {
+      "code": "Undefined",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Problem reading the cache file C:\\Users\\butun\\OneDrive\\Desktop\\Algoholics\\Domain\\obj\\project.nuget.cache : Invalid property identifier character: <. Path 'version', line 3, position 0."
+    }
+  ]
 }

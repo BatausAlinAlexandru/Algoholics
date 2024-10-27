@@ -1,41 +1,49 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\Users\\batau\\Desktop\\PROIECTE\\Algoholics\\",
+  "WorkspaceRootPath": "C:\\Users\\butun\\source\\repos\\Algohol\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{9033680D-41B7-4969-82A0-822C14922691}|Infrastructure\\Infrastructure.csproj|c:\\users\\batau\\desktop\\proiecte\\algoholics\\infrastructure\\data\\applicationdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{5FC4EFF2-3693-4709-A38A-24556500EA02}|Domain\\Domain.csproj|c:\\users\\butun\\source\\repos\\algohol\\domain\\aggregates\\orderaggregate\\entities\\order.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5FC4EFF2-3693-4709-A38A-24556500EA02}|Domain\\Domain.csproj|solutionrelative:domain\\aggregates\\orderaggregate\\entities\\order.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5FC4EFF2-3693-4709-A38A-24556500EA02}|Domain\\Domain.csproj|c:\\users\\butun\\source\\repos\\algohol\\domain\\aggregates\\orderaggregate\\entities\\orderdetail.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5FC4EFF2-3693-4709-A38A-24556500EA02}|Domain\\Domain.csproj|solutionrelative:domain\\aggregates\\orderaggregate\\entities\\orderdetail.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9033680D-41B7-4969-82A0-822C14922691}|Infrastructure\\Infrastructure.csproj|c:\\users\\butun\\source\\repos\\algohol\\infrastructure\\data\\applicationdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{9033680D-41B7-4969-82A0-822C14922691}|Infrastructure\\Infrastructure.csproj|solutionrelative:infrastructure\\data\\applicationdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{5FC4EFF2-3693-4709-A38A-24556500EA02}|Domain\\Domain.csproj|c:\\users\\batau\\desktop\\proiecte\\algoholics\\domain\\aggregates\\useraggregate\\entities\\useraccountpaymantinfo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{5FC4EFF2-3693-4709-A38A-24556500EA02}|Domain\\Domain.csproj|c:\\users\\butun\\source\\repos\\algohol\\domain\\aggregates\\useraggregate\\entities\\useraccountpaymantinfo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{5FC4EFF2-3693-4709-A38A-24556500EA02}|Domain\\Domain.csproj|solutionrelative:domain\\aggregates\\useraggregate\\entities\\useraccountpaymantinfo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{5FC4EFF2-3693-4709-A38A-24556500EA02}|Domain\\Domain.csproj|c:\\users\\batau\\desktop\\proiecte\\algoholics\\domain\\aggregates\\useraggregate\\entities\\useraccountinfo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{5FC4EFF2-3693-4709-A38A-24556500EA02}|Domain\\Domain.csproj|c:\\users\\butun\\source\\repos\\algohol\\domain\\aggregates\\useraggregate\\entities\\useraccountinfo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{5FC4EFF2-3693-4709-A38A-24556500EA02}|Domain\\Domain.csproj|solutionrelative:domain\\aggregates\\useraggregate\\entities\\useraccountinfo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{5FC4EFF2-3693-4709-A38A-24556500EA02}|Domain\\Domain.csproj|c:\\users\\batau\\desktop\\proiecte\\algoholics\\domain\\aggregates\\useraggregate\\entities\\useraccountcredentials.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{5FC4EFF2-3693-4709-A38A-24556500EA02}|Domain\\Domain.csproj|c:\\users\\butun\\source\\repos\\algohol\\domain\\aggregates\\useraggregate\\entities\\useraccountcredentials.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{5FC4EFF2-3693-4709-A38A-24556500EA02}|Domain\\Domain.csproj|solutionrelative:domain\\aggregates\\useraggregate\\entities\\useraccountcredentials.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{5FC4EFF2-3693-4709-A38A-24556500EA02}|Domain\\Domain.csproj|c:\\users\\batau\\desktop\\proiecte\\algoholics\\domain\\aggregates\\useraggregate\\entities\\useraccountsettings.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{5FC4EFF2-3693-4709-A38A-24556500EA02}|Domain\\Domain.csproj|c:\\users\\butun\\source\\repos\\algohol\\domain\\aggregates\\useraggregate\\entities\\useraccountsettings.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{5FC4EFF2-3693-4709-A38A-24556500EA02}|Domain\\Domain.csproj|solutionrelative:domain\\aggregates\\useraggregate\\entities\\useraccountsettings.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{5FC4EFF2-3693-4709-A38A-24556500EA02}|Domain\\Domain.csproj|c:\\users\\batau\\desktop\\proiecte\\algoholics\\domain\\aggregates\\useraggregate\\entities\\useraccount.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{5FC4EFF2-3693-4709-A38A-24556500EA02}|Domain\\Domain.csproj|c:\\users\\butun\\source\\repos\\algohol\\domain\\aggregates\\useraggregate\\entities\\useraccount.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{5FC4EFF2-3693-4709-A38A-24556500EA02}|Domain\\Domain.csproj|solutionrelative:domain\\aggregates\\useraggregate\\entities\\useraccount.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{9033680D-41B7-4969-82A0-822C14922691}|Infrastructure\\Infrastructure.csproj|c:\\users\\batau\\desktop\\proiecte\\algoholics\\infrastructure\\repositories\\useraccountrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{9033680D-41B7-4969-82A0-822C14922691}|Infrastructure\\Infrastructure.csproj|c:\\users\\butun\\source\\repos\\algohol\\infrastructure\\repositories\\useraccountrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{9033680D-41B7-4969-82A0-822C14922691}|Infrastructure\\Infrastructure.csproj|solutionrelative:infrastructure\\repositories\\useraccountrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{5FC4EFF2-3693-4709-A38A-24556500EA02}|Domain\\Domain.csproj|c:\\users\\batau\\desktop\\proiecte\\algoholics\\domain\\aggregates\\useraggregate\\repositories\\iuseraccountrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{5FC4EFF2-3693-4709-A38A-24556500EA02}|Domain\\Domain.csproj|c:\\users\\butun\\source\\repos\\algohol\\domain\\aggregates\\useraggregate\\repositories\\iuseraccountrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{5FC4EFF2-3693-4709-A38A-24556500EA02}|Domain\\Domain.csproj|solutionrelative:domain\\aggregates\\useraggregate\\repositories\\iuseraccountrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{906114DB-2F7E-4DCD-BCCA-3D7FF67263C1}|Application\\Application.csproj|c:\\users\\batau\\desktop\\proiecte\\algoholics\\application\\user\\handlers\\getalluseraccounthandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{906114DB-2F7E-4DCD-BCCA-3D7FF67263C1}|Application\\Application.csproj|c:\\users\\butun\\source\\repos\\algohol\\application\\user\\handlers\\getalluseraccounthandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{906114DB-2F7E-4DCD-BCCA-3D7FF67263C1}|Application\\Application.csproj|solutionrelative:application\\user\\handlers\\getalluseraccounthandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
@@ -46,8 +54,25 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 6,
+          "SelectedChildIndex": 0,
           "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Order.cs",
+              "DocumentMoniker": "C:\\Users\\butun\\source\\repos\\Algohol\\Domain\\Aggregates\\OrderAggregate\\Entities\\Order.cs",
+              "RelativeDocumentMoniker": "Domain\\Aggregates\\OrderAggregate\\Entities\\Order.cs",
+              "ToolTip": "C:\\Users\\butun\\source\\repos\\Algohol\\Domain\\Aggregates\\OrderAggregate\\Entities\\Order.cs",
+              "RelativeToolTip": "Domain\\Aggregates\\OrderAggregate\\Entities\\Order.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-24T10:52:24.017Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:128:0:{75188d03-9892-4ae2-abf1-207126247ce5}"
+            },
             {
               "$type": "Bookmark",
               "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
@@ -55,10 +80,23 @@
             {
               "$type": "Document",
               "DocumentIndex": 1,
+              "Title": "OrderDetail.cs",
+              "DocumentMoniker": "C:\\Users\\butun\\source\\repos\\Algohol\\Domain\\Aggregates\\OrderAggregate\\Entities\\OrderDetail.cs",
+              "RelativeDocumentMoniker": "Domain\\Aggregates\\OrderAggregate\\Entities\\OrderDetail.cs",
+              "ToolTip": "C:\\Users\\butun\\source\\repos\\Algohol\\Domain\\Aggregates\\OrderAggregate\\Entities\\OrderDetail.cs",
+              "RelativeToolTip": "Domain\\Aggregates\\OrderAggregate\\Entities\\OrderDetail.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-24T10:51:00.383Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
               "Title": "UserAccountPaymantInfo.cs",
-              "DocumentMoniker": "C:\\Users\\batau\\Desktop\\PROIECTE\\Algoholics\\Domain\\Aggregates\\UserAggregate\\Entities\\UserAccountPaymantInfo.cs",
+              "DocumentMoniker": "C:\\Users\\butun\\source\\repos\\Algohol\\Domain\\Aggregates\\UserAggregate\\Entities\\UserAccountPaymantInfo.cs",
               "RelativeDocumentMoniker": "Domain\\Aggregates\\UserAggregate\\Entities\\UserAccountPaymantInfo.cs",
-              "ToolTip": "C:\\Users\\batau\\Desktop\\PROIECTE\\Algoholics\\Domain\\Aggregates\\UserAggregate\\Entities\\UserAccountPaymantInfo.cs",
+              "ToolTip": "C:\\Users\\butun\\source\\repos\\Algohol\\Domain\\Aggregates\\UserAggregate\\Entities\\UserAccountPaymantInfo.cs",
               "RelativeToolTip": "Domain\\Aggregates\\UserAggregate\\Entities\\UserAccountPaymantInfo.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAAkAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -66,11 +104,11 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 4,
               "Title": "UserAccountInfo.cs",
-              "DocumentMoniker": "C:\\Users\\batau\\Desktop\\PROIECTE\\Algoholics\\Domain\\Aggregates\\UserAggregate\\Entities\\UserAccountInfo.cs",
+              "DocumentMoniker": "C:\\Users\\butun\\source\\repos\\Algohol\\Domain\\Aggregates\\UserAggregate\\Entities\\UserAccountInfo.cs",
               "RelativeDocumentMoniker": "Domain\\Aggregates\\UserAggregate\\Entities\\UserAccountInfo.cs",
-              "ToolTip": "C:\\Users\\batau\\Desktop\\PROIECTE\\Algoholics\\Domain\\Aggregates\\UserAggregate\\Entities\\UserAccountInfo.cs",
+              "ToolTip": "C:\\Users\\butun\\source\\repos\\Algohol\\Domain\\Aggregates\\UserAggregate\\Entities\\UserAccountInfo.cs",
               "RelativeToolTip": "Domain\\Aggregates\\UserAggregate\\Entities\\UserAccountInfo.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABoAAACIAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -78,11 +116,11 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 5,
               "Title": "UserAccountCredentials.cs",
-              "DocumentMoniker": "C:\\Users\\batau\\Desktop\\PROIECTE\\Algoholics\\Domain\\Aggregates\\UserAggregate\\Entities\\UserAccountCredentials.cs",
+              "DocumentMoniker": "C:\\Users\\butun\\source\\repos\\Algohol\\Domain\\Aggregates\\UserAggregate\\Entities\\UserAccountCredentials.cs",
               "RelativeDocumentMoniker": "Domain\\Aggregates\\UserAggregate\\Entities\\UserAccountCredentials.cs",
-              "ToolTip": "C:\\Users\\batau\\Desktop\\PROIECTE\\Algoholics\\Domain\\Aggregates\\UserAggregate\\Entities\\UserAccountCredentials.cs",
+              "ToolTip": "C:\\Users\\butun\\source\\repos\\Algohol\\Domain\\Aggregates\\UserAggregate\\Entities\\UserAccountCredentials.cs",
               "RelativeToolTip": "Domain\\Aggregates\\UserAggregate\\Entities\\UserAccountCredentials.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAABUAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -90,11 +128,11 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 6,
               "Title": "UserAccountSettings.cs",
-              "DocumentMoniker": "C:\\Users\\batau\\Desktop\\PROIECTE\\Algoholics\\Domain\\Aggregates\\UserAggregate\\Entities\\UserAccountSettings.cs",
+              "DocumentMoniker": "C:\\Users\\butun\\source\\repos\\Algohol\\Domain\\Aggregates\\UserAggregate\\Entities\\UserAccountSettings.cs",
               "RelativeDocumentMoniker": "Domain\\Aggregates\\UserAggregate\\Entities\\UserAccountSettings.cs",
-              "ToolTip": "C:\\Users\\batau\\Desktop\\PROIECTE\\Algoholics\\Domain\\Aggregates\\UserAggregate\\Entities\\UserAccountSettings.cs",
+              "ToolTip": "C:\\Users\\butun\\source\\repos\\Algohol\\Domain\\Aggregates\\UserAggregate\\Entities\\UserAccountSettings.cs",
               "RelativeToolTip": "Domain\\Aggregates\\UserAggregate\\Entities\\UserAccountSettings.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAA4AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -102,11 +140,11 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 7,
               "Title": "UserAccount.cs",
-              "DocumentMoniker": "C:\\Users\\batau\\Desktop\\PROIECTE\\Algoholics\\Domain\\Aggregates\\UserAggregate\\Entities\\UserAccount.cs",
+              "DocumentMoniker": "C:\\Users\\butun\\source\\repos\\Algohol\\Domain\\Aggregates\\UserAggregate\\Entities\\UserAccount.cs",
               "RelativeDocumentMoniker": "Domain\\Aggregates\\UserAggregate\\Entities\\UserAccount.cs",
-              "ToolTip": "C:\\Users\\batau\\Desktop\\PROIECTE\\Algoholics\\Domain\\Aggregates\\UserAggregate\\Entities\\UserAccount.cs",
+              "ToolTip": "C:\\Users\\butun\\source\\repos\\Algohol\\Domain\\Aggregates\\UserAggregate\\Entities\\UserAccount.cs",
               "RelativeToolTip": "Domain\\Aggregates\\UserAggregate\\Entities\\UserAccount.cs",
               "ViewState": "AgIAAAYAAAAAAAAAAAAowA8AAAA1AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -114,24 +152,24 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 2,
               "Title": "ApplicationDbContext.cs",
-              "DocumentMoniker": "C:\\Users\\batau\\Desktop\\PROIECTE\\Algoholics\\Infrastructure\\Data\\ApplicationDbContext.cs",
+              "DocumentMoniker": "C:\\Users\\butun\\source\\repos\\Algohol\\Infrastructure\\Data\\ApplicationDbContext.cs",
               "RelativeDocumentMoniker": "Infrastructure\\Data\\ApplicationDbContext.cs",
-              "ToolTip": "C:\\Users\\batau\\Desktop\\PROIECTE\\Algoholics\\Infrastructure\\Data\\ApplicationDbContext.cs",
+              "ToolTip": "C:\\Users\\butun\\source\\repos\\Algohol\\Infrastructure\\Data\\ApplicationDbContext.cs",
               "RelativeToolTip": "Infrastructure\\Data\\ApplicationDbContext.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAA1AAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-10-21T11:27:59.128Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 8,
               "Title": "UserAccountRepository.cs",
-              "DocumentMoniker": "C:\\Users\\batau\\Desktop\\PROIECTE\\Algoholics\\Infrastructure\\Repositories\\UserAccountRepository.cs",
+              "DocumentMoniker": "C:\\Users\\butun\\source\\repos\\Algohol\\Infrastructure\\Repositories\\UserAccountRepository.cs",
               "RelativeDocumentMoniker": "Infrastructure\\Repositories\\UserAccountRepository.cs",
-              "ToolTip": "C:\\Users\\batau\\Desktop\\PROIECTE\\Algoholics\\Infrastructure\\Repositories\\UserAccountRepository.cs",
+              "ToolTip": "C:\\Users\\butun\\source\\repos\\Algohol\\Infrastructure\\Repositories\\UserAccountRepository.cs",
               "RelativeToolTip": "Infrastructure\\Repositories\\UserAccountRepository.cs",
               "ViewState": "AgIAADIAAAAAAAAAAAAIwEYAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -139,11 +177,11 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 9,
               "Title": "IUserAccountRepository.cs",
-              "DocumentMoniker": "C:\\Users\\batau\\Desktop\\PROIECTE\\Algoholics\\Domain\\Aggregates\\UserAggregate\\Repositories\\IUserAccountRepository.cs",
+              "DocumentMoniker": "C:\\Users\\butun\\source\\repos\\Algohol\\Domain\\Aggregates\\UserAggregate\\Repositories\\IUserAccountRepository.cs",
               "RelativeDocumentMoniker": "Domain\\Aggregates\\UserAggregate\\Repositories\\IUserAccountRepository.cs",
-              "ToolTip": "C:\\Users\\batau\\Desktop\\PROIECTE\\Algoholics\\Domain\\Aggregates\\UserAggregate\\Repositories\\IUserAccountRepository.cs",
+              "ToolTip": "C:\\Users\\butun\\source\\repos\\Algohol\\Domain\\Aggregates\\UserAggregate\\Repositories\\IUserAccountRepository.cs",
               "RelativeToolTip": "Domain\\Aggregates\\UserAggregate\\Repositories\\IUserAccountRepository.cs",
               "ViewState": "AgIAAAMAAAAAAAAAAAAAACMAAAAIAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -151,11 +189,11 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 10,
               "Title": "GetAllUserAccountHandler.cs",
-              "DocumentMoniker": "C:\\Users\\batau\\Desktop\\PROIECTE\\Algoholics\\Application\\User\\Handlers\\GetAllUserAccountHandler.cs",
+              "DocumentMoniker": "C:\\Users\\butun\\source\\repos\\Algohol\\Application\\User\\Handlers\\GetAllUserAccountHandler.cs",
               "RelativeDocumentMoniker": "Application\\User\\Handlers\\GetAllUserAccountHandler.cs",
-              "ToolTip": "C:\\Users\\batau\\Desktop\\PROIECTE\\Algoholics\\Application\\User\\Handlers\\GetAllUserAccountHandler.cs",
+              "ToolTip": "C:\\Users\\butun\\source\\repos\\Algohol\\Application\\User\\Handlers\\GetAllUserAccountHandler.cs",
               "RelativeToolTip": "Application\\User\\Handlers\\GetAllUserAccountHandler.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABUAAAANAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",

@@ -3,46 +3,36 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-
-namespace Domain.Aggregates.ProductAggregate
+namespace Domain.Aggregates.ProductAggregate.Entities
 {
-    using System;
-    using System.Collections.Generic;
-    using System.Linq;
-
-    namespace Domain.Aggregates.ProductAggregate
+    public class Product:BaseEntity,IAggregateRoot
     {
-        public class Product
+         
+        public void AddProduct(ProductDetail product)
         {
-            public List<ProductDetails> products { set; get; } = new List<ProductDetails>();
+            if (product == null)
+                throw new ArgumentNullException(nameof(product));
+
+            Products.Add(product);
+        }
 
 
-            public void AddProduct(ProductDetails product)
-            {
-                if (product == null)
-                    throw new ArgumentNullException(nameof(product));
+        public bool UpdateProduct(ProductDetail product, string name, string description, decimal price)
+        {
+            if (product == null || !Products.Contains(product))
+                return false;
 
-                products.Add(product);
-            }
+            product.UpdateProductDetails(name, price, description);
+            return true;
+        }
+        public bool DeleteProduct(ProductDetail product)
+        {
+            return Products.Remove(product);
+        }
 
-          
-            public bool UpdateProduct(ProductDetails product, string name, string description, decimal price, int stockQuantity, string category)
-            {
-                if (product == null || !products.Contains(product))
-                    return false;
-
-                product.Update(name, description, price, stockQuantity, category);
-                return true;
-            }
-            public bool DeleteProduct(ProductDetails product)
-            {
-                return products.Remove(product);
-            }
-
-            public ProductDetails GetProductByName(string name)
-            {
-                return products.FirstOrDefault(p => p.name.Equals(name, StringComparison.OrdinalIgnoreCase));
-            }
+        public ProductDetail GetProductByName(string name)
+        {
+            return Products.FirstOrDefault(p => p.Name.Equals(name, StringComparison.OrdinalIgnoreCase));
         }
     }
 }
