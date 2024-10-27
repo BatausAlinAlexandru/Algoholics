@@ -1,6 +1,8 @@
 ﻿using Domain.Aggregates.ProductAggregate.Entities;
 using Domain.Aggregates.ProductAggregate.Repositories;
+using Domain.Aggregates.UserAggregate.Entities;
 using Infrastructure.Data;
+using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -14,14 +16,45 @@ namespace Infrastructure.Repositories
 
         private readonly ApplicationDbContext _applicationDbContext;
 
-        public Task<List<ProductDetail>> GetProductAsync(Product Product)
+        public ProductRepository(ApplicationDbContext applicationDbContext)
         {
-            throw new NotImplementedException();
+            _applicationDbContext = applicationDbContext;
         }
 
-        Task<bool> IProductRepository.DeleteProductAsync(Guid idProduct)
+        public async Task<List<Product>> GetProductAsync()
         {
-            throw new NotImplementedException();
+            return await _applicationDbContext.Products.ToListAsync();
+        }
+
+        public async Task<bool> AddProductAsync(ProductDetail productDetail)
+        {
+            await _applicationDbContext.SaveChangesAsync();
+            try
+            {
+                Product product = new Product();
+                product.AddProductDetail(productDetail);
+                _applicationDbContext.Products.Add(product);
+                await _applicationDbContext.SaveChangesAsync();
+                return true;
+            }
+            catch (Exception ex)
+            {
+                throw new NotImplementedException();
+            }
+        }
+
+
+
+        public async Task<bool> DeleteProductAsync(Guid idProduct)
+        {
+            var product = await _applicationDbContext.Products.FindAsync(idProduct);
+            if (product is not null)
+            {
+                _applicationDbContext.Products.Remove(product);
+                await _applicationDbContext.SaveChangesAsync();
+                return true;
+            }
+            return false;
         }
 
         Task<List<ProductDetail>> IProductRepository.GetProductAsync()

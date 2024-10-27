@@ -15,7 +15,7 @@ namespace Domain.Aggregates.ProductAggregate.Repositories
 
         public Task<Product?> GetProductByIdAsync(Guid idProduct);
 
-        public Task<bool> AddProductAsync(Product Product);
+        public Task<bool> AddProductAsync(ProductDetail productDetail);
 
         public Task<bool> DeleteProductAsync(Guid idProduct);
 
