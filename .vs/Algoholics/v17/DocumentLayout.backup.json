@@ -3,6 +3,10 @@
   "WorkspaceRootPath": "C:\\Users\\batau\\Desktop\\PROIECTE\\Algoholics\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{9033680D-41B7-4969-82A0-822C14922691}|Infrastructure\\Infrastructure.csproj|c:\\users\\batau\\desktop\\proiecte\\algoholics\\infrastructure\\data\\applicationdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9033680D-41B7-4969-82A0-822C14922691}|Infrastructure\\Infrastructure.csproj|solutionrelative:infrastructure\\data\\applicationdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{9033680D-41B7-4969-82A0-822C14922691}|Infrastructure\\Infrastructure.csproj|c:\\users\\batau\\desktop\\proiecte\\algoholics\\infrastructure\\repositories\\productrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{9033680D-41B7-4969-82A0-822C14922691}|Infrastructure\\Infrastructure.csproj|solutionrelative:infrastructure\\repositories\\productrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
@@ -27,6 +31,19 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
+              "Title": "ApplicationDbContext.cs",
+              "DocumentMoniker": "C:\\Users\\batau\\Desktop\\PROIECTE\\Algoholics\\Infrastructure\\Data\\ApplicationDbContext.cs",
+              "RelativeDocumentMoniker": "Infrastructure\\Data\\ApplicationDbContext.cs",
+              "ToolTip": "C:\\Users\\batau\\Desktop\\PROIECTE\\Algoholics\\Infrastructure\\Data\\ApplicationDbContext.cs",
+              "RelativeToolTip": "Infrastructure\\Data\\ApplicationDbContext.cs",
+              "ViewState": "AgIAACwAAAAAAAAAAAAQwAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-30T22:59:03.408Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
               "Title": "ProductRepository.cs",
               "DocumentMoniker": "C:\\Users\\batau\\Desktop\\PROIECTE\\Algoholics\\Infrastructure\\Repositories\\ProductRepository.cs",
               "RelativeDocumentMoniker": "Infrastructure\\Repositories\\ProductRepository.cs",
@@ -39,7 +56,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 2,
               "Title": "IProductRepository.cs",
               "DocumentMoniker": "C:\\Users\\batau\\Desktop\\PROIECTE\\Algoholics\\Domain\\Aggregates\\ProductAggregate\\Repositories\\IProductRepository.cs",
               "RelativeDocumentMoniker": "Domain\\Aggregates\\ProductAggregate\\Repositories\\IProductRepository.cs",
@@ -47,8 +64,7 @@
               "RelativeToolTip": "Domain\\Aggregates\\ProductAggregate\\Repositories\\IProductRepository.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAFAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-30T22:56:13.689Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-10-30T22:56:13.689Z"
             }
           ]
         }
