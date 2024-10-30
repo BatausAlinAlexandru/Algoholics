@@ -1,6 +1,4 @@
-﻿using System;
-using Domain;
-namespace Domain.Aggregates.OrderAggregate.Entities
+﻿namespace Domain.Aggregates.OrderAggregate.Entities
 {
     public class OrderDetail: BaseEntity
     {

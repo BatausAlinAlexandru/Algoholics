@@ -1,5 +1,4 @@
-﻿using System;
-using Domain.Aggregates.OrderAggregate.Value_Objects;
+﻿using Domain.Aggregates.OrderAggregate.Value_Objects;
 
 namespace Domain.Aggregates.OrderAggregate.Entities
 {

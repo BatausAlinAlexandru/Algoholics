@@ -2,7 +2,7 @@
 using MediatR;
 using System.ComponentModel.DataAnnotations;
 
-namespace Application.User.Commands.UserAccount
+namespace Application.Commands.UserAccount
 {
     public class DeleteUserAccountCommand : IRequest<Result>
     {

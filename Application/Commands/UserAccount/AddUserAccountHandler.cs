@@ -1,9 +1,8 @@
 ﻿using Domain.Aggregates.UserAggregate.Repositories;
 using MediatR;
 using CSharpFunctionalExtensions;
-using Application.User.Commands.UserAccount;
 
-namespace Application.User.Handlers.UserAccountHandler
+namespace Application.Commands.UserAccount
 {
     public class AddUserAccountHandler : IRequestHandler<AddUserAccountCommand, Result>
     {

@@ -1,6 +1,6 @@
 ﻿using Domain.Aggregates.UserAggregate.Value_Objects;
 
-namespace Application.User.DTO
+namespace Application.DTO
 {
     public class UserAccountDTO
     {
@@ -8,6 +8,5 @@ namespace Application.User.DTO
         public string Email { get; set; }
         public string Password { get; set; }
         public UserAccountRole UserAccountRole { get; set; }
-
     }
 }

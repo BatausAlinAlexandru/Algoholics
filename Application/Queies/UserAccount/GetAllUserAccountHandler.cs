@@ -1,9 +1,8 @@
-﻿using Application.User.DTO;
-using Application.User.Queries;
+﻿using Application.DTO;
 using Domain.Aggregates.UserAggregate.Repositories;
 using MediatR;
 
-namespace Application.User.Handlers.UserAccount
+namespace Application.Queies.UserAccount
 {
     public class GetAllUserAccountHandler : IRequestHandler<GetAllUserAccountsQuery, List<UserAccountDTO>>
     {

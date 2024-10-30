@@ -1,10 +1,9 @@
-﻿using Application.User.Commands;
-using Application.User.Commands.UserAccount;
-using Application.User.Commands.UserAccountCredentials;
-using Application.User.Queries;
-using Domain.Aggregates.UserAggregate.Entities;
-using MediatR;
+﻿using MediatR;
 using Microsoft.AspNetCore.Mvc;
+using Application.Commands.UserAccount;
+using Application.Commands.UserAccountCredentials;
+using Application.Queies.UserAccount;
+
 
 namespace WebAPI.Controllers
 {

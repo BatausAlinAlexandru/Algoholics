@@ -1,9 +1,8 @@
-﻿using Application.User.Commands.UserAccount;
-using CSharpFunctionalExtensions;
+﻿using CSharpFunctionalExtensions;
 using Domain.Aggregates.UserAggregate.Repositories;
 using MediatR;
 
-namespace Application.User.Handlers.UserAccount
+namespace Application.Commands.UserAccount
 {
     public class DeleteUserAccountHandler : IRequestHandler<DeleteUserAccountCommand, Result>
     {

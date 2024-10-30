@@ -1,10 +1,9 @@
 ﻿using MediatR;
 using CSharpFunctionalExtensions;
-using Application.User.Commands.UserAccountCredentials;
 using Domain.Aggregates.UserAggregate.Repositories;
 
 
-namespace Application.User.Handlers.UserAccountCredentials
+namespace Application.Commands.UserAccountCredentials
 {
     public class ModifyUserAccountEmailHandler : IRequestHandler<ModifyUserAccountEmailCommand, Result>
     {
