@@ -150,3 +150,14 @@ C:\Users\batau\Desktop\PROIECTE\Algoholics\WebAPI\bin\Debug\net8.0\zh-Hant\Micro
 C:\Users\batau\Desktop\PROIECTE\Algoholics\WebAPI\bin\Debug\net8.0\CSharpFunctionalExtensions.dll
 C:\Users\batau\Desktop\PROIECTE\Algoholics\WebAPI\bin\Debug\net8.0\MediatR.dll
 C:\Users\batau\Desktop\PROIECTE\Algoholics\WebAPI\bin\Debug\net8.0\MediatR.Contracts.dll
+C:\Users\horat\Documents\GitHub\Algoholics\WebAPI\obj\Debug\net8.0\WebAPI.csproj.AssemblyReference.cache
+C:\Users\horat\Documents\GitHub\Algoholics\WebAPI\obj\Debug\net8.0\WebAPI.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\horat\Documents\GitHub\Algoholics\WebAPI\obj\Debug\net8.0\WebAPI.AssemblyInfoInputs.cache
+C:\Users\horat\Documents\GitHub\Algoholics\WebAPI\obj\Debug\net8.0\WebAPI.AssemblyInfo.cs
+C:\Users\horat\Documents\GitHub\Algoholics\WebAPI\obj\Debug\net8.0\WebAPI.csproj.CoreCompileInputs.cache
+C:\Users\horat\Documents\GitHub\Algoholics\WebAPI\obj\Debug\net8.0\WebAPI.MvcApplicationPartsAssemblyInfo.cs
+C:\Users\horat\Documents\GitHub\Algoholics\WebAPI\obj\Debug\net8.0\WebAPI.MvcApplicationPartsAssemblyInfo.cache
+C:\Users\horat\Documents\GitHub\Algoholics\WebAPI\obj\Debug\net8.0\WebAPI.sourcelink.json
+C:\Users\horat\Documents\GitHub\Algoholics\WebAPI\obj\Debug\net8.0\WebAPI.dll
+C:\Users\horat\Documents\GitHub\Algoholics\WebAPI\obj\Debug\net8.0\refint\WebAPI.dll
+C:\Users\horat\Documents\GitHub\Algoholics\WebAPI\obj\Debug\net8.0\WebAPI.pdb

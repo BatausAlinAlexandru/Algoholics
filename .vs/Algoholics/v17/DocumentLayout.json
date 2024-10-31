@@ -1,37 +1,133 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\Users\\batau\\Desktop\\PROIECTE\\Algoholics\\",
+  "WorkspaceRootPath": "C:\\Users\\horat\\Documents\\GitHub\\Algoholics\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{5FC4EFF2-3693-4709-A38A-24556500EA02}|Domain\\Domain.csproj|c:\\users\\batau\\desktop\\proiecte\\algoholics\\domain\\aggregates\\productaggregate\\entities\\productdetail.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{5FC4EFF2-3693-4709-A38A-24556500EA02}|Domain\\Domain.csproj|solutionrelative:domain\\aggregates\\productaggregate\\entities\\productdetail.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{906114DB-2F7E-4DCD-BCCA-3D7FF67263C1}|Application\\Application.csproj|c:\\users\\horat\\documents\\github\\algoholics\\application\\queies\\order\\getallordershandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{906114DB-2F7E-4DCD-BCCA-3D7FF67263C1}|Application\\Application.csproj|solutionrelative:application\\queies\\order\\getallordershandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{9033680D-41B7-4969-82A0-822C14922691}|Infrastructure\\Infrastructure.csproj|c:\\users\\batau\\desktop\\proiecte\\algoholics\\infrastructure\\repositories\\productrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{9033680D-41B7-4969-82A0-822C14922691}|Infrastructure\\Infrastructure.csproj|solutionrelative:infrastructure\\repositories\\productrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{906114DB-2F7E-4DCD-BCCA-3D7FF67263C1}|Application\\Application.csproj|c:\\users\\horat\\documents\\github\\algoholics\\application\\queies\\order\\getallordersquery.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{906114DB-2F7E-4DCD-BCCA-3D7FF67263C1}|Application\\Application.csproj|solutionrelative:application\\queies\\order\\getallordersquery.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{9033680D-41B7-4969-82A0-822C14922691}|Infrastructure\\Infrastructure.csproj|c:\\users\\batau\\desktop\\proiecte\\algoholics\\infrastructure\\data\\applicationdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{9033680D-41B7-4969-82A0-822C14922691}|Infrastructure\\Infrastructure.csproj|solutionrelative:infrastructure\\data\\applicationdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{906114DB-2F7E-4DCD-BCCA-3D7FF67263C1}|Application\\Application.csproj|c:\\users\\horat\\documents\\github\\algoholics\\application\\dto\\orderdetaildto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{906114DB-2F7E-4DCD-BCCA-3D7FF67263C1}|Application\\Application.csproj|solutionrelative:application\\dto\\orderdetaildto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{E1672985-58DC-47E4-899B-35507D6C4ADF}|WebAPI\\WebAPI.csproj|c:\\users\\batau\\desktop\\proiecte\\algoholics\\webapi\\controllers\\productcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{E1672985-58DC-47E4-899B-35507D6C4ADF}|WebAPI\\WebAPI.csproj|solutionrelative:webapi\\controllers\\productcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{906114DB-2F7E-4DCD-BCCA-3D7FF67263C1}|Application\\Application.csproj|c:\\users\\horat\\documents\\github\\algoholics\\application\\dto\\orderdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{906114DB-2F7E-4DCD-BCCA-3D7FF67263C1}|Application\\Application.csproj|solutionrelative:application\\dto\\orderdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{5FC4EFF2-3693-4709-A38A-24556500EA02}|Domain\\Domain.csproj|c:\\users\\batau\\desktop\\proiecte\\algoholics\\domain\\aggregates\\productaggregate\\repositories\\iproductrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{5FC4EFF2-3693-4709-A38A-24556500EA02}|Domain\\Domain.csproj|c:\\users\\horat\\documents\\github\\algoholics\\domain\\aggregates\\orderaggregate\\entities\\orderdetail.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5FC4EFF2-3693-4709-A38A-24556500EA02}|Domain\\Domain.csproj|solutionrelative:domain\\aggregates\\orderaggregate\\entities\\orderdetail.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5FC4EFF2-3693-4709-A38A-24556500EA02}|Domain\\Domain.csproj|c:\\users\\horat\\documents\\github\\algoholics\\domain\\aggregates\\orderaggregate\\entities\\order.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5FC4EFF2-3693-4709-A38A-24556500EA02}|Domain\\Domain.csproj|solutionrelative:domain\\aggregates\\orderaggregate\\entities\\order.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{906114DB-2F7E-4DCD-BCCA-3D7FF67263C1}|Application\\Application.csproj|c:\\users\\horat\\documents\\github\\algoholics\\application\\queies\\useraccount\\getalluseraccounthandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{906114DB-2F7E-4DCD-BCCA-3D7FF67263C1}|Application\\Application.csproj|solutionrelative:application\\queies\\useraccount\\getalluseraccounthandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{906114DB-2F7E-4DCD-BCCA-3D7FF67263C1}|Application\\Application.csproj|c:\\users\\horat\\documents\\github\\algoholics\\application\\commands\\orderdetail\\addorderdetailhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{906114DB-2F7E-4DCD-BCCA-3D7FF67263C1}|Application\\Application.csproj|solutionrelative:application\\commands\\orderdetail\\addorderdetailhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{906114DB-2F7E-4DCD-BCCA-3D7FF67263C1}|Application\\Application.csproj|c:\\users\\horat\\documents\\github\\algoholics\\application\\commands\\orderdetail\\addorderdetailcommand.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{906114DB-2F7E-4DCD-BCCA-3D7FF67263C1}|Application\\Application.csproj|solutionrelative:application\\commands\\orderdetail\\addorderdetailcommand.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{906114DB-2F7E-4DCD-BCCA-3D7FF67263C1}|Application\\Application.csproj|c:\\users\\horat\\documents\\github\\algoholics\\application\\commands\\order\\addordercommand.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{906114DB-2F7E-4DCD-BCCA-3D7FF67263C1}|Application\\Application.csproj|solutionrelative:application\\commands\\order\\addordercommand.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{906114DB-2F7E-4DCD-BCCA-3D7FF67263C1}|Application\\Application.csproj|c:\\users\\horat\\documents\\github\\algoholics\\application\\commands\\order\\addorderhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{906114DB-2F7E-4DCD-BCCA-3D7FF67263C1}|Application\\Application.csproj|solutionrelative:application\\commands\\order\\addorderhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5FC4EFF2-3693-4709-A38A-24556500EA02}|Domain\\Domain.csproj|c:\\users\\horat\\documents\\github\\algoholics\\domain\\aggregates\\orderaggregate\\repositories\\iorderrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5FC4EFF2-3693-4709-A38A-24556500EA02}|Domain\\Domain.csproj|solutionrelative:domain\\aggregates\\orderaggregate\\repositories\\iorderrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5FC4EFF2-3693-4709-A38A-24556500EA02}|Domain\\Domain.csproj|c:\\users\\horat\\documents\\github\\algoholics\\domain\\aggregates\\useraggregate\\entities\\useraccount.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5FC4EFF2-3693-4709-A38A-24556500EA02}|Domain\\Domain.csproj|solutionrelative:domain\\aggregates\\useraggregate\\entities\\useraccount.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{906114DB-2F7E-4DCD-BCCA-3D7FF67263C1}|Application\\Application.csproj|c:\\users\\horat\\documents\\github\\algoholics\\application\\commands\\orderstatus\\modifyorderstatushandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{906114DB-2F7E-4DCD-BCCA-3D7FF67263C1}|Application\\Application.csproj|solutionrelative:application\\commands\\orderstatus\\modifyorderstatushandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5FC4EFF2-3693-4709-A38A-24556500EA02}|Domain\\Domain.csproj|c:\\users\\horat\\documents\\github\\algoholics\\domain\\aggregates\\productaggregate\\repositories\\iproductrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{5FC4EFF2-3693-4709-A38A-24556500EA02}|Domain\\Domain.csproj|solutionrelative:domain\\aggregates\\productaggregate\\repositories\\iproductrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{9033680D-41B7-4969-82A0-822C14922691}|Infrastructure\\Infrastructure.csproj|c:\\users\\batau\\desktop\\proiecte\\algoholics\\infrastructure\\repositories\\useraccountrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{906114DB-2F7E-4DCD-BCCA-3D7FF67263C1}|Application\\Application.csproj|c:\\users\\horat\\documents\\github\\algoholics\\application\\commands\\useraccount\\adduseraccountcommand.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{906114DB-2F7E-4DCD-BCCA-3D7FF67263C1}|Application\\Application.csproj|solutionrelative:application\\commands\\useraccount\\adduseraccountcommand.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{906114DB-2F7E-4DCD-BCCA-3D7FF67263C1}|Application\\Application.csproj|c:\\users\\horat\\documents\\github\\algoholics\\application\\commands\\orderstatus\\modifyorderstatuscommand.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{906114DB-2F7E-4DCD-BCCA-3D7FF67263C1}|Application\\Application.csproj|solutionrelative:application\\commands\\orderstatus\\modifyorderstatuscommand.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9033680D-41B7-4969-82A0-822C14922691}|Infrastructure\\Infrastructure.csproj|c:\\users\\horat\\documents\\github\\algoholics\\infrastructure\\repositories\\useraccountrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{9033680D-41B7-4969-82A0-822C14922691}|Infrastructure\\Infrastructure.csproj|solutionrelative:infrastructure\\repositories\\useraccountrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{5FC4EFF2-3693-4709-A38A-24556500EA02}|Domain\\Domain.csproj|c:\\users\\batau\\desktop\\proiecte\\algoholics\\domain\\aggregates\\useraggregate\\exceptions\\useraccountexception.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{5FC4EFF2-3693-4709-A38A-24556500EA02}|Domain\\Domain.csproj|c:\\users\\horat\\documents\\github\\algoholics\\domain\\aggregates\\orderaggregate\\value objects\\orderstatus.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5FC4EFF2-3693-4709-A38A-24556500EA02}|Domain\\Domain.csproj|solutionrelative:domain\\aggregates\\orderaggregate\\value objects\\orderstatus.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{906114DB-2F7E-4DCD-BCCA-3D7FF67263C1}|Application\\Application.csproj|c:\\users\\horat\\documents\\github\\algoholics\\application\\commands\\useraccount\\adduseraccounthandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{906114DB-2F7E-4DCD-BCCA-3D7FF67263C1}|Application\\Application.csproj|solutionrelative:application\\commands\\useraccount\\adduseraccounthandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5FC4EFF2-3693-4709-A38A-24556500EA02}|Domain\\Domain.csproj|c:\\users\\horat\\documents\\github\\algoholics\\domain\\aggregates\\useraggregate\\entities\\useraccountcredentials.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5FC4EFF2-3693-4709-A38A-24556500EA02}|Domain\\Domain.csproj|solutionrelative:domain\\aggregates\\useraggregate\\entities\\useraccountcredentials.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5FC4EFF2-3693-4709-A38A-24556500EA02}|Domain\\Domain.csproj|c:\\users\\horat\\documents\\github\\algoholics\\domain\\aggregates\\useraggregate\\entities\\useraccountsettings.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5FC4EFF2-3693-4709-A38A-24556500EA02}|Domain\\Domain.csproj|solutionrelative:domain\\aggregates\\useraggregate\\entities\\useraccountsettings.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5FC4EFF2-3693-4709-A38A-24556500EA02}|Domain\\Domain.csproj|c:\\users\\horat\\documents\\github\\algoholics\\domain\\aggregates\\useraggregate\\entities\\useraccountpaymantinfo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5FC4EFF2-3693-4709-A38A-24556500EA02}|Domain\\Domain.csproj|solutionrelative:domain\\aggregates\\useraggregate\\entities\\useraccountpaymantinfo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5FC4EFF2-3693-4709-A38A-24556500EA02}|Domain\\Domain.csproj|c:\\users\\horat\\documents\\github\\algoholics\\domain\\aggregates\\useraggregate\\entities\\useraccountinfo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5FC4EFF2-3693-4709-A38A-24556500EA02}|Domain\\Domain.csproj|solutionrelative:domain\\aggregates\\useraggregate\\entities\\useraccountinfo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{906114DB-2F7E-4DCD-BCCA-3D7FF67263C1}|Application\\Application.csproj|c:\\users\\horat\\documents\\github\\algoholics\\application\\dependecyinjection.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{906114DB-2F7E-4DCD-BCCA-3D7FF67263C1}|Application\\Application.csproj|solutionrelative:application\\dependecyinjection.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5FC4EFF2-3693-4709-A38A-24556500EA02}|Domain\\Domain.csproj|c:\\users\\horat\\documents\\github\\algoholics\\domain\\domain.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
+      "RelativeMoniker": "D:0:0:{5FC4EFF2-3693-4709-A38A-24556500EA02}|Domain\\Domain.csproj|solutionrelative:domain\\domain.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5FC4EFF2-3693-4709-A38A-24556500EA02}|Domain\\Domain.csproj|c:\\users\\horat\\documents\\github\\algoholics\\domain\\aggregates\\productaggregate\\entities\\productdetail.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5FC4EFF2-3693-4709-A38A-24556500EA02}|Domain\\Domain.csproj|solutionrelative:domain\\aggregates\\productaggregate\\entities\\productdetail.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9033680D-41B7-4969-82A0-822C14922691}|Infrastructure\\Infrastructure.csproj|c:\\users\\horat\\documents\\github\\algoholics\\infrastructure\\repositories\\productrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9033680D-41B7-4969-82A0-822C14922691}|Infrastructure\\Infrastructure.csproj|solutionrelative:infrastructure\\repositories\\productrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9033680D-41B7-4969-82A0-822C14922691}|Infrastructure\\Infrastructure.csproj|c:\\users\\horat\\documents\\github\\algoholics\\infrastructure\\data\\applicationdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9033680D-41B7-4969-82A0-822C14922691}|Infrastructure\\Infrastructure.csproj|solutionrelative:infrastructure\\data\\applicationdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E1672985-58DC-47E4-899B-35507D6C4ADF}|WebAPI\\WebAPI.csproj|c:\\users\\horat\\documents\\github\\algoholics\\webapi\\controllers\\productcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E1672985-58DC-47E4-899B-35507D6C4ADF}|WebAPI\\WebAPI.csproj|solutionrelative:webapi\\controllers\\productcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5FC4EFF2-3693-4709-A38A-24556500EA02}|Domain\\Domain.csproj|c:\\users\\horat\\documents\\github\\algoholics\\domain\\aggregates\\useraggregate\\exceptions\\useraccountexception.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{5FC4EFF2-3693-4709-A38A-24556500EA02}|Domain\\Domain.csproj|solutionrelative:domain\\aggregates\\useraggregate\\exceptions\\useraccountexception.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{5FC4EFF2-3693-4709-A38A-24556500EA02}|Domain\\Domain.csproj|c:\\users\\batau\\desktop\\proiecte\\algoholics\\domain\\aggregates\\productaggregate\\entities\\product.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{5FC4EFF2-3693-4709-A38A-24556500EA02}|Domain\\Domain.csproj|c:\\users\\horat\\documents\\github\\algoholics\\domain\\aggregates\\productaggregate\\entities\\product.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{5FC4EFF2-3693-4709-A38A-24556500EA02}|Domain\\Domain.csproj|solutionrelative:domain\\aggregates\\productaggregate\\entities\\product.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
@@ -42,58 +138,382 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 4,
+          "SelectedChildIndex": 2,
           "Children": [
-            {
-              "$type": "Bookmark",
-              "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
-            },
             {
               "$type": "Document",
               "DocumentIndex": 3,
-              "Title": "ProductController.cs",
-              "DocumentMoniker": "C:\\Users\\batau\\Desktop\\PROIECTE\\Algoholics\\WebAPI\\Controllers\\ProductController.cs",
-              "RelativeDocumentMoniker": "WebAPI\\Controllers\\ProductController.cs",
-              "ToolTip": "C:\\Users\\batau\\Desktop\\PROIECTE\\Algoholics\\WebAPI\\Controllers\\ProductController.cs",
-              "RelativeToolTip": "WebAPI\\Controllers\\ProductController.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Title": "OrderDTO.cs",
+              "DocumentMoniker": "C:\\Users\\horat\\Documents\\GitHub\\Algoholics\\Application\\DTO\\OrderDTO.cs",
+              "RelativeDocumentMoniker": "Application\\DTO\\OrderDTO.cs",
+              "ToolTip": "C:\\Users\\horat\\Documents\\GitHub\\Algoholics\\Application\\DTO\\OrderDTO.cs*",
+              "RelativeToolTip": "Application\\DTO\\OrderDTO.cs*",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAA0AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-30T23:35:32.872Z",
+              "WhenOpened": "2024-10-31T11:16:58.736Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "UserAccountException.cs",
-              "DocumentMoniker": "C:\\Users\\batau\\Desktop\\PROIECTE\\Algoholics\\Domain\\Aggregates\\UserAggregate\\Exceptions\\UserAccountException.cs",
-              "RelativeDocumentMoniker": "Domain\\Aggregates\\UserAggregate\\Exceptions\\UserAccountException.cs",
-              "ToolTip": "C:\\Users\\batau\\Desktop\\PROIECTE\\Algoholics\\Domain\\Aggregates\\UserAggregate\\Exceptions\\UserAccountException.cs",
-              "RelativeToolTip": "Domain\\Aggregates\\UserAggregate\\Exceptions\\UserAccountException.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAAAAAAAAAAAA==",
+              "DocumentIndex": 1,
+              "Title": "GetAllOrdersQuery.cs",
+              "DocumentMoniker": "C:\\Users\\horat\\Documents\\GitHub\\Algoholics\\Application\\Queies\\Order\\GetAllOrdersQuery.cs",
+              "RelativeDocumentMoniker": "Application\\Queies\\Order\\GetAllOrdersQuery.cs",
+              "ToolTip": "C:\\Users\\horat\\Documents\\GitHub\\Algoholics\\Application\\Queies\\Order\\GetAllOrdersQuery.cs*",
+              "RelativeToolTip": "Application\\Queies\\Order\\GetAllOrdersQuery.cs*",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAA3AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-30T23:09:17.796Z",
+              "WhenOpened": "2024-10-31T11:06:51.359Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "GetAllOrdersHandler.cs",
+              "DocumentMoniker": "C:\\Users\\horat\\Documents\\GitHub\\Algoholics\\Application\\Queies\\Order\\GetAllOrdersHandler.cs",
+              "RelativeDocumentMoniker": "Application\\Queies\\Order\\GetAllOrdersHandler.cs",
+              "ToolTip": "C:\\Users\\horat\\Documents\\GitHub\\Algoholics\\Application\\Queies\\Order\\GetAllOrdersHandler.cs*",
+              "RelativeToolTip": "Application\\Queies\\Order\\GetAllOrdersHandler.cs*",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAACYAAABXAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-31T10:56:55.608Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "AddOrderDetailHandler.cs",
+              "DocumentMoniker": "C:\\Users\\horat\\Documents\\GitHub\\Algoholics\\Application\\Commands\\OrderDetail\\AddOrderDetailHandler.cs",
+              "RelativeDocumentMoniker": "Application\\Commands\\OrderDetail\\AddOrderDetailHandler.cs",
+              "ToolTip": "C:\\Users\\horat\\Documents\\GitHub\\Algoholics\\Application\\Commands\\OrderDetail\\AddOrderDetailHandler.cs",
+              "RelativeToolTip": "Application\\Commands\\OrderDetail\\AddOrderDetailHandler.cs",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAAACAAAAApAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-31T10:50:46.748Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "AddOrderDetailCommand.cs",
+              "DocumentMoniker": "C:\\Users\\horat\\Documents\\GitHub\\Algoholics\\Application\\Commands\\OrderDetail\\AddOrderDetailCommand.cs",
+              "RelativeDocumentMoniker": "Application\\Commands\\OrderDetail\\AddOrderDetailCommand.cs",
+              "ToolTip": "C:\\Users\\horat\\Documents\\GitHub\\Algoholics\\Application\\Commands\\OrderDetail\\AddOrderDetailCommand.cs",
+              "RelativeToolTip": "Application\\Commands\\OrderDetail\\AddOrderDetailCommand.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAEAAAAOAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "OverriddenGroupName": "Application\\Commands\\OrderDetail",
+              "WhenOpened": "2024-10-31T10:50:05.261Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "AddOrderHandler.cs",
+              "DocumentMoniker": "C:\\Users\\horat\\Documents\\GitHub\\Algoholics\\Application\\Commands\\Order\\AddOrderHandler.cs",
+              "RelativeDocumentMoniker": "Application\\Commands\\Order\\AddOrderHandler.cs",
+              "ToolTip": "C:\\Users\\horat\\Documents\\GitHub\\Algoholics\\Application\\Commands\\Order\\AddOrderHandler.cs",
+              "RelativeToolTip": "Application\\Commands\\Order\\AddOrderHandler.cs",
+              "ViewState": "AgIAAAsAAAAAAAAAAAAAwCAAAABZAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-31T10:03:24.695Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "AddOrderCommand.cs",
+              "DocumentMoniker": "C:\\Users\\horat\\Documents\\GitHub\\Algoholics\\Application\\Commands\\Order\\AddOrderCommand.cs",
+              "RelativeDocumentMoniker": "Application\\Commands\\Order\\AddOrderCommand.cs",
+              "ToolTip": "C:\\Users\\horat\\Documents\\GitHub\\Algoholics\\Application\\Commands\\Order\\AddOrderCommand.cs",
+              "RelativeToolTip": "Application\\Commands\\Order\\AddOrderCommand.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABEAAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-31T09:22:42.289Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 5,
+              "Title": "Order.cs",
+              "DocumentMoniker": "C:\\Users\\horat\\Documents\\GitHub\\Algoholics\\Domain\\Aggregates\\OrderAggregate\\Entities\\Order.cs",
+              "RelativeDocumentMoniker": "Domain\\Aggregates\\OrderAggregate\\Entities\\Order.cs",
+              "ToolTip": "C:\\Users\\horat\\Documents\\GitHub\\Algoholics\\Domain\\Aggregates\\OrderAggregate\\Entities\\Order.cs",
+              "RelativeToolTip": "Domain\\Aggregates\\OrderAggregate\\Entities\\Order.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAHAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-31T09:19:12.037Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "OrderDetail.cs",
+              "DocumentMoniker": "C:\\Users\\horat\\Documents\\GitHub\\Algoholics\\Domain\\Aggregates\\OrderAggregate\\Entities\\OrderDetail.cs",
+              "RelativeDocumentMoniker": "Domain\\Aggregates\\OrderAggregate\\Entities\\OrderDetail.cs",
+              "ToolTip": "C:\\Users\\horat\\Documents\\GitHub\\Algoholics\\Domain\\Aggregates\\OrderAggregate\\Entities\\OrderDetail.cs",
+              "RelativeToolTip": "Domain\\Aggregates\\OrderAggregate\\Entities\\OrderDetail.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAAIAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-31T09:19:02.354Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "IOrderRepository.cs",
+              "DocumentMoniker": "C:\\Users\\horat\\Documents\\GitHub\\Algoholics\\Domain\\Aggregates\\OrderAggregate\\Repositories\\IOrderRepository.cs",
+              "RelativeDocumentMoniker": "Domain\\Aggregates\\OrderAggregate\\Repositories\\IOrderRepository.cs",
+              "ToolTip": "C:\\Users\\horat\\Documents\\GitHub\\Algoholics\\Domain\\Aggregates\\OrderAggregate\\Repositories\\IOrderRepository.cs*",
+              "RelativeToolTip": "Domain\\Aggregates\\OrderAggregate\\Repositories\\IOrderRepository.cs*",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAuwAkAAAAhAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-31T09:18:37.503Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "OrderDetailDTO.cs",
+              "DocumentMoniker": "C:\\Users\\horat\\Documents\\GitHub\\Algoholics\\Application\\DTO\\OrderDetailDTO.cs",
+              "RelativeDocumentMoniker": "Application\\DTO\\OrderDetailDTO.cs",
+              "ToolTip": "C:\\Users\\horat\\Documents\\GitHub\\Algoholics\\Application\\DTO\\OrderDetailDTO.cs*",
+              "RelativeToolTip": "Application\\DTO\\OrderDetailDTO.cs*",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAtAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-31T09:52:18.848Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "GetAllUserAccountHandler.cs",
+              "DocumentMoniker": "C:\\Users\\horat\\Documents\\GitHub\\Algoholics\\Application\\Queies\\UserAccount\\GetAllUserAccountHandler.cs",
+              "RelativeDocumentMoniker": "Application\\Queies\\UserAccount\\GetAllUserAccountHandler.cs",
+              "ToolTip": "C:\\Users\\horat\\Documents\\GitHub\\Algoholics\\Application\\Queies\\UserAccount\\GetAllUserAccountHandler.cs",
+              "RelativeToolTip": "Application\\Queies\\UserAccount\\GetAllUserAccountHandler.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAB4AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-31T09:17:51.045Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "UserAccount.cs",
+              "DocumentMoniker": "C:\\Users\\horat\\Documents\\GitHub\\Algoholics\\Domain\\Aggregates\\UserAggregate\\Entities\\UserAccount.cs",
+              "RelativeDocumentMoniker": "Domain\\Aggregates\\UserAggregate\\Entities\\UserAccount.cs",
+              "ToolTip": "C:\\Users\\horat\\Documents\\GitHub\\Algoholics\\Domain\\Aggregates\\UserAggregate\\Entities\\UserAccount.cs",
+              "RelativeToolTip": "Domain\\Aggregates\\UserAggregate\\Entities\\UserAccount.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAAlAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-31T09:20:18.324Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "ModifyOrderStatusHandler.cs",
+              "DocumentMoniker": "C:\\Users\\horat\\Documents\\GitHub\\Algoholics\\Application\\Commands\\OrderStatus\\ModifyOrderStatusHandler.cs",
+              "RelativeDocumentMoniker": "Application\\Commands\\OrderStatus\\ModifyOrderStatusHandler.cs",
+              "ToolTip": "C:\\Users\\horat\\Documents\\GitHub\\Algoholics\\Application\\Commands\\OrderStatus\\ModifyOrderStatusHandler.cs",
+              "RelativeToolTip": "Application\\Commands\\OrderStatus\\ModifyOrderStatusHandler.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABgAAAAjAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-31T10:22:57.137Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
+              "Title": "AddUserAccountCommand.cs",
+              "DocumentMoniker": "C:\\Users\\horat\\Documents\\GitHub\\Algoholics\\Application\\Commands\\UserAccount\\AddUserAccountCommand.cs",
+              "RelativeDocumentMoniker": "Application\\Commands\\UserAccount\\AddUserAccountCommand.cs",
+              "ToolTip": "C:\\Users\\horat\\Documents\\GitHub\\Algoholics\\Application\\Commands\\UserAccount\\AddUserAccountCommand.cs",
+              "RelativeToolTip": "Application\\Commands\\UserAccount\\AddUserAccountCommand.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABUAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-31T09:20:03.503Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 16,
+              "Title": "ModifyOrderStatusCommand.cs",
+              "DocumentMoniker": "C:\\Users\\horat\\Documents\\GitHub\\Algoholics\\Application\\Commands\\OrderStatus\\ModifyOrderStatusCommand.cs",
+              "RelativeDocumentMoniker": "Application\\Commands\\OrderStatus\\ModifyOrderStatusCommand.cs",
+              "ToolTip": "C:\\Users\\horat\\Documents\\GitHub\\Algoholics\\Application\\Commands\\OrderStatus\\ModifyOrderStatusCommand.cs",
+              "RelativeToolTip": "Application\\Commands\\OrderStatus\\ModifyOrderStatusCommand.cs",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAAABYAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-31T10:22:11.271Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 18,
+              "Title": "OrderStatus.cs",
+              "DocumentMoniker": "C:\\Users\\horat\\Documents\\GitHub\\Algoholics\\Domain\\Aggregates\\OrderAggregate\\Value Objects\\OrderStatus.cs",
+              "RelativeDocumentMoniker": "Domain\\Aggregates\\OrderAggregate\\Value Objects\\OrderStatus.cs",
+              "ToolTip": "C:\\Users\\horat\\Documents\\GitHub\\Algoholics\\Domain\\Aggregates\\OrderAggregate\\Value Objects\\OrderStatus.cs",
+              "RelativeToolTip": "Domain\\Aggregates\\OrderAggregate\\Value Objects\\OrderStatus.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAAQAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-31T09:18:24.101Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 19,
+              "Title": "AddUserAccountHandler.cs",
+              "DocumentMoniker": "C:\\Users\\horat\\Documents\\GitHub\\Algoholics\\Application\\Commands\\UserAccount\\AddUserAccountHandler.cs",
+              "RelativeDocumentMoniker": "Application\\Commands\\UserAccount\\AddUserAccountHandler.cs",
+              "ToolTip": "C:\\Users\\horat\\Documents\\GitHub\\Algoholics\\Application\\Commands\\UserAccount\\AddUserAccountHandler.cs",
+              "RelativeToolTip": "Application\\Commands\\UserAccount\\AddUserAccountHandler.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABEAAABKAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-31T09:23:44.752Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 20,
+              "Title": "UserAccountCredentials.cs",
+              "DocumentMoniker": "C:\\Users\\horat\\Documents\\GitHub\\Algoholics\\Domain\\Aggregates\\UserAggregate\\Entities\\UserAccountCredentials.cs",
+              "RelativeDocumentMoniker": "Domain\\Aggregates\\UserAggregate\\Entities\\UserAccountCredentials.cs",
+              "ToolTip": "C:\\Users\\horat\\Documents\\GitHub\\Algoholics\\Domain\\Aggregates\\UserAggregate\\Entities\\UserAccountCredentials.cs",
+              "RelativeToolTip": "Domain\\Aggregates\\UserAggregate\\Entities\\UserAccountCredentials.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAuwAoAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-31T09:20:34.6Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 17,
               "Title": "UserAccountRepository.cs",
-              "DocumentMoniker": "C:\\Users\\batau\\Desktop\\PROIECTE\\Algoholics\\Infrastructure\\Repositories\\UserAccountRepository.cs",
+              "DocumentMoniker": "C:\\Users\\horat\\Documents\\GitHub\\Algoholics\\Infrastructure\\Repositories\\UserAccountRepository.cs",
               "RelativeDocumentMoniker": "Infrastructure\\Repositories\\UserAccountRepository.cs",
-              "ToolTip": "C:\\Users\\batau\\Desktop\\PROIECTE\\Algoholics\\Infrastructure\\Repositories\\UserAccountRepository.cs",
+              "ToolTip": "C:\\Users\\horat\\Documents\\GitHub\\Algoholics\\Infrastructure\\Repositories\\UserAccountRepository.cs",
               "RelativeToolTip": "Infrastructure\\Repositories\\UserAccountRepository.cs",
-              "ViewState": "AgIAABMAAAAAAAAAAAAgwAAAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-10-30T23:08:34.565Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 14,
+              "Title": "IProductRepository.cs",
+              "DocumentMoniker": "C:\\Users\\horat\\Documents\\GitHub\\Algoholics\\Domain\\Aggregates\\ProductAggregate\\Repositories\\IProductRepository.cs",
+              "RelativeDocumentMoniker": "Domain\\Aggregates\\ProductAggregate\\Repositories\\IProductRepository.cs",
+              "ToolTip": "C:\\Users\\horat\\Documents\\GitHub\\Algoholics\\Domain\\Aggregates\\ProductAggregate\\Repositories\\IProductRepository.cs",
+              "RelativeToolTip": "Domain\\Aggregates\\ProductAggregate\\Repositories\\IProductRepository.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABcAAAA/AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-30T22:56:13.689Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 21,
+              "Title": "UserAccountSettings.cs",
+              "DocumentMoniker": "C:\\Users\\horat\\Documents\\GitHub\\Algoholics\\Domain\\Aggregates\\UserAggregate\\Entities\\UserAccountSettings.cs",
+              "RelativeDocumentMoniker": "Domain\\Aggregates\\UserAggregate\\Entities\\UserAccountSettings.cs",
+              "ToolTip": "C:\\Users\\horat\\Documents\\GitHub\\Algoholics\\Domain\\Aggregates\\UserAggregate\\Entities\\UserAccountSettings.cs",
+              "RelativeToolTip": "Domain\\Aggregates\\UserAggregate\\Entities\\UserAccountSettings.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-31T09:20:47.999Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 22,
+              "Title": "UserAccountPaymantInfo.cs",
+              "DocumentMoniker": "C:\\Users\\horat\\Documents\\GitHub\\Algoholics\\Domain\\Aggregates\\UserAggregate\\Entities\\UserAccountPaymantInfo.cs",
+              "RelativeDocumentMoniker": "Domain\\Aggregates\\UserAggregate\\Entities\\UserAccountPaymantInfo.cs",
+              "ToolTip": "C:\\Users\\horat\\Documents\\GitHub\\Algoholics\\Domain\\Aggregates\\UserAggregate\\Entities\\UserAccountPaymantInfo.cs",
+              "RelativeToolTip": "Domain\\Aggregates\\UserAggregate\\Entities\\UserAccountPaymantInfo.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-31T09:20:46.399Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 23,
+              "Title": "UserAccountInfo.cs",
+              "DocumentMoniker": "C:\\Users\\horat\\Documents\\GitHub\\Algoholics\\Domain\\Aggregates\\UserAggregate\\Entities\\UserAccountInfo.cs",
+              "RelativeDocumentMoniker": "Domain\\Aggregates\\UserAggregate\\Entities\\UserAccountInfo.cs",
+              "ToolTip": "C:\\Users\\horat\\Documents\\GitHub\\Algoholics\\Domain\\Aggregates\\UserAggregate\\Entities\\UserAccountInfo.cs",
+              "RelativeToolTip": "Domain\\Aggregates\\UserAggregate\\Entities\\UserAccountInfo.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-31T09:20:43.017Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 25,
+              "Title": "Domain",
+              "DocumentMoniker": "C:\\Users\\horat\\Documents\\GitHub\\Algoholics\\Domain\\Domain.csproj",
+              "RelativeDocumentMoniker": "Domain\\Domain.csproj",
+              "ToolTip": "C:\\Users\\horat\\Documents\\GitHub\\Algoholics\\Domain\\Domain.csproj",
+              "RelativeToolTip": "Domain\\Domain.csproj",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2024-10-31T09:18:15.52Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 24,
+              "Title": "DependecyInjection.cs",
+              "DocumentMoniker": "C:\\Users\\horat\\Documents\\GitHub\\Algoholics\\Application\\DependecyInjection.cs",
+              "RelativeDocumentMoniker": "Application\\DependecyInjection.cs",
+              "ToolTip": "C:\\Users\\horat\\Documents\\GitHub\\Algoholics\\Application\\DependecyInjection.cs",
+              "RelativeToolTip": "Application\\DependecyInjection.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAAYAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-31T09:17:13.736Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{cce594b6-0c39-4442-ba28-10c64ac7e89f}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 29,
+              "Title": "ProductController.cs",
+              "DocumentMoniker": "C:\\Users\\horat\\Documents\\GitHub\\Algoholics\\WebAPI\\Controllers\\ProductController.cs",
+              "RelativeDocumentMoniker": "WebAPI\\Controllers\\ProductController.cs",
+              "ToolTip": "C:\\Users\\horat\\Documents\\GitHub\\Algoholics\\WebAPI\\Controllers\\ProductController.cs",
+              "RelativeToolTip": "WebAPI\\Controllers\\ProductController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-30T23:35:32.872Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 30,
+              "Title": "UserAccountException.cs",
+              "DocumentMoniker": "C:\\Users\\horat\\Documents\\GitHub\\Algoholics\\Domain\\Aggregates\\UserAggregate\\Exceptions\\UserAccountException.cs",
+              "RelativeDocumentMoniker": "Domain\\Aggregates\\UserAggregate\\Exceptions\\UserAccountException.cs",
+              "ToolTip": "C:\\Users\\horat\\Documents\\GitHub\\Algoholics\\Domain\\Aggregates\\UserAggregate\\Exceptions\\UserAccountException.cs",
+              "RelativeToolTip": "Domain\\Aggregates\\UserAggregate\\Exceptions\\UserAccountException.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-30T23:09:17.796Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 26,
               "Title": "ProductDetail.cs",
-              "DocumentMoniker": "C:\\Users\\batau\\Desktop\\PROIECTE\\Algoholics\\Domain\\Aggregates\\ProductAggregate\\Entities\\ProductDetail.cs",
+              "DocumentMoniker": "C:\\Users\\horat\\Documents\\GitHub\\Algoholics\\Domain\\Aggregates\\ProductAggregate\\Entities\\ProductDetail.cs",
               "RelativeDocumentMoniker": "Domain\\Aggregates\\ProductAggregate\\Entities\\ProductDetail.cs",
-              "ToolTip": "C:\\Users\\batau\\Desktop\\PROIECTE\\Algoholics\\Domain\\Aggregates\\ProductAggregate\\Entities\\ProductDetail.cs",
+              "ToolTip": "C:\\Users\\horat\\Documents\\GitHub\\Algoholics\\Domain\\Aggregates\\ProductAggregate\\Entities\\ProductDetail.cs",
               "RelativeToolTip": "Domain\\Aggregates\\ProductAggregate\\Entities\\ProductDetail.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAdAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -102,54 +522,39 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 31,
               "Title": "Product.cs",
-              "DocumentMoniker": "C:\\Users\\batau\\Desktop\\PROIECTE\\Algoholics\\Domain\\Aggregates\\ProductAggregate\\Entities\\Product.cs",
+              "DocumentMoniker": "C:\\Users\\horat\\Documents\\GitHub\\Algoholics\\Domain\\Aggregates\\ProductAggregate\\Entities\\Product.cs",
               "RelativeDocumentMoniker": "Domain\\Aggregates\\ProductAggregate\\Entities\\Product.cs",
-              "ToolTip": "C:\\Users\\batau\\Desktop\\PROIECTE\\Algoholics\\Domain\\Aggregates\\ProductAggregate\\Entities\\Product.cs",
+              "ToolTip": "C:\\Users\\horat\\Documents\\GitHub\\Algoholics\\Domain\\Aggregates\\ProductAggregate\\Entities\\Product.cs",
               "RelativeToolTip": "Domain\\Aggregates\\ProductAggregate\\Entities\\Product.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAcAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-30T23:04:49.734Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-10-30T23:04:49.734Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 28,
               "Title": "ApplicationDbContext.cs",
-              "DocumentMoniker": "C:\\Users\\batau\\Desktop\\PROIECTE\\Algoholics\\Infrastructure\\Data\\ApplicationDbContext.cs",
+              "DocumentMoniker": "C:\\Users\\horat\\Documents\\GitHub\\Algoholics\\Infrastructure\\Data\\ApplicationDbContext.cs",
               "RelativeDocumentMoniker": "Infrastructure\\Data\\ApplicationDbContext.cs",
-              "ToolTip": "C:\\Users\\batau\\Desktop\\PROIECTE\\Algoholics\\Infrastructure\\Data\\ApplicationDbContext.cs",
+              "ToolTip": "C:\\Users\\horat\\Documents\\GitHub\\Algoholics\\Infrastructure\\Data\\ApplicationDbContext.cs",
               "RelativeToolTip": "Infrastructure\\Data\\ApplicationDbContext.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-30T22:59:03.408Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-10-30T22:59:03.408Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 27,
               "Title": "ProductRepository.cs",
-              "DocumentMoniker": "C:\\Users\\batau\\Desktop\\PROIECTE\\Algoholics\\Infrastructure\\Repositories\\ProductRepository.cs",
+              "DocumentMoniker": "C:\\Users\\horat\\Documents\\GitHub\\Algoholics\\Infrastructure\\Repositories\\ProductRepository.cs",
               "RelativeDocumentMoniker": "Infrastructure\\Repositories\\ProductRepository.cs",
-              "ToolTip": "C:\\Users\\batau\\Desktop\\PROIECTE\\Algoholics\\Infrastructure\\Repositories\\ProductRepository.cs",
+              "ToolTip": "C:\\Users\\horat\\Documents\\GitHub\\Algoholics\\Infrastructure\\Repositories\\ProductRepository.cs",
               "RelativeToolTip": "Infrastructure\\Repositories\\ProductRepository.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAD8AAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-10-30T22:57:28.685Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "IProductRepository.cs",
-              "DocumentMoniker": "C:\\Users\\batau\\Desktop\\PROIECTE\\Algoholics\\Domain\\Aggregates\\ProductAggregate\\Repositories\\IProductRepository.cs",
-              "RelativeDocumentMoniker": "Domain\\Aggregates\\ProductAggregate\\Repositories\\IProductRepository.cs",
-              "ToolTip": "C:\\Users\\batau\\Desktop\\PROIECTE\\Algoholics\\Domain\\Aggregates\\ProductAggregate\\Repositories\\IProductRepository.cs",
-              "RelativeToolTip": "Domain\\Aggregates\\ProductAggregate\\Repositories\\IProductRepository.cs",
-              "ViewState": "AgIAAAkAAAAAAAAAAAAowBYAAAAWAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-30T22:56:13.689Z",
               "EditorCaption": ""
             }
           ]

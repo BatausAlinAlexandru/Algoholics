@@ -14,3 +14,12 @@ C:\Users\batau\Desktop\PROIECTE\Algoholics\Application\obj\Debug\net8.0\Applicat
 C:\Users\batau\Desktop\PROIECTE\Algoholics\Application\obj\Debug\net8.0\refint\Application.dll
 C:\Users\batau\Desktop\PROIECTE\Algoholics\Application\obj\Debug\net8.0\Application.pdb
 C:\Users\batau\Desktop\PROIECTE\Algoholics\Application\obj\Debug\net8.0\ref\Application.dll
+C:\Users\horat\Documents\GitHub\Algoholics\Application\obj\Debug\net8.0\Application.csproj.AssemblyReference.cache
+C:\Users\horat\Documents\GitHub\Algoholics\Application\obj\Debug\net8.0\Application.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\horat\Documents\GitHub\Algoholics\Application\obj\Debug\net8.0\Application.AssemblyInfoInputs.cache
+C:\Users\horat\Documents\GitHub\Algoholics\Application\obj\Debug\net8.0\Application.AssemblyInfo.cs
+C:\Users\horat\Documents\GitHub\Algoholics\Application\obj\Debug\net8.0\Application.csproj.CoreCompileInputs.cache
+C:\Users\horat\Documents\GitHub\Algoholics\Application\obj\Debug\net8.0\Application.sourcelink.json
+C:\Users\horat\Documents\GitHub\Algoholics\Application\obj\Debug\net8.0\Application.dll
+C:\Users\horat\Documents\GitHub\Algoholics\Application\obj\Debug\net8.0\refint\Application.dll
+C:\Users\horat\Documents\GitHub\Algoholics\Application\obj\Debug\net8.0\Application.pdb
