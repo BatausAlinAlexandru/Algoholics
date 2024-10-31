@@ -1,20 +1,24 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\horat\\Documents\\GitHub\\Algoholics\\Domain\\Domain.csproj": {}
+    "D:\\Facultate\\Proiect Colectiv\\Algoholics\\Algoholics\\Domain\\Domain.csproj": {}
   },
   "projects": {
-    "C:\\Users\\horat\\Documents\\GitHub\\Algoholics\\Domain\\Domain.csproj": {
+    "D:\\Facultate\\Proiect Colectiv\\Algoholics\\Algoholics\\Domain\\Domain.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\horat\\Documents\\GitHub\\Algoholics\\Domain\\Domain.csproj",
+        "projectUniqueName": "D:\\Facultate\\Proiect Colectiv\\Algoholics\\Algoholics\\Domain\\Domain.csproj",
         "projectName": "Domain",
-        "projectPath": "C:\\Users\\horat\\Documents\\GitHub\\Algoholics\\Domain\\Domain.csproj",
-        "packagesPath": "C:\\Users\\horat\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\horat\\Documents\\GitHub\\Algoholics\\Domain\\obj\\",
+        "projectPath": "D:\\Facultate\\Proiect Colectiv\\Algoholics\\Algoholics\\Domain\\Domain.csproj",
+        "packagesPath": "C:\\Users\\teodo\\.nuget\\packages\\",
+        "outputPath": "D:\\Facultate\\Proiect Colectiv\\Algoholics\\Algoholics\\Domain\\obj\\",
         "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
         "configFilePaths": [
-          "C:\\Users\\horat\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\teodo\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [

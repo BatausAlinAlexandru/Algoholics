@@ -1,13 +1,14 @@
 {
   "version": 2,
-  "dgSpecHash": "QJjCF+NBtYE=",
+  "dgSpecHash": "Oy4mXMAypC0=",
   "success": true,
-  "projectFilePath": "C:\\Users\\horat\\Documents\\GitHub\\Algoholics\\Application\\Application.csproj",
+  "projectFilePath": "D:\\Facultate\\Proiect Colectiv\\Algoholics\\Algoholics\\Application\\Application.csproj",
   "expectedPackageFiles": [
-    "C:\\Users\\horat\\.nuget\\packages\\csharpfunctionalextensions\\3.1.0\\csharpfunctionalextensions.3.1.0.nupkg.sha512",
-    "C:\\Users\\horat\\.nuget\\packages\\mediatr\\12.4.1\\mediatr.12.4.1.nupkg.sha512",
-    "C:\\Users\\horat\\.nuget\\packages\\mediatr.contracts\\2.0.1\\mediatr.contracts.2.0.1.nupkg.sha512",
-    "C:\\Users\\horat\\.nuget\\packages\\microsoft.extensions.dependencyinjection.abstractions\\8.0.2\\microsoft.extensions.dependencyinjection.abstractions.8.0.2.nupkg.sha512"
+    "C:\\Users\\teodo\\.nuget\\packages\\awssdk.core\\3.7.400.43\\awssdk.core.3.7.400.43.nupkg.sha512",
+    "C:\\Users\\teodo\\.nuget\\packages\\csharpfunctionalextensions\\3.1.0\\csharpfunctionalextensions.3.1.0.nupkg.sha512",
+    "C:\\Users\\teodo\\.nuget\\packages\\mediatr\\12.4.1\\mediatr.12.4.1.nupkg.sha512",
+    "C:\\Users\\teodo\\.nuget\\packages\\mediatr.contracts\\2.0.1\\mediatr.contracts.2.0.1.nupkg.sha512",
+    "C:\\Users\\teodo\\.nuget\\packages\\microsoft.extensions.dependencyinjection.abstractions\\8.0.2\\microsoft.extensions.dependencyinjection.abstractions.8.0.2.nupkg.sha512"
   ],
   "logs": []
 }

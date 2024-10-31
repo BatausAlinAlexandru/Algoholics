@@ -2,6 +2,19 @@
   "version": 3,
   "targets": {
     "net8.0": {
+      "AWSSDK.Core/3.7.400.43": {
+        "type": "package",
+        "compile": {
+          "lib/net8.0/AWSSDK.Core.dll": {
+            "related": ".pdb;.xml"
+          }
+        },
+        "runtime": {
+          "lib/net8.0/AWSSDK.Core.dll": {
+            "related": ".pdb;.xml"
+          }
+        }
+      },
       "CSharpFunctionalExtensions/3.1.0": {
         "type": "package",
         "compile": {
@@ -74,6 +87,35 @@
     }
   },
   "libraries": {
+    "AWSSDK.Core/3.7.400.43": {
+      "sha512": "1e9Tq2LBfGmD3C9bbkErz65jpatDu8oz1QQPU7MqxQWm6h12z6bOKL5udhvuqXknqtLBAh0+V1JTkAX0vOQZsw==",
+      "type": "package",
+      "path": "awssdk.core/3.7.400.43",
+      "hasTools": true,
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "awssdk.core.3.7.400.43.nupkg.sha512",
+        "awssdk.core.nuspec",
+        "images/AWSLogo.png",
+        "lib/net35/AWSSDK.Core.dll",
+        "lib/net35/AWSSDK.Core.pdb",
+        "lib/net35/AWSSDK.Core.xml",
+        "lib/net45/AWSSDK.Core.dll",
+        "lib/net45/AWSSDK.Core.pdb",
+        "lib/net45/AWSSDK.Core.xml",
+        "lib/net8.0/AWSSDK.Core.dll",
+        "lib/net8.0/AWSSDK.Core.pdb",
+        "lib/net8.0/AWSSDK.Core.xml",
+        "lib/netcoreapp3.1/AWSSDK.Core.dll",
+        "lib/netcoreapp3.1/AWSSDK.Core.pdb",
+        "lib/netcoreapp3.1/AWSSDK.Core.xml",
+        "lib/netstandard2.0/AWSSDK.Core.dll",
+        "lib/netstandard2.0/AWSSDK.Core.pdb",
+        "lib/netstandard2.0/AWSSDK.Core.xml",
+        "tools/account-management.ps1"
+      ]
+    },
     "CSharpFunctionalExtensions/3.1.0": {
       "sha512": "cLVWFoYqn7xI7LVAIgnxr1CNCPFjqM8Q5ya8pbYST1ZdDg6SZxEoyQx8tpe5hkib0+cVyruv82IUiKk3fMEG7w==",
       "type": "package",
@@ -165,6 +207,7 @@
   },
   "projectFileDependencyGroups": {
     "net8.0": [
+      "AWSSDK.Core >= 3.7.400.43",
       "CSharpFunctionalExtensions >= 3.1.0",
       "Domain >= 1.0.0",
       "MediatR >= 12.4.1",
@@ -172,19 +215,24 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\horat\\.nuget\\packages\\": {}
+    "C:\\Users\\teodo\\.nuget\\packages\\": {},
+    "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\horat\\Documents\\GitHub\\Algoholics\\Application\\Application.csproj",
+      "projectUniqueName": "D:\\Facultate\\Proiect Colectiv\\Algoholics\\Algoholics\\Application\\Application.csproj",
       "projectName": "Application",
-      "projectPath": "C:\\Users\\horat\\Documents\\GitHub\\Algoholics\\Application\\Application.csproj",
-      "packagesPath": "C:\\Users\\horat\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\horat\\Documents\\GitHub\\Algoholics\\Application\\obj\\",
+      "projectPath": "D:\\Facultate\\Proiect Colectiv\\Algoholics\\Algoholics\\Application\\Application.csproj",
+      "packagesPath": "C:\\Users\\teodo\\.nuget\\packages\\",
+      "outputPath": "D:\\Facultate\\Proiect Colectiv\\Algoholics\\Algoholics\\Application\\obj\\",
       "projectStyle": "PackageReference",
+      "fallbackFolders": [
+        "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+      ],
       "configFilePaths": [
-        "C:\\Users\\horat\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\teodo\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -199,8 +247,8 @@
         "net8.0": {
           "targetAlias": "net8.0",
           "projectReferences": {
-            "C:\\Users\\horat\\Documents\\GitHub\\Algoholics\\Domain\\Domain.csproj": {
-              "projectPath": "C:\\Users\\horat\\Documents\\GitHub\\Algoholics\\Domain\\Domain.csproj"
+            "D:\\Facultate\\Proiect Colectiv\\Algoholics\\Algoholics\\Domain\\Domain.csproj": {
+              "projectPath": "D:\\Facultate\\Proiect Colectiv\\Algoholics\\Algoholics\\Domain\\Domain.csproj"
             }
           }
         }
@@ -220,6 +268,10 @@
       "net8.0": {
         "targetAlias": "net8.0",
         "dependencies": {
+          "AWSSDK.Core": {
+            "target": "Package",
+            "version": "[3.7.400.43, )"
+          },
           "CSharpFunctionalExtensions": {
             "target": "Package",
             "version": "[3.1.0, )"
