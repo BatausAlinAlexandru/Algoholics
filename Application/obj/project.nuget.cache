@@ -1,13 +1,13 @@
 {
   "version": 2,
-  "dgSpecHash": "S4RmL51XIno=",
+  "dgSpecHash": "QJjCF+NBtYE=",
   "success": true,
-  "projectFilePath": "C:\\Users\\batau\\Desktop\\PROIECTE\\Algoholics\\Application\\Application.csproj",
+  "projectFilePath": "C:\\Users\\horat\\Documents\\GitHub\\Algoholics\\Application\\Application.csproj",
   "expectedPackageFiles": [
-    "C:\\Users\\batau\\.nuget\\packages\\csharpfunctionalextensions\\3.1.0\\csharpfunctionalextensions.3.1.0.nupkg.sha512",
-    "C:\\Users\\batau\\.nuget\\packages\\mediatr\\12.4.1\\mediatr.12.4.1.nupkg.sha512",
-    "C:\\Users\\batau\\.nuget\\packages\\mediatr.contracts\\2.0.1\\mediatr.contracts.2.0.1.nupkg.sha512",
-    "C:\\Users\\batau\\.nuget\\packages\\microsoft.extensions.dependencyinjection.abstractions\\8.0.2\\microsoft.extensions.dependencyinjection.abstractions.8.0.2.nupkg.sha512"
+    "C:\\Users\\horat\\.nuget\\packages\\csharpfunctionalextensions\\3.1.0\\csharpfunctionalextensions.3.1.0.nupkg.sha512",
+    "C:\\Users\\horat\\.nuget\\packages\\mediatr\\12.4.1\\mediatr.12.4.1.nupkg.sha512",
+    "C:\\Users\\horat\\.nuget\\packages\\mediatr.contracts\\2.0.1\\mediatr.contracts.2.0.1.nupkg.sha512",
+    "C:\\Users\\horat\\.nuget\\packages\\microsoft.extensions.dependencyinjection.abstractions\\8.0.2\\microsoft.extensions.dependencyinjection.abstractions.8.0.2.nupkg.sha512"
   ],
   "logs": []
 }

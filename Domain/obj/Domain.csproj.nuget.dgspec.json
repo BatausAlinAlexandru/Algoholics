@@ -1,24 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\batau\\Desktop\\PROIECTE\\Algoholics\\Domain\\Domain.csproj": {}
+    "C:\\Users\\horat\\Documents\\GitHub\\Algoholics\\Domain\\Domain.csproj": {}
   },
   "projects": {
-    "C:\\Users\\batau\\Desktop\\PROIECTE\\Algoholics\\Domain\\Domain.csproj": {
+    "C:\\Users\\horat\\Documents\\GitHub\\Algoholics\\Domain\\Domain.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\batau\\Desktop\\PROIECTE\\Algoholics\\Domain\\Domain.csproj",
+        "projectUniqueName": "C:\\Users\\horat\\Documents\\GitHub\\Algoholics\\Domain\\Domain.csproj",
         "projectName": "Domain",
-        "projectPath": "C:\\Users\\batau\\Desktop\\PROIECTE\\Algoholics\\Domain\\Domain.csproj",
-        "packagesPath": "C:\\Users\\batau\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\batau\\Desktop\\PROIECTE\\Algoholics\\Domain\\obj\\",
+        "projectPath": "C:\\Users\\horat\\Documents\\GitHub\\Algoholics\\Domain\\Domain.csproj",
+        "packagesPath": "C:\\Users\\horat\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\horat\\Documents\\GitHub\\Algoholics\\Domain\\obj\\",
         "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
-        ],
         "configFilePaths": [
-          "C:\\Users\\batau\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Users\\horat\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -65,7 +61,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.402/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.403/PortableRuntimeIdentifierGraph.json"
         }
       }
     }

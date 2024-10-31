@@ -4659,24 +4659,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\batau\\.nuget\\packages\\": {},
-    "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
+    "C:\\Users\\horat\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\batau\\Desktop\\PROIECTE\\Algoholics\\WebAPI\\WebAPI.csproj",
+      "projectUniqueName": "C:\\Users\\horat\\Documents\\GitHub\\Algoholics\\WebAPI\\WebAPI.csproj",
       "projectName": "WebAPI",
-      "projectPath": "C:\\Users\\batau\\Desktop\\PROIECTE\\Algoholics\\WebAPI\\WebAPI.csproj",
-      "packagesPath": "C:\\Users\\batau\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\batau\\Desktop\\PROIECTE\\Algoholics\\WebAPI\\obj\\",
+      "projectPath": "C:\\Users\\horat\\Documents\\GitHub\\Algoholics\\WebAPI\\WebAPI.csproj",
+      "packagesPath": "C:\\Users\\horat\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\horat\\Documents\\GitHub\\Algoholics\\WebAPI\\obj\\",
       "projectStyle": "PackageReference",
-      "fallbackFolders": [
-        "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
-      ],
       "configFilePaths": [
-        "C:\\Users\\batau\\AppData\\Roaming\\NuGet\\NuGet.Config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+        "C:\\Users\\horat\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -4691,11 +4686,11 @@
         "net8.0": {
           "targetAlias": "net8.0",
           "projectReferences": {
-            "C:\\Users\\batau\\Desktop\\PROIECTE\\Algoholics\\Application\\Application.csproj": {
-              "projectPath": "C:\\Users\\batau\\Desktop\\PROIECTE\\Algoholics\\Application\\Application.csproj"
+            "C:\\Users\\horat\\Documents\\GitHub\\Algoholics\\Application\\Application.csproj": {
+              "projectPath": "C:\\Users\\horat\\Documents\\GitHub\\Algoholics\\Application\\Application.csproj"
             },
-            "C:\\Users\\batau\\Desktop\\PROIECTE\\Algoholics\\Infrastructure\\Infrastructure.csproj": {
-              "projectPath": "C:\\Users\\batau\\Desktop\\PROIECTE\\Algoholics\\Infrastructure\\Infrastructure.csproj"
+            "C:\\Users\\horat\\Documents\\GitHub\\Algoholics\\Infrastructure\\Infrastructure.csproj": {
+              "projectPath": "C:\\Users\\horat\\Documents\\GitHub\\Algoholics\\Infrastructure\\Infrastructure.csproj"
             }
           }
         }
@@ -4749,7 +4744,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.402/PortableRuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.403/PortableRuntimeIdentifierGraph.json"
       }
     }
   }
