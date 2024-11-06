@@ -3,7 +3,7 @@ using CSharpFunctionalExtensions;
 using System.ComponentModel.DataAnnotations;
 using System.Text.Json.Serialization;
 
-namespace Application.Commands.UserAccountCredentials
+namespace Application.Commands.UserAccount
 {
     public class ModifyUserAccountEmailCommand : IRequest<Result>
     {

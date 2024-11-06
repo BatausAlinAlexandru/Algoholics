@@ -1,7 +1,6 @@
 ﻿using MediatR;
 using Microsoft.AspNetCore.Mvc;
 using Application.Commands.UserAccount;
-using Application.Commands.UserAccountCredentials;
 using Application.Queies.UserAccount;
 
 
@@ -35,9 +34,9 @@ namespace WebAPI.Controllers
         }
 
         [HttpPost]
-        public async Task<IActionResult> AddUserAccount(AddUserAccountCommand userAccount)
+        public async Task<IActionResult> AddUserAccount(RegisterUserAccountCommand userAccount)
         {
-            var command = new AddUserAccountCommand(userAccount.Email, userAccount.Password);
+            var command = new RegisterUserAccountCommand(userAccount.Email, userAccount.Password);
             var result = await _mediator.Send(command);
 
             if (result.IsSuccess)

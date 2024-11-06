@@ -4,7 +4,7 @@ using System.ComponentModel.DataAnnotations;
 
 namespace Application.Commands.UserAccount
 {
-    public class AddUserAccountCommand : IRequest<Result>
+    public class RegisterUserAccountCommand : IRequest<Result>
     {
         [Required]
         public string Email { get; set; }
@@ -12,7 +12,7 @@ namespace Application.Commands.UserAccount
         [Required]
         public string Password { get; set; }
 
-        public AddUserAccountCommand(string email, string password)
+        public RegisterUserAccountCommand(string email, string password)
         {
             Email = email;
             Password = password;

@@ -150,3 +150,4 @@ C:\Users\batau\Desktop\PROIECTE\Algoholics\WebAPI\bin\Debug\net8.0\zh-Hant\Micro
 C:\Users\batau\Desktop\PROIECTE\Algoholics\WebAPI\bin\Debug\net8.0\CSharpFunctionalExtensions.dll
 C:\Users\batau\Desktop\PROIECTE\Algoholics\WebAPI\bin\Debug\net8.0\MediatR.dll
 C:\Users\batau\Desktop\PROIECTE\Algoholics\WebAPI\bin\Debug\net8.0\MediatR.Contracts.dll
+C:\Users\batau\Desktop\PROIECTE\Algoholics\WebAPI\bin\Debug\net8.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll

@@ -6,6 +6,7 @@
         public string Name { set; get; }
         public float Price { set; get; }
         public string Description { set; get; }
+
         public ProductDetail(string name, float price, string description)
         {
             this.Name = name;

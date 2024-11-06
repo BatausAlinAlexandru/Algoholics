@@ -3,7 +3,7 @@ using CSharpFunctionalExtensions;
 using Domain.Aggregates.UserAggregate.Repositories;
 
 
-namespace Application.Commands.UserAccountCredentials
+namespace Application.Commands.UserAccount
 {
     public class ModifyUserAccountEmailHandler : IRequestHandler<ModifyUserAccountEmailCommand, Result>
     {
