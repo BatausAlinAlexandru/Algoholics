@@ -4,6 +4,7 @@ using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.IdentityModel.Tokens;
 using System.Text;
+using Domain.Aggregates.UserAggregate.Repositories;
 
 namespace Application
 {
@@ -37,6 +38,10 @@ namespace Application
             services.AddScoped<IAuthenticationService, AuthenticationService>();
             services.AddScoped<IJwtTokenGenerator, JwtTokenGenerator>();
             services.AddScoped<IPasswordHasher, PasswordHasher>();
+            services.AddScoped<IFileStorageService, LocalFileStorageService>();
+
+
+
 
 
             return services;

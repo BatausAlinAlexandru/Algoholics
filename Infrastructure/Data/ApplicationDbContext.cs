@@ -1,6 +1,6 @@
-﻿using Domain.Aggregates.OrderAggregate.Entities;
-using Domain.Aggregates.ProductAggregate.Entities;
+﻿using Domain.Aggregates.ProductAggregate.Entities;
 using Domain.Aggregates.UserAggregate.Entities;
+using Infrastructure.EntityConfigurations;
 using Microsoft.EntityFrameworkCore;
 
 namespace Infrastructure.Data
@@ -16,24 +16,11 @@ namespace Infrastructure.Data
         {
             base.OnModelCreating(modelBuilder);
 
-            modelBuilder.Entity<UserAccount>().ToTable("users");
-            modelBuilder.Entity<UserAccountCredentials>().ToTable("users_credentials");
-            modelBuilder.Entity<UserAccountSettings>().ToTable("users_settings");
+            modelBuilder.ApplyConfiguration(new UserAccountEntityTypeConfiguration());
+            modelBuilder.ApplyConfiguration(new UserAccountCredentialsEntityTypeConfiguration());
+            modelBuilder.ApplyConfiguration(new UserAccountInfoEntityTypeConfiguration());
+            modelBuilder.ApplyConfiguration(new UserAccountSettingsEntityTypeConfiguration());
 
-            modelBuilder.Entity<UserAccount>().HasKey(u => u.Id);
-            modelBuilder.Entity<UserAccountCredentials>().HasKey(u => u.Id);
-            modelBuilder.Entity<UserAccountCredentials>().HasIndex(c => c.Email).IsUnique();
-            modelBuilder.Entity<UserAccountSettings>().HasKey(s => s.Id);
-
-            modelBuilder.Entity<UserAccount>()
-                .HasOne(u => u.UserAccountCredentials)
-                .WithOne()
-                .HasForeignKey<UserAccountCredentials>(c => c.Id);
-
-            modelBuilder.Entity<UserAccount>()
-                .HasOne(u => u.UserAccountSettings)
-                .WithOne()
-                .HasForeignKey<UserAccountSettings>(s => s.Id);
 
             modelBuilder.Entity<Product>().ToTable("products");
             modelBuilder.Entity<ProductDetail>().ToTable("product_details");
@@ -45,17 +32,6 @@ namespace Infrastructure.Data
                 .HasOne(p => p.ProductDetail)
                 .WithOne()
                 .HasForeignKey<ProductDetail>(p => p.Id);
-
-         /*   modelBuilder.Entity<Order>().ToTable("orders");
-            modelBuilder.Entity<OrderDetail>().ToTable("order_details");
-
-            modelBuilder.Entity<Order>().HasKey(o => o.Id);
-            modelBuilder.Entity<OrderDetail>().HasKey(o => o.Id);
-
-            modelBuilder.Entity<Order>()
-                .HasOne(o => o.OrderDetails)
-                .WithOne()
-                .HasForeignKey<OrderDetail>(o => o.Id);*/
 
         }
     }

@@ -4,7 +4,8 @@
     {
         public UserAccountCredentials UserAccountCredentials { get; set; }
         public UserAccountSettings UserAccountSettings { get; set; }
-        
+        public UserAccountInfo UserAccountInfo { get; set; }
+
 
         public UserAccount() : base() { }
       
@@ -30,6 +31,18 @@
         {
             this.UserAccountSettings = new UserAccountSettings(emailNotifications, smsNotifications);
             this.UserAccountSettings.Id = this.Id;
+        }
+
+        public void AddUserAccountInfo(string sex, string alias)
+        {
+            this.UserAccountInfo = new UserAccountInfo(sex, alias);
+            this.UserAccountInfo.Id = this.Id;
+        }
+
+        public void AddUserAccountInfo(UserAccountInfo userAccountInfo)
+        {
+            this.UserAccountInfo = userAccountInfo;
+            this.UserAccountInfo.Id = this.Id;
         }
     }
 }

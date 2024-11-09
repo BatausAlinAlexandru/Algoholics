@@ -12,7 +12,7 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace Infrastructure.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    [Migration("20241030224344_initialcreate")]
+    [Migration("20241106164257_initialcreate")]
     partial class initialcreate
     {
         /// <inheritdoc />
@@ -75,11 +75,13 @@ namespace Infrastructure.Migrations
 
                     b.Property<string>("Email")
                         .IsRequired()
-                        .HasColumnType("nvarchar(450)");
+                        .HasMaxLength(50)
+                        .HasColumnType("nvarchar(50)");
 
                     b.Property<string>("Password")
                         .IsRequired()
-                        .HasColumnType("nvarchar(max)");
+                        .HasMaxLength(100)
+                        .HasColumnType("nvarchar(100)");
 
                     b.Property<int>("UserAccountRole")
                         .HasColumnType("int");
@@ -90,6 +92,28 @@ namespace Infrastructure.Migrations
                         .IsUnique();
 
                     b.ToTable("users_credentials", (string)null);
+                });
+
+            modelBuilder.Entity("Domain.Aggregates.UserAggregate.Entities.UserAccountInfo", b =>
+                {
+                    b.Property<Guid>("Id")
+                        .HasColumnType("uniqueidentifier");
+
+                    b.Property<string>("Alias")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Avatar")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Sex")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("users_info", (string)null);
                 });
 
             modelBuilder.Entity("Domain.Aggregates.UserAggregate.Entities.UserAccountSettings", b =>
@@ -126,6 +150,15 @@ namespace Infrastructure.Migrations
                         .IsRequired();
                 });
 
+            modelBuilder.Entity("Domain.Aggregates.UserAggregate.Entities.UserAccountInfo", b =>
+                {
+                    b.HasOne("Domain.Aggregates.UserAggregate.Entities.UserAccount", null)
+                        .WithOne("UserAccountInfo")
+                        .HasForeignKey("Domain.Aggregates.UserAggregate.Entities.UserAccountInfo", "Id")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+                });
+
             modelBuilder.Entity("Domain.Aggregates.UserAggregate.Entities.UserAccountSettings", b =>
                 {
                     b.HasOne("Domain.Aggregates.UserAggregate.Entities.UserAccount", null)
@@ -144,6 +177,9 @@ namespace Infrastructure.Migrations
             modelBuilder.Entity("Domain.Aggregates.UserAggregate.Entities.UserAccount", b =>
                 {
                     b.Navigation("UserAccountCredentials")
+                        .IsRequired();
+
+                    b.Navigation("UserAccountInfo")
                         .IsRequired();
 
                     b.Navigation("UserAccountSettings")

@@ -29,6 +29,7 @@ namespace Infrastructure.Repositories
             var userAccount = await _applicationDbContext.Users
                 .Include(u => u.UserAccountCredentials)
                 .Include(u => u.UserAccountSettings)
+                .Include(u => u.UserAccountInfo)
                 .FirstOrDefaultAsync(u => u.Id == idUserAccount);
 
             return userAccount;
@@ -40,7 +41,13 @@ namespace Infrastructure.Repositories
             try
             {
                 UserAccount UserAccount = new UserAccount();
+                UserAccountSettings userAccountSettings = new UserAccountSettings();
+                UserAccountInfo userAccountInfo = new UserAccountInfo();
+
                 UserAccount.AddUserAccountCredentials(userAccountCredentials);
+                UserAccount.AddUserAccountInfo(userAccountInfo);
+                UserAccount.AddUserAccountSettings(userAccountSettings);
+
                 _applicationDbContext.Users.Add(UserAccount);
                 await _applicationDbContext.SaveChangesAsync();
                 return true;
@@ -74,6 +81,7 @@ namespace Infrastructure.Repositories
             var userAccounts = _applicationDbContext.Users
                 .Include(u => u.UserAccountCredentials)
                 .Include(u => u.UserAccountSettings)
+                .Include(u => u.UserAccountInfo)
                 .ToList();
 
             return Task.FromResult(userAccounts);

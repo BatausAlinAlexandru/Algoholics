@@ -80,5 +80,28 @@ namespace WebAPI.Controllers
                 return BadRequest(result.Error);
             }
         }
+
+        [HttpPost("upload-avatar")]
+        public async Task<IActionResult> UploadUserAvatar(Guid userId, IFormFile avatar)
+        {
+            if (avatar == null || avatar.Length == 0)
+            {
+                return BadRequest("No file uploaded.");
+            }
+
+            var command = new UploadUserAccountAvatarCommand(userId, avatar);
+            var result = await _mediator.Send(command);
+
+            if (result)
+            {
+                return Ok();
+            }
+            else
+            {
+                return BadRequest();
+            }
+        }
+
+       
     }
 }

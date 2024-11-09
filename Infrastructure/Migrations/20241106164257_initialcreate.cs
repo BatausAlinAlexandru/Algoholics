@@ -58,8 +58,8 @@ namespace Infrastructure.Migrations
                 columns: table => new
                 {
                     Id = table.Column<Guid>(type: "uniqueidentifier", nullable: false),
-                    Email = table.Column<string>(type: "nvarchar(450)", nullable: false),
-                    Password = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    Email = table.Column<string>(type: "nvarchar(50)", maxLength: 50, nullable: false),
+                    Password = table.Column<string>(type: "nvarchar(100)", maxLength: 100, nullable: false),
                     UserAccountRole = table.Column<int>(type: "int", nullable: false)
                 },
                 constraints: table =>
@@ -67,6 +67,26 @@ namespace Infrastructure.Migrations
                     table.PrimaryKey("PK_users_credentials", x => x.Id);
                     table.ForeignKey(
                         name: "FK_users_credentials_users_Id",
+                        column: x => x.Id,
+                        principalTable: "users",
+                        principalColumn: "Id",
+                        onDelete: ReferentialAction.Cascade);
+                });
+
+            migrationBuilder.CreateTable(
+                name: "users_info",
+                columns: table => new
+                {
+                    Id = table.Column<Guid>(type: "uniqueidentifier", nullable: false),
+                    Sex = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    Alias = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    Avatar = table.Column<string>(type: "nvarchar(max)", nullable: false)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_users_info", x => x.Id);
+                    table.ForeignKey(
+                        name: "FK_users_info_users_Id",
                         column: x => x.Id,
                         principalTable: "users",
                         principalColumn: "Id",
@@ -107,6 +127,9 @@ namespace Infrastructure.Migrations
 
             migrationBuilder.DropTable(
                 name: "users_credentials");
+
+            migrationBuilder.DropTable(
+                name: "users_info");
 
             migrationBuilder.DropTable(
                 name: "users_settings");
