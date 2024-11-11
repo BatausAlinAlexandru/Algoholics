@@ -28,4 +28,8 @@ export class LoginComponent {
     }
   }
 
+  redirectToSignUp() {
+    this.router.navigate(['/signup']);
+  }
+
 }
