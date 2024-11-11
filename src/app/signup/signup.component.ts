@@ -25,5 +25,7 @@ export class SignupComponent {
       alert('Email already in use');
     }
   }
-
+  redirectToLogin(){
+    this.router.navigate(['/login']);
+  }
 }

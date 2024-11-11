@@ -24,7 +24,7 @@
   }
   
   input {
-    width: 100%;
+    width: 90%;
     padding: 10px;
     border: 2px solid #FF9E44;
     border-radius: 5px;
@@ -49,6 +49,7 @@
     margin-top: 20px;
     color: #8B2E57;
     text-decoration: none;
+    cursor: pointer;
   }
   
   .link:hover {
