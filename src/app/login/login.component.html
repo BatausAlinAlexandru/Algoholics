@@ -1,16 +1,18 @@
-<div class="login-container">
+<div class="app-container">
+  <div class="login-container">
     <h2>Login</h2>
     <form (ngSubmit)="onLogin()">
       <div>
         <label>Email:</label>
-        <input type="email" [(ngModel)]="email" name="email" required />
-      </div>
+          <input type="email" [(ngModel)]="email" name="email" required />
+        </div>
       <div>
         <label>Parolă:</label>
-        <input type="password" [(ngModel)]="password" name="password" required />
+        <input type="password" [(ngModel)]="password" name="password" required  />
       </div>
-      <button type="submit">Login</button>
+      <button type="submit" class="button_margin">Login</button>
     </form>
-    <a routerLink="/signup" class='link'>Nu ai cont? Creează unul aici</a>
+    <a (click)="redirectToSignUp()" class='link'>Nu ai cont? Creează unul aici</a>
   </div>
+</div>
   

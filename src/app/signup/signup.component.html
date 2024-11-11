@@ -1,3 +1,4 @@
+<div class="app-container">
 <div class="signup-container">
     <h2>Sign Up</h2>
     <form (ngSubmit)="onSignup()">
@@ -15,6 +16,7 @@
       </div>
       <button type="submit">Sign Up</button>
     </form>
-    <a routerLink="/login" class='link'>Ai deja un cont? Loghează-te aici</a>
+    <a (click)="redirectToLogIn()" class='link'>Ai deja un cont? Loghează-te aici</a>
   </div>
+</div>
   
