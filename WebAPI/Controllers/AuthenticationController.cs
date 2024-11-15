@@ -22,7 +22,6 @@ namespace WebAPI.Controllers
 
             if (result.IsSuccess)
             {
-                // Assuming result is of type Result<LoginResponse> where LoginResponse contains the Token property
                 return Ok(new { Token = result.Value });
             }
             else
