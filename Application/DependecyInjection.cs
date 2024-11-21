@@ -5,6 +5,7 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.IdentityModel.Tokens;
 using System.Text;
 using Domain.Aggregates.UserAggregate.Repositories;
+using System.Security.Claims;
 
 namespace Application
 {
@@ -30,6 +31,7 @@ namespace Application
                     ValidateLifetime = true,
                     ValidateIssuerSigningKey = true,
                     IssuerSigningKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes("anubis-secret-key-testing-in-production")),
+                    RoleClaimType = ClaimTypes.Role,
                     ValidIssuer = "localhost",
                     ValidAudience = "localhost"
                 };

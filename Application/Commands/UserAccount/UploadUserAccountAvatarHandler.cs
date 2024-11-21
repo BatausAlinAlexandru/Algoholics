@@ -22,12 +22,17 @@ namespace Application.Commands.UserAccount
             if (user == null)
                 return false;
 
-            var folder = "avatars";
-            var avatarFileName = $"{user.Id}_{request.AvatarFile.FileName}";
+            var fileExtension = Path.GetExtension(request.AvatarFile.FileName);
 
+            if (string.IsNullOrWhiteSpace(fileExtension))
+                return false;
+            var folder = "avatars";
+            var avatarFileName = $"{user.Id}{fileExtension}";
+
+            await _fileStorageService.DeleteFileAsync(folder, user.UserAccountInfo.Avatar);
 
             var avatarFilePath = await _fileStorageService.SaveFileAsync(folder, avatarFileName, request.AvatarFile);
-            if(string.IsNullOrWhiteSpace(avatarFilePath))
+            if (string.IsNullOrWhiteSpace(avatarFilePath))
                 return false;
             user.UserAccountInfo.Avatar = avatarFilePath;
             await _userAccountRepository.SaveUserAccountAsync();

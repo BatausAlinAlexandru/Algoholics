@@ -1,5 +1,4 @@
-﻿using Domain.Aggregates.UserAggregate.Repositories;
-using MediatR;
+﻿using MediatR;
 using CSharpFunctionalExtensions;
 using Application.Services.Interfaces;
 

@@ -2,6 +2,8 @@
 using Microsoft.AspNetCore.Mvc;
 using Application.Commands.UserAccount;
 using Application.Queies.UserAccount;
+using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Authentication.JwtBearer;
 
 
 namespace WebAPI.Controllers
@@ -18,8 +20,10 @@ namespace WebAPI.Controllers
         }
 
         [HttpGet]
+        [Authorize(AuthenticationSchemes = JwtBearerDefaults.AuthenticationScheme, Roles = "User")]
         public async Task<IActionResult> GetUserAccount()
         {
+
             var command = new GetAllUserAccountsQuery();
             var result = await _mediator.Send(command);
 
