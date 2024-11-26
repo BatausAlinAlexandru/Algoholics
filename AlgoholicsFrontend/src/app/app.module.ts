@@ -10,6 +10,9 @@ import { FooterComponent } from './components/footer/footer.component';
 import { CartComponent } from './components/cart/cart.component';
 import { CheckoutComponent } from './components/checkout/checkout.component';
 import { HttpClientModule } from '@angular/common/http';
+//import { AccountComponent } from '../components/account/account.component';
+import { LoginComponent } from './components/account/login/login.component';
+import { SignupComponent } from './components/account/signup/signup.component';
 
 @NgModule({
   declarations: [
@@ -19,7 +22,10 @@ import { HttpClientModule } from '@angular/common/http';
     HeaderComponent,
     FooterComponent,
     CartComponent,
-    CheckoutComponent
+    CheckoutComponent,
+    //AccountComponent,
+    LoginComponent,
+    SignupComponent
   ],
   imports: [
     BrowserModule,
