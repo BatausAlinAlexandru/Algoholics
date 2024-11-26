@@ -1,0 +1,76 @@
+.login-container {
+  max-width: 30vh;
+  max-height: 45vh;
+  width: 55vh;
+  height: 26vh;
+  z-index: 1;
+  margin: 50px auto;
+  padding: 20px;
+  border-radius: 10px;
+  backdrop-filter: blur(10px);
+  /* background: #FFD143; */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+  text-align: center;
+  position: relative;
+}
+
+h2 {
+  color: black;
+}
+
+form div {
+  margin-bottom: 15px;
+}
+
+label {
+  display: block;
+  font-weight: bold;
+  margin-bottom: 5px;
+  color: black;
+}
+
+input {
+  width: 75%;
+  padding: 10px;
+  border: 2px solid #FF9E44;
+  border-radius: 5px;
+}
+
+button {
+  background-color: #FF7443;
+  width: 45%;
+  color: white;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+  button:hover {
+    background-color: #B63C47;
+  }
+
+.link {
+  display: block;
+  margin-top: 15px;
+  margin-bottom: 10px;
+  color: #8B2E57;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+  .link:hover {
+    text-decoration: underline;
+  }
+
+.app-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  width: 100vw;
+  /* background: url('C:/Users/horat/Documents/GitHub/AlgoholicsFrontend/src/assets/blurry-gradient-haikei.svg') no-repeat center center fixed; */
+  background: url('../../../../public/assets/img/692753f487446.png') no-repeat center center fixed;
+  background-size: cover;
+}
