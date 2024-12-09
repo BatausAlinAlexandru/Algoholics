@@ -1,8 +1,8 @@
 .login-container {
-  max-width: 30vh;
+  max-width: 60vh;
   max-height: 45vh;
-  width: 55vh;
-  height: 26vh;
+  width: 100vh;
+  height: 70vh;
   z-index: 1;
   margin: 50px auto;
   padding: 20px;
