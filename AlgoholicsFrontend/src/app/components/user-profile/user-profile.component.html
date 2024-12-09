@@ -4,19 +4,21 @@
   <div class="profile-image">
     <img src="/assets/img/userphoto.png" alt="Fotografie de profil">
   </div>
+
   <!-- profile info -->
   <div class="profile-info">
     <h2>First Name: Ion</h2>
     <h2>Last Name: Popescu</h2>
     <p class="email">Email: ion.popescu&#64;example.com</p>
     <p class="password">Password: parolaSite123</p>
-    <!-- /profile info -->
   </div>
+  <!-- /profile info -->
+
   <!-- profile action - buttons -->
   <div class="profile-actions">
-    <button class="edit-profile-btn">Edit profile</button>
+    <button class="edit-profile-btn" [routerLink]="['/edit-user-profile']">Edit Profile</button>
     <button class="delete-profile-btn">Delete account</button>
-    <!-- /profile action - buttons -->
   </div>
-  <!-- /container -->
+  <!-- /profile action - buttons -->
 </div>
+<!-- /container -->

@@ -5,13 +5,16 @@ body {
   font-family: 'Montserrat', sans-serif;
   background-color: #8B2E57;
   display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100vh;
+  justify-content: center; 
+  align-items: center; 
+  height: 100vh; 
+  flex-direction: column; 
 }
 
 /* stilul container-ului */
-.container {
+.edit-container {
+  margin-top: 70px;
+  margin-bottom: 70px;
   background-color: #ffffff;
   border-radius: 10px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
@@ -19,74 +22,17 @@ body {
   width: 90%;
   max-width: 400px;
   text-align: center;
-}
-
-/* stilul titlurilor */
-h1,
-h2 {
-  margin-bottom: 20px;
-  font-size: 24px;
-}
-
-h1 {
-  color: #FF7443;
+  margin-left: 510px;
 }
 
 h2 {
-  font-family: 'Fjalla One', sans-serif;
+  font-family: 'Montserrat', sans-serif;
   font-size: 24px;
   font-weight: 400;
-  text-transform: uppercase;
-  color: #4d4d4d;
-}
-
-/* stilul textului */
-p {
-  color: #333333;
-  font-size: 16px;
+  text-transform: none;
+  color: #FF7443;
   margin-bottom: 20px;
-}
-
-.email {
-  padding-top: 20px;
-}
-
-.password {
-  text-align: left;
-  margin: 0;
-  margin-left: 63px;
-}
-
-/* butoane */
-.profile-actions {
-  display: flex;
-  justify-content: center;
-  gap: 15px;
-  margin-top: 45px;
-}
-
-button {
-  background-color: #FF7443;
-  color: #ffffff;
-  border: none;
-  border-radius: 5px;
-  padding: 13px 15px;
-  font-size: 14px;
-  cursor: pointer;
-  transition: background-color 0.3s ease;
-}
-
-  button:hover {
-    background-color: #8B2E57;
-  }
-
-/* imaginea profilului */
-.profile-image img {
-  width: 100px;
-  height: 100px;
-  border-radius: 50%;
-  display: block;
-  margin: 0 auto;
+  font-weight: bold;
 }
 
 /* stilul form-ului */
@@ -98,7 +44,7 @@ form {
 
 label {
   font-size: 14px;
-  color: white;
+  color: #333333;
   text-align: left;
   font-weight: bold;
 }
@@ -114,50 +60,32 @@ input[type="password"] {
   border-radius: 5px;
 }
 
-form button {
+button {
   background-color: #FF7443;
   color: #ffffff;
   border: none;
   border-radius: 5px;
-  margin-left: 70px;
-  margin-right: 40px;
   padding: 13px 15px;
   font-size: 14px;
   cursor: pointer;
   transition: background-color 0.3s ease;
+  margin-top: 15px;
 }
 
-.edit-container {
-  h2
-
-{
-  color: #FF7443;
-  font-weight: bold;
-  font-family: 'Montserrat', sans-serif;
-  text-transform: none;
-}
-
-#profile-picture {
-  color: lightgray;
-}
-
-button:hover {
-  border: 1px solid white;
-  background-color: #8B2E57;
-}
-
-}
+  button:hover {
+    background-color: #8B2E57;
+  }
 
 /* design responsive */
 @media (min-width: 768px) {
-  .container {
+  .edit-container {
     width: 50%;
     max-width: 400px;
   }
 }
 
 @media (max-width: 480px) {
-  .container {
+  .edit-container {
     padding: 30px 15px;
   }
 

@@ -626,39 +626,60 @@ textarea.input {
 }
 
 /*----------------------------*\
-	Main nav
+    Main navigation
 \*----------------------------*/
 
-.main-nav>li+li {
-  margin-left: 30px
+.main-nav {
+  display: flex; 
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center; 
+  list-style: none; 
+  padding: 0; 
+  margin: 0;
 }
 
-.main-nav>li>a {
-  padding: 20px 0px;
+.main-nav > li {
+  margin-left: 30px;
 }
 
-.main-nav>li>a:hover, .main-nav>li>a:focus, .main-nav>li.active>a {
-  color: #8B2E57;
+.main-nav > li:first-child {
+  margin-left: 0;
+}
+
+.main-nav > li > a {
+  text-decoration: none;
+  color: black; 
+  padding: 11px 15px; 
+  display: block;
+}
+
+.main-nav > li > a:hover,
+.main-nav > li > a:focus,
+.main-nav > li.active > a {
+  color: #8B2E57; 
   background-color: transparent;
 }
 
-.main-nav>li>a:after {
+.main-nav > li > a:after {
   content: "";
   display: block;
   width: 0%;
   height: 2px;
   background-color: #8B2E57;
-  -webkit-transition: 0.2s all;
   transition: 0.2s all;
 }
 
-.main-nav>li>a:hover:after, .main-nav>li>a:focus:after, .main-nav>li.active>a:after {
+.main-nav > li > a:hover:after,
+.main-nav > li > a:focus:after,
+.main-nav > li.active > a:after {
   width: 100%;
 }
 
 .header-ctn li.nav-toggle {
   display: none;
 }
+
 
 /*----------------------------*\
 	responsive nav
