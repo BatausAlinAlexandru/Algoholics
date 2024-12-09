@@ -33,21 +33,8 @@ namespace Infrastructure.EntityConfigurations.ProductEntityTypeConfigurations
             builder.Property(p => p.PhotoUrl)
                 .HasMaxLength(500);
 
-            // Configurare pentru ProductCategory (Owned Type)
-            builder.OwnsOne(p => p.ProductCategory, pc =>
-            {
-                pc.Property(c => c.Name)
-                    .IsRequired()
-                    .HasMaxLength(100)
-                    .HasColumnName("CategoryName"); // Coloana în tabel
-
-                pc.Property(c => c.Description)
-                    .HasMaxLength(500)
-                    .HasColumnName("CategoryDescription"); // Coloana în tabel
-            });
-
             // Configurare pentru ProductSpecifications (Owned Collection)
-            builder.OwnsMany(p => p.productSpecifications, ps =>
+            builder.OwnsMany(p => p.ProductSpecifications, ps =>
             {
                 ps.Property(s => s.Key)
                     .IsRequired()

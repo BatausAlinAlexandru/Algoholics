@@ -1,4 +1,5 @@
 ﻿using Domain.Aggregates.CategoryAggregate.Entities;
+using Domain.Aggregates.OrderAggregate.Entities;
 using Domain.Aggregates.ProductAggregate.Entities;
 using Domain.Aggregates.UserAggregate.Entities;
 using Infrastructure.EntityConfigurations.CategoryEntityTypeConfigurations;
@@ -12,6 +13,7 @@ namespace Infrastructure.Data
     {
         public DbSet<UserAccount> Users { get; set; }
         public DbSet<Product> Products { get; set; }
+        public DbSet<Order> Orders { get; set; }
         public DbSet<Category> Categories { get; set; }
         public DbSet<FilterGroup> FilterGroups { get; set; }
         public DbSet<FilterValue> FilterValues { get; set; }

@@ -24,5 +24,10 @@ namespace Domain.Aggregates.UserAggregate.Entities
         {
             this.Password = password;
         }
+
+        public void UpdateRole(UserAccountRole role)
+        {
+            this.UserAccountRole = role;
+        }
     }
 }

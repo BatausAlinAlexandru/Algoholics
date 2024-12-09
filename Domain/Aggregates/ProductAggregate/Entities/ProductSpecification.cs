@@ -13,8 +13,8 @@
             if (string.IsNullOrEmpty(value))
                 throw new ArgumentNullException(nameof(value));
 
-            this.Key = key;
-            this.Value = value;
+            Key = key;
+            Value = value;
         }
     }
 }

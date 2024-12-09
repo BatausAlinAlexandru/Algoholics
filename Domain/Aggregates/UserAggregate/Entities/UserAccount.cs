@@ -1,4 +1,6 @@
-﻿namespace Domain.Aggregates.UserAggregate.Entities
+﻿using Domain.Aggregates.UserAggregate.Value_Objects;
+
+namespace Domain.Aggregates.UserAggregate.Entities
 {
     public class UserAccount : BaseEntity,  IAggregateRoot
     {
@@ -33,9 +35,9 @@
             this.UserAccountSettings.Id = this.Id;
         }
 
-        public void AddUserAccountInfo(string sex, string alias)
+        public void AddUserAccountInfo(UserAccountGender userAccountGender, string alias)
         {
-            this.UserAccountInfo = new UserAccountInfo(sex, alias);
+            this.UserAccountInfo = new UserAccountInfo(userAccountGender, alias);
             this.UserAccountInfo.Id = this.Id;
         }
 

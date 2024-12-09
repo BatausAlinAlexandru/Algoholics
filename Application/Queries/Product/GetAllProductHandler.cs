@@ -1,5 +1,5 @@
-﻿using Application.DTO;
-using Domain.Aggregates.ProductAggregate.Repositories;
+﻿using Domain.Aggregates.ProductAggregate.Repositories;
+using Application.DTO;
 using MediatR;
 
 namespace Application.Queies.Product
@@ -23,8 +23,10 @@ namespace Application.Queies.Product
                 Discount = p.Discount,
                 Price = p.Price,
                 ImageUrl = p.PhotoUrl,
-                ProductCategory = p.ProductCategory,
-                ProductSpecifications = p.productSpecifications.Select(ps => new ProductSpecificationDTO
+                IdCtegory = p.IdCategory,
+                IdSubcategory = p.IdSubcategory,
+                Filters = p.Filters,
+                ProductSpecifications = p.ProductSpecifications.Select(ps => new ProductSpecificationDTO
                 {
                     Name = ps.Key,
                     Value = ps.Value

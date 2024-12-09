@@ -1,4 +1,6 @@
-﻿namespace Domain.Aggregates.ProductAggregate.Entities
+﻿using Domain.Aggregates.CategoryAggregate.Entities;
+
+namespace Domain.Aggregates.ProductAggregate.Entities
 {
     public class Product : BaseEntity, IAggregateRoot
     {
@@ -8,12 +10,51 @@
         public int Stock { get; set; }
         public int Discount { get; set; }
         public string PhotoUrl { get; set; }
-        public ProductCategory ProductCategory { get; set; }
-        public List<ProductSpecification> productSpecifications { get; set; } = new List<ProductSpecification>();
+        public Guid IdCategory { get; set; }
+        public Guid IdSubcategory { get; set; }
+        public List<FilterGroup> Filters { get; set; }
+
+        public void AddFilter(FilterGroup filter)
+        {
+            if (filter == null)
+                throw new ArgumentNullException(nameof(filter), "Filter cannot be null.");
+            if (Filters.Any(f => f.Id == filter.Id))
+                throw new InvalidOperationException("Filter is already associated with this product.");
+            Filters.Add(filter);
+        }
+
+        public void AddFilterValue(Guid idFilterGroup, FilterValue filterValue)
+        {
+            if (filterValue == null)
+                throw new ArgumentNullException(nameof(filterValue), "Filter cannot be null.");
+            if (Filters.Any(f => f.Values.Any(v => v.Id == filterValue.Id)))
+                throw new InvalidOperationException("Filter is already associated with this product.");
+            Filters.First(f => f.Id == idFilterGroup).AddFilterValue(filterValue);
+        }
+
+        public void RemoveFilterValue(Guid idFilterGroup, FilterValue filterValue)
+        {
+            if (filterValue == null)
+                throw new ArgumentNullException(nameof(filterValue), "Filter cannot be null.");
+            if (!Filters.Any(f => f.Values.Any(v => v.Id == filterValue.Id)))
+                throw new InvalidOperationException("Filter does not exist in this product.");
+            Filters.First(f => f.Id == idFilterGroup).RemoveFilter(filterValue);
+        }
+
+        public void RemoveFilter(FilterGroup filter)
+        {
+            if (filter == null)
+                throw new ArgumentNullException(nameof(filter), "Filter cannot be null.");
+            if (!Filters.Remove(filter))
+                throw new InvalidOperationException("Filter does not exist in this product.");
+        }
+
+        public List<ProductSpecification> ProductSpecifications { get; set; } = new List<ProductSpecification>();
 
         public Product() { }
 
-        public Product(string name, float price, string description, int stock, string photoUrl, ProductCategory productCategory)
+        public Product(string name, float price, string description, int stock, int discount, string photoUrl, Guid idCategory, Guid idSubcategory,
+            List<FilterGroup> filterGroups, List<ProductSpecification> productSpecifications)
         {
             if (string.IsNullOrEmpty(name))
                 throw new ArgumentException("Numele produsului nu poate fi gol.");
@@ -28,10 +69,14 @@
             Stock = stock;
             Discount = 0;
             PhotoUrl = photoUrl;
-            ProductCategory = productCategory;
+            IdCategory = idCategory;
+            IdSubcategory = idSubcategory;
+            Filters = filterGroups;
+            ProductSpecifications = productSpecifications;
         }
 
-        public void UpdateProduct(string name, float price, string description, int stock, string photoUrl, ProductCategory productCategory)
+        public void UpdateProduct(Guid idProduct, string name, float price, string description, int stock, int discount, string photoUrl, Guid idCategory, Guid idSubcategory, 
+            List<FilterGroup> filterGroups, List<ProductSpecification> productSpecifications) 
         {
             if (string.IsNullOrEmpty(name))
                 throw new ArgumentException("Numele produsului nu poate fi gol.");
@@ -44,18 +89,22 @@
             Price = price;
             Description = description;
             Stock = stock;
+            Discount = discount;
             PhotoUrl = photoUrl;
-            ProductCategory = productCategory;
+            IdCategory = idCategory;
+            IdSubcategory = idSubcategory;
+            Filters = filterGroups;
+            ProductSpecifications = productSpecifications;
         }
 
         public void AddProductSpecification(ProductSpecification productSpecification)
         {
-            this.productSpecifications.Add(productSpecification);
+            ProductSpecifications.Add(productSpecification);
         }
 
         public void DeleteProductSpecification(ProductSpecification productSpecification)
         {
-            this.productSpecifications.Remove(productSpecification);
+            ProductSpecifications.Remove(productSpecification);
         }
     }
 }

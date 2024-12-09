@@ -2,9 +2,6 @@
 using Microsoft.AspNetCore.Mvc;
 using Application.Commands.UserAccount;
 using Application.Queies.UserAccount;
-using Microsoft.AspNetCore.Authorization;
-using Microsoft.AspNetCore.Authentication.JwtBearer;
-
 
 namespace WebAPI.Controllers
 {
@@ -20,7 +17,7 @@ namespace WebAPI.Controllers
         }
 
         [HttpGet("get-users")]
-        [Authorize(AuthenticationSchemes = JwtBearerDefaults.AuthenticationScheme, Roles = "User")]
+        //[Authorize(AuthenticationSchemes = JwtBearerDefaults.AuthenticationScheme, Roles = "User")]
         public async Task<IActionResult> GetUserAccount()
         {
 
@@ -53,7 +50,7 @@ namespace WebAPI.Controllers
             }
         }
 
-        [HttpDelete]
+        [HttpDelete("{Id}")]
         public async Task<IActionResult> DeleteUserAccount(Guid id)
         {
             var command = new DeleteUserAccountCommand(id);
@@ -69,9 +66,10 @@ namespace WebAPI.Controllers
             }
         }
 
-        [HttpPut]
+        [HttpPut()]
         public async Task<IActionResult> UpdateUserAccountEmail(ModifyUserAccountEmailCommand userAccount)
         {
+
             var command = new ModifyUserAccountEmailCommand(userAccount.Id, userAccount.Email);
             var result = await _mediator.Send(command);
 

@@ -1,4 +1,5 @@
-﻿using Domain.Aggregates.ProductAggregate.Entities;
+﻿using CSharpFunctionalExtensions;
+using Domain.Aggregates.ProductAggregate.Entities;
 using Domain.Aggregates.ProductAggregate.Repositories;
 using Infrastructure.Data;
 using Microsoft.EntityFrameworkCore;
@@ -14,15 +15,13 @@ namespace Infrastructure.Repositories
             _applicationDbContext = applicationDbContext;
         }
 
-        public async Task<bool> AddProductAsync(Product p)
+        public async Task<Result> AddProductAsync(Product p)
         {
             try
             {
-                /*Product product = new Product();
-                product(p);
-                await _applicationDbContext.Products.AddAsync(product);
-                return true;*/
-                return true;
+                await _applicationDbContext.Products.AddAsync(p);
+                await _applicationDbContext.SaveChangesAsync();
+                return Result.Success();
             }
             catch (Exception ex)
             {
@@ -31,7 +30,39 @@ namespace Infrastructure.Repositories
            
         }
 
-        public async Task<bool> DeleteProductAsync(Guid idProduct)
+        public async Task<Result> UpdateProductAsync(Product newProduct)
+        {
+            try
+            {
+                var productToUpdate = await _applicationDbContext.Products.FindAsync(newProduct.Id);
+                if (productToUpdate is null)
+                {
+                    return Result.Failure("Product not found.");
+                }
+                productToUpdate.UpdateProduct(
+                    newProduct.Id,
+                    newProduct.Name,
+                    newProduct.Price,
+                    newProduct.Description,
+                    newProduct.Stock,
+                    newProduct.Discount,
+                    newProduct.PhotoUrl,
+                    newProduct.IdCategory,
+                    newProduct.IdSubcategory,
+                    newProduct.Filters,
+                    newProduct.ProductSpecifications
+                );
+
+                await _applicationDbContext.SaveChangesAsync();
+                return Result.Success();
+            }
+            catch (Exception ex)
+            {
+                throw new Exception("An error occured while updating the product.", ex);
+            }
+        }
+
+        public async Task<Result> DeleteProductAsync(Guid idProduct)
         {
             try
             {
@@ -40,9 +71,9 @@ namespace Infrastructure.Repositories
                 {
                     _applicationDbContext.Products.Remove(product);
                     await _applicationDbContext.SaveChangesAsync();
-                    return true;
+                    return Result.Success();
                 }
-                return false;
+                return Result.Failure("Nu am adaugat produs in baza de date.");
             }
             catch (Exception ex)
             {
@@ -60,26 +91,6 @@ namespace Infrastructure.Repositories
             var product = await _applicationDbContext.Products.FindAsync(idProduct);
 
             return product;
-        }
-
-
-        public async Task<bool> ModifyProductDetailsAsync(Guid idProduct, Product product)
-        {
-            try
-            {
-                /*var product = await _applicationDbContext.Products.FindAsync(idProduct);
-                if(product is not null)
-                {
-                    product.ProductDetail = productDetail;
-                    await _applicationDbContext.SaveChangesAsync();
-                    return true;
-                }*/
-                return false;
-            }
-            catch (Exception ex)
-            {
-                throw new Exception("An error occurred while attempting to modify the product.", ex);
-            }
         }
     }
 }

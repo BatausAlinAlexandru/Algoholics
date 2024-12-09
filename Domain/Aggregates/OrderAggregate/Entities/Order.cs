@@ -4,43 +4,29 @@ namespace Domain.Aggregates.OrderAggregate.Entities
 {
     public class Order : BaseEntity, IAggregateRoot
     {
-        public List<OrderDetail> OrderDetails { get; set; } = new List<OrderDetail>();
-        public DateTime OrderDate { get; set; }
-        public decimal OrderTotalPrice { get; set; }
-        public OrderStatus OrderStatus { get; set; } = OrderStatus.Pending;
-
-        public Order() { }
-
-        public Order(List<OrderDetail> orderDetails, OrderStatus orderStatus)
+        public Guid UserId { get; set; }
+        public List<OrderProductDetail> ProductsToOrder { get; set; }
+        public OrderStatus Status { get; set; }
+        public DateTime OrderDate { get; set; } = DateTime.Now;
+        public float TotalPrice { get; set; }
+        public Order()
         {
-            OrderDetails = orderDetails;
-            OrderDate = DateTime.Now;
-            OrderTotalPrice = CalculateTotalPrice();
-            OrderStatus = orderStatus;
+            ProductsToOrder = new List<OrderProductDetail>();
         }
 
-        public void AddOrderDetail(OrderDetail orderDetail)
+        public Order(Guid userId, List<OrderProductDetail> productsToOrder, float totalPrice)
         {
-            this.OrderDetails.Add(orderDetail);
-            this.OrderTotalPrice = CalculateTotalPrice();
+            Status = OrderStatus.Pending;
+            ProductsToOrder = productsToOrder;
+            TotalPrice = totalPrice;
         }
 
-        public void DeleteOrderDetail(OrderDetail orderDetail)
+        public void UpdateOrder(Order newOrder)
         {
-            this.OrderDetails.Remove(orderDetail);
-            this.OrderTotalPrice = CalculateTotalPrice();
+            Status = newOrder.Status;
+            ProductsToOrder = newOrder.ProductsToOrder;
+            TotalPrice = newOrder.TotalPrice;
         }
-
-        public void UpdateOrderStatus(OrderStatus newOrderStatus)
-        {
-            this.OrderStatus = newOrderStatus;
-        }
-
-        private decimal CalculateTotalPrice()
-        {
-            return OrderDetails.Sum(x => x.TotalPrice);
-        }
-
     }
 }
 

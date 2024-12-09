@@ -1,4 +1,5 @@
-﻿using Domain.Aggregates.ProductAggregate.Entities;
+﻿using Domain.Aggregates.CategoryAggregate.Entities;
+using Domain.Aggregates.ProductAggregate.Entities;
 
 namespace Application.DTO
 {
@@ -11,7 +12,9 @@ namespace Application.DTO
         public int Discount { get; set; }
         public float Price { get; set; }
         public string ImageUrl { get; set; }
-        public ProductCategory ProductCategory { get; set; }
+        public Guid IdCtegory { get; set; }
+        public Guid IdSubcategory { get; set; }
+        public List<FilterGroup> Filters { get; set; }
         public List<ProductSpecificationDTO> ProductSpecifications { get; set; }
     }
 }

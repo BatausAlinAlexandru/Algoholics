@@ -3,6 +3,7 @@ using Domain.Aggregates.UserAggregate.Repositories;
 using Domain.Aggregates.UserAggregate.Exceptions;
 using Infrastructure.Data;
 using Microsoft.EntityFrameworkCore;
+using System.Security.Cryptography;
 
 
 namespace Infrastructure.Repositories
@@ -43,6 +44,15 @@ namespace Infrastructure.Repositories
                 UserAccount UserAccount = new UserAccount();
                 UserAccountSettings userAccountSettings = new UserAccountSettings();
                 UserAccountInfo userAccountInfo = new UserAccountInfo();
+
+
+                // ceva logica o rezolv dupa  //////////////////////////////////////////////////
+                string usernameBase = userAccountCredentials.Email.Split("@")[0];
+                int randomNumber = RandomNumberGenerator.GetInt32(1000, 9999);
+                string username = $"{usernameBase}{randomNumber}";
+                userAccountInfo.Alias = username;
+                ////////////////////////////////////////////////////////////////////////////////
+
 
                 UserAccount.AddUserAccountCredentials(userAccountCredentials);
                 UserAccount.AddUserAccountInfo(userAccountInfo);

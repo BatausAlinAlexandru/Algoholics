@@ -21,8 +21,10 @@ namespace Application.Queies.UserAccount
             {
                 Id = ua.Id,
                 Email = ua.UserAccountCredentials.Email,
-                Password = ua.UserAccountCredentials.Password,
                 UserAccountRole = ua.UserAccountCredentials.UserAccountRole,
+                Alias = ua.UserAccountInfo.Alias,
+                UserAccountGender = ua.UserAccountInfo.UserAccountGender,
+                DateCreated = ua.UserAccountInfo.DateCreated,
             }).ToList();
 
         }

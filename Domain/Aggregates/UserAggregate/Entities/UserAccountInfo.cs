@@ -1,16 +1,18 @@
-﻿namespace Domain.Aggregates.UserAggregate.Entities
+﻿using Domain.Aggregates.UserAggregate.Value_Objects;
+
+namespace Domain.Aggregates.UserAggregate.Entities
 {
     public class UserAccountInfo
     {
         public Guid Id { get; set; }
         public DateOnly DateCreated { get; }
-        public string Sex { get; set; }
+        public UserAccountGender UserAccountGender { get; set; }
         public string Alias { get; set; }
         public string Avatar { get; set; }
 
-        public UserAccountInfo(string sex, string alias)
+        public UserAccountInfo(UserAccountGender userAccountGender, string alias)
         {
-            this.Sex = sex;
+            this.UserAccountGender = userAccountGender;    
             this.Alias = alias;
             this.DateCreated = DateOnly.FromDateTime(DateTime.Now);
             this.Avatar = "default_avatar.jpg";
@@ -19,7 +21,7 @@
         // default
         public UserAccountInfo()
         {
-            this.Sex = "None";
+            this.UserAccountGender = UserAccountGender.Other;
             this.Alias = "None";
             this.DateCreated = DateOnly.FromDateTime(DateTime.Now);
             this.Avatar = "default_avatar.jpg";
