@@ -1,8 +1,8 @@
 .signup-container {
-  max-width: 30vh;
-  max-height: 45vh;
-  width: 55vh;
-  height: 28vh;
+  max-width: 60vh;
+  max-height: 60vh;
+  width: 100vh;
+  height: 80vh;
   z-index: 1;
   margin: 50px auto;
   padding: 20px;
