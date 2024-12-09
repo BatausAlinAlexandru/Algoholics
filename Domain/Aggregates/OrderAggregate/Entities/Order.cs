@@ -36,6 +36,12 @@ namespace Domain.Aggregates.OrderAggregate.Entities
             this.OrderStatus = newOrderStatus;
         }
 
+        public void UpdateOrderDetails(List<OrderDetail> orderDetails)
+        {
+            this.OrderDetails = orderDetails;
+        }
+
+
        // private float CalculateTotalPrice()
         //{
         //    return OrderDetails.Sum(x => x.TotalPrice);
