@@ -12,7 +12,7 @@ namespace Domain.Aggregates.OrderAggregate.Repositories
         public Task<bool> AddOrderAsync(Order order);
         public Task<bool> DeleteOrderAsync(Guid orderId);
         public Task<bool> SaveOrderAsync(Order order);
-        public Task<Order?> GetOrderByIdAsync(Guid idOrder);
+        //public Task<Order?> GetOrderByIdAsync(Guid idOrder);
 
     }
 }
