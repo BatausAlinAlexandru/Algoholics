@@ -7,15 +7,14 @@
         <input type="email" [(ngModel)]="email" name="email" required />
       </div>
       <div>
-        <label>Username:</label>
-        <input type="text" [(ngModel)]="username" name="username" required />
-      </div>
-      <div>
         <label>Parolă:</label>
         <input type="password" [(ngModel)]="password" name="password" required />
       </div>
       <button type="submit">Sign Up</button>
     </form>
+    <div *ngIf="errorMessage" class="error-message">
+      {{ errorMessage }}
+    </div>
     <a (click)="redirectToLogIn()" class='link'>Ai deja un cont? Loghează-te aici</a>
   </div>
 </div>

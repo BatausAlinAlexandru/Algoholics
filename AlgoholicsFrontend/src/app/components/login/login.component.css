@@ -14,6 +14,12 @@
   position: relative;
 }
 
+.error-message {
+  color: 0x1999f;
+  margin-top: 10px;
+  font-size: 0.9rem;
+}
+
 h2 {
   color: black;
 }
