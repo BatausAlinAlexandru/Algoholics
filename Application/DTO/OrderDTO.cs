@@ -7,7 +7,7 @@ namespace Application.DTO
         public Guid Id { get; set; }
         public DateTime OrderDate { get; set; }
         public float OrderTotalPrice { get; set; }
-        public string UserAccountEmail { get; set; }
+        public Guid UserAccountId { get; set; }
         public OrderStatus OrderStatus { get; set; }
         public List<OrderDetailDTO> OrderDetails { get; set; }
     }

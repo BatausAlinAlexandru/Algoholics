@@ -8,15 +8,16 @@ namespace Domain.Aggregates.OrderAggregate.Entities
         public List<OrderDetail> OrderDetails { get; set; } = new List<OrderDetail>();
         public DateTime OrderDate { get; set; }
         public float OrderTotalPrice { get; set; }
-        public UserAccount UserAccount { get; set; }
+        public Guid UserAccountId { get; set; }
         public OrderStatus OrderStatus { get; set; } = OrderStatus.Pending;
-        public Order(List<OrderDetail> orderDetails, OrderStatus orderStatus,UserAccount user)
+        public Order() { }
+        public Order(List<OrderDetail> orderDetails, OrderStatus orderStatus,Guid userId)
         {
             OrderDetails = orderDetails;
             OrderDate = DateTime.Now;
             OrderTotalPrice = 0;
             OrderStatus = orderStatus;
-            UserAccount = user;
+            UserAccountId = userId;
         }
 
         public void AddOrderDetail(OrderDetail orderDetail)

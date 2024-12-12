@@ -10,6 +10,5 @@ namespace Application.DTO
         public int Quantity { get; set; }
         public float TotalPrice { get; set; }
         public PaymentMethod PaymentMethod { get; set; }
-        public DateTime Date { get; set; }
     }
 }

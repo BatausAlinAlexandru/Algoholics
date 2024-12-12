@@ -20,7 +20,8 @@ namespace Application.Commands.Order
 
         public async Task<Result> Handle(CreateOrderCommand request, CancellationToken cancellationToken)
         {
-            var order = new Domain.Aggregates.OrderAggregate.Entities.Order(request.OrderDetails,request.OrderStatus,request.Buyer);
+
+            var order = new Domain.Aggregates.OrderAggregate.Entities.Order(request.OrderDetails,request.OrderStatus,request.BuyerId);
 
             var success = await _orderRepository.AddOrderAsync(order);
             return success ? Result.Success() : Result.Failure("Failed to create order");

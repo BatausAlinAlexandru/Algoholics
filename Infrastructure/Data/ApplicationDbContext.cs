@@ -1,4 +1,5 @@
-﻿using Domain.Aggregates.ProductAggregate.Entities;
+﻿using Domain.Aggregates.OrderAggregate.Entities;
+using Domain.Aggregates.ProductAggregate.Entities;
 using Domain.Aggregates.UserAggregate.Entities;
 using Infrastructure.EntityConfigurations;
 using Microsoft.EntityFrameworkCore;
@@ -11,6 +12,7 @@ namespace Infrastructure.Data
 
         public DbSet<UserAccount> Users { get; set; }
         public DbSet<Product> Products { get; set; }
+        public DbSet<Order> Orders { get; set; }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
@@ -20,7 +22,7 @@ namespace Infrastructure.Data
             modelBuilder.ApplyConfiguration(new UserAccountCredentialsEntityTypeConfiguration());
             modelBuilder.ApplyConfiguration(new UserAccountInfoEntityTypeConfiguration());
             modelBuilder.ApplyConfiguration(new UserAccountSettingsEntityTypeConfiguration());
-
+            modelBuilder.ApplyConfiguration(new OrderEntityTypeConfiguration());
 
             modelBuilder.Entity<Product>().ToTable("products");
             modelBuilder.Entity<ProductDetail>().ToTable("product_details");
@@ -33,6 +35,7 @@ namespace Infrastructure.Data
                 .WithOne()
                 .HasForeignKey<ProductDetail>(p => p.Id);
 
+            
         }
     }
 }

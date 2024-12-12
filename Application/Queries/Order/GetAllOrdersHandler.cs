@@ -29,7 +29,7 @@ namespace Application.Queries.Order
                 Id = order.Id,
                 OrderDate = order.OrderDate,
                 OrderTotalPrice = order.OrderTotalPrice,
-                UserAccountEmail = order.UserAccount.UserAccountCredentials.Email,
+                UserAccountId = order.UserAccountId,
                 OrderStatus = order.OrderStatus,
                 OrderDetails = order.OrderDetails.Select(od => new OrderDetailDTO
                 {
@@ -37,7 +37,6 @@ namespace Application.Queries.Order
                     Quantity = od.Quantity,
                     TotalPrice = od.TotalPrice,
                     PaymentMethod = od.PaymentMethod,
-                    Date = od.Date
                 }).ToList()
             }).ToList();
         }

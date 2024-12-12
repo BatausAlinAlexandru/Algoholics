@@ -6,6 +6,8 @@ using Application.Commands.Order;
 using Domain.Aggregates.OrderAggregate.Entities;
 using Domain.Aggregates.OrderAggregate.Value_Objects;
 using Application.Queies.Order;
+using Application.Commands.UserAccount;
+using Domain.Aggregates.UserAggregate.Entities;
 
 namespace WebAPI.Controllers
 {
@@ -21,7 +23,7 @@ namespace WebAPI.Controllers
         }
 
         [HttpGet]
-        [Authorize(AuthenticationSchemes = JwtBearerDefaults.AuthenticationScheme, Roles = "Admin")]
+        //[Authorize(AuthenticationSchemes = JwtBearerDefaults.AuthenticationScheme, Roles = "Admin")]
         public async Task<IActionResult> GetAllOrders()
         {
             var query = new GetAllOrdersQuery();
@@ -32,10 +34,11 @@ namespace WebAPI.Controllers
 
 
         [HttpPost]
-        [Authorize(AuthenticationSchemes = JwtBearerDefaults.AuthenticationScheme, Roles = "User")]
+        //[Authorize(AuthenticationSchemes = JwtBearerDefaults.AuthenticationScheme, Roles = "User")]
         public async Task<IActionResult> CreateOrder(CreateOrderCommand createOrderCommand)
         {
-            var result = await _mediator.Send(createOrderCommand);
+            var command = new CreateOrderCommand(createOrderCommand.OrderDetails,createOrderCommand.BuyerId,createOrderCommand.OrderStatus);
+            var result = await _mediator.Send(command);
 
             if (result.IsSuccess)
             {
@@ -48,7 +51,7 @@ namespace WebAPI.Controllers
         }
 
         [HttpDelete("{orderId:guid}")]
-        [Authorize(AuthenticationSchemes = JwtBearerDefaults.AuthenticationScheme, Roles = "Admin")]
+        //[Authorize(AuthenticationSchemes = JwtBearerDefaults.AuthenticationScheme, Roles = "Admin")]
         public async Task<IActionResult> CancelOrder(Guid orderId)
         {
             var command = new CancelOrderCommand(orderId);
@@ -65,7 +68,7 @@ namespace WebAPI.Controllers
         }
 
         [HttpPut("update-products/{orderId:guid}")]
-        [Authorize(AuthenticationSchemes = JwtBearerDefaults.AuthenticationScheme, Roles = "Admin,User")]
+        //[Authorize(AuthenticationSchemes = JwtBearerDefaults.AuthenticationScheme, Roles = "Admin,User")]
         public async Task<IActionResult> ModifyOrderProducts(Guid orderId, List<OrderDetail> orderDetails)
         {
             var command = new ModifyOrderProductsCommand(orderId, orderDetails);
@@ -82,7 +85,7 @@ namespace WebAPI.Controllers
         }
 
         [HttpPut("update-status/{orderId:guid}")]
-        [Authorize(AuthenticationSchemes = JwtBearerDefaults.AuthenticationScheme, Roles = "Admin")]
+        //[Authorize(AuthenticationSchemes = JwtBearerDefaults.AuthenticationScheme, Roles = "Admin")]
         public async Task<IActionResult> ModifyOrderStatus(Guid orderId, OrderStatus orderStatus)
         {
             var command = new ModifyOrderStatusCommand(orderId, orderStatus);

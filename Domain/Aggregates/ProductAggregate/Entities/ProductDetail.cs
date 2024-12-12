@@ -10,7 +10,7 @@
         public int Discount { set; get; }
         public string pathFoto { get; set; }
 
-
+        public ProductDetail() { }
         public ProductDetail(string name, float price, string description,int stoc,int disc, string pathFoto)
         {
             this.Name = name;

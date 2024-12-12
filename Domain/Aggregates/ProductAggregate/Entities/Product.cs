@@ -14,7 +14,7 @@
 
         public void AddProductDetail(string name, float price, string description)
         {
-            this.ProductDetail = new ProductDetail(name, price, description);
+            //this.ProductDetail = new ProductDetail(name, price, description);
             this.ProductDetail.Id = this.Id;
         }
     }

@@ -13,14 +13,16 @@ namespace Application.Commands.Order
         [Required]
         public List<OrderDetail> OrderDetails { get; set; }
         [Required]
-        public UserAccount Buyer { get; set; }
+        public Guid BuyerId { get; set; }
         [Required]
         public OrderStatus OrderStatus { get; set; } = OrderStatus.Pending;
 
-        public CreateOrderCommand(List<OrderDetail> orderDetails, UserAccount user, OrderStatus orderStatus)
+        public CreateOrderCommand() { }
+
+        public CreateOrderCommand(List<OrderDetail> orderDetails, Guid userId, OrderStatus orderStatus)
         {
             OrderDetails = orderDetails;
-            Buyer = user;
+            BuyerId = userId;
             OrderStatus = orderStatus;
         }
     }
