@@ -9,18 +9,21 @@ import { AuthService } from '../../services/auth.service';
 })
 export class SignupComponent {
   email = '';
-  username = '';
   password = '';
+  errorMessage = '';
 
   constructor(private authService: AuthService, private router: Router) { }
 
   onSignup() {
-    if (this.authService.signup(this.email, this.username, this.password)) {
-      alert('Sign up successful');
-      this.router.navigate(['/']);
-    } else {
-      alert('Email already in use');
-    }
+    this.authService.signup(this.email, this.password).subscribe(
+      () => {
+        alert('Sign up successful!');
+        this.router.navigate(['/login']); // Redirecționează către login după înregistrare
+      },
+      (error) => {
+        this.errorMessage = error.error?.message || 'Failed to sign up. Please try again.';
+      }
+    );
   }
 
   redirectToLogIn() {

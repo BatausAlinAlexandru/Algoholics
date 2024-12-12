@@ -11,18 +11,20 @@ export class LoginComponent {
 
   email = '';
   password = '';
+  errorMessage = '';
 
   constructor(private authService: AuthService, private router: Router) { }
 
   onLogin() {
-    if (this.authService.login(this.email, this.password)) {
-
-      alert('Login successful!');
-      this.router.navigate(['/']);
-    } else {
-
-      alert('Invalid credentials...');
-    }
+    this.authService.login(this.email, this.password).subscribe(
+      (response: any) => {
+        const token = response.token;
+        localStorage.setItem('token', token);
+      },
+      (error) => {
+        this.errorMessage = 'Invalid email or password';
+      }
+    );
   }
 
   redirectToSignUp() {
