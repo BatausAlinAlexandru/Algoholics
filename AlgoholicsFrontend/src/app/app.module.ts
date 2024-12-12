@@ -13,6 +13,8 @@ import { CheckoutComponent } from './components/checkout/checkout.component';
 import { HttpClientModule } from '@angular/common/http';
 import { LoginComponent } from './components/login/login.component';
 import { SignupComponent } from './components/signup/signup.component';
+import { UserProfileComponent } from './components/user-profile/user-profile.component';
+import { EditUserProfileComponent } from './components/edit-user-profile/edit-user-profile.component'; // Import componenta
 
 @NgModule({
   declarations: [
@@ -24,7 +26,9 @@ import { SignupComponent } from './components/signup/signup.component';
     CartComponent,
     CheckoutComponent,
     LoginComponent,
-    SignupComponent
+    SignupComponent,
+    UserProfileComponent,
+    EditUserProfileComponent
   ],
   imports: [
     BrowserModule,
