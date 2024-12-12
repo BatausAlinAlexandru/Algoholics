@@ -1,1 +1,58 @@
-<p>cart works!</p>
+<div class="cart-header">
+  <header>
+    <h2>Your Cart</h2>
+  </header>
+</div>
+
+<div class="cart-container">
+  <div class="product-card" *ngFor="let item of cartItems">
+    <div class="product-info">
+      <h3>{{ item.name }}</h3>
+      <p>{{ item.description }}</p>
+      <p><strong>Price:</strong> ${{ item.price }}</p>
+      <p><strong>Quantity:</strong> {{ item.qty }}</p>
+    </div>
+    <button (click)="removeFromCart(item)" class="remove-btn">Remove</button>
+  </div>
+</div>
+
+<div class="cart-summary">
+  <h3>Total Price: ${{ calculateTotal() }}</h3>
+  <button class="checkout-btn">Checkout</button>
+</div>
+
+<div class="dropdown">
+  <a routerLink="/cart" style="color:black" class="dropdown-toggle" data-toggle="dropdown" aria-expanded="true">
+    <i class="fa fa-shopping-cart"></i>
+    <span>Your Cart</span>
+    <div class="qty">{{ cartItems.length }}</div> 
+  </a>
+
+  <div class="cart-dropdown">
+    <div class="cart-list">
+      <div class="product-widget" *ngFor="let item of cartItems">
+        <div class="product-img">
+          <img [src]="item.image" alt="">
+        </div>
+        <div class="product-body">
+          <h3 class="product-name"><a href="#">{{ item.name }}</a></h3>
+          <h4 class="product-price">
+            <span class="qty">{{ item.qty }}x</span>
+            ${{ item.price }}
+          </h4>
+        </div>
+        <button (click)="removeFromCart(item)" class="delete">
+          <i class="fa fa-close"></i>
+        </button>
+      </div>
+    </div>
+    <div class="cart-summary">
+      <small>{{ cartItems.length }} Item(s) selected</small>
+      <h5>SUBTOTAL: ${{ calculateTotal() }}</h5> 
+    </div>
+    <div class="cart-btns">
+      <a href="#">View Cart</a>
+      <a href="#">Checkout <i class="fa fa-arrow-circle-right"></i></a>
+    </div>
+  </div>
+</div>

@@ -2,6 +2,7 @@ using Application;
 
 var builder = WebApplication.CreateBuilder(args);
 
+
 builder.Services.AddInfrastructure();
 builder.Services.AddApplication();
 

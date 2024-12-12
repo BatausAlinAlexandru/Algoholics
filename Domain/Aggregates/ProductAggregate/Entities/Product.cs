@@ -12,9 +12,9 @@
             this.ProductDetail.Id = productDetail.Id;
         }
 
-        public void AddProductDetail(string name, float price, string description)
+        public void AddProductDetail(string name, float price, string description, int stoc, int disc, string pathFoto)
         {
-            this.ProductDetail = new ProductDetail(name, price, description);
+            this.ProductDetail = new ProductDetail(name, price, description, stoc, disc, pathFoto);
             this.ProductDetail.Id = this.Id;
         }
     }
