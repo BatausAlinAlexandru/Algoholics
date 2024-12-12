@@ -2037,6 +2037,7 @@ textarea.input {
 
 #bottom-footer {
   background: #FF7443;
+  padding: 15px 0; /* Reducere padding */
 }
 
 .footer {
@@ -2047,7 +2048,7 @@ textarea.input {
   color: #FFF;
   text-transform: uppercase;
   font-size: 18px;
-  margin: 0px 0px 30px;
+  margin: 0px 0px 10px;
 }
 
 .footer-links li+li {
