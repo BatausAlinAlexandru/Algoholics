@@ -4,7 +4,7 @@
   width: 100vh;
   height: 70vh;
   z-index: 1;
-  margin: 50px auto;
+  margin: 20px auto;
   padding: 40px 20px; /* Padding mai mare sus și jos */
   border-radius: 10px;
   background-color: white; /* Culoarea de fundal albă */
@@ -71,6 +71,7 @@ button {
 
 .app-container {
   display: flex;
+  flex-direction: column; /* Plasează elementele vertical (logo și formular) */
   justify-content: center;
   align-items: center;
   height: 100vh;
@@ -78,4 +79,17 @@ button {
   /* background: url('C:/Users/horat/Documents/GitHub/AlgoholicsFrontend/src/assets/blurry-gradient-haikei.svg') no-repeat center center fixed; */
   background: url('../../../../public/assets/img/692753f487446.png') no-repeat center center fixed;
   background-size: cover;
+}
+
+.login-logo-container {
+  margin-bottom: 20px; /* Adaugă un spațiu între logo și formular */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+.login-logo .logo img {
+  max-width: 200px; /* Setează dimensiunea maximă a logo-ului */
+  height: auto;
 }
