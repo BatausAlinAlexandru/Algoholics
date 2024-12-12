@@ -1,14 +1,13 @@
 .login-container {
   max-width: 60vh;
-  max-height: 45vh;
+  max-height: 55vh; /* Max-height mai mare */
   width: 100vh;
   height: 70vh;
   z-index: 1;
   margin: 50px auto;
-  padding: 20px;
+  padding: 40px 20px; /* Padding mai mare sus și jos */
   border-radius: 10px;
-  backdrop-filter: blur(10px);
-  /* background: #FFD143; */
+  background-color: white; /* Culoarea de fundal albă */
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
   text-align: center;
   position: relative;
@@ -62,12 +61,12 @@ button {
   margin-top: 15px;
   margin-bottom: 10px;
   color: #8B2E57;
-  text-decoration: none;
+  text-decoration: none; /* Elimină sublinierea inițială */
   cursor: pointer;
 }
 
   .link:hover {
-    text-decoration: underline;
+    text-decoration: none; /* Asigură că nu apare sublinierea la hover */
   }
 
 .app-container {
