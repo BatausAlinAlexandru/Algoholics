@@ -36,12 +36,11 @@ const routes: Routes = [
   },
   {
     path: 'edit-user-profile', component: EditUserProfileComponent
-  }
   },
-  { path: 'wishlist', component: WishlistComponent },
-  //{ path: 'cart', component: CartComponent },
-
-
+  {
+    path: 'wishlist', component: WishlistComponent
+  }
+ 
 ];
 
 @NgModule({
