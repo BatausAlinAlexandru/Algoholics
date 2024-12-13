@@ -62,13 +62,13 @@ body {
 }
 
 h1, h2, h3, h4, h5, h6 {
-  color: #2B2D42;
+  /* color: #2B2D42; */
   font-weight: 700;
   margin: 0 0 10px;
 }
 
 a {
-  color: #2B2D42;
+  /* color: #2B2D42; */
   font-weight: 500;
   -webkit-transition: 0.2s color;
   transition: 0.2s color;
@@ -327,7 +327,7 @@ textarea.input {
 
 .section-tab-nav li a {
   font-weight: 700;
-  color: #8D99AE;
+  /* color: #8D99AE; */
 }
 
 .section-tab-nav li a:after {
@@ -413,7 +413,7 @@ textarea.input {
 #top-header {
   padding-top: 10px;
   padding-bottom: 10px;
-  background-color: #FF7443;
+  /*background-color: #FF7443;*/
 }
 
 .header-links li {
@@ -446,7 +446,7 @@ textarea.input {
 #header {
   padding-top: 15px;
   padding-bottom: 15px;
-  background-color: #FF7443;
+  /*background-color: #FF7443;*/
 }
 
 .header-logo {
@@ -462,8 +462,7 @@ textarea.input {
 \*----------------------------*/
 
 .header-search {
-  padding: 20px 0px;
-  margin-left: 20px; /* Muta intreaga sectiune */
+  padding: 15px 0px;
 }
 
 .header-search form {
@@ -476,11 +475,8 @@ textarea.input {
 }
 
 .header-search form .input {
-  width: calc(100% - 100px); /* Ajusteaza in functie de layout-ul general */
-  max-width: 500px; /* Seteaza o latime maxima pentru consistenta */
+  width: calc(100% - 260px);
   margin-right: -4px;
-  border-radius: 40px 0 0 40px; /* Colturile din stanga sunt rotunjite */
-  padding-left: 30px; /* Muta textul din interior mai la dreapta */
 }
 
 .header-search form .search-btn {
@@ -624,66 +620,47 @@ textarea.input {
 ===========================================================*/
 
 #navigation {
-  background: #FFF;
-  border-bottom: 2px solid #E4E7ED;
+  /* background: #FFF; */
+  /* border-bottom: 2px solid #E4E7ED; */
   border-top: 3px solid #8B2E57;
 }
 
 /*----------------------------*\
-    Main navigation
+	Main nav
 \*----------------------------*/
 
+.main-nav>li>a:hover, .main-nav>li>a:focus, .main-nav>li.active>a {
+  color: #8B2E57;
+  /*background-color: transparent;*/
+}
+
 .main-nav {
-  display: flex; 
-  flex-direction: row;
-  justify-content: flex-start;
-  align-items: center; 
-  list-style: none; 
-  padding: 0; 
-  margin: 0;
+  position: relative; /* Ensure the main-nav has a positioning context */
 }
 
-.main-nav > li {
-  margin-left: 30px;
+.main-nav>ul {
+  padding: 5px 0px;
 }
 
-.main-nav > li:first-child {
-  margin-left: 0;
-}
-
-.main-nav > li > a {
-  text-decoration: none;
-  color: black; 
-  padding: 11px 15px; 
-  display: block;
-}
-
-.main-nav > li > a:hover,
-.main-nav > li > a:focus,
-.main-nav > li.active > a {
-  color: #8B2E57; 
-  background-color: transparent;
-}
-
-.main-nav > li > a:after {
+.main-nav>ul:after {
   content: "";
-  display: block;
-  width: 0%;
-  height: 2px;
-  background-color: #8B2E57;
-  transition: 0.2s all;
+  position: relative;
+  bottom: 0; /* Position the line at the bottom of the link */
+  left: 0; /* Start from the left of the link */
+  width: 100%; /* Make the line span the entire width of the link */
+  height: 2px; /* Line thickness */
+  background-color: #8B2E57; /* Line color */
+  -webkit-transition: 0.2s all ease-in-out;
+  transition: 0.2s all ease-in-out;
 }
 
-.main-nav > li > a:hover:after,
-.main-nav > li > a:focus:after,
-.main-nav > li.active > a:after {
+.main-nav>li>a:hover:after, .main-nav>li>a:focus:after, .main-nav>li.active>a:after {
   width: 100%;
 }
 
 .header-ctn li.nav-toggle {
   display: none;
 }
-
 
 /*----------------------------*\
 	responsive nav
@@ -807,7 +784,7 @@ textarea.input {
 }
 
 /*=========================================================
-	05 -> HOT DEAL ...
+	05 -> HOT DEAL
 ===========================================================*/
 
 #hot-deal.section {
@@ -1950,10 +1927,9 @@ textarea.input {
 ===========================================================*/
 
 #newsletter.section {
-  /* Am scos bordurile */
-  margin-top: 10px;
-  padding-bottom: 60px; /* Spatiu intern mai mare */
-  margin-bottom: 50px; /* Adaugam spatiu sub newsletter */
+  /* border-top: 2px solid #E4E7ED; */
+  border-bottom: 3px solid #8B2E57;
+  margin-top: 30px;
 }
 
 .newsletter {
@@ -2042,7 +2018,6 @@ textarea.input {
 
 #bottom-footer {
   background: #FF7443;
-  padding: 15px 0; /* Reducere padding */
 }
 
 .footer {
@@ -2053,7 +2028,7 @@ textarea.input {
   color: #FFF;
   text-transform: uppercase;
   font-size: 18px;
-  margin: 0px 0px 10px;
+  margin: 0px 0px 30px;
 }
 
 .footer-links li+li {
@@ -2222,4 +2197,52 @@ textarea.input {
     float: none;
     margin-top: 10px;
   }
+}
+
+/* Light Mode (Default) */
+:root {
+  --background-color: #ffffff;
+  --a-color: #000;
+  --text-color: #000000;
+  --link-color: #1a73e8;
+  --button-background: #eaeaea;
+  --header-background-color: #FF7443;
+  --footer-background-color: #eaeaea;
+}
+
+/* Dark Mode */
+:root.dark-mode {
+  --background-color: #121212;
+  --text-color: #ffffff;
+  --link-color: #bb86fc;
+  --button-background: #333333;
+  --header-background-color: #1f1f1f;
+  --footer-background-color: #1a1a1a;
+}
+
+/* Apply variables */
+body {
+  background-color: var(--background-color);
+  color: var(--text-color);
+}
+
+a {
+  color: var(--link-color);
+}
+
+button {
+  background-color: var(--button-background);
+  color: var(--text-color);
+}
+
+.fa-heart-o {
+  color: #000 !important; /* Replace with your desired color */
+}
+
+.fa-exchange {
+  color: #000 !important; /* Replace with your desired color */
+}
+
+.fa-eye {
+  color: #000 !important; /* Replace with your desired color */
 }

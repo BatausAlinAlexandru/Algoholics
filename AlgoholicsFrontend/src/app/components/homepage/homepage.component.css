@@ -1,0 +1,20 @@
+.homepage {
+    background-color: var(--background-color);
+    color: var(--text-color);
+  }
+  
+  .homepage a {
+    color: var(--text-color);
+  }
+  
+  .homepage button {
+    background-color: var(--text-color);
+    color: var(--background-color);
+    border: 1px solid var(--text-color);
+  }
+  
+  .homepage button:hover {
+    background-color: var(--background-color);
+    color: var(--text-color);
+  }
+  
