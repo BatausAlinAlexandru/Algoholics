@@ -6,44 +6,103 @@ using System.Threading.Tasks;
 
 namespace Application.Commands.Product
 {
-    public class ModifyProductHandler : IRequestHandler<ModifyProductCommand, Result>
+    public class ModifyProductNameHandler : IRequestHandler<ModifyProductNameCommand, Result>
     {
         private readonly IProductRepository _productRepository;
 
-        public ModifyProductHandler() { }
 
-        public ModifyProductHandler(IProductRepository productRepository)
+        public ModifyProductNameHandler(IProductRepository productRepository)
         {
             _productRepository = productRepository;
         }
-
-        public async Task<Result> Handle(ModifyProductCommand request, CancellationToken cancellationToken)
+        public async Task<Result> Handle(ModifyProductNameCommand request, CancellationToken cancellationToken)
         {
-            var productDetail = await _productRepository.GetProductByIdAsync(request.ProductId);
-            if (productDetail == null) return Result.Failure("Product not found.\n");
+            var product = await _productRepository.GetProductByIdAsync(request.ProductId);
+            if (product == null) return Result.Failure("Product not found.\n");
 
-            switch (request)
-            {
-                case ModifyProductNameCommand nameCommand:
-                    productDetail.ProductDetail.Name = nameCommand.Name;
-                    break;
-                case ModifyProductStockCommand stockCommand:
-                    productDetail.ProductDetail.Stoc = stockCommand.Stock;
-                    break;
-                case ModifyProductPriceCommand priceCommand:
-                    productDetail.ProductDetail.Price = priceCommand.Price;
-                    break;
-                case ModifyProductDescriptionCommand descriptionCommand:
-                    productDetail.ProductDetail.Description = descriptionCommand.Description;
-                    break;
-                case ModifyProductDiscountCommand discountCommand:
-                    productDetail.ProductDetail.Discount = discountCommand.Discount;
-                    break;
-                default:
-                    return Result.Failure("Product Error.\n");
-            }
+            product.ProductDetail.Name = request.Name;
+              
+            var success = await _productRepository.ModifyProductDetailsAsync(request.ProductId, product.ProductDetail);
+            return success ? Result.Success() : Result.Failure("Failed to modify the product.\n");
+        }
+    }
+    public class ModifyProductStocHandler : IRequestHandler<ModifyProductStockCommand, Result>
+    {
+        private readonly IProductRepository _productRepository;
 
-            var success = await _productRepository.ModifyProductDetailsAsync(request.ProductId, productDetail.ProductDetail);
+
+        public ModifyProductStocHandler(IProductRepository productRepository)
+        {
+            _productRepository = productRepository;
+        }
+        public async Task<Result> Handle(ModifyProductStockCommand request, CancellationToken cancellationToken)
+        {
+            var product = await _productRepository.GetProductByIdAsync(request.ProductId);
+            if (product == null) return Result.Failure("Product not found.\n");
+
+            product.ProductDetail.Stoc = request.Stock;
+
+            var success = await _productRepository.ModifyProductDetailsAsync(request.ProductId, product.ProductDetail);
+            return success ? Result.Success() : Result.Failure("Failed to modify the product.\n");
+        }
+    }
+    public class ModifyProductPriceHandler : IRequestHandler<ModifyProductPriceCommand, Result>
+    {
+        private readonly IProductRepository _productRepository;
+
+
+        public ModifyProductPriceHandler(IProductRepository productRepository)
+        {
+            _productRepository = productRepository;
+        }
+        public async Task<Result> Handle(ModifyProductPriceCommand request, CancellationToken cancellationToken)
+        {
+            var product = await _productRepository.GetProductByIdAsync(request.ProductId);
+            if (product == null) return Result.Failure("Product not found.\n");
+
+            product.ProductDetail.Price = request.Price;
+
+            var success = await _productRepository.ModifyProductDetailsAsync(request.ProductId, product.ProductDetail);
+            return success ? Result.Success() : Result.Failure("Failed to modify the product.\n");
+        }
+    }
+    public class ModifyProductDescriptionHandler : IRequestHandler<ModifyProductDescriptionCommand, Result>
+    {
+        private readonly IProductRepository _productRepository;
+
+
+        public ModifyProductDescriptionHandler(IProductRepository productRepository)
+        {
+            _productRepository = productRepository;
+        }
+        public async Task<Result> Handle(ModifyProductDescriptionCommand request, CancellationToken cancellationToken)
+        {
+            var product = await _productRepository.GetProductByIdAsync(request.ProductId);
+            if (product == null) return Result.Failure("Product not found.\n");
+
+            product.ProductDetail.Description = request.Description;
+
+            var success = await _productRepository.ModifyProductDetailsAsync(request.ProductId, product.ProductDetail);
+            return success ? Result.Success() : Result.Failure("Failed to modify the product.\n");
+        }
+    }
+    public class ModifyProductDiscountHandler : IRequestHandler<ModifyProductDiscountCommand, Result>
+    {
+        private readonly IProductRepository _productRepository;
+
+
+        public ModifyProductDiscountHandler(IProductRepository productRepository)
+        {
+            _productRepository = productRepository;
+        }
+        public async Task<Result> Handle(ModifyProductDiscountCommand request, CancellationToken cancellationToken)
+        {
+            var product = await _productRepository.GetProductByIdAsync(request.ProductId);
+            if (product == null) return Result.Failure("Product not found.\n");
+
+            product.ProductDetail.Discount = request.Discount;
+
+            var success = await _productRepository.ModifyProductDetailsAsync(request.ProductId, product.ProductDetail);
             return success ? Result.Success() : Result.Failure("Failed to modify the product.\n");
         }
     }
