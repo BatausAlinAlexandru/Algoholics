@@ -15,6 +15,7 @@ import { LoginComponent } from './components/login/login.component';
 import { SignupComponent } from './components/signup/signup.component';
 import { UserProfileComponent } from './components/user-profile/user-profile.component';
 import { EditUserProfileComponent } from './components/edit-user-profile/edit-user-profile.component'; // Import componenta
+import { WishlistComponent } from './components/wishlist/wishlist.component';
 
 @NgModule({
   declarations: [
@@ -28,7 +29,8 @@ import { EditUserProfileComponent } from './components/edit-user-profile/edit-us
     LoginComponent,
     SignupComponent,
     UserProfileComponent,
-    EditUserProfileComponent
+    EditUserProfileComponent,
+    WishlistComponent
   ],
   imports: [
     BrowserModule,

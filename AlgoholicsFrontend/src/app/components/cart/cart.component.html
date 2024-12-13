@@ -1,1 +1,24 @@
-<p>cart works!</p>
+<div class="cart-header">
+  <header>
+    <h2>Your Cart</h2>
+  </header>
+</div>
+
+<div class="cart-container">
+  <div class="product-card" *ngFor="let item of cartItems">
+    <div class="product-info">
+      <h3>{{ item.name }}</h3>
+      <p><strong>Price:</strong> ${{ item.price }}</p>
+      <p><strong>Quantity:</strong> {{ item.qty }}</p>
+    </div>
+    <button (click)="removeFromCart(item)" class="remove-btn">Remove</button>
+  </div>
+</div>
+
+<div class="cart-summary">
+  <h3>Total Price: ${{ calculateTotal() }}</h3>
+  <button class="checkout-btn">Checkout</button>
+</div>
+
+
+
