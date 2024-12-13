@@ -20,10 +20,8 @@ namespace Application.Queries.Order
 
         public async Task<List<OrderDTO>> Handle(GetAllOrdersQuery request, CancellationToken cancellationToken)
         {
-            // Retrieve all orders from the repository
             var orders = await _orderRepository.GetOrdersAsync();
 
-            // Map the Order domain objects to OrderDTOs
             return orders.Select(order => new OrderDTO
             {
                 Id = order.Id,

@@ -67,17 +67,30 @@ namespace Infrastructure.Repositories
 
         public async Task<bool> SaveOrderAsync(Order order)
         {
-            var existingOrder = await _context.Orders.FindAsync(order.Id);
-            if (existingOrder == null)
+            var trackedOrder = await _context.Orders
+                .Include(o => o.OrderDetails) // Include OrderDetails for tracking
+                .FirstOrDefaultAsync(o => o.Id == order.Id);
+
+            if (trackedOrder == null)
             {
-                await _context.Orders.AddAsync(order); // Add if not found
-            }
-            else
-            {
-                _context.Orders.Update(order); // Update existing order
+                throw new InvalidOperationException("Order does not exist.");
             }
 
-            return await _context.SaveChangesAsync() > 0; // Save changes and return success status
+            // Update the tracked OrderDetails directly
+            foreach (var detail in order.OrderDetails)
+            {
+                var trackedDetail = trackedOrder.OrderDetails.FirstOrDefault(d => d.Id == detail.Id);
+
+                if (trackedDetail != null)
+                {
+                    trackedDetail.ProductName = detail.ProductName;
+                    trackedDetail.Quantity = detail.Quantity;
+                    trackedDetail.TotalPrice = detail.TotalPrice;
+                    trackedDetail.PaymentMethod = detail.PaymentMethod;
+                }
+            }
+
+            return await _context.SaveChangesAsync() > 0;
         }
     }
 }

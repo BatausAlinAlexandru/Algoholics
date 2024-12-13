@@ -1,8 +1,7 @@
 ﻿namespace Domain.Aggregates.ProductAggregate.Entities
 {
     public class ProductDetail
-    {   //stoc+discount+url
-        public Guid Id { get; set; }
+    {   
         public string Name { set; get; }
         public float Price { set; get; }
         public string Description { set; get; }

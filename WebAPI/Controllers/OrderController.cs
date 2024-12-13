@@ -6,8 +6,8 @@ using Application.Commands.Order;
 using Domain.Aggregates.OrderAggregate.Entities;
 using Domain.Aggregates.OrderAggregate.Value_Objects;
 using Application.Queies.Order;
-using Application.Commands.UserAccount;
 using Domain.Aggregates.UserAggregate.Entities;
+using Application.DTO;
 
 namespace WebAPI.Controllers
 {
@@ -69,9 +69,9 @@ namespace WebAPI.Controllers
 
         [HttpPut("update-products/{orderId:guid}")]
         //[Authorize(AuthenticationSchemes = JwtBearerDefaults.AuthenticationScheme, Roles = "Admin,User")]
-        public async Task<IActionResult> ModifyOrderProducts(Guid orderId, List<OrderDetail> orderDetails)
+        public async Task<IActionResult> ModifyOrderProducts(Guid orderId, Guid orderDetailId,List<OrderDetailDTO> orderDetails)
         {
-            var command = new ModifyOrderProductsCommand(orderId, orderDetails);
+            var command = new ModifyOrderProductsCommand(orderId,orderDetailId, orderDetails);
             var result = await _mediator.Send(command);
 
             if (result.IsSuccess)
@@ -100,5 +100,7 @@ namespace WebAPI.Controllers
                 return BadRequest(result.Error);
             }
         }
+
+
     }
 }

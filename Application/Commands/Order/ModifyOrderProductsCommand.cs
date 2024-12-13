@@ -13,15 +13,15 @@ namespace Application.Commands.Order
 {
     public class ModifyOrderProductsCommand : IRequest<Result>
     {
-        [Required]
         public Guid OrderId { get; set; }
-        [Required]
-        public List<OrderDetail> OrderDetails { get; set; }
+        public Guid OrderDetailId { get; set; }
+        public List<OrderDetailDTO> UpdatedOrderDetails { get; set; }
 
-        public ModifyOrderProductsCommand(Guid orderId, List<OrderDetail> orderDetails)
+        public ModifyOrderProductsCommand(Guid orderId, Guid orderDetailId ,List<OrderDetailDTO> updatedOrderDetails)
         {
             OrderId = orderId;
-            OrderDetails = orderDetails;
+            OrderDetailId = orderDetailId;
+            UpdatedOrderDetails = updatedOrderDetails;
         }
     }
 }

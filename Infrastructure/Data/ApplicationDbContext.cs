@@ -23,17 +23,7 @@ namespace Infrastructure.Data
             modelBuilder.ApplyConfiguration(new UserAccountInfoEntityTypeConfiguration());
             modelBuilder.ApplyConfiguration(new UserAccountSettingsEntityTypeConfiguration());
             modelBuilder.ApplyConfiguration(new OrderEntityTypeConfiguration());
-
-            modelBuilder.Entity<Product>().ToTable("products");
-            modelBuilder.Entity<ProductDetail>().ToTable("product_details");
-
-            modelBuilder.Entity<Product>().HasKey(p => p.Id);
-            modelBuilder.Entity<ProductDetail>().HasKey(p => p.Id);
-
-            modelBuilder.Entity<Product>()
-                .HasOne(p => p.ProductDetail)
-                .WithOne()
-                .HasForeignKey<ProductDetail>(p => p.Id);
+            modelBuilder.ApplyConfiguration(new ProductEntityTypeConfiguration());
 
             
         }
