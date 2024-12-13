@@ -15,11 +15,11 @@
     <form (ngSubmit)="onSignup()">
       <div>
         <label>Email:</label>
-        <input type="email" [(ngModel)]="email" name="email" required />
+        <input type="email" [(ngModel)]="email" name="email" placeholder="Enter your email" required />
       </div>
       <div>
-        <label>Parolă:</label>
-        <input type="password" [(ngModel)]="password" name="password" required />
+        <label>Password:</label>
+        <input type="password" [(ngModel)]="password" name="password" placeholder="Enter your password" required />
       </div>
       <button type="submit">Sign Up</button>
     </form>

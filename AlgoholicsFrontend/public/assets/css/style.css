@@ -462,7 +462,8 @@ textarea.input {
 \*----------------------------*/
 
 .header-search {
-  padding: 15px 0px;
+  padding: 20px 0px;
+  margin-left: 20px; /* Muta intreaga sectiune */
 }
 
 .header-search form {
@@ -475,8 +476,11 @@ textarea.input {
 }
 
 .header-search form .input {
-  width: calc(100% - 260px);
+  width: calc(100% - 100px); /* Ajusteaza in functie de layout-ul general */
+  max-width: 500px; /* Seteaza o latime maxima pentru consistenta */
   margin-right: -4px;
+  border-radius: 40px 0 0 40px; /* Colturile din stanga sunt rotunjite */
+  padding-left: 30px; /* Muta textul din interior mai la dreapta */
 }
 
 .header-search form .search-btn {
@@ -1946,9 +1950,10 @@ textarea.input {
 ===========================================================*/
 
 #newsletter.section {
-  border-top: 2px solid #E4E7ED;
-  border-bottom: 3px solid #8B2E57;
-  margin-top: 30px;
+  /* Am scos bordurile */
+  margin-top: 10px;
+  padding-bottom: 60px; /* Spatiu intern mai mare */
+  margin-bottom: 50px; /* Adaugam spatiu sub newsletter */
 }
 
 .newsletter {
