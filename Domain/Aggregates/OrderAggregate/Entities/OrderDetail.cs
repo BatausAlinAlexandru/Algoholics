@@ -10,10 +10,8 @@ namespace Domain.Aggregates.OrderAggregate.Entities
         public int Quantity { get; set; }
         public float TotalPrice { get; set; }
         public PaymentMethod PaymentMethod { set; get; }
-        public Guid IdAccount { get; set; }
-        public UserAccountPaymantInfo? User { get; set; }
-        public DateTime Date { get; set; }
-        public OrderDetail(Product product, int quantity,PaymentMethod pm, UserAccountPaymantInfo? user=null)
+        public OrderDetail() { }
+        public OrderDetail(Product product, int quantity,PaymentMethod pm)
         {
             ProductName = product.ProductDetail.Name;
             if (quantity <= product.ProductDetail.Stoc) { 
@@ -21,8 +19,6 @@ namespace Domain.Aggregates.OrderAggregate.Entities
                 Quantity = quantity; 
             }
             else throw new ArgumentException("Cantitatea aleasa este mai mare decat stocul disponibil");
-            User = user;
-            Date = DateTime.Now;
             PaymentMethod = pm;
         }
   

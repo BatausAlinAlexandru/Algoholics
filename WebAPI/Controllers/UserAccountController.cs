@@ -20,7 +20,7 @@ namespace WebAPI.Controllers
         }
 
         [HttpGet]
-        [Authorize(AuthenticationSchemes = JwtBearerDefaults.AuthenticationScheme, Roles = "User")]
+        //[Authorize(AuthenticationSchemes = JwtBearerDefaults.AuthenticationScheme, Roles = "User")]
         public async Task<IActionResult> GetUserAccount()
         {
 
@@ -53,7 +53,7 @@ namespace WebAPI.Controllers
             }
         }
 
-        [HttpDelete]
+        [HttpDelete("{id}")]
         public async Task<IActionResult> DeleteUserAccount(Guid id)
         {
             var command = new DeleteUserAccountCommand(id);
@@ -69,7 +69,7 @@ namespace WebAPI.Controllers
             }
         }
 
-        [HttpPut]
+        [HttpPut("{id}")]
         public async Task<IActionResult> UpdateUserAccountEmail(ModifyUserAccountEmailCommand userAccount)
         {
             var command = new ModifyUserAccountEmailCommand(userAccount.Id, userAccount.Email);
@@ -106,6 +106,6 @@ namespace WebAPI.Controllers
             }
         }
 
-       
+
     }
 }

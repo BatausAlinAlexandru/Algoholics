@@ -18,9 +18,9 @@ namespace Infrastructure.Repositories
         {
             try
             {
-                Product product = new Product();
-                product.AddProductDetail(productDetail);
+                Product product = new Product(productDetail);
                 await _applicationDbContext.Products.AddAsync(product);
+                await _applicationDbContext.SaveChangesAsync();
                 return true;
             }
             catch (Exception ex)
@@ -70,6 +70,7 @@ namespace Infrastructure.Repositories
                 if(product is not null)
                 {
                     product.ProductDetail = productDetail;
+                    _applicationDbContext.Products.Update(product);
                     await _applicationDbContext.SaveChangesAsync();
                     return true;
                 }
