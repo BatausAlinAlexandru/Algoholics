@@ -4,7 +4,7 @@
 
 .cart-container {
   display: flex;
-  flex-direction: column;
+  flex-wrap: wrap;
   gap: 16px;
   padding: 16px;
 }
@@ -58,27 +58,14 @@
   border-radius: 5px;
 }
 
-.cart-dropdown {
-  position: absolute;
-  right: 0;
-  top: 40px;
-  background-color: white;
-  border: 1px solid #ccc;
-  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
-  padding: 10px;
-  width: 300px;
-}
-
-.cart-btns a {
-  display: inline-block;
-  margin-top: 10px;
-  padding: 10px 20px;
-  background-color: #28a745;
+.checkout-btn {
+  background-color: #8b2e57;
   color: white;
-  text-decoration: none;
-  border-radius: 5px;
+  border: none;
+  padding: 10px 15px;
+  cursor: pointer;
 }
 
-  .cart-btns a:hover {
-    background-color: #218838;
+  .checkout-btn:hover {
+    background-color: #4f0f32;
   }

@@ -15,12 +15,14 @@ export class WishlistComponent implements OnInit {
   private productService: ProductService) { }
 
   ngOnInit(): void {
-    this.productService.getAllProducts().subscribe(prods => {
-      console.log(prods);
-    });  }
+    this.productService.getAllProducts().subscribe()
+      this.wishlistItems = this.wishlistService.getWishlist();
+    }
 
   removeFromWishlist(item: any): void {
     this.wishlistItems = this.wishlistItems.filter(product => product !== item);
     this.wishlistService.updateWishlist(this.wishlistItems); 
   }
+
+  
 }

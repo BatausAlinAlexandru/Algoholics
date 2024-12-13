@@ -6,9 +6,9 @@ import { BehaviorSubject } from 'rxjs';
 })
 export class CartService {
   private cartItems: any[] = [
-    { name: 'Product 1', price: 100, qty: 1, image: 'assets/product01.png' },
-    { name: 'Product 2', price: 150, qty: 2, image: 'assets/product02.png' },
-    { name: 'Product 3', price: 50, qty: 1, image: 'assets/product03.png' }
+    { name: 'Smartwatch', price: 100, qty: 1, image: 'assets/product01.png' },
+    { name: 'Headphones', price: 150, qty: 2, image: 'assets/product02.png' },
+    { name: 'Mouse', price: 50, qty: 1, image: 'assets/product03.png' }
   ];
 
   cartItemsChanged: BehaviorSubject<any[]> = new BehaviorSubject(this.cartItems);

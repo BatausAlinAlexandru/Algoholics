@@ -8,45 +8,40 @@ import { CartService } from '../../services/cart.service';
   styleUrls: ['./header.component.css']
 })
 export class HeaderComponent implements OnInit{
-  cartItems: any[] = []; // Lista de produse din coș
+  cartItems: any[] = [];
+  wishlistItems: any[] = [];
 
-  cartItemCount: number = 0;
+  isCartOpen: boolean = false;
 
   constructor(private wishlistService: WishlistService,
     private cartService: CartService)
-  {
-    this.cartService.cartItemsChanged.subscribe((items: any[]) => {
-      this.cartItemCount = items.length;
-    });
-
-    this.cartItemCount = this.cartService.getCartItemCount();
-  }
+  {}
 
   ngOnInit(): void {
-    // Obține produsele din coș atunci când componenta este inițializată
+    this.wishlistItems = this.wishlistService.getWishlist();
     this.cartItems = this.cartService.getCart();
   }
 
   addToWishlist(product: any): void {
-    this.wishlistService.addToWishlist(product); // Adaugă produsul la wishlist
+    this.wishlistService.addToWishlist(product); 
   }
 
   getWishlistCount(): number {
-    return this.wishlistService.getWishlistCount(); // Returnează numărul de produse
+    return this.wishlistService.getWishlistCount();
   }
 
   removeFromCart(product: any): void {
-    // Elimină produsul din coș
     this.cartService.removeFromCart(product.id);
-    this.cartItems = this.cartService.getCart(); // Actualizează lista produselor din coș
+    this.cartItems = this.cartService.getCart(); 
   }
 
   calculateTotal(): number {
-    // Calculează suma totală a produselor din coș
     return this.cartItems.reduce((total, item) => total + item.price, 0);
   }
 
   getCartlistCount(): number {
-    return this.cartService.getCartItemCount(); // Returnează numărul de produse
+      return this.cartService.getCartItemCount();
   }
+
+  
 }

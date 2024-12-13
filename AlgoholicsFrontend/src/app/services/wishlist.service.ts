@@ -4,7 +4,11 @@ import { Injectable } from '@angular/core';
   providedIn: 'root'
 })
 export class WishlistService {
-  private wishlist: any[] = [];
+  private wishlist: any[] = [
+    { name: 'Laptop', description: 'Description 1', price: 100 },
+    { name: 'Camera', description: 'Description 2', price: 200 },
+    { name: 'Smartphone', description: 'Description 3', price: 300 }
+  ];
 
   addToWishlist(product: any): void {
     const alreadyInWishlist = this.wishlist.some(item => item.name === product.name);
@@ -30,4 +34,9 @@ export class WishlistService {
   updateWishlist(updatedWishlist: any[]): void {
     this.wishlist = updatedWishlist;
   }
+
+  //isWishlistOpen(): string {
+  //  return this.isWishlistOpen().valueOf();
+     
+  //}
 }

@@ -30,4 +30,5 @@ export class CartComponent implements OnInit {
     this.cartService.updateCart(this.cartItems); 
     this.calculateTotal(); 
   }
+
 }

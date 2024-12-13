@@ -36,7 +36,5 @@ export class ProductComponent implements OnInit {
 
   addToWishlist(product: any) {
     this.wishlistService.addToWishlist(product); 
-    console.log('Current wishlist: ${product.name}');
-
   }
 }
