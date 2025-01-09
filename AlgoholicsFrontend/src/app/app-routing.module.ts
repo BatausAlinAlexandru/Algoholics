@@ -10,6 +10,7 @@ import { SignupComponent } from './components/signup/signup.component';
 import { UserProfileComponent } from './components/user-profile/user-profile.component';
 import { EditUserProfileComponent } from './components/edit-user-profile/edit-user-profile.component'; 
 import { WishlistComponent } from './components/wishlist/wishlist.component';
+import { ProductPageComponent } from './components/product-page/product-page.component';
 
 
 const routes: Routes = [
@@ -39,7 +40,12 @@ const routes: Routes = [
   },
   {
     path: 'wishlist', component: WishlistComponent
-  }
+  },
+  {
+    path: 'product/:id', component: ProductPageComponent
+  },
+  {path: '**', redirectTo: '' },
+
  
 ];
 
