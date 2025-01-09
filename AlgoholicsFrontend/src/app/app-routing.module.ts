@@ -1,3 +1,4 @@
+/// <reference path="app.module.server.ts" />
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { HomepageComponent } from './components/homepage/homepage.component';
@@ -42,7 +43,7 @@ const routes: Routes = [
     path: 'wishlist', component: WishlistComponent
   },
   {
-    path: 'product/:id', component: ProductPageComponent
+    path: 'product-details/:id', component: ProductPageComponent
   },
   {path: '**', redirectTo: '' },
 
