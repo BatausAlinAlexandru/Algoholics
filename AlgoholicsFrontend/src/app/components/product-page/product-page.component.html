@@ -1,7 +1,9 @@
 <div *ngIf="product">
   <h1>{{ product.name }}</h1>
-  <img [src]="product.image" alt="{{ product.name }}">
-  <p>{{ product.description }}</p>
+  <img src={{product.image}} alt="{{ product.name }}">
+  <div class="description">
+    <p *ngFor="let line of product.description">{{ line }}</p>
+  </div>
 </div>
 <div *ngIf="!product">
   <p>Produsul nu a fost găsit!</p>

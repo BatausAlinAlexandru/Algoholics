@@ -42,7 +42,7 @@ const routes: Routes = [
     path: 'wishlist', component: WishlistComponent
   },
   {
-    path: 'product/:id', component: ProductPageComponent
+    path: 'product-details/:id', component: ProductPageComponent
   },
   {path: '**', redirectTo: '' },
 
