@@ -14,7 +14,11 @@
     <div class="product-details">
 
       <!-- Descrierea produsului -->
-      <p class="product-description">{{ product.description }}</p>
+      <div class="description">
+        <p *ngFor="let line of product.description">{{ line }}</p>
+        <p><strong>Price:</strong> ${{ product.price }}</p>
+
+      </div>
 
       <!-- Secțiunea pentru butoane -->
       <div class="product-buttons">

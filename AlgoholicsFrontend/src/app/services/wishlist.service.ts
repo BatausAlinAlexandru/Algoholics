@@ -1,22 +1,31 @@
 import { Injectable } from '@angular/core';
+import { ProductService } from './product.service';
 
 @Injectable({
   providedIn: 'root'
 })
 export class WishlistService {
-  private wishlist: any[] = [
-    { name: 'Laptop', description: 'Description 1', price: 100 },
-    { name: 'Camera', description: 'Description 2', price: 200 },
-    { name: 'Smartphone', description: 'Description 3', price: 300 }
-  ];
+  private wishlist: any[] = [];
+  //  { name: 'Laptop', description: 'Description 1', price: 100 },
+  //  { name: 'Camera', description: 'Description 2', price: 200 },
+  //  { name: 'Smartphone', description: 'Description 3', price: 300 }
+  //];
 
-  addToWishlist(product: any): void {
-    const alreadyInWishlist = this.wishlist.some(item => item.name === product.name);
-    if (!alreadyInWishlist) {
-      this.wishlist.push(product);
+  constructor(private productService: ProductService) { }
+
+  addToWishlist(productId: number): void {
+    //const alreadyInWishlist = this.wishlist.some(item => item.name === product.name);
+    //if (!alreadyInWishlist) {
+    //  this.wishlist.push(product);
+    //}
+    //console.log('Current wishlist:', this.wishlist);
+    const product = this.productService.products.find(p => p.id === productId);
+    if (product) {
+      const alreadyInWishlist = this.wishlist.some(item => item.id === product.id);
+      if (!alreadyInWishlist) {
+        this.wishlist.push(product);
+      }
     }
-    console.log('Current wishlist:', this.wishlist);
-
   }
 
   getWishlist(): any[] {
