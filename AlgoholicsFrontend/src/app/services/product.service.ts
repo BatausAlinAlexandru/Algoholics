@@ -18,21 +18,9 @@ export class ProductService {
       }
     });
   }
+
   private products = [
-    {
-      id: 1, name: 'MACBOOK PRO RETINA 13 INCH', description:
-['Informatii MacBook:',
-'Seria: MacBook Pro',
-'An: Mid 2014',
-'Stare baterie: 663 Cicluri / 88 % Health',
-'Accesorii incluse: Incarcator',
-'Model procesor: Core i5 - 4278U',
-'Diagonala display: 13 - inch',
-'Memorie: 8GB',
-'Capacitate stocare: 128GB SSD',
-'Placa video: Iris 5100 1.5GB shared',
-'Versiune tastatura: NOR',
-'Culoare: Silver'], image: '/assets/img/product01.png' },
+    { id: 1, name: 'MACBOOK PRO RETINA 13 INCH', description: 'Descrierea produsului 1', image: '/assets/img/product01.png' },
     { id: 2, name: 'CASTI SUPERLUX HD681', description: 'Descrierea produsului 2', image: '/assets/img/product02.png' },
     { id: 3, name: 'MACBOOK PRO 15.4 INCH', description: 'Descrierea produsului 3', image: '/assets/img/product03.png' },
     { id: 4, name: 'TASTATURA GAMING NATEC', description: 'Descrierea produsului 3', image: '/assets/img/product14.png' },

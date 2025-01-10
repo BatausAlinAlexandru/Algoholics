@@ -1,10 +1,36 @@
-<div *ngIf="product">
-  <h1>{{ product.name }}</h1>
-  <img src={{product.image}} alt="{{ product.name }}">
-  <div class="description">
-    <p *ngFor="let line of product.description">{{ line }}</p>
+<!-- Container principal pentru întreaga pagină a produsului -->
+<div *ngIf="product" class="product-container">
+
+  <!-- Titlul produsului, poziționat central -->
+  <h1 class="product-title">{{ product.name }}</h1>
+
+  <!-- Secțiunea de conținut: imaginea produsului în stânga, detaliile în dreapta -->
+  <div class="product-content">
+
+    <!-- Imaginea produsului -->
+    <img class="product-image" [src]="product.image" alt="{{ product.name }}">
+
+    <!-- Detaliile produsului (descriere + butoane) -->
+    <div class="product-details">
+
+      <!-- Descrierea produsului -->
+      <p class="product-description">{{ product.description }}</p>
+
+      <!-- Secțiunea pentru butoane -->
+      <div class="product-buttons">
+
+        <!-- Buton pentru "Add to Cart" -->
+          <button class="add-to-cart-btn"><i class="fa fa-shopping-cart"></i> add to cart</button>
+
+        <!-- Buton pentru "Add to Wishlist" -->
+        <button class="add-to-wishlist"><i class="fa fa-heart"></i><span class="tooltipp"> add to wishlist</span></button>
+      </div>
+
+    </div>
   </div>
 </div>
-<div *ngIf="!product">
+
+<!-- Mesaj afișat când produsul nu este găsit -->
+<div *ngIf="!product" class="no-product">
   <p>Produsul nu a fost găsit!</p>
 </div>
