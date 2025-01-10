@@ -461,8 +461,13 @@ textarea.input {
 	Search
 \*----------------------------*/
 
+/* Repozitionam search bar-ul ca sa fie in dreptul logo-ului */
+
 .header-search {
   padding: 15px 0px;
+  margin-left: 80px; /* Mută search bar-ul mult mai la dreapta */
+  margin-top: 15px; /* Poziționează puțin mai jos */
+  max-width: 100%; /* Asigură spațiu suficient pentru input */
 }
 
 .header-search form {
@@ -471,12 +476,13 @@ textarea.input {
 
 .header-search form .input-select {
   margin-right: -4px;
-  border-radius: 40px 0px 0px 40px;
+  border-radius: 50px 0px 0px 50px; /* Rotunjit la stânga */
 }
 
 .header-search form .input {
-  width: calc(100% - 260px);
+  width: 350px; /* Dimensiune fixă pentru zona de input */
   margin-right: -4px;
+  border-radius: 50px 0px 0px 50px; /* Rotunjire stângă */
 }
 
 .header-search form .search-btn {
@@ -486,8 +492,9 @@ textarea.input {
   color: #FFF;
   font-weight: 700;
   border: none;
-  border-radius: 0px 40px 40px 0px;
+  border-radius: 0px 50px 50px 0px; /* Rotunjire dreaptă */
 }
+
 
 /*----------------------------*\
 	Cart
@@ -495,7 +502,8 @@ textarea.input {
 
 .header-ctn {
   float: right;
-  padding: 15px 0px;
+  padding-top: 30px; /* Padding top mai mare pentru a fi intr-un drept cu search bar-ul si logo-ul */
+  padding-bottom: 15px;
 }
 
 .header-ctn>div {
@@ -539,6 +547,10 @@ textarea.input {
 
 .header-ctn .menu-toggle {
   display: none;
+}
+
+.theme-toggle {
+  cursor: pointer; /* Afișează cursorul de pointer */
 }
 
 .cart-dropdown {
@@ -1016,65 +1028,7 @@ textarea.input {
   transform: translate(-50%, -5px);
 }
 
-.product .add-to-cart {
-  position: absolute;
-  left: 1px;
-  right: 1px;
-  bottom: 1px;
-  padding: 15px;
-  background: #1e1f29;
-  text-align: center;
-  -webkit-transform: translateY(0%);
-  -ms-transform: translateY(0%);
-  transform: translateY(0%);
-  -webkit-transition: 0.2s all;
-  transition: 0.2s all;
-  z-index: 2;
-}
-
-.product:hover .add-to-cart {
-  -webkit-transform: translateY(100%);
-  -ms-transform: translateY(100%);
-  transform: translateY(100%);
-}
-
-.product .add-to-cart .add-to-cart-btn {
-  position: relative;
-  border: 2px solid transparent;
-  height: 40px;
-  padding: 0 30px;
-  background-color: #ef233c;
-  color: #FFF;
-  text-transform: uppercase;
-  font-weight: 700;
-  border-radius: 40px;
-  -webkit-transition: 0.2s all;
-  transition: 0.2s all;
-}
-
-.product .add-to-cart .add-to-cart-btn>i {
-  position: absolute;
-  left: 0;
-  top: 0;
-  width: 40px;
-  height: 40px;
-  line-height: 38px;
-  color: #8B2E57;
-  opacity: 0;
-  visibility: hidden;
-}
-
-.product .add-to-cart .add-to-cart-btn:hover {
-  background-color: #FFF;
-  color: #8B2E57;
-  border-color: #8B2E57;
-  padding: 0px 30px 0px 50px;
-}
-
-.product .add-to-cart .add-to-cart-btn:hover>i {
-  opacity: 1;
-  visibility: visible;
-}
+/* Am scos stilizarile pentru vechiul buton add to cart  */
 
 /*----------------------------*\
 	Widget product
