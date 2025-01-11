@@ -36,13 +36,17 @@ export class AuthService {
     );
   }
 
-  signup(email: string, password: string): Observable<any> {
-    return this.http.post(`${this.signupApiUrl}`, { email, password });
+  public isAuthenticated(): boolean {
+    return this.authenticated.value;
   }
 
-  logout() {
+  public logOut() {
     localStorage.removeItem('token');
     this.authenticated.next(false);
     this.router.navigate(['/login']);
+  }
+
+  signup(email: string, password: string): Observable<any> {
+    return this.http.post(`${this.signupApiUrl}`, { email, password });
   }
 }

@@ -15,6 +15,9 @@ export class UserProfileComponent {
     this.router.navigate(['/user-profile']);
   }
 
+  logOut() {
+    this.authService.logOut();
+  }
 
 }
 

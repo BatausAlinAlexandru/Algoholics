@@ -16,15 +16,15 @@ export class LoginComponent {
   constructor(private authService: AuthService, private router: Router) { }
 
   onLogin() {
-    this.authService.login(this.email, this.password).subscribe(
-      (response: any) => {
-        const token = response.token;
-        localStorage.setItem('token', token);
-      },
-      (error) => {
-        this.errorMessage = 'Invalid email or password';
-      }
-    );
+      this.authService.login(this.email, this.password).subscribe(
+        (response: any) => {
+          const token = response.token;
+          localStorage.setItem('token', token);
+        },
+        (error) => {
+          this.errorMessage = 'Invalid email or password';
+        }
+      );
   }
 
   redirectToSignUp() {
