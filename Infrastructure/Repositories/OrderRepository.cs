@@ -43,20 +43,20 @@ namespace Infrastructure.Repositories
             return await _context.SaveChangesAsync() > 0; // Save changes and return success status
         }
 
-        public async Task<bool> UpdateOrderAsync(Order order)
-        {
-            var existingOrder = await _context.Orders.FindAsync(order.Id); // Find existing order
-            if (existingOrder == null) return false; // Return false if order not found
+        //public async Task<bool> UpdateOrderAsync(Order order)
+        //{
+        //    var existingOrder = await _context.Orders.FindAsync(order.Id); // Find existing order
+        //    if (existingOrder == null) return false; // Return false if order not found
 
-            // Update properties
-            existingOrder.OrderDate = order.OrderDate;
-            existingOrder.OrderTotalPrice = order.OrderTotalPrice;
-            existingOrder.OrderStatus = order.OrderStatus;
-            existingOrder.OrderDetails = order.OrderDetails;
+        //    // Update properties
+        //    existingOrder.OrderDate = order.OrderDate;
+        //    existingOrder.OrderTotalPrice = order.OrderTotalPrice;
+        //    existingOrder.OrderStatus = order.OrderStatus;
+        //    existingOrder.OrderDetails = order.OrderDetails;
 
-            _context.Orders.Update(existingOrder); // Update order
-            return await _context.SaveChangesAsync() > 0; // Save changes and return success status
-        }
+        //    _context.Orders.Update(existingOrder); // Update order
+        //    return await _context.SaveChangesAsync() > 0; // Save changes and return success status
+        //}
 
         public async Task<List<Order>> GetOrdersAsync()
         {
