@@ -12,14 +12,14 @@ using System.Threading.Tasks;
 
 namespace Application.Commands.Order
 {
-    public class CreateWishlistHandler : IRequestHandler<CreateWhishlistCommand, Result>
+    public class CreateWishlistHandler : IRequestHandler<CreateWishlistCommand, Result>
     {
         private readonly IWishlistRepository _wishlistRepository;
         public CreateWishlistHandler(IWishlistRepository wishlistRepository)
         {
             this._wishlistRepository = wishlistRepository;
         }
-        public async Task<Result> Handle(CreateWhishlistCommand request, CancellationToken cancellationToken)
+        public async Task<Result> Handle(CreateWishlistCommand request, CancellationToken cancellationToken)
         {
             var Products = request.ProductList.Select(dto => new Domain.Aggregates.ProductAggregate.Entities.Product(
                 new ProductDetail(

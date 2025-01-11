@@ -8,15 +8,15 @@ using System.ComponentModel.DataAnnotations;
 
 namespace Application.Commands.Order
 {
-    public class CreateWhishlistCommand : IRequest<Result>
+    public class CreateWishlistCommand : IRequest<Result>
     {
         [Required]
         public List<ProductDTO> ProductList { get; set; }
         [Required]
         public Guid UserId { get; set; }
-        public CreateWhishlistCommand() { }
+        public CreateWishlistCommand() { }
 
-        public CreateWhishlistCommand(List<ProductDTO> productList, Guid userId)
+        public CreateWishlistCommand(List<ProductDTO> productList, Guid userId)
         {
             ProductList = productList;
             UserId = userId;

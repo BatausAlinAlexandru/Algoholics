@@ -33,9 +33,9 @@ namespace WebAPI.Controllers
 
         [HttpPost]
         //[Authorize(AuthenticationSchemes = JwtBearerDefaults.AuthenticationScheme, Roles = "User")]
-        public async Task<IActionResult> CreateWishlist(CreateOrderCommand createOrderCommand)
+        public async Task<IActionResult> CreateWishlist(CreateWishlistCommand createWishlistCommand)
         {
-            var command = new CreateOrderCommand(createOrderCommand.OrderDetails, createOrderCommand.BuyerId, createOrderCommand.OrderStatus);
+            var command = new CreateWishlistCommand(createWishlistCommand.ProductList,createWishlistCommand.UserId);
             var result = await _mediator.Send(command);
 
             if (result.IsSuccess)
