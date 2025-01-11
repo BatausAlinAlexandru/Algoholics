@@ -1,12 +1,19 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using CSharpFunctionalExtensions;
+using MediatR;
+using System.ComponentModel.DataAnnotations;
 
 namespace Application.Commands.Wishlist
 {
-    internal class RemoveWishlistCommand
+    public class RemoveWishlistCommand : IRequest<Result>
     {
+        [Required]
+        public Guid WishlistId { get; set; }
+        public RemoveWishlistCommand() { }
+        public RemoveWishlistCommand(Guid wishlistId)
+        {
+            WishlistId = wishlistId;
+        }
+        
+
     }
 }

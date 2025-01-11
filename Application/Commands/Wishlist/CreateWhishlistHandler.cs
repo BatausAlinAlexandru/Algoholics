@@ -1,5 +1,7 @@
 ﻿using CSharpFunctionalExtensions;
 using Domain.Aggregates.OrderAggregate.Repositories;
+using Domain.Aggregates.ProductAggregate.Entities;
+using Domain.Aggregates.WishlistAggregate.Repositories;
 using MediatR;
 using System;
 using System.Collections.Generic;
@@ -10,17 +12,29 @@ using System.Threading.Tasks;
 
 namespace Application.Commands.Order
 {
-    public class CreateWhishlistHandler : IRequestHandler<CreateWhishlistCommand, Result>
+    public class CreateWishlistHandler : IRequestHandler<CreateWhishlistCommand, Result>
     {
-        private readonly IWhishlistRepository wishlistRepository;
-        public CreateWhishlistHandler(IOrderRepository orderRepository)
+        private readonly IWishlistRepository _wishlistRepository;
+        public CreateWishlistHandler(IWishlistRepository wishlistRepository)
         {
-            this.wishlistRepository = wishlistRepository;
+            this._wishlistRepository = wishlistRepository;
         }
-        public async Task<Result> Handle(CancelOrderCommand request, CancellationToken cancellationToken)
+        public async Task<Result> Handle(CreateWhishlistCommand request, CancellationToken cancellationToken)
         {
-            var success = await wishlistRepository.DeleteOrderAsync(request.OrderId);
-            return success ? Result.Success() : Result.Failure("Failed to delete order.\n");
+            var Products = request.ProductList.Select(dto => new Domain.Aggregates.ProductAggregate.Entities.Product(
+                new ProductDetail(
+                    dto.Name,
+                    dto.Price,
+                    dto.Description,
+                    dto.Stock,
+                    dto.Discount,
+                    dto.PathFoto
+                )
+            )).ToList();
+            var wishlist = new Domain.Aggregates.WishlistAggregate.Entities.Wishlist(request.UserId,Products);
+
+            var success = await _wishlistRepository.CreateWishlistAsync(wishlist);
+            return success ? Result.Success() : Result.Failure("Failed to create order");
         }
     }
 }

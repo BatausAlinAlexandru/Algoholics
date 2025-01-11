@@ -11,6 +11,7 @@ namespace Domain.Aggregates.WishlistAggregate.Repositories
     public interface IWishlistRepository
     {
         Task<Wishlist> GetWishlistByUserIdAsync(Guid userId);
+        Task<Wishlist> GetWishlistByIdAsync(Guid wishlistId);
         Task<List<Wishlist>> GetAllWishlistsAsync();
         Task<bool> CreateWishlistAsync(Wishlist wishlist);
         Task<bool> RemoveWishlistAsync(Guid wishlistId);
