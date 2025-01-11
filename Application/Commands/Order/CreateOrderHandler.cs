@@ -9,7 +9,7 @@ using Domain.Aggregates.OrderAggregate.Value_Objects;
 
 namespace Application.Commands.Order
 {
-    public class CreateOrderHandler : IRequestHandler<CreateOrderCommand, Result>
+    public class CreateOrderHandler : IRequestHandler<CreateWishlistCommand, Result>
     {
         private readonly IOrderRepository _orderRepository;
 
@@ -18,7 +18,7 @@ namespace Application.Commands.Order
             _orderRepository = orderRepository;
         }
 
-        public async Task<Result> Handle(CreateOrderCommand request, CancellationToken cancellationToken)
+        public async Task<Result> Handle(CreateWishlistCommand request, CancellationToken cancellationToken)
         {
 
             var order = new Domain.Aggregates.OrderAggregate.Entities.Order(request.OrderDetails,request.OrderStatus,request.BuyerId);

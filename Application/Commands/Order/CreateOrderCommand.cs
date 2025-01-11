@@ -8,7 +8,7 @@ using System.ComponentModel.DataAnnotations;
 
 namespace Application.Commands.Order
 {
-    public class CreateOrderCommand : IRequest<Result>
+    public class CreateWishlistCommand : IRequest<Result>
     {
         [Required]
         public List<OrderDetail> OrderDetails { get; set; }
@@ -17,9 +17,9 @@ namespace Application.Commands.Order
         [Required]
         public OrderStatus OrderStatus { get; set; } = OrderStatus.Pending;
 
-        public CreateOrderCommand() { }
+        public CreateWishlistCommand() { }
 
-        public CreateOrderCommand(List<OrderDetail> orderDetails, Guid userId, OrderStatus orderStatus)
+        public CreateWishlistCommand(List<OrderDetail> orderDetails, Guid userId, OrderStatus orderStatus)
         {
             OrderDetails = orderDetails;
             BuyerId = userId;

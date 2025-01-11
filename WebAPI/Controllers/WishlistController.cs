@@ -13,20 +13,20 @@ namespace WebAPI.Controllers
 {
     [ApiController]
     [Route("api/[controller]")]
-    public class OrderController : ControllerBase
+    public class WishlistController : ControllerBase
     {
         private readonly IMediator _mediator;
 
-        public OrderController(IMediator mediator)
+        public WishlistController(IMediator mediator)
         {
             _mediator = mediator;
         }
 
         [HttpGet]
         //[Authorize(AuthenticationSchemes = JwtBearerDefaults.AuthenticationScheme, Roles = "Admin")]
-        public async Task<IActionResult> GetAllOrders()
+        public async Task<IActionResult> GetAllWishlists()
         {
-            var query = new GetAllOrdersQuery();
+            var query = new GetAllWishlistQuery();
             var result = await _mediator.Send(query);
 
             return Ok(result);
@@ -35,9 +35,9 @@ namespace WebAPI.Controllers
 
         [HttpPost]
         //[Authorize(AuthenticationSchemes = JwtBearerDefaults.AuthenticationScheme, Roles = "User")]
-        public async Task<IActionResult> CreateOrder(CreateWishlistCommand createOrderCommand)
+        public async Task<IActionResult> CreateWishlist(CreateWishlistCommand createOrderCommand)
         {
-            var command = new CreateWishlistCommand(createOrderCommand.OrderDetails,createOrderCommand.BuyerId,createOrderCommand.OrderStatus);
+            var command = new CreateWishlistCommand(createOrderCommand.OrderDetails, createOrderCommand.BuyerId, createOrderCommand.OrderStatus);
             var result = await _mediator.Send(command);
 
             if (result.IsSuccess)
@@ -69,9 +69,9 @@ namespace WebAPI.Controllers
 
         [HttpPut("update-products/{orderId:guid}")]
         //[Authorize(AuthenticationSchemes = JwtBearerDefaults.AuthenticationScheme, Roles = "Admin,User")]
-        public async Task<IActionResult> ModifyOrderProducts(Guid orderId, Guid orderDetailId,List<OrderDetailDTO> orderDetails)
+        public async Task<IActionResult> ModifyOrderProducts(Guid orderId, Guid orderDetailId, List<OrderDetailDTO> orderDetails)
         {
-            var command = new ModifyOrderProductsCommand(orderId,orderDetailId, orderDetails);
+            var command = new ModifyOrderProductsCommand(orderId, orderDetailId, orderDetails);
             var result = await _mediator.Send(command);
 
             if (result.IsSuccess)
