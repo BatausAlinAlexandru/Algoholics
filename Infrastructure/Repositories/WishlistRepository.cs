@@ -1,6 +1,8 @@
 ﻿using Domain.Aggregates.ProductAggregate.Entities;
 using Domain.Aggregates.WishlistAggregate.Entities;
 using Domain.Aggregates.WishlistAggregate.Repositories;
+using Infrastructure.Data;
+using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -9,36 +11,53 @@ using System.Threading.Tasks;
 
 namespace Infrastructure.Repositories
 {
-    public class WishlistRepository : IWishlistRepository
+    internal class WishlistRepository : IWishlistRepository
     {
-        public Task<bool> CreateWishlistAsync(Wishlist wishlist)
+        private readonly ApplicationDbContext _context;
+        public WishlistRepository(ApplicationDbContext context)
         {
-            throw new NotImplementedException();
+            _context = context;
+        }
+        public async Task<bool> CreateWishlistAsync(Wishlist wishlist)
+        {
+            await _context.Wishlists.AddAsync(wishlist);
+            return await _context.SaveChangesAsync() > 0;
         }
 
-        public Task<List<Wishlist>> GetAllWishlistsAsync()
+        public async Task<List<Wishlist>> GetAllWishlistsAsync()
         {
-            throw new NotImplementedException();
+           return await _context.Wishlists.Include(w => w.Products).ToListAsync();
         }
 
-        public Task<Wishlist> GetWishlistByIdAsync(Guid wishlistId)
+        public async Task<Wishlist> GetWishlistByIdAsync(Guid wishlistId)
         {
-            throw new NotImplementedException();
+            return await _context.Wishlists.Include(w => w.Products).FirstOrDefaultAsync(o => o.Id == wishlistId);
         }
 
-        public Task<Wishlist> GetWishlistByUserIdAsync(Guid userId)
+        public async Task<Wishlist> GetWishlistByUserIdAsync(Guid userId)
         {
-            throw new NotImplementedException();
+            return await _context.Wishlists.Include(w => w.Products).FirstOrDefaultAsync(o => o.UserAccountId == userId);
         }
 
-        public Task<bool> RemoveWishlistAsync(Guid wishlistId)
+        public async Task<bool> RemoveWishlistAsync(Guid wishlistId)
         {
-            throw new NotImplementedException();
+            var wishlist = await _context.Wishlists.FindAsync(wishlistId);
+            if (wishlist == null) return false; 
+
+            _context.Wishlists.Remove(wishlist); 
+            return await _context.SaveChangesAsync() > 0;
         }
 
-        public Task<bool> UpdateWishlistAsync(Guid wishlistId, List<Product> updatedProductList)
+        public async Task<bool> UpdateWishlistAsync(Guid wishlistId, List<Product> updatedProductList)
         {
-            throw new NotImplementedException();
+                var existingWishlist = await _context.Wishlists.FindAsync(wishlistId); // Find existing order
+                if (existingWishlist == null) return false; // Return false if order not found
+
+                // Update properties
+                existingWishlist.Products = updatedProductList;
+
+                _context.Wishlists.Update(existingWishlist); // Update order
+                return await _context.SaveChangesAsync() > 0; // Save changes and return success status
         }
     }
 }
