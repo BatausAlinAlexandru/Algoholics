@@ -1,12 +1,18 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using Application.DTO;
+using CSharpFunctionalExtensions;
+using MediatR;
 
-namespace Application.Commands.Wishlist
+namespace Application.Commands.Order
 {
-    internal class UpdateWishlistCommand
+    public class UpdateWishlistCommand : IRequest<Result>
     {
+        public Guid WishlistId { get; set; }
+        public List<ProductDTO> UpdatedProductList { get; set; }
+
+        public UpdateWishlistCommand(Guid wishlistId,List<ProductDTO> updatedProductList)
+        {
+            WishlistId = wishlistId;
+            UpdatedProductList = updatedProductList;
+        }
     }
 }

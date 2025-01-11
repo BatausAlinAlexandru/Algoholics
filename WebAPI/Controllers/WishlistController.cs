@@ -8,6 +8,7 @@ using Domain.Aggregates.OrderAggregate.Value_Objects;
 using Application.Queies.Order;
 using Domain.Aggregates.UserAggregate.Entities;
 using Application.DTO;
+using Application.Commands.Wishlist;
 
 namespace WebAPI.Controllers
 {
@@ -50,11 +51,11 @@ namespace WebAPI.Controllers
             }
         }
 
-        [HttpDelete("{orderId:guid}")]
+        [HttpDelete("{wishlistId:guid}")]
         //[Authorize(AuthenticationSchemes = JwtBearerDefaults.AuthenticationScheme, Roles = "Admin")]
-        public async Task<IActionResult> CancelOrder(Guid orderId)
+        public async Task<IActionResult> RemoveWishlist(Guid wishlistId)
         {
-            var command = new CancelOrderCommand(orderId);
+            var command = new RemoveWishlistCommand(wishlistId);
             var result = await _mediator.Send(command);
 
             if (result.IsSuccess)
@@ -67,11 +68,11 @@ namespace WebAPI.Controllers
             }
         }
 
-        [HttpPut("update-products/{orderId:guid}")]
+        [HttpPut("update-wishlist/{wishlistId:guid}")]
         //[Authorize(AuthenticationSchemes = JwtBearerDefaults.AuthenticationScheme, Roles = "Admin,User")]
-        public async Task<IActionResult> ModifyOrderProducts(Guid orderId, Guid orderDetailId, List<OrderDetailDTO> orderDetails)
+        public async Task<IActionResult> UpdateWishlistProducts(Guid wishlistId, List<ProductDTO> productList)
         {
-            var command = new ModifyOrderProductsCommand(orderId, orderDetailId, orderDetails);
+            var command = new UpdateWishlistCommand(wishlistId, productList);
             var result = await _mediator.Send(command);
 
             if (result.IsSuccess)
@@ -83,24 +84,5 @@ namespace WebAPI.Controllers
                 return BadRequest(result.Error);
             }
         }
-
-        [HttpPut("update-status/{orderId:guid}")]
-        //[Authorize(AuthenticationSchemes = JwtBearerDefaults.AuthenticationScheme, Roles = "Admin")]
-        public async Task<IActionResult> ModifyOrderStatus(Guid orderId, OrderStatus orderStatus)
-        {
-            var command = new ModifyOrderStatusCommand(orderId, orderStatus);
-            var result = await _mediator.Send(command);
-
-            if (result.IsSuccess)
-            {
-                return Ok();
-            }
-            else
-            {
-                return BadRequest(result.Error);
-            }
-        }
-
-
     }
 }
