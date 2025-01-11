@@ -5,6 +5,7 @@ using Infrastructure.Repositories;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.DependencyInjection;
 using Domain.Aggregates.ProductAggregate.Repositories;
+using Domain.Aggregates.WishlistAggregate.Repositories;
 
 namespace Application
 {
@@ -18,6 +19,7 @@ namespace Application
             services.AddTransient<IUserAccountRepository, UserAccountRepository>();
             services.AddTransient<IOrderRepository, OrderRepository>();
             services.AddTransient<IProductRepository, ProductRepository>();
+            services.AddTransient<IWishlistRepository, WishlistRepository>();
 
             return services;
         }
