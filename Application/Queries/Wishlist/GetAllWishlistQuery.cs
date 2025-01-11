@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace Application.Queries.Wishlist
 {
-    public class GetAllWishlistQuery : IRequest<List<Wishlist>>
+    public class GetAllWishlistQuery : IRequest<List<Domain.Aggregates.WishlistAggregate.Entities.Wishlist>>
     {
         public GetAllWishlistQuery()
         {

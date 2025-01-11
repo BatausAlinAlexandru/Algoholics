@@ -3,12 +3,9 @@ using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using MediatR;
 using Application.Commands.Order;
-using Domain.Aggregates.OrderAggregate.Entities;
-using Domain.Aggregates.OrderAggregate.Value_Objects;
-using Application.Queies.Order;
-using Domain.Aggregates.UserAggregate.Entities;
 using Application.DTO;
 using Application.Commands.Wishlist;
+using Application.Queries.Wishlist;
 
 namespace WebAPI.Controllers
 {
