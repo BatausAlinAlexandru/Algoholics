@@ -22,10 +22,10 @@ namespace Application.Queries.Wishlist
 
         public async Task<Domain.Aggregates.WishlistAggregate.Entities.Wishlist> Handle(GetWishlistByUserIdQuery request, CancellationToken cancellationToken)
         {
-            if(_userAccountRepository.GetUserAccountByIdAsync(request.userId) == null)
-            {
-                throw new Domain.Aggregates.UserAggregate.Exceptions.UserAccountException("You are not logged in!\n");
-            }
+            //if(_userAccountRepository.GetUserAccountByIdAsync(request.userId) == null)
+            //{
+            //    throw new Domain.Aggregates.UserAggregate.Exceptions.UserAccountException("You are not logged in!\n");
+            //}
             var wishlist = await _wishlistRepository.GetWishlistByUserIdAsync(request.userId);
             return wishlist;
         }

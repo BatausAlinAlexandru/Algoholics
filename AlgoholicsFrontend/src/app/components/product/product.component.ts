@@ -35,6 +35,6 @@ export class ProductComponent implements OnInit {
   }
 
   addToWishlist(product: any) {
-    this.wishlistService.addToWishlist(product); 
+    //this.wishlistService.addToWishlist(product); 
   }
 }

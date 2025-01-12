@@ -18,17 +18,17 @@ export class HeaderComponent implements OnInit{
   {}
 
   ngOnInit(): void {
-    this.wishlistItems = this.wishlistService.getWishlist();
-    this.cartItems = this.cartService.getCart();
+    //this.wishlistItems = this.wishlistService.getAllWishlists();
+    //this.cartItems = this.cartService.getCart();
   }
 
-  addToWishlist(product: any): void {
-    this.wishlistService.addToWishlist(product); 
-  }
+  //addToWishlist(product: any): void {
+  //  this.wishlistService.addToWishlist(product); 
+  //}
 
-  getWishlistCount(): number {
-    return this.wishlistService.getWishlistCount();
-  }
+  //getWishlistCount(): number {
+  //  return this.wishlistService.getWishlistCount();
+  //}
 
   removeFromCart(product: any): void {
     this.cartService.removeFromCart(product.id);

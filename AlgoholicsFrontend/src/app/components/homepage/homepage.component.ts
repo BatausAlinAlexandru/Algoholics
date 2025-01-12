@@ -25,7 +25,7 @@ export class HomepageComponent implements OnInit {
   }
 
   addToWishlist(product: any): void {
-    this.wishlistService.addToWishlist(product);
+    //this.wishlistService.addToWishlist(product);
   }
 
 }
