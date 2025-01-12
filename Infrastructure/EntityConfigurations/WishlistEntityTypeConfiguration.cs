@@ -1,4 +1,5 @@
-﻿using Domain.Aggregates.WishlistAggregate.Entities;
+﻿using Domain.Aggregates.ProductAggregate.Entities;
+using Domain.Aggregates.WishlistAggregate.Entities;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
 
@@ -18,8 +19,15 @@ namespace Infrastructure.EntityConfigurations
 
             // Configure the relationship with Product
             builder.HasMany(w => w.Products)
-                   .WithOne() // Assuming no navigation property in Product back to Wishlist
-                   .OnDelete(DeleteBehavior.Cascade);
+            .WithMany()
+            .UsingEntity<Dictionary<string, object>>(
+                "WishlistProduct", // Join table name
+                j => j.HasOne<Product>().WithMany().HasForeignKey("ProductId"), // Configure the Product side
+                j => j.HasOne<Wishlist>().WithMany().HasForeignKey("WishlistId"), // Configure the Wishlist side
+                j =>
+                {
+                    j.HasKey("WishlistId", "ProductId"); // Composite key
+                });
         }
     }
 }

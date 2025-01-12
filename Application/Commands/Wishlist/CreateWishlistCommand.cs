@@ -11,14 +11,14 @@ namespace Application.Commands.Order
     public class CreateWishlistCommand : IRequest<Result>
     {
         [Required]
-        public List<ProductDTO> ProductList { get; set; }
+        public List<Guid> ProductIdList { get; set; }
         [Required]
         public Guid UserId { get; set; }
         public CreateWishlistCommand() { }
 
-        public CreateWishlistCommand(List<ProductDTO> productList, Guid userId)
+        public CreateWishlistCommand(List<Guid> productList, Guid userId)
         {
-            ProductList = productList;
+            ProductIdList = productList;
             UserId = userId;
         }
     }

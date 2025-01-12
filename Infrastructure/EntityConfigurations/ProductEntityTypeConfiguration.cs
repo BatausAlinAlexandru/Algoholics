@@ -16,8 +16,8 @@ namespace Infrastructure.EntityConfigurations
 
             // Configure properties
             builder.Property(p => p.Id)
-                   .IsRequired()
-                   .ValueGeneratedOnAdd(); // Auto-generated ID
+                   .IsRequired();
+                   //.ValueGeneratedOnAdd(); // Auto-generated ID
 
             builder.OwnsOne(p => p.ProductDetail, pd =>
             {
