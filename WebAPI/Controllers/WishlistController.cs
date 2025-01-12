@@ -81,5 +81,14 @@ namespace WebAPI.Controllers
                 return BadRequest(result.Error);
             }
         }
+
+        [HttpGet("user/{userId:guid}")]
+        //[Authorize(AuthenticationSchemes = JwtBearerDefaults.AuthenticationScheme, Roles = "Admin,User")]
+        public async Task<IActionResult> GetUserWishlist(Guid userId)
+        {
+            var command = new GetWishlistByUserIdQuery(userId);
+            var result = await _mediator.Send(command);
+            return Ok(result);
+        }
     }
 }
