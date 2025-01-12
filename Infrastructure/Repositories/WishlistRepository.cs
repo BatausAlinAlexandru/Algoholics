@@ -20,12 +20,6 @@ namespace Infrastructure.Repositories
         }
         public async Task<bool> CreateWishlistAsync(Wishlist wishlist)
         {
-            var productList = wishlist.Products;
-            foreach(Product product in productList) 
-            {
-                if (!_context.Products.Contains(product))
-                    throw new InvalidOperationException($"The product {product.ProductDetail.Name} with id {product.Id} is not in the database");
-            }
             await _context.Wishlists.AddAsync(wishlist);
             return await _context.SaveChangesAsync() > 0;
         }
