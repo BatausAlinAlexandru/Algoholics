@@ -1966,6 +1966,9 @@ textarea.input {
 ===========================================================*/
 
 #footer {
+  border-top: #8B2E57;
+  border-top-width: 3px;
+  border-top-style: solid;
   background: #8B2E57;
   color: #B9BABC;
 }
@@ -2199,4 +2202,8 @@ button {
 
 .fa-eye {
   color: #000 !important; /* Replace with your desired color */
+}
+
+.fa-shopping-cart {
+  color: #000 !important;
 }

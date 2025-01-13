@@ -98,4 +98,6 @@ header a:hover {
     color: var(--text-color) !important; /* Desired color specific to this component */
   }
   
-  
+.fa-shopping-cart {
+    color: var(--text-color) !important;
+}

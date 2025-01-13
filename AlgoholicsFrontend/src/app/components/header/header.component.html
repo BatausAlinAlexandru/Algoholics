@@ -3,17 +3,9 @@
   <!-- TOP HEADER -->
   <div id="top-header">
     <div class="container">
-      <ul class="header-links pull-left">
-        <li><i class="fa fa-phone"></i> +021-95-51-84</li>
-        <li><i class="fa fa-envelope-o"></i> email&#64;email.com</li>
-        <li><i class="fa fa-map-marker"></i> 1734 Stonecoal Road</li>
-      </ul>
       <ul class="header-links pull-right">
-        <li id="theme-toggle" class="theme-toggle">
-          <a href="#">
-            <i class="fa fa-moon-o"></i>
-            <span id="theme-label">Dark Mode</span>
-          </a>
+        <li #themeToggle id="theme-toggle" class="theme-toggle">
+          <a><i class="fa fa-moon-o"></i><span id="theme-label">Dark Mode</span></a>
         </li>
         <li><i class="fa fa-dollar"></i> USD</li>
         <li *ngIf="!isAuthenticated" ><a href="#" routerLink="/login"><i class="fa fa-user-o"></i> My Account</a></li>
@@ -61,7 +53,7 @@
 
             <!-- Cart -->
             <div>
-              <a routerLink="/cart" style="color:black">
+              <a routerLink="/cart">
                 <i class="fa fa-shopping-cart"></i>
                 <span>Your Cart</span>
                 <div class="qty">{{ getCartlistCount() }}</div>

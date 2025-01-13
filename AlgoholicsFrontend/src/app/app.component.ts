@@ -12,18 +12,27 @@ export class AppComponent implements OnInit {
   constructor(private router: Router) { }
 
   ngOnInit() {
-    // Load theme from localStorage
+    setTimeout(() => {
+      this.initializeThemeToggle();
+    }, 0);
+  }
+
+  initializeThemeToggle() {
     const root = document.documentElement;
     const savedTheme = localStorage.getItem('theme') || 'light';
-
+  
     if (savedTheme === 'dark') {
       root.classList.add('dark-mode');
     }
-
+  
     const themeToggle = document.getElementById('theme-toggle') as HTMLElement;
+    if (!themeToggle) {
+      console.error('Elementul theme-toggle nu a fost găsit.');
+      return;
+    }
+    
     themeToggle.textContent = savedTheme === 'dark' ? 'Light Mode' : 'Dark Mode';
-
-    // Toggle theme
+  
     themeToggle.addEventListener('click', () => {
       const isDarkMode = root.classList.toggle('dark-mode');
       localStorage.setItem('theme', isDarkMode ? 'dark' : 'light');
