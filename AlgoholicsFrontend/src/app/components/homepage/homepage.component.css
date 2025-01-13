@@ -1,0 +1,36 @@
+.homepage {
+    background-color: var(--background-color);
+    color: var(--text-color);
+  }
+  
+  .homepage a {
+    color: var(--text-color);
+  }
+  
+  .homepage button {
+    background-color: var(--text-color);
+    color: var(--background-color);
+    border: 1px solid var(--text-color);
+  }
+  
+  .homepage button:hover {
+    background-color: var(--background-color);
+    color: var(--text-color);
+  }
+  
+  .product-card {
+    margin: 8px; /* Adjust the value to control spacing */
+  }
+
+  .product-img {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 300px; /* Same height as the image for perfect centering */
+    background-color: #fff; /* Optional: Add a white background for the image container */
+  }
+  
+  .product-img img {
+    max-width: 100%; /* Ensure the image scales properly */
+    max-height: 100%; /* Maintain the image's aspect ratio */
+  }

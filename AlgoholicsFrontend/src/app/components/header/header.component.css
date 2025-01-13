@@ -1,0 +1,103 @@
+/* Stilurile de bază */
+.main-nav {
+    list-style: none;
+    padding: 15px;
+    margin: 0;
+}
+
+.main-nav > li {
+    position: relative;
+}
+
+.dropdown-menu {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    position: absolute;
+    top: 100%; /* Afișează submeniul sub "Home" */
+    left: 0;
+    display: none; /* Ascunde submeniul */
+    background: #fff; /* Fundal pentru submeniu */
+    border: 1px solid #ddd; /* Opțional: bordură */
+    z-index: 1000; /* Asigură afișarea peste alte elemente */
+}
+
+.dropdown:hover .dropdown-menu {
+    display: block; /* Afișează submeniul la hover */
+}
+
+.dropdown-menu li {
+    padding: 10px;
+}
+
+.dropdown-menu li a {
+    text-decoration: none;
+    color: #000;
+}
+
+.dropdown-menu li a:hover {
+    background: #f0f0f0; /* Schimbă culoarea de fundal la hover */
+}
+
+.menu-item {
+    display: flex;
+    align-items: center;
+    font-size: 16px; /* Ajustează dimensiunea textului */
+    color: #8B2E57; /* Culoarea textului */
+}
+
+.menu-icon {
+    display: inline-block;
+    width: 18px; /* Lățimea totală a celor trei linii */
+    height: 14px; /* Înălțimea containerului */
+    position: relative;
+    margin-right: 8px; /* Spațiu între icon și text */
+}
+
+.menu-icon::before,
+.menu-icon::after {
+    content: "";
+    position: absolute;
+    width: 100%; /* Lungimea completă a fiecărei linii */
+    height: 2px; /* Grosimea fiecărei linii */
+    background-color: #8B2E57; /* Culoarea liniilor */
+    left: 0;
+}
+
+.menu-icon::before {
+    top: 0; /* Prima linie */
+}
+
+.menu-icon::after {
+    top: 14px; /* Ultima linie */
+}
+
+.menu-icon .middle-line {
+    position: absolute;
+    top: 7px; /* Linia din mijloc */
+    left: 0;
+    width: 100%; /* Lungimea completă a liniei din mijloc */
+    height: 2px; /* Grosimea liniei din mijloc */
+    background-color: #8B2E57; /* Culoarea liniei din mijloc */
+}
+
+header {
+  background-color: var(--header-background-color);
+  color: var(--text-color);
+}
+
+header a {
+  color: var(--text-color);
+}
+
+header a:hover {
+  color: var(--text-color); /* Or any highlight color */
+}
+
+.fa-heart-o {
+    color: var(--text-color) !important; /* Desired color specific to this component */
+  }
+  
+.fa-shopping-cart {
+    color: var(--text-color) !important;
+}

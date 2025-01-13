@@ -1,0 +1,7 @@
+<div *ngIf="showNavbar()">
+  <app-header></app-header> <!-- Header-ul va fi afișat doar când nu suntem pe login -->
+</div>
+<router-outlet></router-outlet>
+<div *ngIf="showFooter()">
+  <app-footer></app-footer> <!-- Footer-ul va fi afișat doar când nu suntem pe login sau signup -->
+</div>
