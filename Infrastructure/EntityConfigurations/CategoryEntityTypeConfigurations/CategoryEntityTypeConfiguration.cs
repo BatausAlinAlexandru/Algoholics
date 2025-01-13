@@ -10,6 +10,7 @@ namespace Infrastructure.EntityConfigurations.CategoryEntityTypeConfigurations
         {
             builder.ToTable("categories");
             builder.HasKey(c => c.Id);
+            builder.HasIndex(c => c.Name).IsUnique(); // Constrângere unică
             builder.Property(c => c.Name).IsRequired().HasMaxLength(50);
             builder.HasMany(c => c.Subcategories).WithOne().HasForeignKey(sc => sc.IdCategory);
         }

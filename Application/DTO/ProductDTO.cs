@@ -14,7 +14,6 @@ namespace Application.DTO
         public string ImageUrl { get; set; }
         public Guid IdCtegory { get; set; }
         public Guid IdSubcategory { get; set; }
-        public List<FilterGroup> Filters { get; set; }
-        public List<ProductSpecificationDTO> ProductSpecifications { get; set; }
+        public List<ProductFilter> Filters { get; set; }
     }
 }

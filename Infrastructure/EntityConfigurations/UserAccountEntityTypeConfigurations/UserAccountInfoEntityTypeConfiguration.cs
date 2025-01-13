@@ -9,6 +9,11 @@ namespace Infrastructure.EntityConfigurations.UserAccountEntityTypeConfiguration
         {
             builder.ToTable("users_info");
             builder.HasKey(i => i.Id);
+
+            builder.HasOne(uai => uai.UserAccountPaymentCardInfo)
+                .WithOne()
+                .HasForeignKey<UserAccountPaymentInfo>(uapi => uapi.IdUserAccount)
+                .OnDelete(DeleteBehavior.Cascade);
         }
     }
 }

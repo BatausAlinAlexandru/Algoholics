@@ -26,11 +26,6 @@ namespace Application.Queies.Product
                 IdCtegory = p.IdCategory,
                 IdSubcategory = p.IdSubcategory,
                 Filters = p.Filters,
-                ProductSpecifications = p.ProductSpecifications.Select(ps => new ProductSpecificationDTO
-                {
-                    Name = ps.Key,
-                    Value = ps.Value
-                }).ToList()
             }).ToList();
         }
     }

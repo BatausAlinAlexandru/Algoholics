@@ -16,7 +16,7 @@ namespace Application.Queies.UserAccount
         public async Task<List<UserAccountDTO>> Handle(GetAllUserAccountsQuery request, CancellationToken cancellationToken)
         {
 
-            var userAccounts = await _userAccountRepository.GetUserAccountsAsyncV2();
+            var userAccounts = await _userAccountRepository.GetUserAccountsAsync();
             return userAccounts.Select(ua => new UserAccountDTO
             {
                 Id = ua.Id,

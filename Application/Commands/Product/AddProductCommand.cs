@@ -15,7 +15,6 @@ namespace Application.Commands.Product
         [Required] public required string PhotoUrl { get; set; }
         [Required] public required Guid IdCategory { get; set; }
         [Required] public required Guid IdSubcategory { get; set; }
-        [Required] public required List<Domain.Aggregates.CategoryAggregate.Entities.FilterGroup> Filters { get; set; }
-        [Required] public required List<ProductSpecification> ProductSpecifications { get; set; }
+        [Required] public required List<ProductFilter> Filters { get; set; }
     }
 }

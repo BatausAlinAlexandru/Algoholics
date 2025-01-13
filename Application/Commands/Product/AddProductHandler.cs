@@ -16,7 +16,7 @@ namespace Application.Commands.Product
         public async Task<Result> Handle(AddProductCommand request, CancellationToken cancellationToken)
         {
             var product = new Domain.Aggregates.ProductAggregate.Entities.Product(request.Name, request.Price, request.Description, request.Stock, request.Discount, request.PhotoUrl, request.IdCategory, 
-                request.IdSubcategory, request.Filters, request.ProductSpecifications);            
+                request.IdSubcategory, request.Filters);            
             await _productRepository.AddProductAsync(product);
             return Result.Success();
         }

@@ -77,5 +77,6 @@ namespace Infrastructure.Repositories
             {
                 return Result.Failure(e.Message);
             }
+        }
     }
 }

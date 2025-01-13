@@ -1,4 +1,5 @@
-﻿namespace Domain.Aggregates.OrderAggregate.Entities
+﻿
+namespace Domain.Aggregates.OrderAggregate.Entities
 {
     public class OrderProductDetail : BaseEntity
     {

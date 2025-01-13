@@ -10,5 +10,7 @@ namespace Domain.Aggregates.CategoryAggregate.Repositories
         Task<Result> AddFilterValue(FilterValue filterValue);
         Task<Result> UpdateFilterValue(FilterValue newFilterValue);
         Task<Result> DeleteFilterValue(Guid idFilterValue);
+
+        Task<List<FilterValue>> GetFilterValuesByFilterGroupId(Guid idFilterGroup);
     }
 }

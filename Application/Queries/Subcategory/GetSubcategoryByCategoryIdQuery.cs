@@ -7,9 +7,9 @@ namespace Application.Queies.Subcategory
     {
         public Guid IdCategory { get; set; }
 
-        public GetSubcategoryByCategoryIdQuery()
+        public GetSubcategoryByCategoryIdQuery(Guid id)
         {
-            
+            this.IdCategory = id;
         }
     }
 }

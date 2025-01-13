@@ -15,8 +15,25 @@ namespace WebAPI.Controllers
             _mediator = mediator;
         }
 
+
+        [HttpPost("register")]
+        public async Task<IActionResult> RegisterUserAccount(RegisterUserAccountCommand userAccount)
+        {
+            var command = new RegisterUserAccountCommand(userAccount.Email, userAccount.Password);
+            var result = await _mediator.Send(command);
+
+            if (result.IsSuccess)
+            {
+                return Ok();
+            }
+            else
+            {
+                return BadRequest(result.Error);
+            }
+        }
+
         [HttpPost("login")]
-        public async Task<IActionResult> Loggin(LoginUserAccountCommand logginUserAccountCommand)
+        public async Task<IActionResult> LogginUserAccount(LoginUserAccountCommand logginUserAccountCommand)
         {
             var result = await _mediator.Send(logginUserAccountCommand);
 
@@ -29,5 +46,6 @@ namespace WebAPI.Controllers
                 return BadRequest(result.Error);
             }
         }
+
     }
 }

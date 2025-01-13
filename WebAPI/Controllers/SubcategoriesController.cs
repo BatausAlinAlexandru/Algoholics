@@ -68,9 +68,10 @@ namespace WebAPI.Controllers
             }
         }
 
-        [HttpGet("get-by-category-id")]
-        public async Task<IActionResult> GetSubcategoryByCategoryId([FromQuery] GetSubcategoryByCategoryIdQuery query)
+        [HttpGet("get-by-category-id/{id}")]
+        public async Task<IActionResult> GetSubcategoryByCategoryId(Guid id)
         {
+            var query = new GetSubcategoryByCategoryIdQuery(id);
             var result = await _mediator.Send(query);
             if (result.Count > 0)
             {

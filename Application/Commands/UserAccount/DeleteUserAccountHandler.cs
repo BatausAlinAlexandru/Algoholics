@@ -16,7 +16,10 @@ namespace Application.Commands.UserAccount
         public async Task<Result> Handle(DeleteUserAccountCommand request, CancellationToken cancellationToken)
         {
             var success = await _userAccountRepository.DeleteUserAccountAsync(request.IdUserAccount);
-            return success ? Result.Success() : Result.Failure("Failed to delete user account");
+            if (success.IsFailure)
+                return Result.Failure("Failed to delete user account");
+
+            return Result.Success();
         }
     }
 }

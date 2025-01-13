@@ -1,5 +1,6 @@
 ﻿using Application.Commands.FilterValue;
 using Application.Queies.FilverValue;
+using Application.Queries.FilverValue;
 using MediatR;
 using Microsoft.AspNetCore.Mvc;
 
@@ -41,6 +42,15 @@ namespace WebAPI.Controllers
         public async Task<IActionResult> GetAllFilterValues()
         {
             var result = await _mediator.Send(new GetAllFilterValuesQuery());
+            return result.Count > 0 ? Ok(result) : BadRequest(result);
+        }
+
+
+        [HttpGet("get-all-by-filter-group-id/{id}")]
+        public async Task<IActionResult> GetFilterValuesByFilterGroupId(Guid id)
+        {
+            var query = new GetFilterValueByFilteGroupIdQuery { IdFilterGroup = id };
+            var result = await _mediator.Send(query);
             return result.Count > 0 ? Ok(result) : BadRequest(result);
         }
 

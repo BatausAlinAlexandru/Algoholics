@@ -34,12 +34,10 @@ namespace WebAPI.Controllers
             }
         }
 
-        [HttpPost]
-        public async Task<IActionResult> AddUserAccount(RegisterUserAccountCommand userAccount)
+        [HttpPost("add-payment-info")]
+        public async Task<IActionResult> AddUserAccountPaymentInfo([FromBody] AddUserAccountPaymentInfoCommand command)
         {
-            var command = new RegisterUserAccountCommand(userAccount.Email, userAccount.Password);
             var result = await _mediator.Send(command);
-
             if (result.IsSuccess)
             {
                 return Ok();
@@ -50,7 +48,22 @@ namespace WebAPI.Controllers
             }
         }
 
-        [HttpDelete("{Id}")]
+        [HttpPut("update-payment-info")]
+        public async Task<IActionResult> UpdateUserAccountPaymentInfo([FromBody] UpdateUserAccountPaymentInfoCommand command)
+        {
+            var result = await _mediator.Send(command);
+            if (result.IsSuccess)
+            {
+                return Ok();
+            }
+            else
+            {
+                return BadRequest(result.Error);
+            }
+        }
+
+
+        [HttpDelete("{id}")]
         public async Task<IActionResult> DeleteUserAccount(Guid id)
         {
             var command = new DeleteUserAccountCommand(id);
@@ -66,13 +79,27 @@ namespace WebAPI.Controllers
             }
         }
 
-        [HttpPut()]
-        public async Task<IActionResult> UpdateUserAccountEmail(ModifyUserAccountEmailCommand userAccount)
+        [HttpPut("{id}")]
+        public async Task<IActionResult> UpdateUserAccountEmail(Guid id, ModifyUserAccountEmailCommand userAccount)
         {
 
-            var command = new ModifyUserAccountEmailCommand(userAccount.Id, userAccount.Email);
+            var command = new ModifyUserAccountEmailCommand(id, userAccount.Email);
             var result = await _mediator.Send(command);
 
+            if (result.IsSuccess)
+            {
+                return Ok();
+            }
+            else
+            {
+                return BadRequest(result.Error);
+            }
+        }
+
+        [HttpPut("update-user-account-admin-panel")]
+        public async Task<IActionResult> UpdateUserAccount([FromBody] UpdateUserAccountCommand command)
+        {
+            var result = await _mediator.Send(command);
             if (result.IsSuccess)
             {
                 return Ok();
@@ -103,7 +130,5 @@ namespace WebAPI.Controllers
                 return BadRequest();
             }
         }
-
-       
     }
 }

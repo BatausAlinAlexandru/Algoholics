@@ -9,6 +9,12 @@ namespace Domain.Aggregates.UserAggregate.Entities
         public string Password { get; set; }
         public UserAccountRole UserAccountRole { get; set; } = UserAccountRole.User;
 
+        public UserAccountCredentials()
+        {
+            this.Email = string.Empty;
+            this.Password = string.Empty;
+        }
+
         public UserAccountCredentials(string email, string password)
         {
             this.Email = email;

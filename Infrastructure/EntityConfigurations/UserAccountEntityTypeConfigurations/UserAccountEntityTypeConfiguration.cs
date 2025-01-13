@@ -1,5 +1,6 @@
 ﻿using Domain.Aggregates.UserAggregate.Entities;
 using Microsoft.EntityFrameworkCore;
+using System.Reflection.Emit;
 
 namespace Infrastructure.EntityConfigurations.UserAccountEntityTypeConfigurations
 {

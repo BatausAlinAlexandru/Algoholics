@@ -41,6 +41,7 @@ namespace Application
             services.AddScoped<IJwtTokenGenerator, JwtTokenGenerator>();
             services.AddScoped<IPasswordHasher, PasswordHasher>();
             services.AddScoped<IFileStorageService, LocalFileStorageService>();
+            services.AddScoped<ICalculateThePriceOfProducts, CalculateThePrice>();
 
 
 

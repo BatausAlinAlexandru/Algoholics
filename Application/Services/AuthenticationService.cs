@@ -19,7 +19,7 @@ namespace Application.Services
 
         public async Task<string> LoginAsync(string email, string password)
         {
-            var userAccounts = await _userAccountRepository.GetUserAccountsAsyncV2();
+            var userAccounts = await _userAccountRepository.GetUserAccountsAsync();
             var user = userAccounts.FirstOrDefault(u => u.UserAccountCredentials.Email == email);
 
             if (user == null || !_passwordHasher.Verify(password, user.UserAccountCredentials.Password))

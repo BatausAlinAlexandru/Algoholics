@@ -6,9 +6,10 @@ namespace Domain.Aggregates.OrderAggregate.Entities
     {
         public Guid UserId { get; set; }
         public List<OrderProductDetail> ProductsToOrder { get; set; }
-        public OrderStatus Status { get; set; }
         public DateTime OrderDate { get; set; } = DateTime.Now;
         public float TotalPrice { get; set; }
+        public OrderStatus Status { get; set; }
+        
         public Order()
         {
             ProductsToOrder = new List<OrderProductDetail>();

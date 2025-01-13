@@ -22,11 +22,11 @@ namespace WebAPI.Controllers
             var result = await _mediator.Send(command);
             if (result.IsSuccess)
             {
-                return Ok(result);
+                return Ok();
             }
             else
             {
-                return BadRequest(result);
+                return BadRequest(result.Error);
             }
         }
 
@@ -67,6 +67,27 @@ namespace WebAPI.Controllers
             if (result.Count > 0)
             {
                 return Ok(result);
+            }
+            else
+            {
+                return BadRequest(result);
+            }
+        }
+
+
+        [HttpPost("upload")]
+        public async Task<IActionResult> UploadProductPhoto(Guid productId, IFormFile image)
+        {
+            if (image == null || image.Length == 0)
+            {
+                return BadRequest("No file uploaded.");
+            }
+
+            var command = new UploadProductImageCommand(productId, image);
+            var result = await _mediator.Send(command);
+            if (result.IsSuccess)
+            {
+                return Ok();
             }
             else
             {

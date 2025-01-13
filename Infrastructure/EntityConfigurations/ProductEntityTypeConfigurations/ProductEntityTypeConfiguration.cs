@@ -34,20 +34,21 @@ namespace Infrastructure.EntityConfigurations.ProductEntityTypeConfigurations
                 .HasMaxLength(500);
 
             // Configurare pentru ProductSpecifications (Owned Collection)
-            builder.OwnsMany(p => p.ProductSpecifications, ps =>
+            builder.OwnsMany(p => p.Filters, ps =>
             {
-                ps.Property(s => s.Key)
+                ps.Property(s => s.IdFilterGroup)
                     .IsRequired()
                     .HasMaxLength(100)
-                    .HasColumnName("SpecificationKey");
+                    .HasColumnName("IdFilterGroup");
 
-                ps.Property(s => s.Value)
+                ps.Property(s => s.IdFilterValue)
                     .IsRequired()
                     .HasMaxLength(500)
-                    .HasColumnName("SpecificationValue");
+                    .HasColumnName("IdFilterValue");
 
                 ps.WithOwner(); // Specifică că aparțin lui Product
             });
+
         }
     }
 }

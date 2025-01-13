@@ -46,11 +46,16 @@ namespace Infrastructure.Repositories
             return await _applicationDbContext.FilterGroups.FindAsync(idFilterGroup).AsTask();
         }
 
-        public async Task<List<FilterGroup>> GetSubcategoriesBySubcategoryIdAsync(Guid idSubcategory)
+        public async Task<List<FilterGroup>> GetFilterGroupBySubcategoryIdAsync(Guid idSubcategory)
         {
             return await _applicationDbContext.FilterGroups
                 .Where(f => f.IdSubcategory == idSubcategory)
                 .ToListAsync();
+        }
+
+        public Task<IEnumerable<object>> GetFilterGroupsBySubcategoryIdAsync(Guid idSubcategory)
+        {
+            throw new NotImplementedException();
         }
 
         public async Task<Result> UpdateFilterGroupAsync(FilterGroup filterGroup)

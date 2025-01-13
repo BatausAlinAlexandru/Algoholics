@@ -2,9 +2,12 @@
 using Domain.Aggregates.OrderAggregate.Entities;
 using Domain.Aggregates.ProductAggregate.Entities;
 using Domain.Aggregates.UserAggregate.Entities;
+using Domain.Aggregates.WishListAggregate.Entity;
 using Infrastructure.EntityConfigurations.CategoryEntityTypeConfigurations;
+using Infrastructure.EntityConfigurations.OrderEntityTypeConfigurations;
 using Infrastructure.EntityConfigurations.ProductEntityTypeConfigurations;
 using Infrastructure.EntityConfigurations.UserAccountEntityTypeConfigurations;
+using Infrastructure.EntityConfigurations.WishListEntityTypeConfigurations;
 using Microsoft.EntityFrameworkCore;
 
 namespace Infrastructure.Data
@@ -17,7 +20,8 @@ namespace Infrastructure.Data
         public DbSet<Category> Categories { get; set; }
         public DbSet<FilterGroup> FilterGroups { get; set; }
         public DbSet<FilterValue> FilterValues { get; set; }
-        public DbSet<Subcategory> Subcategories { get; set; }   
+        public DbSet<Subcategory> Subcategories { get; set; } 
+        public DbSet<WishList> WishLists { get; set; }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
@@ -27,14 +31,22 @@ namespace Infrastructure.Data
             modelBuilder.ApplyConfiguration(new UserAccountCredentialsEntityTypeConfiguration());
             modelBuilder.ApplyConfiguration(new UserAccountInfoEntityTypeConfiguration());
             modelBuilder.ApplyConfiguration(new UserAccountSettingsEntityTypeConfiguration());
+            modelBuilder.ApplyConfiguration(new UserAccountPaymentInfoEntityTypeConfiguration());
 
 
             modelBuilder.ApplyConfiguration(new ProductEntityTypeConfiguration());
+
+            modelBuilder.ApplyConfiguration(new OrderEntityTypeConfiguration());
+            modelBuilder.ApplyConfiguration(new OrderProductDetailEntityTypeConfiguration());
+
 
             modelBuilder.ApplyConfiguration(new CategoryEntityTypeConfiguration());
             modelBuilder.ApplyConfiguration(new SubcategoryEntityTypeConfiguration());
             modelBuilder.ApplyConfiguration(new FilterEntityTypeConfiguration());
             modelBuilder.ApplyConfiguration(new FilterValueEntityTypeConfiguration());
+
+
+            modelBuilder.ApplyConfiguration(new WishListEntityTypeConfiguration());
 
 
         }

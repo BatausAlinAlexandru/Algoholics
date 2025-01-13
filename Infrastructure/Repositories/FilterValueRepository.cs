@@ -46,6 +46,14 @@ namespace Infrastructure.Repositories
             return filterValue ?? throw new InvalidOperationException("FilterValue not found.");
         }
 
+        public Task<List<FilterValue>> GetFilterValuesByFilterGroupId(Guid idFilterGroup)
+        {
+            var filterValues = _applicationDbContext.FilterValues
+                .Where(fv => fv.IdFilterGroup == idFilterGroup)
+                .ToListAsync();
+            return filterValues;
+        }
+
         public async Task<Result> UpdateFilterValue(FilterValue newFilterValue)
         {
             var existingFilterValue = await _applicationDbContext.FilterValues.FindAsync(newFilterValue.Id);

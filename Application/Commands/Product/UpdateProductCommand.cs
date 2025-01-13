@@ -1,4 +1,5 @@
 ﻿using CSharpFunctionalExtensions;
+using Domain.Aggregates.ProductAggregate.Entities;
 using MediatR;
 using System.ComponentModel.DataAnnotations;
 
@@ -15,6 +16,6 @@ namespace Application.Commands.Product
         [Required] public required string NewPhotoUrl { get; set; }
         [Required] public required Guid NewIdCategory { get; set; }
         [Required] public required Guid NewIdSubcategory { get; set; }
-        [Required] public required List<Domain.Aggregates.CategoryAggregate.Entities.FilterGroup> NewFilters { get; set; }
+        [Required] public required List<ProductFilter> NewFilters { get; set; }
     }
 }

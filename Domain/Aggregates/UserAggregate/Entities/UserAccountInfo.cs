@@ -9,6 +9,18 @@ namespace Domain.Aggregates.UserAggregate.Entities
         public UserAccountGender UserAccountGender { get; set; }
         public string Alias { get; set; }
         public string Avatar { get; set; }
+        public UserAccountPaymentInfo UserAccountPaymentCardInfo { get; set; } = new UserAccountPaymentInfo();
+
+        public void AddPaymentInfo(UserAccountPaymentInfo userAccountPaymentInfo)
+        {
+            UserAccountPaymentCardInfo.UpdatePaymentInfo(userAccountPaymentInfo);
+            UserAccountPaymentCardInfo.IdUserAccount = Id;
+        }
+
+        public void UpdatePaymentInfo(UserAccountPaymentInfo newUserAccountPaymentInfo)
+        {
+            UserAccountPaymentCardInfo.UpdatePaymentInfo(newUserAccountPaymentInfo);
+        }
 
         public UserAccountInfo(UserAccountGender userAccountGender, string alias)
         {
@@ -18,7 +30,6 @@ namespace Domain.Aggregates.UserAggregate.Entities
             this.Avatar = "default_avatar.jpg";
 
         }
-        // default
         public UserAccountInfo()
         {
             this.UserAccountGender = UserAccountGender.Other;
@@ -26,13 +37,5 @@ namespace Domain.Aggregates.UserAggregate.Entities
             this.DateCreated = DateOnly.FromDateTime(DateTime.Now);
             this.Avatar = "default_avatar.jpg";
         }
-
-      /*  public void AddPaymentInfo(UserAccountPaymantInfo userAccountPaymantInfo)
-        {
-            this.paymentCardInfo.Id = this.Id;
-            this.paymentCardInfo.CardNumber = userAccountPaymantInfo.CardNumber;
-            this.paymentCardInfo.CardHolderName = userAccountPaymantInfo.CardHolderName.ToString(); //tostring e inutil in acest context
-            this.paymentCardInfo.CVV = userAccountPaymantInfo.CVV;
-        }*/
     }
 }

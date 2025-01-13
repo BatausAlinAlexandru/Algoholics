@@ -4,6 +4,7 @@ using Domain.Aggregates.UserAggregate.Exceptions;
 using Infrastructure.Data;
 using Microsoft.EntityFrameworkCore;
 using System.Security.Cryptography;
+using CSharpFunctionalExtensions;
 
 
 namespace Infrastructure.Repositories
@@ -18,26 +19,7 @@ namespace Infrastructure.Repositories
             _applicationDbContext = applicationDbContext;
         }
 
-        
-        public async Task<List<UserAccount>> GetUserAccountsAsync()
-        {
-            return await _applicationDbContext.Users.ToListAsync();
-        }
-
-        
-        public async Task<UserAccount?> GetUserAccountByIdAsync(Guid idUserAccount)
-        {
-            var userAccount = await _applicationDbContext.Users
-                .Include(u => u.UserAccountCredentials)
-                .Include(u => u.UserAccountSettings)
-                .Include(u => u.UserAccountInfo)
-                .FirstOrDefaultAsync(u => u.Id == idUserAccount);
-
-            return userAccount;
-        }
-
-        
-        public async Task<bool> AddUserAccountAsync(UserAccountCredentials userAccountCredentials)
+        public async Task<Result> AddUserAccountAsync(UserAccountCredentials userAccountCredentials)
         {
             try
             {
@@ -45,6 +27,8 @@ namespace Infrastructure.Repositories
                 UserAccountSettings userAccountSettings = new UserAccountSettings();
                 UserAccountInfo userAccountInfo = new UserAccountInfo();
 
+                userAccountInfo.UserAccountPaymentCardInfo = new UserAccountPaymentInfo();
+                
 
                 // ceva logica o rezolv dupa  //////////////////////////////////////////////////
                 string usernameBase = userAccountCredentials.Email.Split("@")[0];
@@ -60,41 +44,82 @@ namespace Infrastructure.Repositories
 
                 _applicationDbContext.Users.Add(UserAccount);
                 await _applicationDbContext.SaveChangesAsync();
-                return true;
+                return Result.Success();
             }
             catch (Exception ex)
             {
-                throw new UserAccountException("An error occurred while adding the user account.", ex);
+                return Result.Failure(ex.Message);
             }
 
         }
 
-        public async Task<bool> DeleteUserAccountAsync(Guid idUserAccount)
+        public async Task<Result> UpdateUserAccountAsync(UserAccount newUserAccount)
+        {
+            var user = await _applicationDbContext.Users.FindAsync(newUserAccount.Id);
+            if (user is null)
+                return Result.Failure("User not found");
+
+            user.UpdateUserAccount(newUserAccount);
+            await _applicationDbContext.SaveChangesAsync();
+
+            return Result.Success();
+        }
+
+        public async Task<Result> DeleteUserAccountAsync(Guid idUserAccount)
         {
             var userAccount = await _applicationDbContext.Users.FindAsync(idUserAccount);
             if (userAccount is not null)
             {
                 _applicationDbContext.Users.Remove(userAccount);
                 await _applicationDbContext.SaveChangesAsync();
-                return true;
+                return Result.Success();
             }
-            return false;
+            return Result.Failure("UserAccount Delete Error");
         }
 
-        public async Task SaveUserAccountAsync()
+
+        public async Task<Result> AddUserAccountPaymentCardInfoAsync(Guid idUserAccount, UserAccountPaymentInfo userAccountPaymentInfo)
         {
+            var userAccount = await _applicationDbContext.Users
+                .Include(u => u.UserAccountInfo)
+                .FirstOrDefaultAsync(u => u.Id == idUserAccount);
+            if (userAccount is null)
+                return Result.Failure("User not found");
+
+            userAccount.UserAccountInfo.AddPaymentInfo(userAccountPaymentInfo);
+
             await _applicationDbContext.SaveChangesAsync();
+            return Result.Success();
         }
 
-        public Task<List<UserAccount>> GetUserAccountsAsyncV2()
+
+        public Task<List<UserAccount>> GetUserAccountsAsync()
         {
             var userAccounts = _applicationDbContext.Users
                 .Include(u => u.UserAccountCredentials)
                 .Include(u => u.UserAccountSettings)
                 .Include(u => u.UserAccountInfo)
+                .Include(u => u.UserAccountInfo.UserAccountPaymentCardInfo)
                 .ToList();
 
             return Task.FromResult(userAccounts);
+        }
+       
+        public async Task<UserAccount?> GetUserAccountByIdAsync(Guid idUserAccount)
+        {
+            var userAccount = await _applicationDbContext.Users
+                .Include(u => u.UserAccountCredentials)
+                .Include(u => u.UserAccountSettings)
+                .Include(u => u.UserAccountInfo)
+                .Include(u => u.UserAccountInfo.UserAccountPaymentCardInfo)
+                .FirstOrDefaultAsync(u => u.Id == idUserAccount);
+
+            return userAccount;
+        }
+
+        public async Task SaveUserAccountAsync()
+        {
+            await _applicationDbContext.SaveChangesAsync();
         }
 
     }

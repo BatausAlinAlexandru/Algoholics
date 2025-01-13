@@ -7,9 +7,10 @@ namespace Domain.Aggregates.CategoryAggregate.Repositories
     {
         Task<List<FilterGroup>> GetAllFilterGroupsAsync();
         Task<FilterGroup?> GetFilterGroupByIdAsync(Guid idFilterGroup);
-        Task<List<FilterGroup>> GetSubcategoriesBySubcategoryIdAsync(Guid idSubcategory);
+        Task<List<FilterGroup>> GetFilterGroupBySubcategoryIdAsync(Guid idSubcategory);
         Task<Result> AddFilterGroupAsync(FilterGroup filterGroup);
         Task<Result> UpdateFilterGroupAsync(FilterGroup filterGroup);
         Task<Result> DeleteFilterGroupAsync(Guid idFilterGroup);
+        Task<IEnumerable<object>> GetFilterGroupsBySubcategoryIdAsync(Guid idSubcategory);
     }
 }

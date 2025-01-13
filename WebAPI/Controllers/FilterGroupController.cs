@@ -1,5 +1,6 @@
 ﻿using Application.Commands.FilterGroup;
 using Application.Queies.FilterGroup;
+using Application.Queries.FilterGroup;
 using MediatR;
 using Microsoft.AspNetCore.Mvc;
 
@@ -31,7 +32,7 @@ namespace WebAPI.Controllers
         }
 
         [HttpDelete("delete")]
-        public async Task<IActionResult> DeleteFilterGroup([FromQuery] DeleteFilterGroupCommand command)
+        public async Task<IActionResult> DeleteFilterGroup(DeleteFilterGroupCommand command)
         {
             var result = await _mediator.Send(command);
             return result.IsSuccess ? Ok() : BadRequest();
@@ -41,6 +42,14 @@ namespace WebAPI.Controllers
         public async Task<IActionResult> GetAllFilterGroups()
         {
             var result = await _mediator.Send(new GetAllFilterGroupQuery());
+            return result.Count > 0 ? Ok(result) : BadRequest(result);
+        }
+
+        [HttpGet("get-by-subcategory-id/{id}")]
+        public async Task<IActionResult> GetFilterGroupsBySubcategoryId(Guid id)
+        {
+            var query = new GetAllFilterGroupByIdSubcategoryQuery { IdSubcategory = id };
+            var result = await _mediator.Send(query);
             return result.Count > 0 ? Ok(result) : BadRequest(result);
         }
     }
