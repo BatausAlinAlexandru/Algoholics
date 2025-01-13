@@ -1,0 +1,27 @@
+.navbar {
+  background-color: transparent;
+  padding: 1em;
+  position: fixed;
+  width: 100%;
+  user-select: none;
+}
+
+.nav {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+}
+
+.nav-item {
+  margin-right: 1em;
+}
+
+.nav-link {
+  color: white;
+  text-decoration: none;
+}
+
+  .nav-link:hover {
+    text-decoration: underline;
+  }

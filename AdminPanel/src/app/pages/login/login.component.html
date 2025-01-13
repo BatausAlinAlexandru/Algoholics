@@ -1,0 +1,33 @@
+<app-navbar></app-navbar>
+
+<body>
+  <form class="form-signin" (ngSubmit)="onSubmit()">
+    <h2 h3 mb-3 font-weight-normal>Please sign in</h2>
+    <div>
+      <label for="email" class="sr-only">Email address</label>
+      <input class="form-control"
+             type="email"
+             id="email"
+             [(ngModel)]="email"
+             name="email"
+             required />
+    </div>
+    <div>
+      <label for="password" class="sr-only">Password</label>
+      <input class="form-control"
+             type="password"
+             id="password"
+             [(ngModel)]="password"
+             name="password"
+             required />
+    </div>
+    <div class="checkbox mb-3">
+      <label>
+        <br />
+        <h4 *ngIf="errorMessage" style="color:red;" class="error">{{ errorMessage }}</h4>
+      </label>
+    </div>
+    <button class="btn btn-lg btn-primary btn-block" style="background-color: transparent" type="submit">Sign in</button>
+    
+  </form>
+</body>

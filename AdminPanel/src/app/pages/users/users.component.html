@@ -1,0 +1,109 @@
+<!-- users.component.html -->
+<body>
+  <div class="position-absolute top-0 start-0 container-fluid mt-5">
+    <div class="container-fluid mt-5">
+      <h2 class="text-center mb-4 text-white">Lista Utilizatorilor</h2>
+      <!-- Wrapper pentru scroll vertical -->
+      <!-- Search Bar -->
+      <div class="mb-3">
+        <input type="text"
+               class="form-control search-bar"
+               placeholder="Caută utilizatori după ID, email sau alias..."
+               [(ngModel)]="searchTerm" />
+      </div>
+
+      <div class="table-responsive" style="max-height: 570px; overflow-y: auto;">
+        <table class="table table-hover table-bordered table-striped text-end">
+          <thead class="table-dark">
+            <tr>
+              <th class="text-center">ID</th>
+              <th class="text-center">Email</th>
+              <th class="text-center">Role</th>
+              <th class="text-center">Date Created</th>
+              <th class="text-center">Gender</th>
+              <th class="text-center">Alias</th>
+              <th class="text-center">Acțiuni</th>
+            </tr>
+          </thead>
+          <tbody class="table-dark text-center">
+            <tr *ngFor="let user of filteredUsers | paginate: { itemsPerPage: itemsPerPage, currentPage: currentPage }">
+              <td>{{ user.id }}</td>
+              <td>{{ user.email }}</td>
+              <td>{{ user.userAccountRole }}</td>
+              <td>{{ user.dateCreated }}</td>
+              <td>{{ user.userAccountGender }}</td>
+              <td>{{ user.alias }}</td>
+              <td>
+                <button class="btn btn-primary btn-sm me-2" (click)="editUser(user)">
+                  <i class="fas fa-edit"></i> Modifică
+                </button>
+                <button class="btn btn-danger btn-sm" (click)="deleteUser(user.id)">
+                  <i class="fas fa-trash-alt"></i> Șterge
+                </button>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+    <div class="anubis">
+      <pagination-controls (pageChange)="currentPage = $event" 
+                           class="mt-3 text-center custom-pagination"></pagination-controls>
+    </div>
+
+  </div>
+
+  <!-- Modalul de editare -->
+    <ng-template #editModal let-modal>
+      <div class="modal-header">
+        <h4 class="modal-title">Editare Utilizator</h4>
+        <!--<button type="button" class="close position-absolute top-0 end-0" aria-label="Close" (click)="modal.dismiss('Cross click')">
+          <span aria-hidden="true">&times;</span>
+        </button>-->
+      </div>
+      <div class="modal-body">
+        <!-- Formularul de editare -->
+        <form>
+          <div class="form-group">
+            <label for="email">Email</label>
+            <input type="email"
+                   id="email"
+                   class="form-control"
+                   [(ngModel)]="selectedUser.email"
+                   name="email" />
+          </div>
+          <div class="form-group">
+            <label for="role">Role</label>
+            <input type="text"
+                   id="role"
+                   class="form-control"
+                   [(ngModel)]="selectedUser.userAccountRole"
+                   name="role" />
+          </div>
+
+          <div class="form-group">
+            <label for="role">Gender</label>
+            <input type="text"
+                   id="gender"
+                   class="form-control"
+                   [(ngModel)]="selectedUser.userAccountGender"
+                   name="gender" />
+          </div>
+
+          <div class="form-group">
+            <label for="role">Alias</label>
+            <input type="text"
+                   id="alias"
+                   class="form-control"
+                   [(ngModel)]="selectedUser.alias"
+                   name="alias" />
+          </div>
+          <!-- Alte câmpuri dacă este necesar -->
+        </form>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" (click)="modal.close()">Anulează</button>
+        <button type="button" class="btn btn-success" (click)="saveUser(modal)">Salvează</button>
+      </div>
+    </ng-template>
+</body>

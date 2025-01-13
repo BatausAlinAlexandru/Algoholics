@@ -1,0 +1,175 @@
+<body>
+  <div class="position-absolute top-0 start-0 container-fluid mt-5">
+    <div class="container-fluid mt-5">
+      <h2 class="text-center mb-4 text-white">Lista Categoriilor</h2>
+    </div>
+  </div>
+
+  <div class="container-horizontal">
+    <!-- CATEGORII -->
+    <div class="layer">
+      <h3>Categorii</h3>
+      <input type="text" class="search-bar" placeholder="Caută categorii" [(ngModel)]="searchTermCategory"/>
+      <ul>
+        <li *ngFor="let category of filteredCategory"
+            [class.active]="selectedCategoryId === category.idCategory"
+            (click)="selectCategory(category.idCategory)">
+          {{ category.name }}
+        </li>
+      </ul>
+      <button type="button" class="button-add" (click)="openModal(addCategoryModal)">Adaugă categorie</button>
+      <button class="button-delete" (click)="deleteCategory(selectedCategoryId)">Elimină categorie</button>
+
+    </div>
+
+    <!-- Modalul pentru adăugare categorie -->
+    <ng-template #addCategoryModal let-modal>
+      <div class="modal-header">
+        <h4 class="modal-title">Adaugă categorie</h4>
+      </div>
+      <div class="modal-body">
+        <!-- Formular pentru adăugare categorie -->
+        <form>
+          <div class="form-group">
+            <label for="categoryName">Nume categorie</label>
+            <input type="text"
+                   id="categoryName"
+                   class="form-control"
+                   [(ngModel)]="newCategoryName"
+                   name="categoryName"
+                   placeholder="Introduceți numele categoriei" />
+          </div>
+        </form>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" (click)="modal.close()">Anulează</button>
+        <button type="button" class="btn btn-success" (click)="saveCategory(modal)">Adaugă</button>
+      </div>
+    </ng-template>
+
+
+    <!-- SUBCATEGORII -->
+    <div class="layer">
+      <h3>Subcategorii</h3>
+      <input type="text" class="search-bar" placeholder="Caută subcategorii" [(ngModel)]="searchTermSubcategory"/>
+      <ul>
+        <li *ngFor="let subcategory of filteredSubcategory"
+            [class.active]="selectedSubcategoryId === subcategory.idSubcategory"
+            (click)="selectSubcategory(subcategory.idSubcategory)">
+          {{ subcategory.name }}
+        </li>
+      </ul>
+      <button class="button-add" (click)="openModal(addSubcategoryModal)">Adaugă subcategorie</button>
+      <button class="button-delete" (click)="deleteSubcategory(selectedSubcategoryId)">Elimină subcategorie</button>
+    </div>
+
+    <!-- Modalul pentru adăugare subcategorie -->
+    <ng-template #addSubcategoryModal let-modal>
+      <div class="modal-header">
+        <h4 class="modal-title">Adaugă subcategorie</h4>
+      </div>
+      <div class="modal-body">
+        <!-- Formular pentru adăugare subcategorie -->
+        <form>
+          <div class="form-group">
+            <label for="subcategoryName">Nume subcategorie</label>
+            <input type="text"
+                   id="subcategoryName"
+                   class="form-control"
+                   [(ngModel)]="newSubcategoryName"
+                   name="subcategoryName"
+                   placeholder="Introduceți numele subcategoriei" />
+          </div>
+        </form>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" (click)="modal.close()">Anulează</button>
+        <button type="button" class="btn btn-success" (click)="saveSubcategory(modal)">Adaugă</button>
+      </div>
+    </ng-template>
+
+
+
+    <!-- GRUPURI DE FILTRE -->
+    <div class="layer">
+      <h3>Grupuri de Filtre</h3>
+      <input type="text" class="search-bar" placeholder="Caută grupuri de filtre" [(ngModel)]="searchTermFilterGroup"/>
+      <ul>
+        <li *ngFor="let filterGroup of filteredFilterGroup"
+            [class.active]="selectedFilterGroupId === filterGroup.id"
+            (click)="selectFilterGroup(filterGroup.id)">
+          {{ filterGroup.name }}
+        </li>
+      </ul>
+      <button class="button-add" (click)="openModal(addFilterGroupModal)">Adaugă grup</button>
+      <button class="button-delete" (click)="deleteFilterGroup(selectedFilterGroupId)">Elimină grup</button>
+    </div>
+
+    <!-- Modalul pentru adăugare filterGroup -->
+    <ng-template #addFilterGroupModal let-modal>
+      <div class="modal-header">
+        <h4 class="modal-title">Adaugă FilterGroup</h4>
+      </div>
+      <div class="modal-body">
+        <!-- Formular pentru adăugare filterGroup -->
+        <form>
+          <div class="form-group">
+            <label for="filterGroupName">Nume filterGroup</label>
+            <input type="text"
+                   id="filterGroupName"
+                   class="form-control"
+                   [(ngModel)]="newFilterGroupName"
+                   name="filterGroupName"
+                   placeholder="Introduceți numele filterGroup" />
+          </div>
+        </form>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" (click)="modal.close()">Anulează</button>
+        <button type="button" class="btn btn-success" (click)="saveFilterGroup(modal)">Adaugă</button>
+      </div>
+    </ng-template>
+
+    <!-- VALORI DE FILTRU -->
+    <div class="layer">
+      <h3>Valori de Filtru</h3>
+      <input type="text" class="search-bar" placeholder="Caută valori de filtre" [(ngModel)]="searchTermFilterValue" />
+      <ul>
+        <li *ngFor="let filterValue of filteredFilterValue"
+            [class.active]="selectedFilterValueId === filterValue.id"
+            (click)="selectFilterValue(filterValue.id)">
+          {{ filterValue.name }}
+        </li>
+      </ul>
+      <button class="button-add" (click)="openModal(addFilterValueModal)">Adaugă valoare</button>
+      <button class="button-delete" (click)="deleteFilterValue(selectedFilterValueId)">Elimină valoare</button>
+    </div>
+  </div>
+  <!-- Modalul pentru adăugare filterValue -->
+  <ng-template #addFilterValueModal let-modal>
+    <div class="modal-header">
+      <h4 class="modal-title">Adaugă FilterValue</h4>
+    </div>
+    <div class="modal-body">
+      <!-- Formular pentru adăugare filterValue -->
+      <form>
+        <div class="form-group">
+          <label for="filterValueName">Nume filterValue</label>
+          <input type="text"
+                 id="filterValueName"
+                 class="form-control"
+                 [(ngModel)]="newFilterValueName"
+                 name="filterValueName"
+                 placeholder="Introduceți numele filterValue" />
+        </div>
+      </form>
+    </div>
+    <div class="modal-footer">
+      <button type="button" class="btn btn-secondary" (click)="modal.close()">Anulează</button>
+      <button type="button" class="btn btn-success" (click)="saveFilterValue(modal)">Adaugă</button>
+    </div>
+  </ng-template>
+
+
+
+</body>
