@@ -91,8 +91,9 @@ export class WishlistService {
 
   // Update wishlist products
   public updateWishlist(wishlistId: string, products: Product[]): Observable<Wishlist> {
-    const body = { products };
-    return this.http.put<Wishlist>(`${this.apiUrl}/update-wishlist/${wishlistId}`, body);
+    const productIds = products.map(product => product.id); // Extract product IDs
+    const body = { productIdList: productIds }; // Update the field to `productIdList`
+    return this.http.put<Wishlist>(`${this.apiUrl}/update-wishlist/${wishlistId}`, productIds);
   }
 
   // Remove a wishlist

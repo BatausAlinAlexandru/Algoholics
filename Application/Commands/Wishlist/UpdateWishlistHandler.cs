@@ -1,19 +1,13 @@
-﻿using CSharpFunctionalExtensions;
-using Domain.Aggregates.OrderAggregate.Repositories;
-using Domain.Aggregates.ProductAggregate.Entities;
+﻿using Application.Commands.Order;
+using CSharpFunctionalExtensions;
 using Domain.Aggregates.ProductAggregate.Repositories;
-using Domain.Aggregates.UserAggregate.Repositories;
+using Domain.Aggregates.WishlistAggregate.Entities;
 using Domain.Aggregates.WishlistAggregate.Repositories;
 using MediatR;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
-namespace Application.Commands.Order
+namespace Application.Commands.Wishlist
 {
-    public class UpdateWishlistHandler : IRequestHandler<UpdateWishlistCommand, Result>
+    public class UpdateWishlistHandler : IRequestHandler<UpdateWishlistCommand, Result<Domain.Aggregates.WishlistAggregate.Entities.Wishlist>>
     {
         private readonly IWishlistRepository _wishlistRepository;
         private readonly IProductRepository _productRepository;
@@ -24,16 +18,17 @@ namespace Application.Commands.Order
             _productRepository = productRepository;
         }
 
-        public async Task<Result> Handle(UpdateWishlistCommand request, CancellationToken cancellationToken)
+        public async Task<Result<Domain.Aggregates.WishlistAggregate.Entities.Wishlist>> Handle(UpdateWishlistCommand request, CancellationToken cancellationToken)
         {
-            // Fetch the wishlist from the repository
+            // Fetch the existing wishlist
             var wishlist = await _wishlistRepository.GetWishlistByIdAsync(request.WishlistId);
 
             if (wishlist == null)
             {
-                return Result.Failure("Wishlist not found.");
+                return Result.Failure<Domain.Aggregates.WishlistAggregate.Entities.Wishlist>("Wishlist not found.");
             }
 
+            // Collect the product entities
             var products = new List<Domain.Aggregates.ProductAggregate.Entities.Product>();
             foreach (Guid productId in request.UpdatedProductIdList)
             {
@@ -44,10 +39,19 @@ namespace Application.Commands.Order
                 }
             }
 
-            // Save changes
-            var success = await _wishlistRepository.UpdateWishlistAsync(request.WishlistId,products);
+            // Perform the update via the repository
+            var success = await _wishlistRepository.UpdateWishlistAsync(request.WishlistId, products);
 
-            return success ? Result.Success() : Result.Failure("Failed to update wishlist details.");
+            if (!success)
+            {
+                return Result.Failure<Domain.Aggregates.WishlistAggregate.Entities.Wishlist>("Failed to update wishlist details.");
+            }
+
+            // Now fetch the newly updated wishlist (with included products, if needed)
+            var updatedWishlist = await _wishlistRepository.GetWishlistByIdAsync(request.WishlistId);
+
+            // Return the updated wishlist in the Result
+            return Result.Success(updatedWishlist);
         }
     }
 }
