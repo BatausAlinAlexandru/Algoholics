@@ -45,12 +45,18 @@ import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
 
+export interface ProductDetail {
+  name: string;
+  price: number;
+  description: string;
+  stoc: number;
+  discount: number;
+  pathFoto: string;
+}
+
 export interface Product {
   id: string;
-  name: string;
-  description: string;
-  price: number;
-  quantity: number;
+  productDetail: ProductDetail;
 }
 
 export interface Wishlist {

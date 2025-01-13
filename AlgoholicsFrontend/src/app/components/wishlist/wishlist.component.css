@@ -17,7 +17,7 @@
   background-color: #fff;
   width: 300px;
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   justify-content: space-between;
 }
 

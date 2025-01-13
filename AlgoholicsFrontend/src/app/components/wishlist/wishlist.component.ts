@@ -25,7 +25,9 @@ export class WishlistComponent implements OnInit {
     this.loggedInUserId = this.getUserIdFromToken();
     this.wishlistService.getWishlistByUserId(this.loggedInUserId).subscribe(
       (data) => {
+        console.log(data);
         this.wishlist = data;
+        console.log(this.wishlist);
       },
       (error) => {
         console.error('Error fetching wishlist!', error);

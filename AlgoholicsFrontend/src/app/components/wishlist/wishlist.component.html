@@ -8,9 +8,9 @@
   <div *ngIf="wishlist.products.length > 0; else emptyWishlist">
     <div class="product-card" *ngFor="let item of wishlist.products">
       <div class="product-info">
-        <h3>{{ item.name }}</h3>
-        <p>{{ item.description }}</p>
-        <p><strong>Price:</strong> ${{ item.price }}</p>
+        <h3>{{ item.productDetail.name }}</h3>
+        <p>{{ item.productDetail.description }}</p>
+        <p><strong>Price:</strong> ${{ item.productDetail.price }}</p>
       </div>
       <button (click)="removeFromWishlist(item)" class="remove-btn">Remove</button>
     </div>
