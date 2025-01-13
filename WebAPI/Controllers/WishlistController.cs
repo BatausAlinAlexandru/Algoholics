@@ -67,9 +67,9 @@ namespace WebAPI.Controllers
 
         [HttpPut("update-wishlist/{wishlistId:guid}")]
         //[Authorize(AuthenticationSchemes = JwtBearerDefaults.AuthenticationScheme, Roles = "Admin,User")]
-        public async Task<IActionResult> UpdateWishlistProducts(Guid wishlistId, List<ProductDTO> productList)
+        public async Task<IActionResult> UpdateWishlistProducts(Guid wishlistId, List<Guid> productIdList)
         {
-            var command = new UpdateWishlistCommand(wishlistId, productList);
+            var command = new UpdateWishlistCommand(wishlistId, productIdList);
             var result = await _mediator.Send(command);
 
             if (result.IsSuccess)

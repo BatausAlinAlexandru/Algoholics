@@ -28,7 +28,7 @@ export class WishlistComponent implements OnInit {
         this.wishlist = data;
       },
       (error) => {
-        console.error('Error fetching wishlist', error);
+        console.error('Error fetching wishlist!', error);
       }
     );
   }
@@ -61,7 +61,7 @@ export class WishlistComponent implements OnInit {
         return '';
       }
     }
-    return '0d4f11ab-c711-4206-af31-b2b1445e8a44';
+    return '';
   }
 
 

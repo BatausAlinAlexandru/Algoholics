@@ -7,12 +7,12 @@ namespace Application.Commands.Order
     public class UpdateWishlistCommand : IRequest<Result>
     {
         public Guid WishlistId { get; set; }
-        public List<ProductDTO> UpdatedProductList { get; set; }
+        public List<Guid> UpdatedProductIdList { get; set; }
 
-        public UpdateWishlistCommand(Guid wishlistId,List<ProductDTO> updatedProductList)
+        public UpdateWishlistCommand(Guid wishlistId,List<Guid> updatedProductIdList)
         {
             WishlistId = wishlistId;
-            UpdatedProductList = updatedProductList;
+            UpdatedProductIdList = updatedProductIdList;
         }
     }
 }
