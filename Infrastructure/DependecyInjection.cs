@@ -13,7 +13,7 @@ namespace Application
         public static IServiceCollection AddInfrastructure(this IServiceCollection services)
         {
             services.AddDbContext<ApplicationDbContext>(options =>
-                options.UseSqlServer("Server=localhost;Database=AlgoholicsDB;Integrated Security=True;TrustServerCertificate=True;"));
+                options.UseSqlServer("Server=LAPTOP-OUFV3QKG;Database=AlgoholicsDB;Integrated Security=True;TrustServerCertificate=True;"));
 
             services.AddTransient<IUserAccountRepository, UserAccountRepository>();
             services.AddTransient<IOrderRepository, OrderRepository>();

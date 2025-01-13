@@ -1,43 +1,38 @@
 import { Injectable } from '@angular/core';
-import { BehaviorSubject } from 'rxjs';
 
 @Injectable({
-  providedIn: 'root',
+  providedIn: 'root'
 })
 export class CartService {
-  private cartItems: any[] = [
-    { name: 'Smartwatch', price: 100, qty: 1, image: 'assets/product01.png' },
-    { name: 'Headphones', price: 150, qty: 2, image: 'assets/product02.png' },
-    { name: 'Mouse', price: 50, qty: 1, image: 'assets/product03.png' }
-  ];
+  private cartKey = 'cartItems';
 
-  cartItemsChanged: BehaviorSubject<any[]> = new BehaviorSubject(this.cartItems);
+  constructor() { }
 
-  getCart(): any[] {
-    return this.cartItems;
+  // ✅ Retrieve all cart items (full product objects)
+  getCartItems(): any[] {
+    return JSON.parse(localStorage.getItem(this.cartKey) || '[]');
   }
 
-  addToCart(product: any): void {
-    const existingProduct = this.cartItems.find(item => item.name === product.name);
-    if (existingProduct) {
-      existingProduct.qty += 1; 
-    } else {
-      product.qty = 1; 
-      this.cartItems.push(product);
-    }
-    this.cartItemsChanged.next(this.cartItems); 
-  }
-
-  updateCart(items: any[]): void {
-    this.cartItems = items;
-    this.cartItemsChanged.next(this.cartItems);
-  }
-
+  // ✅ Get the total count of items in the cart
   getCartItemCount(): number {
-    return this.cartItems.length;
+    return this.getCartItems().length;  // ✅ Returns the correct count
   }
 
+  // ✅ Add a product to the cart
+  addToCart(product: any): void {
+    let cartItems = this.getCartItems();
+    cartItems.push(product);
+    localStorage.setItem(this.cartKey, JSON.stringify(cartItems));
+  }
+
+  // ✅ Remove a product from the cart
   removeFromCart(productId: number): void {
-    this.cartItems = this.cartItems.filter(product => product.id !== productId);
+    let cartItems = this.getCartItems().filter(item => item.id !== productId);
+    localStorage.setItem(this.cartKey, JSON.stringify(cartItems));
+  }
+
+  // ✅ Clear cart
+  clearCart(): void {
+    localStorage.removeItem(this.cartKey);
   }
 }

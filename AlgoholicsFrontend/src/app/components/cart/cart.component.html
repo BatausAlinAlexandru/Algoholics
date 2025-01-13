@@ -1,24 +1,14 @@
-<div class="cart-header">
-  <header>
-    <h2>Your Cart</h2>
-  </header>
-</div>
+<h2>Your Cart</h2>
 
-<div class="cart-container">
-  <div class="product-card" *ngFor="let item of cartItems">
-    <div class="product-info">
-      <h3>{{ item.name }}</h3>
-      <p><strong>Price:</strong> ${{ item.price }}</p>
-      <p><strong>Quantity:</strong> {{ item.qty }}</p>
-    </div>
-    <button (click)="removeFromCart(item)" class="remove-btn">Remove</button>
+<div *ngIf="cartProducts.length > 0; else emptyCart">
+  <div class="cart-item" *ngFor="let product of cartProducts">
+    <h3>{{ product.name }}</h3>
+    <p><strong>Price:</strong> ${{ product.price }}</p>
+    <button (click)="removeFromCart(product.id)">Remove</button>
   </div>
+  <button class="clear-cart" (click)="clearCart()">Clear Cart</button>
 </div>
 
-<div class="cart-summary">
-  <h3>Total Price: ${{ calculateTotal() }}</h3>
-  <button class="checkout-btn">Checkout</button>
-</div>
-
-
-
+<ng-template #emptyCart>
+  <p>Your cart is empty.</p>
+</ng-template>
