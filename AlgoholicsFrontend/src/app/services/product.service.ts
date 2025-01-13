@@ -13,11 +13,7 @@ export class ProductService {
 
   /* returneaza toate produsele din backend */
   getAllProducts(numberOfResults = 10) {
-    return this.http.get(this.SERVER_URL+'/products', {
-      params: {
-        limit: numberOfResults.toString()
-      }
-    });
+    return this.http.get<any>('https://localhost:7198/api/Product/get');
   }
 
   products = [

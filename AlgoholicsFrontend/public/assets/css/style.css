@@ -1969,12 +1969,12 @@ textarea.input {
   border-top: #8B2E57;
   border-top-width: 3px;
   border-top-style: solid;
-  background: #8B2E57;
+  /* background: #FF7443; */
   color: #B9BABC;
 }
 
 #bottom-footer {
-  background: #FF7443;
+  /* background: #FF7443; */
 }
 
 .footer {
@@ -2164,7 +2164,7 @@ textarea.input {
   --link-color: #1a73e8;
   --button-background: #eaeaea;
   --header-background-color: #FF7443;
-  --footer-background-color: #eaeaea;
+  --footer-background-color: #FF7443;
 }
 
 /* Dark Mode */

@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ProductService } from '../../services/product.service';
+import { CartService } from '../../services/cart.service';
 import { WishlistService } from '../../services/wishlist.service';
 import { Observable } from 'rxjs';
 import { Router } from '@angular/router';
@@ -14,6 +15,7 @@ export class HomepageComponent implements OnInit {
   products: any[] = [];
 
   constructor(private productService: ProductService,
+    private cartService: CartService,
     private wishlistService: WishlistService,
     private router: Router) { }
 
@@ -25,6 +27,10 @@ export class HomepageComponent implements OnInit {
       console.error('Error fetching products:', error);
     }
     );
+  }
+
+  addToCart(id: number): void {
+    this.cartService.addToCart(id);
   }
 
   addToWishlist(id: number): void {
