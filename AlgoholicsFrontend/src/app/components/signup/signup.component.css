@@ -1,0 +1,107 @@
+.signup-container {
+  max-width: 60vh;
+  max-height: 55vh;
+  width: 100vh;
+  height: 70vh;
+  z-index: 1;
+  margin: 20px auto;
+  padding: 40px 20px; /* Padding mai mare sus și jos */
+  border-radius: 10px;
+  background-color: white; /* Culoarea de fundal albă */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+  text-align: center;
+  position: relative;
+}
+
+  .signup-container::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    backdrop-filter: blur(10px);
+    border-radius: 10px;
+    z-index: -1;
+  }
+
+.error-message {
+  color: 0x1999f;
+  margin-top: 10px;
+  font-size: 0.9rem;
+}
+
+h2 {
+  color: black;
+}
+
+form div {
+  margin-bottom: 15px;
+}
+
+label {
+  display: block;
+  font-weight: bold;
+  margin-bottom: 5px;
+  color: black;
+}
+
+input {
+  width: 75%;
+  padding: 10px;
+  border: 2px solid #FF9E44;
+  border-radius: 5px;
+}
+
+button {
+  background-color: #FF7443;
+  width: 45%;
+  color: white;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+  button:hover {
+    background-color: #B63C47;
+  }
+
+.link {
+  display: block;
+  margin-top: 15px;
+  margin-bottom: 10px;
+  color: #8B2E57;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+  .link:hover {
+    text-decoration: none; /* Asigură că nu apare sublinierea la hover */
+  }
+
+.app-container {
+  display: flex;
+  flex-direction: column; /* Plasează elementele vertical (logo și formular) */
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  width: 100vw;
+  /* background: url('C:/Users/horat/Documents/GitHub/AlgoholicsFrontend/src/assets/blurry-gradient-haikei.svg') no-repeat center center fixed; */
+  background: url('../../../../public/assets/img/692753f487446.png') no-repeat center center fixed;
+  background-size: cover;
+}
+
+.signup-logo-container {
+  margin-bottom: 20px; /* Adaugă un spațiu între logo și formular */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+.signup-logo .logo img {
+  max-width: 200px; /* Setează dimensiunea maximă a logo-ului */
+  height: auto;
+}

@@ -1,0 +1,102 @@
+/* Container principal pentru întreaga pagină a produsului, centrat pe mijloc */
+.product-container {
+  margin: 0 auto;
+  padding: 20px 20px 40px 20px; /* Reducem spațiul de sus, păstrăm un padding mai mare jos */
+  background-color: transparent;
+  display: flex;
+  flex-direction: column;
+  justify-content: center; /* Centrează pe verticală */
+  align-items: center; /* Centrează pe orizontală */
+  height: auto; /* Permite înălțimea să fie ajustată în funcție de conținut */
+  min-height: 80vh; /* Setează o înălțime minimă pentru a preveni ca pagina să fie prea mică */
+  text-align: center;
+}
+
+/* Stilul titlului */
+.product-title {
+  font-size: 2rem;
+  margin-top: 5px; /* Reducem spațiul de sus înainte de titlu */
+  margin-bottom: 30px; /* Spărim spațiul sub titlu pentru a-l separa mai bine de descriere */
+  color: #333;
+}
+
+
+/* Conținutul produsului (imagine + detalii) */
+.product-content {
+  display: flex;
+  flex-direction: row;
+  align-items: center; /* Centrează vertical elementele */
+  gap: 25px; /* Spărim spațiul între imagine și detalii */
+  max-width: 1000px;
+  padding-bottom: 30px; /* Mărim spațiul de jos pentru o distanță mai mare între imagine și butoane */
+}
+
+/* Stil imagine produs */
+.product-image {
+  max-width: 300px;
+  border-radius: 8px;
+}
+
+/* Stil detalii produs (descriere + butoane) */
+.product-details {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 25px; /* Mărim spațiul între descriere și butoane */
+}
+
+/* Descriere produs */
+.product-description {
+  font-size: 1.1rem;
+  line-height: 1.5;
+  color: #555;
+}
+
+/* Butoane */
+.product-buttons {
+  display: flex;
+  justify-content: flex-start;
+  gap: 25px; /* Spărim spațiul între butoane */
+}
+
+/* Stilul butoanelor */
+.btn {
+  display: inline-block;
+  padding: 10px 20px; /* Padding-ul butoanelor poate rămâne la dimensiunea actuală */
+  font-size: 1rem;
+  color: #fff;
+  background-color: #007bff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.btn:hover {
+  background-color: #0056b3;
+}
+
+.add-to-wishlist {
+  background-color: darkred;
+  color: antiquewhite;
+}
+
+/* Modifică culoarea inimii */
+.add-to-wishlist i.fa-heart-o {
+  color: white; /* Setează culoarea iconiței ca alb */
+}
+
+/* Culoare albă la hover */
+.add-to-wishlist:hover i.fa-heart-o {
+  color: white;
+}
+
+
+/* Stil fallback când produsul nu este găsit */
+.no-product {
+  text-align: center;
+  font-size: 1.2rem;
+  color: #888;
+  margin: 40px 0;
+}

@@ -1,0 +1,16 @@
+<div class="wishlist-header">
+  <header>
+    <h2>Your Wishlist</h2>
+  </header>
+</div>
+
+<div class="wishlist-container">
+  <div class="product-card" *ngFor="let item of wishlistItems">
+    <div class="product-info">
+      <h3>{{ item.name }}</h3>
+      <p>{{ item.description }}</p>
+      <p><strong>Price:</strong> ${{ item.price }}</p>
+    </div>
+    <button (click)="removeFromWishlist(item)" class="remove-btn">Remove</button>
+  </div>
+</div>
