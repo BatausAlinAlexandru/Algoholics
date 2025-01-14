@@ -1,0 +1,140 @@
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background: radial-gradient(ellipse at bottom, #0d1d31 0%, #0c0d13 100%);
+  overflow: hidden;
+  --primary-color: #ffffff;
+  color: white;
+
+}
+
+.search-bar {
+  background-color: transparent; /* Fundal transparent */
+  color: white; /* Text alb */
+  border: 1px solid white; /* Bordură albă */
+  border-radius: 10px; /* Colțuri rotunjite */
+  padding: 10px; /* Spațiu interior */
+  font-size: 20px; /* Dimensiunea textului */
+}
+  .search-bar::placeholder {
+    color: rgba(255, 255, 255, 0.6); /* Placeholder alb, semi-transparent */
+  }
+
+  .search-bar:focus {
+    outline: none; /* Elimină conturul default */
+    border-color: #00bfff; /* Bordură albastră la focus */
+    background-color: rgba(255, 255, 255, 0.1); /* Fundal semi-transparent la focus */
+  }
+
+.container-horizontal {
+  display: flex;
+  flex-direction: row;
+  height: 80vh;
+  padding-top: 4%;
+  width: 100%;
+  overflow: hidden;
+}
+
+.layer {
+  flex: 1;
+  padding: 10px;
+  border: 1px solid white;
+  overflow-y: auto;
+  background-color: transparent;
+  display: flex;
+  flex-direction: column;
+  user-select: none;
+}
+
+.layer h3 {
+  margin: 0 0 10px;
+  color: var(--primary-color);
+  text-align: center;
+}
+
+.layer input {
+  margin-bottom: 10px;
+  padding: 5px;
+  width: 100%;
+}
+
+.layer button {
+  margin: 5px 0;
+  padding: 5px 10px;
+}
+
+.layer ul {
+  list-style: none;
+  padding: 0;
+  flex-grow: 1;
+  overflow-y: auto;
+}
+
+  .layer ul li {
+    padding: 5px;
+    cursor: pointer;
+    background: #444;
+    margin: 5px 0;
+    color: var(--primary-color);
+    text-align: center;
+    background-color: transparent;
+    /*border: 1px solid white;*/
+  }
+
+    .layer ul li:hover {
+      /* background: #666;*/
+      background-color: transparent;
+      background: radial-gradient(ellipse at bottom, #f72f7c 0%, #000000 100%);
+    }
+    .layer ul li.active {
+      background: radial-gradient(ellipse at bottom, #00bfff 0%, #000000 100%);
+      font-weight: bold;
+      color: white;
+    }
+
+
+
+.button-add {
+  background: radial-gradient(ellipse at bottom, #11ff00 0%, #055200 100%);
+  color: white;
+}
+  .button-add:hover {
+    background: radial-gradient(ellipse at bottom, #00bfff 0%, #000000 100%);
+  }
+
+.button-delete {
+  background: radial-gradient(ellipse at bottom, #ff0000 0%, #5e0000 100%);
+  color: white;
+}
+
+  .button-delete:hover {
+    background: radial-gradient(ellipse at bottom, #00bfff 0%, #000000 100%);
+  }
+
+
+
+
+
+::ng-deep .modal-content {
+  background: radial-gradient(ellipse at bottom, #0d1d31 0%, #0c0d13 100%);
+  color: #ffffff;
+}
+
+
+::ng-deep ul > li:not(.active) > a {
+  background-color: transparent !important;
+  border-color: black !important;
+}
+
+::ng-deep ul > li.disabled > span {
+  background-color: transparent !important;
+  color: dimgrey;
+  border-color: black !important;
+}
+
+::ng-deep ul > li.active > a {
+  background-color: white !important;
+  border-color: black !important;
+}
