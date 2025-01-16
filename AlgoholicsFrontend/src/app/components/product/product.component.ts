@@ -30,11 +30,10 @@ export class ProductComponent implements OnInit {
   }
 
   addToCart(product: any) {
-    this.cartService.addToCart(product); 
-
+    // this.cartService.addToCart(product); 
   }
 
   addToWishlist(product: any) {
-    this.wishlistService.addToWishlist(product); 
+    // this.wishlistService.addToWishlist(product); 
   }
 }

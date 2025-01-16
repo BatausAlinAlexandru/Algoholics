@@ -4,21 +4,18 @@
   </header>
 </div>
 
-<div class="cart-container">
-  <div class="product-card" *ngFor="let item of cartItems">
-    <div class="product-info">
-      <h3>{{ item.name }}</h3>
-      <p><strong>Price:</strong> ${{ item.price }}</p>
-      <p><strong>Quantity:</strong> {{ item.qty }}</p>
+<div *ngIf="cart != null" class="cart-container">
+  <div *ngIf="cart.items.length > 0; else emptyWishlist">
+    <div class="product-card" *ngFor="let item of products_of_cart">
+      <div class="product-info">
+        <h3>{{item.name}}</h3>
+        <p>{{ item.description }}</p>
+        <p><strong>Price:</strong> ${{ item.price }}</p>
+      </div>
+      <button (click)="removeFromCart(item)" class="remove-btn">Remove</button>
     </div>
-    <button (click)="removeFromCart(item)" class="remove-btn">Remove</button>
   </div>
+  <ng-template #emptyWishlist>
+    <p>Your cart is empty!</p>
+  </ng-template>
 </div>
-
-<div class="cart-summary">
-  <h3>Total Price: ${{ calculateTotal() }}</h3>
-  <button class="checkout-btn">Checkout</button>
-</div>
-
-
-

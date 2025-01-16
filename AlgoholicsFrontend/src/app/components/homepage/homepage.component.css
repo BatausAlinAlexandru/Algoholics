@@ -19,18 +19,209 @@
   }
   
   .product-card {
-    margin: 8px; /* Adjust the value to control spacing */
+    margin: 8px;
   }
 
   .product-img {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 300px; /* Same height as the image for perfect centering */
-    background-color: #fff; /* Optional: Add a white background for the image container */
+    height: 300px; 
+    background-color: #fff;
   }
   
   .product-img img {
-    max-width: 100%; /* Ensure the image scales properly */
-    max-height: 100%; /* Maintain the image's aspect ratio */
+    max-width: 100%; 
+    max-height: 100%; 
   }
+
+  /* =================================
+   1) Basic Wishlist Button Styling
+================================= */
+.add-to-wishlist {
+  position: relative; /* So we can absolutely-position the checkmark */
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  color: #999;
+  transition: color 0.3s ease;
+  outline: none; /* If you want a custom focus style, add it separately */
+}
+
+.add-to-wishlist:hover {
+  color: #666; /* Slightly darker on hover */
+}
+
+/* Empty heart -> Filled heart color transition if desired */
+.add-to-wishlist.active i.fa-heart {
+  color: #e74c3c; /* Your filled heart color (red) */
+  transition: color 0.3s ease;
+}
+
+/* =================================
+   2) Checkmark Container
+================================= */
+.checkmark-container {
+  position: absolute;
+  top: 37%;
+  left: 50%;
+  width: 40px;
+  height: 40px;
+  transform: translate(-50%, -50%) scale(0.8);
+  opacity: 1;
+  pointer-events: none; /* Let clicks pass through to the button */
+  transition: opacity 0.2s ease, transform 0.2s ease;
+}
+
+.checkmark-svg {
+  width: 40px;
+  height: 40px;
+}
+
+/* The checkmark path is initially hidden via dash offset */
+.checkmark-path {
+  stroke: var(--checkmark-color, #8b2e57); /* Green by default */
+  stroke-dasharray: 48;     /* Approx length of the path */
+  stroke-dashoffset: 48;    /* Start fully 'hidden' */
+  transition: stroke 0.3s ease; /* Smooth color transition if dynamic */
+}
+
+/* Hide the heart while checkmark plays */
+.add-to-wishlist.success i.fa {
+  opacity: 0;
+  transition: opacity 0.2s ease;
+}
+
+/* Animate drawing the checkmark path */
+@keyframes draw-check {
+  to {
+    stroke-dashoffset: 0; /* end up fully drawn */
+  }
+}
+
+/* =================================
+   3) .success Class Triggers the Animation
+================================= */
+.add-to-wishlist.success .checkmark-container {
+  opacity: 1;
+  transform: translate(-50%, -50%) scale(1);
+  /* We also do a bounce or pop effect using keyframes */
+  animation: check-bounce 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+/* The actual line draw happens automatically once .success is applied */
+.add-to-wishlist.success .checkmark-path {
+  animation: draw-check 0.5s forwards ease-out;
+}
+
+/* Keyframe for a slight bounce/pop effect */
+@keyframes check-bounce {
+  0% {
+    transform: translate(-50%, -50%) scale(0.8);
+  }
+  70% {
+    transform: translate(-50%, -50%) scale(1.2);
+  }
+  100% {
+    transform: translate(-50%, -50%) scale(1);
+  }
+}
+
+
+ /* =================================
+   1) Basic Cart Button Styling
+================================= */
+.add-to-cart {
+  position: relative; /* So we can absolutely-position the checkmark */
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  color: #999;
+  transition: color 0.3s ease;
+  outline: none; /* If you want a custom focus style, add it separately */
+}
+
+.add-to-cart:hover {
+  color: #666; /* Slightly darker on hover */
+}
+
+/* Empty heart -> Filled heart color transition if desired */
+.add-to-cart.active i.fa-shopping-cart {
+  color: #e74c3c; /* Your filled heart color (red) */
+  transition: color 0.3s ease;
+}
+
+/* =================================
+   2) Checkmark Container
+================================= */
+.checkmark-container {
+  position: absolute;
+  top: 37%;
+  left: 50%;
+  width: 40px;
+  height: 40px;
+  transform: translate(-50%, -50%) scale(0.8);
+  opacity: 1;
+  pointer-events: none; /* Let clicks pass through to the button */
+  transition: opacity 0.2s ease, transform 0.2s ease;
+}
+
+.checkmark-svg {
+  width: 40px;
+  height: 40px;
+}
+
+/* The checkmark path is initially hidden via dash offset */
+.checkmark-path {
+  stroke: var(--checkmark-color, #8b2e57); /* Green by default */
+  stroke-dasharray: 48;     /* Approx length of the path */
+  stroke-dashoffset: 48;    /* Start fully 'hidden' */
+  transition: stroke 0.3s ease; /* Smooth color transition if dynamic */
+}
+
+/* Hide the heart while checkmark plays */
+.add-to-cart.success i.fa {
+  opacity: 0;
+  transition: opacity 0.2s ease;
+}
+
+/* Animate drawing the checkmark path */
+@keyframes draw-check {
+  to {
+    stroke-dashoffset: 0; /* end up fully drawn */
+  }
+}
+
+/* =================================
+   3) .success Class Triggers the Animation
+================================= */
+.add-to-cart.success .checkmark-container {
+  opacity: 1;
+  transform: translate(-50%, -50%) scale(1);
+  /* We also do a bounce or pop effect using keyframes */
+  animation: check-bounce 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+/* The actual line draw happens automatically once .success is applied */
+.add-to-cart.success .checkmark-path {
+  animation: draw-check 0.5s forwards ease-out;
+}
+
+/* Keyframe for a slight bounce/pop effect */
+@keyframes check-bounce {
+  0% {
+    transform: translate(-50%, -50%) scale(0.8);
+  }
+  70% {
+    transform: translate(-50%, -50%) scale(1.2);
+  }
+  100% {
+    transform: translate(-50%, -50%) scale(1);
+  }
+}

@@ -1,5 +1,6 @@
 ﻿using Application.Commands.Product;
 using Application.Queies.Product;
+using Application.Queries.Wishlist;
 using MediatR;
 using Microsoft.AspNetCore.Mvc;
 
@@ -72,6 +73,13 @@ namespace WebAPI.Controllers
             {
                 return BadRequest(result);
             }
+        }
+        [HttpGet("get-product/{productId:guid}")]
+        public async Task<IActionResult> GetProductById(Guid productId)
+        {
+            var command = new GetProductByIdQuery(productId);
+            var result = await _mediator.Send(command);
+            return Ok(result);
         }
 
 
