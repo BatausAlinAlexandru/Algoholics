@@ -1,43 +1,48 @@
 import { Injectable } from '@angular/core';
-import { BehaviorSubject } from 'rxjs';
 
 @Injectable({
-  providedIn: 'root',
+  providedIn: 'root'
 })
 export class CartService {
-  private cartItems: any[] = [
-    { name: 'Smartwatch', price: 100, qty: 1, image: 'assets/product01.png' },
-    { name: 'Headphones', price: 150, qty: 2, image: 'assets/product02.png' },
-    { name: 'Mouse', price: 50, qty: 1, image: 'assets/product03.png' }
-  ];
+  private cartKey = 'cartItems';
 
-  cartItemsChanged: BehaviorSubject<any[]> = new BehaviorSubject(this.cartItems);
+  constructor() { }
 
-  getCart(): any[] {
-    return this.cartItems;
-  }
-
-  addToCart(product: any): void {
-    const existingProduct = this.cartItems.find(item => item.name === product.name);
-    if (existingProduct) {
-      existingProduct.qty += 1; 
-    } else {
-      product.qty = 1; 
-      this.cartItems.push(product);
-    }
-    this.cartItemsChanged.next(this.cartItems); 
-  }
-
-  updateCart(items: any[]): void {
-    this.cartItems = items;
-    this.cartItemsChanged.next(this.cartItems);
+  // Get cart items from localStorage
+  getCartItems(): any[] {
+    const items = localStorage.getItem(this.cartKey);
+    return items ? JSON.parse(items) : [];
   }
 
   getCartItemCount(): number {
-    return this.cartItems.length;
+    return this.getCartItems().reduce((sum, item) => sum + item.quantity, 0);  // ✅ Returns the correct count
   }
 
-  removeFromCart(productId: number): void {
-    this.cartItems = this.cartItems.filter(product => product.id !== productId);
+  // Add product to cart
+  addToCart(product: any) {
+    let cart = this.getCartItems();
+    const existingProduct = cart.find(item => item.id === product.id);
+
+    if (existingProduct) {
+      existingProduct.quantity++; // Increase quantity if already in cart
+    } else {
+      cart.push({ ...product, quantity: 1 });
+    }
+
+    localStorage.setItem(this.cartKey, JSON.stringify(cart)); // Update localStorage
   }
+
+  // Remove product from cart
+  removeFromCart(productId: number) {
+    let cart = this.getCartItems().filter(item => item.id !== productId);
+    localStorage.setItem(this.cartKey, JSON.stringify(cart));
+  }
+
+  // Clear the cart
+  clearCart() {
+    localStorage.removeItem(this.cartKey);
+  }
+
+  
+
 }

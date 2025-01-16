@@ -24,7 +24,7 @@ export class HeaderComponent implements OnInit{
 
   ngOnInit(): void {
     this.wishlistItems = this.wishlistService.getWishlist();
-    this.cartItems = this.cartService.getCart();
+    this.cartItems = this.cartService.getCartItems();
     this.isAuthenticated = this.authService.isAuthenticated();
   }
 
@@ -38,7 +38,7 @@ export class HeaderComponent implements OnInit{
 
   removeFromCart(product: any): void {
     this.cartService.removeFromCart(product.id);
-    this.cartItems = this.cartService.getCart(); 
+    this.cartItems = this.cartService.getCartItems(); 
   }
 
   calculateTotal(): number {
@@ -46,7 +46,13 @@ export class HeaderComponent implements OnInit{
   }
 
   getCartlistCount(): number {
-      return this.cartService.getCartItemCount();
+    try {
+      const count = this.cartService.getCartItemCount();
+      return count > 0 ? count : 0;
+    } catch (error) {
+      console.error('Error fetching cart count:', error);
+      return 0;
+    }
   }
 
   

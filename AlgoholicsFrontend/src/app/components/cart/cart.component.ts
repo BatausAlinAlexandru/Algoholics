@@ -8,27 +8,38 @@ import { CartService } from '../../services/cart.service';
 })
 export class CartComponent implements OnInit {
   cartItems: any[] = [];
-  cartTotal: number = 0;
 
   constructor(private cartService: CartService) { }
 
-  ngOnInit(): void {
-    this.cartItems = this.cartService.getCart();
-    this.calculateTotal();
+  ngOnInit() {
+    this.loadCart();
+  }
+
+  loadCart() {
+    this.cartItems = this.cartService.getCartItems();
   }
 
   calculateTotal(): number {
     let total = 0;
+
     this.cartItems.forEach(item => {
-      total += item.price * item.qty;
+      // Validate price and quantity
+      if (item.price > 0 && !isNaN(item.price) && item.quantity > 0 && !isNaN(item.quantity)) {
+        total += item.price * item.quantity;  // Use 'quantity' instead of 'qty'
+      }
     });
+
     return total;
   }
 
-  removeFromCart(product: any): void {
-    this.cartItems = this.cartItems.filter(item => item !== product);
-    this.cartService.updateCart(this.cartItems); 
-    this.calculateTotal(); 
+
+  removeItem(id: number) {
+    this.cartService.removeFromCart(id);
+    this.loadCart(); // Refresh cart display
   }
 
+  clearCart() {
+    this.cartService.clearCart();
+    this.loadCart();
+  }
 }

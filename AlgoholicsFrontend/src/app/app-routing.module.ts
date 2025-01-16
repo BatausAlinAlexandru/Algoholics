@@ -12,7 +12,7 @@ import { UserProfileComponent } from './components/user-profile/user-profile.com
 import { EditUserProfileComponent } from './components/edit-user-profile/edit-user-profile.component'; 
 import { WishlistComponent } from './components/wishlist/wishlist.component';
 import { ProductPageComponent } from './components/product-page/product-page.component';
-
+import { ProductListComponent } from './components/product-list/product-list.component';
 
 const routes: Routes = [
   {
@@ -45,8 +45,16 @@ const routes: Routes = [
   {
     path: 'product-details/:id', component: ProductPageComponent
   },
-  {path: '**', redirectTo: '' },
+  {
+    path: '**', redirectTo: ''
+  },
+  {
+    path: '', component: ProductListComponent
+  },
 
+  {
+    path: 'cart', component: CartComponent
+  }
  
 ];
 
