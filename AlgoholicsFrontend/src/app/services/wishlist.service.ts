@@ -1,51 +1,87 @@
 import { Injectable } from '@angular/core';
-import { ProductService } from './product.service';
+import { HttpClient } from '@angular/common/http';
+import { map, Observable, of, switchMap } from 'rxjs';
+
+// export interface ProductDetail {
+//   name: string;
+//   price: number;
+//   description: string;
+//   stoc: number;
+//   discount: number;
+//   pathFoto: string;
+// }
+
+// export interface Product {
+//   id: string;
+//   productDetail: ProductDetail;
+// }
+
+export interface Wishlist {
+  id: string;
+  userAccountId: string;
+  productsId: string[];
+}
 
 @Injectable({
   providedIn: 'root'
 })
 export class WishlistService {
-  private wishlist: any[] = [];
-  //  { name: 'Laptop', description: 'Description 1', price: 100 },
-  //  { name: 'Camera', description: 'Description 2', price: 200 },
-  //  { name: 'Smartphone', description: 'Description 3', price: 300 }
-  //];
+  private apiUrl = 'https://localhost:7198/api/WishList';
 
-  constructor(private productService: ProductService) { }
+  constructor(private http: HttpClient) { }
 
-  addToWishlist(productId: number): void {
-    //const alreadyInWishlist = this.wishlist.some(item => item.name === product.name);
-    //if (!alreadyInWishlist) {
-    //  this.wishlist.push(product);
-    //}
-    //console.log('Current wishlist:', this.wishlist);
-    const product = this.productService.products.find(p => p.id === productId);
-    if (product) {
-      const alreadyInWishlist = this.wishlist.some(item => item.id === product.id);
-      if (!alreadyInWishlist) {
-        this.wishlist.push(product);
-      }
-    }
+  // Get all wishlists
+  public getAllWishlists(): Observable<Wishlist[]> {
+    return this.http.get<Wishlist[]>(`${this.apiUrl}`);
   }
 
-  getWishlist(): any[] {
-    return this.wishlist; 
+  // Get a specific wishlist by user ID
+  public getWishlistByUserId(userAccountId: string): Observable<Wishlist> {
+    return this.http.get<Wishlist>(`${this.apiUrl}/get-wishlist-user/${userAccountId}`);
   }
 
-  getWishlistCount(): number {
-    return this.wishlist.length; 
+  // Create a new wishlist
+  public createWishlist(userAccountId: string, productId: string[]): Observable<Wishlist> {
+    const body = { userAccountId, productId };
+    return this.http.post<Wishlist>(`${this.apiUrl}/add`, body);
   }
 
-  removeFromWishlist(productId: number): void {
-    this.wishlist = this.wishlist.filter(product => product.id !== productId);
+  public addProductToWishlist(userAccountId: string, productId: string): Observable<Wishlist> {
+    return this.getWishlistByUserId(userAccountId).pipe(
+      switchMap((wishlist: Wishlist) => {
+        if (!wishlist) {
+          // If no wishlist found, create a brand-new one with this product ID
+          return this.createWishlist(userAccountId, [productId]);
+        } else {
+          // If wishlist exists, check if product is already in the list
+          const alreadyInWishlist = wishlist.productsId.includes(productId);
+          if (alreadyInWishlist) {
+            // Nothing to do, just return the existing wishlist as an observable
+            return of(wishlist);
+          } else {
+            // Product is not in wishlist, so we add it
+            const updatedIds = [...wishlist.productsId, productId];
+            return this.updateWishlist(userAccountId, updatedIds);
+          }
+        }
+      })
+    );
   }
 
-  updateWishlist(updatedWishlist: any[]): void {
-    this.wishlist = updatedWishlist;
+  // Update wishlist products
+  public updateWishlist(idUserAccount: string, products: string[]): Observable<Wishlist> {
+    const body = { idUserAccount,products };
+    return this.http.put<Wishlist>(`${this.apiUrl}/update`, body);
   }
 
-  //isWishlistOpen(): string {
-  //  return this.isWishlistOpen().valueOf();
-     
-  //}
+  // Remove a wishlist
+  public removeWishlist(wishlistId: string): Observable<void> {
+    return this.http.delete<void>(`${this.apiUrl}/${wishlistId}`);
+  }
+
+  public getWishlistCount(userAccountId: string): Observable<number> {
+    return this.getWishlistByUserId(userAccountId).pipe(
+      map((wishlist: Wishlist) => wishlist.productsId.length)
+    );
+  }
 }

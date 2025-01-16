@@ -9,7 +9,7 @@ import { BehaviorSubject, Observable, tap } from 'rxjs';
 export class AuthService {
 
   private apiUrl = 'https://localhost:7198/api/Authentication';
-  private signupApiUrl = 'https://localhost:7198/api/UserAccount';
+  private signupApiUrl = 'https://localhost:7198/api/Authentication';
   private authenticated = new BehaviorSubject<boolean>(false);
   public isAuthenticated$ = this.authenticated.asObservable();
 
@@ -19,7 +19,7 @@ export class AuthService {
   }
 
   public login(email: string, password: string): Observable<any> {
-    return this.http.post(`${this.apiUrl}`, { email, password }).pipe(
+    return this.http.post(`${this.apiUrl}/login`, { email, password }).pipe(
       tap((response: any) => {
         const token = response.token;
         if (token) {
@@ -47,6 +47,22 @@ export class AuthService {
   }
 
   signup(email: string, password: string): Observable<any> {
-    return this.http.post(`${this.signupApiUrl}`, { email, password });
+    return this.http.post(`${this.signupApiUrl}/register`, { email, password });
   }
+
+  getUserIdFromToken(): string {
+    const token = localStorage.getItem('token');
+    if (token) {
+      try {
+        const payloadBase64 = token.split('.')[1]; 
+        const decodedPayload = JSON.parse(atob(payloadBase64)); 
+        return decodedPayload.nameid || ''; 
+      } catch (error) {
+        console.error('Error parsing JWT token:', error);
+        return '';
+      }
+    }
+    return '';
+  }
+
 }

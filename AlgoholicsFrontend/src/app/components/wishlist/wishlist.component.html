@@ -4,13 +4,18 @@
   </header>
 </div>
 
-<div class="wishlist-container">
-  <div class="product-card" *ngFor="let item of wishlistItems">
-    <div class="product-info">
-      <h3>{{ item.name }}</h3>
-      <p>{{ item.description }}</p>
-      <p><strong>Price:</strong> ${{ item.price }}</p>
+<div *ngIf="wishlist != null" class="wishlist-container">
+  <div *ngIf="wishlist.productsId.length > 0; else emptyWishlist">
+    <div class="product-card" *ngFor="let item of products_of_wishlist">
+      <div class="product-info">
+        <h3>{{item.name}}</h3>
+        <p>{{ item.description }}</p>
+        <p><strong>Price:</strong> ${{ item.price }}</p>
+      </div>
+      <button (click)="removeFromWishlist(item)" class="remove-btn">Remove</button>
     </div>
-    <button (click)="removeFromWishlist(item)" class="remove-btn">Remove</button>
   </div>
+  <ng-template #emptyWishlist>
+    <p>Your wishlist is empty!</p>
+  </ng-template>
 </div>

@@ -1,6 +1,7 @@
-﻿using Application.Commands.WishList;
+﻿using Application.Commands.Cart;
+using Application.Queries.Cart;
 using Application.Queries.Wishlist;
-using Application.Queries.WishList;
+using Domain.Aggregates.WishListAggregate.Entity;
 using MediatR;
 using Microsoft.AspNetCore.Mvc;
 
@@ -8,51 +9,49 @@ namespace WebAPI.Controllers
 {
     [ApiController]
     [Route("api/[controller]")]
-    public class WishListController : Controller
+    public class CartController : Controller
     {
         private readonly IMediator _mediator;
 
-        public WishListController(IMediator mediator)
+        public CartController(IMediator mediator)
         {
             _mediator = mediator;
         }
 
         [HttpPost("add")]
-        public async Task<IActionResult> AddWishListController([FromBody] AddWishListCommand command)
+        public async Task<IActionResult> AddCartController([FromBody] AddCartCommand command)
         {
             var result = await _mediator.Send(command);
-
             return result.IsSuccess ? Ok() : BadRequest(result.Error);
         }
 
         [HttpPut("update")]
-        public async Task<IActionResult> UpdateWishListController([FromBody] UpdateWishListCommand command)
+        public async Task<IActionResult> UpdateCartController([FromBody] UpdateCartCommand command)
         {
             var result = await _mediator.Send(command);
-
             return result.IsSuccess ? Ok() : BadRequest(result.Error);
         }
 
-        [HttpDelete("delete/{wishlistId:guid}")]
-        public async Task<IActionResult> DeleteWishListController(Guid wishlistId)
+        [HttpDelete("delete/{cartId:guid}")]
+        public async Task<IActionResult> DeleteCartController(Guid cartId)
         {
-            var command = new DeleteWishListCommand(wishlistId);
+            var command = new DeleteCartCommand(cartId);
             var result = await _mediator.Send(command);
-
             return result.IsSuccess ? Ok() : BadRequest(result.Error);
         }
 
         [HttpGet("get-all")]
-        public async Task<IActionResult> GetAllWishListsController()
+        public async Task<IActionResult> GetAllCartsController()
         {
-            var command = new GetAllWishListsQuery();
-            var result = await _mediator.Send(command);
+            var query = new GetAllCartsQuery();
+            var result = await _mediator.Send(query);
             return result.Count > 0 ? Ok(result) : BadRequest(result);
         }
-        [HttpGet("get-wishlist-user/{userId:guid}")]
+
+        [HttpGet("get-cart-user/{userId:guid}")]
         public async Task<IActionResult> GetUserWishlist(Guid userId)
         {
-            var command = new GetWishlistByUserIdQuery(userId);
+            var command = new GetCartByUserIdQuery(userId);
             var result = await _mediator.Send(command);
             return Ok(result);
         }

@@ -1,8 +1,10 @@
-﻿using Domain.Aggregates.CategoryAggregate.Entities;
+﻿using Domain.Aggregates.CartAggregate.Entity;
+using Domain.Aggregates.CategoryAggregate.Entities;
 using Domain.Aggregates.OrderAggregate.Entities;
 using Domain.Aggregates.ProductAggregate.Entities;
 using Domain.Aggregates.UserAggregate.Entities;
 using Domain.Aggregates.WishListAggregate.Entity;
+using Infrastructure.EntityConfigurations.CartEntityTypeConfigurations;
 using Infrastructure.EntityConfigurations.CategoryEntityTypeConfigurations;
 using Infrastructure.EntityConfigurations.OrderEntityTypeConfigurations;
 using Infrastructure.EntityConfigurations.ProductEntityTypeConfigurations;
@@ -22,6 +24,7 @@ namespace Infrastructure.Data
         public DbSet<FilterValue> FilterValues { get; set; }
         public DbSet<Subcategory> Subcategories { get; set; } 
         public DbSet<WishList> WishLists { get; set; }
+        public DbSet<Cart> Carts { get; set; }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
@@ -47,6 +50,8 @@ namespace Infrastructure.Data
 
 
             modelBuilder.ApplyConfiguration(new WishListEntityTypeConfiguration());
+
+            modelBuilder.ApplyConfiguration(new CartEntityTypeConfiguration());
 
 
         }

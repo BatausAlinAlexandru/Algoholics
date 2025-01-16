@@ -12,6 +12,9 @@ export class HeaderComponent implements OnInit{
 [x: string]: any;
   cartItems: any[] = [];
   wishlistItems: any[] = [];
+  wishlistLength: any;
+  cartLength: any;
+  loggedInUserId: string = '';
 
   isCartOpen: boolean = false;
   isAuthenticated = false;
@@ -23,31 +26,40 @@ export class HeaderComponent implements OnInit{
   {}
 
   ngOnInit(): void {
-    this.wishlistItems = this.wishlistService.getWishlist();
-    this.cartItems = this.cartService.getCart();
+    this.loggedInUserId = this.authService.getUserIdFromToken();
     this.isAuthenticated = this.authService.isAuthenticated();
+    this.wishlistService.getWishlistCount(this.loggedInUserId).subscribe(
+      (count: number) => {
+        this.wishlistLength = count;
+      },
+      (error) => {
+        console.error('Error fetching wishlist count', error);
+        this.wishlistLength = 0; // Handle error case
+      }
+    )
+    this.cartService.getCartCount(this.loggedInUserId).subscribe(
+      (count: number) => {
+        this.cartLength = count;
+      },
+      (error) => {
+        console.error('Error fetching cart count', error);
+        this.cartLength = 0; // Handle error case
+      }
+    )
   }
 
   addToWishlist(product: any): void {
-    this.wishlistService.addToWishlist(product); 
-  }
-
-  getWishlistCount(): number {
-    return this.wishlistService.getWishlistCount();
+    // this.wishlistService.addToWishlist(product); 
   }
 
   removeFromCart(product: any): void {
-    this.cartService.removeFromCart(product.id);
-    this.cartItems = this.cartService.getCart(); 
+    // this.cartService.removeFromCart(product.id);
+    // this.cartItems = this.cartService.getCart(); 
   }
 
-  calculateTotal(): number {
-    return this.cartItems.reduce((total, item) => total + item.price, 0);
-  }
-
-  getCartlistCount(): number {
-      return this.cartService.getCartItemCount();
-  }
+  // calculateTotal(): number {
+  //   return this.cartItems.reduce((total, item) => total + item.price, 0);
+  // }
 
   
 }
