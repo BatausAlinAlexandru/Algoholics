@@ -50,6 +50,7 @@ import { map, Observable, of, switchMap } from 'rxjs';
 export interface Cart {
   id: string;
   userAccountId: string;
+  totalPrice: number;
   items: CartItem[];
 }
 export interface CartItem {

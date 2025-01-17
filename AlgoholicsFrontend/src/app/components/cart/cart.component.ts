@@ -38,6 +38,7 @@ import { CartService, Cart, CartItem } from '../../services/cart.service';
 import { AuthService } from '../../services/auth.service';
 import { HttpClient } from '@angular/common/http';
 import { ProductService, Product } from '../../services/product.service';
+import { OrderService, Order } from '../../services/order.service';
 import { forkJoin } from 'rxjs';
 
 
@@ -56,6 +57,7 @@ export class CartComponent implements OnInit {
     private cartService: CartService,
     private productService: ProductService,
     private authService: AuthService,
+    private orderService: OrderService,
     private http: HttpClient
   ) { }
 
@@ -117,5 +119,83 @@ export class CartComponent implements OnInit {
     }
   }
 
+  checkout(): void {
+    if(this.cart) {
+     this.orderService.createOrder(this.loggedInUserId,this.cart.items);
+    }
+  }
+
+  incrementQuantity(item: Product): void {
+  // Ensure the cart object is available
+  if (!this.cart) return;
+
+  // Find the matching cart item
+  const cartItem = this.cart.items.find(
+    (cartItem) => cartItem.productId === item.id
+  );
+
+  // If the item doesn't exist in the cart, no further action
+  if (!cartItem) return;
+
+  // Safely increment quantity (use 0 as a fallback if undefined)
+  cartItem.quantity = (cartItem.quantity ?? 0) + 1;
+
+  // Create an updated copy of the items array
+  const updatedProductsList = [...this.cart.items];
+
+  // Update the cart in the backend
+  this.cartService.updateCart(this.cart.userAccountId, updatedProductsList).subscribe(
+    (updatedCart) => {
+      // Refetch cart data after successful update
+      this.fetchCart();
+    },
+    (error) => {
+      console.error('Error updating product quantity in cart', error);
+    }
+  );
+}
+
+decrementQuantity(item: Product): void {
+  // Ensure the cart object is available
+  if (!this.cart) return;
+
+  // Find the matching cart item
+  const cartItem = this.cart.items.find(
+    (cartItem) => cartItem.productId === item.id
+  );
+
+  // If the item doesn't exist in the cart, no further action
+  if (!cartItem) return;
+
+  // If quantity is more than 1, decrement; otherwise, remove from cart
+  if ((cartItem.quantity ?? 0) > 1) {
+    cartItem.quantity = (cartItem.quantity ?? 1) - 1;
+
+    // Create an updated copy of the items array
+    const updatedProductsList = [...this.cart.items];
+
+    // Update the cart in the backend
+    this.cartService.updateCart(this.cart.userAccountId, updatedProductsList).subscribe(
+      (updatedCart) => {
+        // Refetch cart data after successful update
+        this.fetchCart();
+      },
+      (error) => {
+        console.error('Error decrementing product quantity in cart', error);
+      }
+    );
+  } else {
+    // If the quantity is 1 and user clicks '-', remove the item
+    this.removeFromCart(item);
+  }
+}
+
+getCartItemQuantity(item: Product) : number | undefined {
+  if (!this.cart) return 0;
+  const cartItem = this.cart.items.find(
+    (cartItem) => cartItem.productId === item.id
+  );
+  return cartItem?.quantity;
+}
 
 }
