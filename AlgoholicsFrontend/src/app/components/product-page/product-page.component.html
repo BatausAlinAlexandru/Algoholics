@@ -1,40 +1,28 @@
-<!-- Container principal pentru întreaga pagină a produsului -->
+<!-- Container principal pentru pagina produsului -->
 <div *ngIf="product" class="product-container">
-
-  <!-- Titlul produsului, poziționat central -->
+  <!-- Titlul produsului -->
   <h1 class="product-title">{{ product.name }}</h1>
 
-  <!-- Secțiunea de conținut: imaginea produsului în stânga, detaliile în dreapta -->
+  <!-- Secțiunea de conținut -->
   <div class="product-content">
-
     <!-- Imaginea produsului -->
-    <img class="product-image" [src]="product.image" alt="{{ product.name }}">
+    <img class="product-image" [src]="product.pathFoto" alt="{{ product.name }}">
 
-    <!-- Detaliile produsului (descriere + butoane) -->
+    <!-- Detalii despre produs -->
     <div class="product-details">
+      <p>{{ product.description }}</p>
+      <p><strong>Price:</strong> ${{ product.price }}</p>
 
-      <!-- Descrierea produsului -->
-      <div class="description">
-        <p *ngFor="let line of product.description">{{ line }}</p>
-        <p><strong>Price:</strong> ${{ product.price }}</p>
-
-      </div>
-
-      <!-- Secțiunea pentru butoane -->
+      <!-- Butoane pentru acțiuni -->
       <div class="product-buttons">
-
-        <!-- Buton pentru "Add to Cart" -->
-          <button class="add-to-cart-btn"><i class="fa fa-shopping-cart"></i> add to cart</button>
-
-        <!-- Buton pentru "Add to Wishlist" -->
-        <button class="add-to-wishlist"><i class="fa fa-heart"></i><span class="tooltipp"> add to wishlist</span></button>
+        <button class="add-to-cart-btn"><i class="fa fa-shopping-cart"></i> Add to Cart</button>
+        <button class="add-to-wishlist"><i class="fa fa-heart"></i> Add to Wishlist</button>
       </div>
-
     </div>
   </div>
 </div>
 
-<!-- Mesaj afișat când produsul nu este găsit -->
+<!-- Mesaj afișat dacă produsul nu este găsit -->
 <div *ngIf="!product" class="no-product">
   <p>Produsul nu a fost găsit!</p>
 </div>

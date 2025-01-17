@@ -78,8 +78,8 @@
 }
 
 .add-to-wishlist {
-  background-color: darkred;
-  color: antiquewhite;
+  background-color: #8B2E57;
+  color: white;
 }
 
 /* Modifică culoarea inimii */
@@ -100,3 +100,26 @@
   color: #888;
   margin: 40px 0;
 }
+
+.add-to-cart-btn,
+.add-to-wishlist {
+  padding: 10px 20px;
+  margin-right: 10px;
+  border: 2px;
+  border-color:black;
+  cursor: pointer;
+  font-size: 16px;
+  transition: all 0.3s ease;
+}
+
+  .add-to-cart-btn.active,
+  .add-to-wishlist.active {
+    background-color: #8B2E57;
+    color: white;
+  }
+
+  .add-to-cart-btn i,
+  .add-to-wishlist i {
+    margin-right: 5px;
+  }
+

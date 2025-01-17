@@ -35,6 +35,39 @@
     max-height: 100%; 
   }
 
+/* Stiluri pentru butoane din meniul de categorii */
+.btn-category {
+  background-color: transparent;
+  border: 1px solid #ddd;
+  padding: 10px 20px;
+  margin: 0 10px;
+  font-size: 14px;
+  color: #919191;
+  cursor: pointer;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+  .btn-category:hover {
+    background-color: #f0f0f0;
+    color: #000;
+  }
+
+  .btn-category:focus {
+    outline: none;
+    background-color: #ddd;
+    color: #000;
+  }
+
+.active .btn-category {
+  background-color: #8B2E57;
+  color: white;
+  border-color: #8B2E57;
+}
+
+  .active .btn-category:hover {
+    background-color: #8B2E57;
+  }
+
   /* =================================
    1) Basic Wishlist Button Styling
 ================================= */

@@ -13,6 +13,9 @@ import { Router } from '@angular/router';
 export class HomepageComponent implements OnInit {
   
   products: any[] = [];
+  categories: any[] = [];
+  filteredProducts: any[] = [];
+  selectedCategory: string = ''; // Categorie selectată pentru filtrare
   loggedInUserId: string = '';
 
   // 1) States for tracking the wishlist icon and success animation
@@ -31,16 +34,70 @@ export class HomepageComponent implements OnInit {
   ) {}
 
   ngOnInit(): void {
-    this.productService.getAllProducts().subscribe(
-      (data: any) => {
-        this.products = data as any[];
+    // Preluăm mai întâi categoriile
+    this.productService.getAllCategories().subscribe(
+      (categories: any[]) => {
+        this.categories = categories;
+        // După ce avem categoriile, preluăm produsele
+        this.productService.getAllProducts().subscribe(
+          (products: any[]) => {
+            this.products = products;
+
+            // Asociem numele categoriei fiecărui produs, folosind categoriile deja disponibile
+            this.products = this.products.map(product => ({
+              ...product,
+              categoryName: this.getCategoryNameById(product.idCtegory)
+            }));
+
+            // La început, toate produsele sunt vizibile
+            this.filteredProducts = this.products;
+
+            // Setează butonul "All Products" ca activ
+            this.setActiveCategoryButton('All');
+          },
+          (error) => console.error('Error fetching products:', error)
+        );
       },
-      (error) => {
-        console.error('Error fetching products:', error);
-      }
+      (error) => console.error('Error fetching categories:', error)
     );
     this.isAuthenticated = this.authService.isAuthenticated();
     this.loggedInUserId = this.authService.getUserIdFromToken();
+  }
+
+  getCategoryNameById(idCtegory: number): string {
+    const category = this.categories.find(cat => cat.idCategory === idCtegory);
+    return category ? category.name : 'Category unknown';
+  }
+
+
+  // Modifică funcția de filtrare pentru a gestiona activarea butonului selectat
+  filterProducts(category: string): void {
+    this.selectedCategory = category; // Setează categoria selectată
+
+    if (category === 'All') {
+      this.filteredProducts = this.products; // Dacă se selectează "All", toate produsele sunt vizibile
+    } else {
+      this.filteredProducts = this.products.filter(product => product.categoryName === category); // Filtrează produsele după categoria aleasă
+    }
+
+    // Schimbă clasa activă pe butonul selectat
+    this.setActiveCategoryButton(category);
+  }
+
+  // Funcția de setare a butonului activ
+  setActiveCategoryButton(category: string): void {
+    const tabs = document.querySelectorAll('.section-tab-nav li');
+    tabs.forEach(tab => {
+      tab.classList.remove('active'); // Îndepărtează clasa 'active' de la toate
+    });
+
+    // Adaugă clasa 'active' pe butonul corespunzător
+    const activeTab = Array.from(tabs).find((tab: any) => {
+      return tab.textContent.trim() === category;
+    });
+    if (activeTab) {
+      activeTab.classList.add('active');
+    }
   }
 
   redirectToLogin(): void {

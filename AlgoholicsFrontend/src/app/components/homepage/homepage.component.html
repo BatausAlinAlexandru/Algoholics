@@ -4,38 +4,43 @@
   <div class="container">
     <!-- row -->
     <div class="row">
+
       <!-- section title -->
       <div class="col-md-12">
         <div class="section-title">
-          <h3 class="title">New Products</h3>
+          <h3 class="title">Products</h3>
           <div class="section-nav">
             <ul class="section-tab-nav tab-nav">
               <li class="active">
-                <a data-toggle="tab" href="#tab1">All Products</a>
+                <!-- Butonul pentru toate produsele, care va fi activat la început -->
+                <button class="btn btn-category" (click)="filterProducts('All')">All Products</button>
               </li>
-              <li><a data-toggle="tab" href="#tab1">Laptops</a></li>
-              <li><a data-toggle="tab" href="#tab1">Smartphones</a></li>
-              <li><a data-toggle="tab" href="#tab1">Cameras</a></li>
-              <li><a data-toggle="tab" href="#tab1">Accessories</a></li>
+              <li>
+                <button class="btn btn-category" (click)="filterProducts('Laptops')">Laptops</button>
+              </li>
+              <li>
+                <button class="btn btn-category" (click)="filterProducts('Smartphones')">Smartphones</button>
+              </li>
+              <li>
+                <button class="btn btn-category" (click)="filterProducts('Cameras')">Cameras</button>
+              </li>
+              <li>
+                <button class="btn btn-category" (click)="filterProducts('Accessories')">Accessories</button>
+              </li>
             </ul>
           </div>
         </div>
       </div>
       <!-- /section title -->
 
-      <div class="product-card" *ngFor="let product of products">
+      <div class="product-card" *ngFor="let product of filteredProducts">
         <div class="product">
           <div class="product-img">
-            <img
-              [src]="'https://localhost:7198' + product.imageUrl"
-              alt="{{ product.name }}"
-            />
-            <div class="product-label">
-              <span class="new">NEW</span>
-            </div>
+            <img [src]="'https://localhost:7198' + product.imageUrl"
+                 alt="{{ product.name }}" />
           </div>
           <div class="product-body">
-            <p class="product-category">Accessories</p>
+            <p class="product-category"><a href="#">{{ product.categoryName }}</a></p>
             <h3 class="product-name">
               <a href="#">{{ product.name }}</a>
             </h3>
@@ -49,73 +54,60 @@
                     <i class="fa fa-star-o"></i>
                   </div> -->
             <div class="product-btns">
-              <button
-                (click)="
+              <button (click)="
                   isAuthenticated ? addToWishlist(product) : redirectToLogin()
                 "
-                class="add-to-wishlist"
-                [ngClass]="{
+                      class="add-to-wishlist"
+                      [ngClass]="{
                   active: isWishlistActive[product.id],
                   success: showWishlistSuccess[product.id]
-                }"
-              >
-                <i
-                  class="fa"
-                  [ngClass]="
+                }">
+                <i class="fa"
+                   [ngClass]="
                     isWishlistActive[product.id] ? 'fa-heart' : 'fa-heart-o'
-                  "
-                ></i>
+                  "></i>
                 <span class="tooltipp">Add to Wishlist</span>
 
                 <div class="checkmark-container">
                   <svg class="checkmark-svg" viewBox="0 0 52 52">
-                    <path
-                      class="checkmark-path"
-                      fill="none"
-                      stroke="#fff"
-                      stroke-width="5"
-                      d="M14 27l10 10 14-14"
-                    />
+                    <path class="checkmark-path"
+                          fill="none"
+                          stroke="#fff"
+                          stroke-width="5"
+                          d="M14 27l10 10 14-14" />
                   </svg>
                 </div>
               </button>
 
               <!-- Add To Cart button -->
-              <button
-                (click)="
+              <button (click)="
                   isAuthenticated ? addToCart(product) : redirectToLogin()
                 "
-                class="add-to-cart"
-                [ngClass]="{
+                      class="add-to-cart"
+                      [ngClass]="{
                   active: isCartActive[product.id],
                   success: showCartSuccess[product.id]
-                }"
-              >
-                <i
-                  class="fa"
-                  [ngClass]="
+                }">
+                <i class="fa"
+                   [ngClass]="
                     isCartActive[product.id]
                       ? 'fa-shopping-cart'
                       : 'fa-shopping-cart'
-                  "
-                ></i>
+                  "></i>
                 <span class="tooltipp">Add to Cart</span>
 
                 <div class="checkmark-container">
                   <svg class="checkmark-svg" viewBox="0 0 52 52">
-                    <path
-                      class="checkmark-path"
-                      fill="none"
-                      stroke="#fff"
-                      stroke-width="5"
-                      d="M14 27l10 10 14-14"
-                    />
+                    <path class="checkmark-path"
+                          fill="none"
+                          stroke="#fff"
+                          stroke-width="5"
+                          d="M14 27l10 10 14-14" />
                   </svg>
                 </div>
               </button>
               <button class="quick-view" (click)="viewProduct(product.id)">
-                <i class="fa fa-eye"></i
-                ><span class="tooltipp">quick view</span>
+                <i class="fa fa-eye"></i><span class="tooltipp">quick view</span>
               </button>
             </div>
           </div>
