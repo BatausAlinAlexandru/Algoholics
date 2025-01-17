@@ -15,9 +15,16 @@ export class ProductPageComponent implements OnInit {
 
   ngOnInit(): void {
     this.route.params.subscribe(params => {
-      const productId = String(params['id']);
-      this.product = this.productService.getProductById(productId);
-    }
-    )
+      const productId = params['id']; // ID-ul produsului din URL
+      this.productService.getProductById(productId).subscribe(
+        (product) => {
+          this.product = product; // Produsul este acum stocat în `this.product`
+        },
+        (error) => {
+          console.error('Error fetching product:', error);
+        }
+      );
+    });
   }
+
 }

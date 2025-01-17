@@ -36,6 +36,11 @@ export class ProductService {
     return this.http.get<Product>(`${this.apiUrl}/get-product/${productId}`);
   }
 
+
+  getAllCategories() {
+    return this.http.get<any[]>('https://localhost:7198/api/Category/get-all');
+  }
+
   // public createProduct(product: Product): Observable<Product> {
   //   return this.http.post<Product>(this.apiUrl, product);
   // }
