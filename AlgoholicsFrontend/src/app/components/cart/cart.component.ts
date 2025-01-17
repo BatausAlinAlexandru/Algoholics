@@ -53,6 +53,8 @@ export class CartComponent implements OnInit {
   loggedInUserId: string = '';
   searchTerm: string = '';
 
+  showCheckoutSuccess: boolean = false;
+ 
   constructor(
     private cartService: CartService,
     private productService: ProductService,
@@ -64,7 +66,7 @@ export class CartComponent implements OnInit {
   ngOnInit(): void {
     this.fetchCart();
   }
-  
+
   fetchCart(): void {
     this.loggedInUserId = this.authService.getUserIdFromToken();
     this.cartService.getCartByUserId(this.loggedInUserId).subscribe(
@@ -120,9 +122,17 @@ export class CartComponent implements OnInit {
   }
 
   checkout(): void {
+    this.showCheckoutSuccess = true;
     if(this.cart) {
-     this.orderService.createOrder(this.loggedInUserId,this.cart.items);
-    }
+     this.orderService.createOrder(this.loggedInUserId,this.cart.items).subscribe(
+      (data: any) => {
+        console.log(data);
+      })
+    };
+    setTimeout(() => {
+      this.showCheckoutSuccess = false;
+    }, 1100);
+      
   }
 
   incrementQuantity(item: Product): void {

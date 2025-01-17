@@ -43,7 +43,13 @@
         <div class="col-md-3 clearfix">
           <div class="header-ctn">
             <!-- Wishlist -->
-            <div>
+            <div *ngIf="!isAuthenticated">
+              <a href="#" routerLink="/login">
+                <i class="fa fa-heart-o"></i>
+                <span>Your Wishlist</span>
+              </a>
+            </div>
+            <div *ngIf="isAuthenticated">
               <a routerLink="/wishlist">
                 <i class="fa fa-heart-o"></i>
                 <span>Your Wishlist</span>
@@ -52,7 +58,13 @@
             </div>
 
             <!-- Cart -->
-            <div>
+            <div *ngIf="!isAuthenticated">
+              <a href="#" routerLink="/login">
+                <i class="fa fa-shopping-cart"></i>
+                <span>Your Cart</span>
+              </a>
+            </div>
+            <div *ngIf="isAuthenticated">
               <a routerLink="/cart">
                 <i class="fa fa-shopping-cart"></i>
                 <span>Your Cart</span>

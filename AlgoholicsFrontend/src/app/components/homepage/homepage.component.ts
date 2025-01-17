@@ -20,6 +20,7 @@ export class HomepageComponent implements OnInit {
   showWishlistSuccess: { [productId: number]: boolean } = {};
   isCartActive: { [productId: number]: boolean } = {};
   showCartSuccess: { [productId: number]: boolean } = {};
+  isAuthenticated: boolean = false; 
 
   constructor(
     private productService: ProductService,
@@ -38,13 +39,13 @@ export class HomepageComponent implements OnInit {
         console.error('Error fetching products:', error);
       }
     );
-
+    this.isAuthenticated = this.authService.isAuthenticated();
     this.loggedInUserId = this.authService.getUserIdFromToken();
   }
 
-  // addToCart(id: number): void {
-  //   this.cartService.addToCart(id);
-  // }
+  redirectToLogin(): void {
+    this.router.navigate(['/login']);
+  }
 
   addToCart(product: any): void {
     this.isCartActive[product.id] = true;

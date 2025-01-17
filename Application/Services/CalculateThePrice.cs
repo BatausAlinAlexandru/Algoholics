@@ -17,27 +17,20 @@ namespace Application.Services
 
         public async Task<Result<float>> CalculateThePriceOfProducts(List<OrderProductDetail> productsToOrder)
         {
-            var productTasks = productsToOrder
-                .Select(p => _productRepository.GetProductByIdAsync(p.ProductId))
-                .ToArray();
-
-            var products = await Task.WhenAll(productTasks);
-
-            if (products.Any(p => p == null))
-                return Result.Failure<float>("One or more products not found");
-
             float totalPrice = 0;
-            for (int i = 0; i < productsToOrder.Count; i++)
+
+            foreach (var detail in productsToOrder)
             {
-                var product = products[i];
-                if (product != null)
-                {
-                    totalPrice += product.Price * productsToOrder[i].Quantity;
-                }
+                var product = await _productRepository.GetProductByIdAsync(detail.ProductId);
+                if (product == null)
+                    return Result.Failure<float>("Product not found: " + detail.ProductId);
+
+                totalPrice += product.Price * detail.Quantity;
             }
 
             return Result.Success(totalPrice);
         }
+
 
     }
 }

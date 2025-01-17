@@ -59,17 +59,6 @@
   border-radius: 5px;
 }
 
-.checkout-btn {
-  background-color: #8b2e57;
-  color: white;
-  border: none;
-  padding: 10px 15px;
-  cursor: pointer;
-}
-
-  .checkout-btn:hover {
-    background-color: #4f0f32;
-  }
 
   .quantity-controls {
     display: flex;
@@ -96,7 +85,86 @@
   
   .quantity-display {
     font-size: 1rem;
+    color: black;
     width: 24px; /* to keep a consistent width */
     text-align: center;
   }
   
+  .checkout-font {
+    color: black;
+  }
+
+  /* Position the checkout button as relative if not already */
+.checkout-btn {
+  position: relative;
+  background-color: #8b2e57;
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  cursor: pointer;
+  border-radius: 4px;
+  font-size: 1em;
+  /* transition so color or text can fade smoothly, if desired */
+  transition: color 0.2s ease;
+}
+
+.checkout-btn:hover {
+  background-color: #4f0f32;
+}
+
+/* We'll hide the label text while success is active (optional) */
+.checkout-btn.success .checkout-label {
+  opacity: 0; 
+  transition: opacity 0.2s ease;
+}
+
+/* Container for the checkmark SVG */
+.checkmark-container {
+  position: absolute;
+  top: 43%;
+  left: 50%;
+  width: 40px;
+  height: 40px;
+  transform: translate(-50%, -50%) scale(0.8);
+  opacity: 0; 
+  pointer-events: none; /* so it doesn't interfere with clicks */
+  transition: opacity 0.2s ease, transform 0.2s ease;
+}
+
+/* The checkmark path is initially hidden by dash offset */
+.checkmark-path {
+  stroke-dasharray: 48;   
+  stroke-dashoffset: 48;  
+}
+/* When .success is active, show the checkmark container, animate it */
+.checkout-btn.success .checkmark-container {
+  opacity: 1;
+  transform: translate(-50%, -50%) scale(1);
+  animation: check-bounce 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+/* Animate the checkmark stroke draw */
+.checkout-btn.success .checkmark-path {
+  animation: draw-check 0.5s forwards ease-out;
+}
+/* Keyframe that draws the line */
+@keyframes draw-check {
+  to {
+    stroke-dashoffset: 0; 
+  }
+}
+
+/* Simple bounce effect */
+@keyframes check-bounce {
+  0% {
+    transform: translate(-50%, -50%) scale(0.8);
+  }
+  70% {
+    transform: translate(-50%, -50%) scale(1.2);
+  }
+  100% {
+    transform: translate(-50%, -50%) scale(1);
+  }
+}
+
+
