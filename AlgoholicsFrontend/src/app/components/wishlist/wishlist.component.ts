@@ -74,6 +74,7 @@ export class WishlistComponent implements OnInit {
       this.wishlistService.updateWishlist(this.wishlist.userAccountId, updatedProductsIdList).subscribe(
         (updatedWishlist) => {
           this.fetchWishlist();
+          this.wishlistService.fetchWishlistCount(this.loggedInUserId);
         },
         (error) => {
           console.error('Error removing product from wishlist', error);

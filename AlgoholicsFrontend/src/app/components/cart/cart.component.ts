@@ -113,6 +113,7 @@ export class CartComponent implements OnInit {
       this.cartService.updateCart(this.cart.userAccountId, updatedProductsIdList).subscribe(
         (updatedCart) => {
           this.fetchCart();
+          this.cartService.fetchCartCount(this.loggedInUserId);
         },
         (error) => {
           console.error('Error removing product from cart', error);

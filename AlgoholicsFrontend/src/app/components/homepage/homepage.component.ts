@@ -59,6 +59,7 @@ export class HomepageComponent implements OnInit {
     this.cartService.addProductToCart(this.loggedInUserId, cartItem).subscribe(
       (updatedCart) => {
         console.log('Product added to cart', updatedCart);
+        this.cartService.fetchCartCount(this.loggedInUserId);
   
         // Trigger the checkmark animation
         this.showCartSuccess[product.id] = true;
@@ -82,6 +83,8 @@ export class HomepageComponent implements OnInit {
     this.wishlistService.addProductToWishlist(this.loggedInUserId, product.id).subscribe(
       (updatedWishlist) => {
         console.log('Product added to wishlist', updatedWishlist);
+        this.wishlistService.fetchWishlistCount(this.loggedInUserId);
+
 
         // Trigger the checkmark animation
         this.showWishlistSuccess[product.id] = true;
