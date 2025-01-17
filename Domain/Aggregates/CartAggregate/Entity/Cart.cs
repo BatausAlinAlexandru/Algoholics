@@ -7,6 +7,7 @@ namespace Domain.Aggregates.CartAggregate.Entity
     {
         public Guid UserAccountId { get; set; }
         public List<CartItem> Items { get; set; } = new List<CartItem>();
+        public float TotalPrice { get; set; } = 0;
         public Cart(Guid userAccountId, List<CartItem> items)
         {
             UserAccountId = userAccountId;

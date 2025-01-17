@@ -5,17 +5,39 @@
 </div>
 
 <div *ngIf="cart != null" class="cart-container">
-  <div *ngIf="cart.items.length > 0; else emptyWishlist">
+  <!-- If the cart has items, show them; else show "Your cart is empty!" -->
+  <ng-container *ngIf="cart.items.length > 0; else emptyCart">
+    <!-- Render each product in the cart -->
     <div class="product-card" *ngFor="let item of products_of_cart">
       <div class="product-info">
-        <h3>{{item.name}}</h3>
+        <h3>{{ item.name }}</h3>
         <p>{{ item.description }}</p>
         <p><strong>Price:</strong> ${{ item.price }}</p>
+
+        <!-- Quantity Controls -->
+        <div class="quantity-controls">
+          <button class="quantity-btn" (click)="decrementQuantity(item)">-</button>
+          <span class="quantity-display">{{ getCartItemQuantity(item) }}</span>
+          <button class="quantity-btn" (click)="incrementQuantity(item)">+</button>
+        </div>
       </div>
+
       <button (click)="removeFromCart(item)" class="remove-btn">Remove</button>
     </div>
-  </div>
-  <ng-template #emptyWishlist>
+
+    <!-- Cart summary / checkout area -->
+    <div class="cart-summary">
+      <!-- Optionally, if you calculate total items / cost in your component -->
+      <!-- <p>Total items: {{ cart.items.length }}</p> -->
+      <!-- <p>Total cost: ${{ totalCost }}</p> -->
+
+      <button class="checkout-btn" (click)="checkout()">Checkout</button>
+      <p><strong>TotalPrice:</strong> ${{ cart.totalPrice }}</p>
+    </div>
+  </ng-container>
+
+  <!-- If no items in the cart -->
+  <ng-template #emptyCart>
     <p>Your cart is empty!</p>
   </ng-template>
 </div>

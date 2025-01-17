@@ -25,6 +25,12 @@ namespace Infrastructure.Repositories
 
             try
             {
+                foreach (var item in cart.Items)
+                {
+                    var product = await _context.Products.FindAsync(item.ProductId);
+                    if (product == null) continue;
+                    cart.TotalPrice += product.Price * item.Quantity;
+                }
                 _context.Carts.Add(cart);
                 await _context.SaveChangesAsync();
                 return Result.Success();
@@ -80,6 +86,13 @@ namespace Infrastructure.Repositories
                 // Update the Items and any other properties you need
                 cart.Items = newCart.Items;
                 cart.UserAccountId = newCart.UserAccountId;
+                cart.TotalPrice = 0;
+                foreach (var item in cart.Items)
+                {
+                    var product = await _context.Products.FindAsync(item.ProductId);
+                    if (product == null) continue;
+                    cart.TotalPrice += product.Price * item.Quantity;
+                }
 
                 _context.Carts.Update(cart);
                 await _context.SaveChangesAsync();

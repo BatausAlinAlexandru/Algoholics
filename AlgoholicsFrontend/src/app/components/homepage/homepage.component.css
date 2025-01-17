@@ -151,11 +151,11 @@
   color: #666; /* Slightly darker on hover */
 }
 
-/* Empty heart -> Filled heart color transition if desired */
+/* Empty heart -> Filled heart color transition if desired
 .add-to-cart.active i.fa-shopping-cart {
-  color: #e74c3c; /* Your filled heart color (red) */
+  color: #e74c3c; 
   transition: color 0.3s ease;
-}
+} */
 
 /* =================================
    2) Checkmark Container
@@ -187,7 +187,7 @@
 
 /* Hide the heart while checkmark plays */
 .add-to-cart.success i.fa {
-  opacity: 0;
+  opacity: 0.0;
   transition: opacity 0.2s ease;
 }
 

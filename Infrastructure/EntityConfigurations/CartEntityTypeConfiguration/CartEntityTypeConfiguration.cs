@@ -11,7 +11,7 @@ namespace Infrastructure.EntityConfigurations.CartEntityTypeConfigurations
         {
             builder.ToTable("Cart");
             builder.HasKey(c => c.Id);
-
+            builder.Property(c => c.TotalPrice);
             // If you want to store CartItem as an owned type or separate table, 
             // you can do so. For example, as owned collection:
             builder.OwnsMany(c => c.Items, i =>

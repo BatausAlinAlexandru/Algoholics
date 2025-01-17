@@ -26,7 +26,8 @@ namespace Application.Queries.Cart
                 {
                     ProductId = i.ProductId,
                     Quantity = i.Quantity
-                }).ToList()
+                }).ToList(),
+                TotalPrice = cart.TotalPrice
             }).ToList();
         }
     }

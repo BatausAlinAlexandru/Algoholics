@@ -47,19 +47,4 @@ export class HeaderComponent implements OnInit{
       }
     )
   }
-
-  addToWishlist(product: any): void {
-    // this.wishlistService.addToWishlist(product); 
-  }
-
-  removeFromCart(product: any): void {
-    // this.cartService.removeFromCart(product.id);
-    // this.cartItems = this.cartService.getCart(); 
-  }
-
-  // calculateTotal(): number {
-  //   return this.cartItems.reduce((total, item) => total + item.price, 0);
-  // }
-
-  
 }
