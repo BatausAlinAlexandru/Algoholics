@@ -1,51 +1,7 @@
-// import { Injectable } from '@angular/core';
-// import { BehaviorSubject } from 'rxjs';
-
-// @Injectable({
-//   providedIn: 'root',
-// })
-// export class CartService {
-//   private cartItems: any[] = [
-//     { name: 'Smartwatch', price: 100, qty: 1, image: 'assets/product01.png' },
-//     { name: 'Headphones', price: 150, qty: 2, image: 'assets/product02.png' },
-//     { name: 'Mouse', price: 50, qty: 1, image: 'assets/product03.png' }
-//   ];
-
-//   cartItemsChanged: BehaviorSubject<any[]> = new BehaviorSubject(this.cartItems);
-
-//   getCart(): any[] {
-//     return this.cartItems;
-//   }
-
-//   addToCart(product: any): void {
-//     const existingProduct = this.cartItems.find(item => item.name === product.name);
-//     if (existingProduct) {
-//       existingProduct.qty += 1; 
-//     } else {
-//       product.qty = 1; 
-//       this.cartItems.push(product);
-//     }
-//     this.cartItemsChanged.next(this.cartItems); 
-//   }
-
-//   updateCart(items: any[]): void {
-//     this.cartItems = items;
-//     this.cartItemsChanged.next(this.cartItems);
-//   }
-
-//   getCartItemCount(): number {
-//     return this.cartItems.length;
-//   }
-
-//   removeFromCart(productId: number): void {
-//     this.cartItems = this.cartItems.filter(product => product.id !== productId);
-//   }
-// }
-
+// cart.service.ts
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
-import { map, Observable, of, switchMap } from 'rxjs';
-
+import { map, Observable, of, switchMap, BehaviorSubject } from 'rxjs';
 
 export interface Cart {
   id: string;
@@ -53,6 +9,7 @@ export interface Cart {
   totalPrice: number;
   items: CartItem[];
 }
+
 export interface CartItem {
   productId: string;
   quantity: number;
@@ -64,19 +21,19 @@ export interface CartItem {
 export class CartService {
   private apiUrl = 'https://localhost:7198/api/Cart';
 
-  constructor(private http: HttpClient) { }
+  // 1) BehaviorSubject to hold the current cart count
+  private cartCountSubject = new BehaviorSubject<number>(0);
+  // Expose as an observable
+  public cartCount$ = this.cartCountSubject.asObservable();
 
-  // Get all Carts
-  public getAllCarts(): Observable<Cart[]> {
-    return this.http.get<Cart[]>(`${this.apiUrl}`);
-  }
+  constructor(private http: HttpClient) {}
 
-  // Get a specific Cart by user ID
+  // --- CRUD Methods ---
+
   public getCartByUserId(userId: string): Observable<Cart> {
     return this.http.get<Cart>(`${this.apiUrl}/get-cart-user/${userId}`);
   }
 
-  // Create a new Cart
   public createCart(userAccountId: string, items: CartItem[]): Observable<Cart> {
     const body = { userAccountId, items };
     return this.http.post<Cart>(`${this.apiUrl}/add`, body);
@@ -84,43 +41,55 @@ export class CartService {
 
   public addProductToCart(userAccountId: string, item: CartItem): Observable<Cart> {
     return this.getCartByUserId(userAccountId).pipe(
-      switchMap((Cart: Cart) => {
-        if (!Cart) {
-          // If no Cart found, create a brand-new one with this product ID
+      switchMap((cart: Cart) => {
+        if (!cart) {
+          // If no cart found, create a brand-new one
           return this.createCart(userAccountId, [item]);
         } else {
-          // If Cart exists, check if product is already in the list
-          const itemAlreadyInCart = Cart.items.some(
-            (cartItem) => cartItem.productId === item.productId
-          );
-          console.log(itemAlreadyInCart);
+          // Check if product is already in cart
+          const itemAlreadyInCart = cart.items.some(i => i.productId === item.productId);
           if (itemAlreadyInCart) {
-            // Nothing to do, just return the existing Cart as an observable
-            return of(Cart);
+            // No action if already in cart
+            return of(cart);
           } else {
-            // Product is not in Cart, so we add it
-            const items = [...Cart.items, item];
-            return this.updateCart(userAccountId, items);
+            // Add the new item
+            const updatedItems = [...cart.items, item];
+            return this.updateCart(userAccountId, updatedItems);
           }
         }
       })
     );
   }
 
-  // Update Cart products
   public updateCart(userAccountId: string, items: CartItem[]): Observable<Cart> {
-    const body = { userAccountId,items };
+    const body = { userAccountId, items };
     return this.http.put<Cart>(`${this.apiUrl}/update`, body);
   }
 
-  // Remove a Cart
   public removeCart(cartId: string): Observable<void> {
     return this.http.delete<void>(`${this.apiUrl}/delete/${cartId}`);
   }
 
+  // --- Counting Methods ---
+
   public getCartCount(userAccountId: string): Observable<number> {
     return this.getCartByUserId(userAccountId).pipe(
-      map((cart: Cart) => cart.items.length)
+      map((cart: Cart) => {
+        if (!cart || !cart.items) {
+          return 0;
+        }
+        return cart.items.length;
+      })
+    );
+  }
+
+  public fetchCartCount(userAccountId: string): void {
+    this.getCartCount(userAccountId).subscribe(
+      (count) => this.cartCountSubject.next(count),
+      (error) => {
+        console.error('Error fetching cart count:', error);
+        this.cartCountSubject.next(0);
+      }
     );
   }
 }

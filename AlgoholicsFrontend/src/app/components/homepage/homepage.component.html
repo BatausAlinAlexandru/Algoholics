@@ -50,14 +50,15 @@
                   </div> -->
             <div class="product-btns">
               <button
-                (click)="addToWishlist(product)"
+                (click)="
+                  isAuthenticated ? addToWishlist(product) : redirectToLogin()
+                "
                 class="add-to-wishlist"
                 [ngClass]="{
                   active: isWishlistActive[product.id],
                   success: showWishlistSuccess[product.id]
                 }"
               >
-                <!-- Dynamic icon: filled vs. outline -->
                 <i
                   class="fa"
                   [ngClass]="
@@ -66,10 +67,8 @@
                 ></i>
                 <span class="tooltipp">Add to Wishlist</span>
 
-                <!-- Checkmark container -->
                 <div class="checkmark-container">
                   <svg class="checkmark-svg" viewBox="0 0 52 52">
-                    <!-- The path that will be 'drawn' -->
                     <path
                       class="checkmark-path"
                       fill="none"
@@ -81,15 +80,17 @@
                 </div>
               </button>
 
+              <!-- Add To Cart button -->
               <button
-                (click)="addToCart(product)"
+                (click)="
+                  isAuthenticated ? addToCart(product) : redirectToLogin()
+                "
                 class="add-to-cart"
                 [ngClass]="{
                   active: isCartActive[product.id],
                   success: showCartSuccess[product.id]
                 }"
               >
-                <!-- Dynamic icon: filled vs. outline -->
                 <i
                   class="fa"
                   [ngClass]="
@@ -100,10 +101,8 @@
                 ></i>
                 <span class="tooltipp">Add to Cart</span>
 
-                <!-- Checkmark container -->
                 <div class="checkmark-container">
                   <svg class="checkmark-svg" viewBox="0 0 52 52">
-                    <!-- The path that will be 'drawn' -->
                     <path
                       class="checkmark-path"
                       fill="none"

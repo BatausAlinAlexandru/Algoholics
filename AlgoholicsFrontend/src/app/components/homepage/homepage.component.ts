@@ -20,6 +20,7 @@ export class HomepageComponent implements OnInit {
   showWishlistSuccess: { [productId: number]: boolean } = {};
   isCartActive: { [productId: number]: boolean } = {};
   showCartSuccess: { [productId: number]: boolean } = {};
+  isAuthenticated: boolean = false; 
 
   constructor(
     private productService: ProductService,
@@ -38,13 +39,13 @@ export class HomepageComponent implements OnInit {
         console.error('Error fetching products:', error);
       }
     );
-
+    this.isAuthenticated = this.authService.isAuthenticated();
     this.loggedInUserId = this.authService.getUserIdFromToken();
   }
 
-  // addToCart(id: number): void {
-  //   this.cartService.addToCart(id);
-  // }
+  redirectToLogin(): void {
+    this.router.navigate(['/login']);
+  }
 
   addToCart(product: any): void {
     this.isCartActive[product.id] = true;
@@ -58,6 +59,7 @@ export class HomepageComponent implements OnInit {
     this.cartService.addProductToCart(this.loggedInUserId, cartItem).subscribe(
       (updatedCart) => {
         console.log('Product added to cart', updatedCart);
+        this.cartService.fetchCartCount(this.loggedInUserId);
   
         // Trigger the checkmark animation
         this.showCartSuccess[product.id] = true;
@@ -81,6 +83,8 @@ export class HomepageComponent implements OnInit {
     this.wishlistService.addProductToWishlist(this.loggedInUserId, product.id).subscribe(
       (updatedWishlist) => {
         console.log('Product added to wishlist', updatedWishlist);
+        this.wishlistService.fetchWishlistCount(this.loggedInUserId);
+
 
         // Trigger the checkmark animation
         this.showWishlistSuccess[product.id] = true;

@@ -22,8 +22,8 @@ export class OrderService {
   constructor(private http: HttpClient) { }
 
   // Create a new Cart
-  public createOrder(userId: string, productToOrder: CartItem[]): Observable<void> {
-    const body = { userId, productToOrder };
-    return this.http.post<void>(`${this.apiUrl}`, body);
+  public createOrder(userId: string, productsToOrder: CartItem[]): Observable<Order> {
+    const body = { userId, productsToOrder };
+    return this.http.post<Order>(`${this.apiUrl}`, body);
   }
 }
