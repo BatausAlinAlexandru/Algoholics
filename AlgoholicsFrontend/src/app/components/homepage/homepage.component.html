@@ -93,7 +93,9 @@
                 <i
                   class="fa"
                   [ngClass]="
-                    isCartActive[product.id] ? 'fa-shopping-cart' : 'fa-shopping-cart-o'
+                    isCartActive[product.id]
+                      ? 'fa-shopping-cart'
+                      : 'fa-shopping-cart'
                   "
                 ></i>
                 <span class="tooltipp">Add to Cart</span>
