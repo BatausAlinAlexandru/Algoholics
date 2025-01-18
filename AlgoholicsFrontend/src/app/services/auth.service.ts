@@ -8,8 +8,8 @@ import { BehaviorSubject, Observable, tap } from 'rxjs';
 })
 export class AuthService {
 
-  private apiUrl = 'https://localhost:7198/api/Authentication';
-  private signupApiUrl = 'https://localhost:7198/api/Authentication';
+  private apiUrl = 'https://localhost:32771/api/Authentication';
+  private signupApiUrl = 'https://localhost:32771/api/Authentication';
   private authenticated = new BehaviorSubject<boolean>(false);
   public isAuthenticated$ = this.authenticated.asObservable();
 

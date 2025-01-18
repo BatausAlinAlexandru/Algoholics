@@ -13,7 +13,7 @@ export interface Wishlist {
   providedIn: 'root'
 })
 export class WishlistService {
-  private apiUrl = 'https://localhost:7198/api/WishList';
+  private apiUrl = 'https://localhost:32771/api/WishList';
 
   // 1) BehaviorSubject to hold the current wishlist count
   private wishlistCountSubject = new BehaviorSubject<number>(0);
