@@ -19,7 +19,7 @@ export interface CartItem {
   providedIn: 'root'
 })
 export class CartService {
-  private apiUrl = 'https://localhost:7198/api/Cart';
+  private apiUrl = 'https://localhost:32771/api/Cart';
 
   // 1) BehaviorSubject to hold the current cart count
   private cartCountSubject = new BehaviorSubject<number>(0);

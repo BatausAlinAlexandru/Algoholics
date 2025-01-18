@@ -22,9 +22,9 @@ export interface Product {
 export class ProductService {
   /** 
    * Replace with your actual API endpoint.
-   * For example: 'https://localhost:7198/api/Product'
+   * For example: 'https://localhost:32771/api/Product'
    */
-  private apiUrl = 'https://localhost:7198/api/Product';
+  private apiUrl = 'https://localhost:32771/api/Product';
 
   constructor(private http: HttpClient) {}
 
@@ -38,7 +38,7 @@ export class ProductService {
 
 
   getAllCategories() {
-    return this.http.get<any[]>('https://localhost:7198/api/Category/get-all');
+    return this.http.get<any[]>('https://localhost:32771/api/Category/get-all');
   }
 
   // public createProduct(product: Product): Observable<Product> {

@@ -17,7 +17,7 @@ export interface CartItem {
   providedIn: 'root'
 })
 export class OrderService {
-  private apiUrl = 'https://localhost:7198/api/Order';
+  private apiUrl = 'https://localhost:32771/api/Order';
 
   constructor(private http: HttpClient) { }
 
