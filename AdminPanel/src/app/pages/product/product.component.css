@@ -1,0 +1,53 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: radial-gradient(ellipse at bottom, #0d1d31 0%, #0c0d13 100%);
+    overflow: hidden;
+    --primary-color: #ffffff;
+    color: white;
+}
+
+
+::ng-deep .modal-content {
+  background: radial-gradient(ellipse at bottom, #0d1d31 0%, #0c0d13 100%);
+  color: #ffffff;
+}
+
+
+.search-bar {
+  background-color: transparent; /* Fundal transparent */
+  color: white; /* Text alb */
+  border: 1px solid white; /* Bordură albă */
+  border-radius: 10px; /* Colțuri rotunjite */
+  padding: 10px; /* Spațiu interior */
+  font-size: 20px; /* Dimensiunea textului */
+}
+
+  .search-bar::placeholder {
+    color: rgba(255, 255, 255, 0.6); /* Placeholder alb, semi-transparent */
+  }
+
+  .search-bar:focus {
+    outline: none; /* Elimină conturul default */
+    border-color: #00bfff; /* Bordură albastră la focus */
+    background-color: rgba(255, 255, 255, 0.1); /* Fundal semi-transparent la focus */
+  }
+
+
+::ng-deep ul > li:not(.active) > a {
+  background-color: transparent !important;
+  border-color: black !important;
+}
+
+::ng-deep ul > li.disabled > span {
+  background-color: transparent !important;
+  color: dimgrey;
+  border-color: black !important;
+}
+
+::ng-deep ul > li.active > a {
+  background-color: white !important;
+  border-color: black !important;
+}
