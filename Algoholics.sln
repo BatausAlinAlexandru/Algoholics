@@ -15,6 +15,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WebAPI", "WebAPI\WebAPI.csp
 EndProject
 Project("{54A90642-561A-4BB1-A94E-469ADEE60C69}") = "AdminPanel", "AdminPanel\AdminPanel.esproj", "{E7121A92-C7E7-4B69-ADC4-AE5D4E10EB21}"
 EndProject
+Project("{54A90642-561A-4BB1-A94E-469ADEE60C69}") = "AlgoholicsFrontend", "AlgoholicsFrontend\AlgoholicsFrontend.esproj", "{C5B2D0C4-8FB9-412B-8B7D-7B2A4EEDA729}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -43,6 +45,12 @@ Global
 		{E7121A92-C7E7-4B69-ADC4-AE5D4E10EB21}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{E7121A92-C7E7-4B69-ADC4-AE5D4E10EB21}.Release|Any CPU.Build.0 = Release|Any CPU
 		{E7121A92-C7E7-4B69-ADC4-AE5D4E10EB21}.Release|Any CPU.Deploy.0 = Release|Any CPU
+		{C5B2D0C4-8FB9-412B-8B7D-7B2A4EEDA729}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C5B2D0C4-8FB9-412B-8B7D-7B2A4EEDA729}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C5B2D0C4-8FB9-412B-8B7D-7B2A4EEDA729}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
+		{C5B2D0C4-8FB9-412B-8B7D-7B2A4EEDA729}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C5B2D0C4-8FB9-412B-8B7D-7B2A4EEDA729}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C5B2D0C4-8FB9-412B-8B7D-7B2A4EEDA729}.Release|Any CPU.Deploy.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

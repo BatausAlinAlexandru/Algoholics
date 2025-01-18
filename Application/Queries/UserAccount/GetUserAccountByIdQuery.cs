@@ -7,6 +7,7 @@ namespace Application.Queries.UserAccount
     {
         public Guid UserAccountId { get; set; }
 
+
         public GetUserAccountByIdQuery(Guid userAccountId)
         {
             UserAccountId = userAccountId;

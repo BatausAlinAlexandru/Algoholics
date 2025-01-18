@@ -1,0 +1,61 @@
+<body>
+  <div class="position-absolute top-0 start-0 container-fluid mt-5">
+    <div class="container-fluid mt-5">
+      <h2 class="text-center mb-4 text-white">Lista Produselor</h2>
+      <!-- Wrapper pentru scroll vertical -->
+      <!-- Search Bar -->
+      <div class="mb-3">
+        <input type="text"
+               class="form-control search-bar"
+               placeholder="Caută produse după nume, preț, descriere, stoc, discount, categorie..."
+               [(ngModel)]="searchTerm" />
+
+      </div>
+
+      <div class="table-responsive" style="max-height: 570px; overflow-y: auto;">
+        <table class="table table-hover table-bordered table-striped text-end">
+          <thead class="table-dark">
+            <tr>
+              <th class="text-center">ID</th>
+              <th class="text-center">Name</th>
+              <th class="text-center">Price</th>
+              <th class="text-center">Descriere</th>
+              <th class="text-center">Stoc</th>
+              <th class="text-center">Discount</th>
+              <th class="text-center">Category</th>
+              <th class="text-center">Acțiuni</th>
+            </tr>
+          </thead>
+          <tbody class="table-dark text-center">
+            <tr *ngFor="let product of filteredProducts">
+              <td>{{product.id}}</td>
+              <td>{{product.name}}</td>
+              <td>{{product.price}}</td>
+              <td>{{product.description}}</td>
+              <td>{{product.stock}}</td>
+              <td>{{product.discount}}</td>
+              <td>{{product.idCtegory}}</td>
+              <td>
+                <button class="btn btn-primary btn-sm me-2">
+                  <i class="fas fa-edit"></i> Modifică
+                </button>
+                <button class="btn btn-danger btn-sm">
+                  <i class="fas fa-trash-alt"></i> Șterge
+                </button>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+    <!--<div class="anubis">
+      <pagination-controls (pageChange)="currentPage = $event"
+                           class="mt-3 text-center custom-pagination"></pagination-controls>
+    </div>-->
+
+  </div>
+
+  <button type="button" class="btn btn-primary btn-lg btn-block">Add product</button>
+
+
+</body>

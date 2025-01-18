@@ -29,3 +29,4 @@ public class GetUserAccountByIdHandler : IRequestHandler<GetUserAccountByIdQuery
         return userAccountDTO;
     }
 }
+
