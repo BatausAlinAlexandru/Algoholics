@@ -2,6 +2,7 @@
 using Microsoft.AspNetCore.Mvc;
 using Application.Commands.UserAccount;
 using Application.Queies.UserAccount;
+using Application.Queries.UserAccount;
 
 namespace WebAPI.Controllers
 {
@@ -34,6 +35,15 @@ namespace WebAPI.Controllers
             }
         }
 
+        [HttpGet("get-user{idUserAccount}")]
+        public async Task<IActionResult> GetUserAccountById(Guid idUserAccount)
+        {
+
+            var query = new GetUserAccountByIdQuery(idUserAccount);
+            var result = await _mediator.Send(query);
+            return result != null ? Ok(result) : BadRequest();
+        }
+
         [HttpPost("add-payment-info")]
         public async Task<IActionResult> AddUserAccountPaymentInfo([FromBody] AddUserAccountPaymentInfoCommand command)
         {
@@ -47,6 +57,8 @@ namespace WebAPI.Controllers
                 return BadRequest(result.Error);
             }
         }
+
+
 
         [HttpPut("update-payment-info")]
         public async Task<IActionResult> UpdateUserAccountPaymentInfo([FromBody] UpdateUserAccountPaymentInfoCommand command)
