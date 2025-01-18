@@ -17,6 +17,7 @@ namespace Domain.Aggregates.OrderAggregate.Entities
 
         public Order(Guid userId, List<OrderProductDetail> productsToOrder, float totalPrice)
         {
+            UserId = userId;
             Status = OrderStatus.Pending;
             ProductsToOrder = productsToOrder;
             TotalPrice = totalPrice;

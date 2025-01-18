@@ -5,7 +5,8 @@ namespace Application.Queries.UserAccount
 {
     public class GetUserAccountByIdQuery : IRequest<UserAccountDTO>
     {
-        public Guid UserAccountId {  get; set; }
+        public Guid UserAccountId { get; set; }
+
 
         public GetUserAccountByIdQuery(Guid userAccountId)
         {
