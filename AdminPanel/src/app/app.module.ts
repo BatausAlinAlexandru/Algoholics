@@ -15,6 +15,7 @@ import { UserEditComponent } from './pages/users/user-edit/user-edit.component';
 import { AuthService } from './auth.service';
 import { NgxPaginationModule } from 'ngx-pagination';
 import { CategoryComponent } from './pages/category/category.component';
+import { ProductComponent } from './pages/product/product.component';
 
 
 @NgModule({
@@ -25,7 +26,8 @@ import { CategoryComponent } from './pages/category/category.component';
     NavbarComponent,
     UsersComponent,
     UserEditComponent,
-    CategoryComponent
+    CategoryComponent,
+    ProductComponent
   ],
   imports: [
     BrowserModule,
