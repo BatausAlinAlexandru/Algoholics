@@ -8,8 +8,6 @@ body {
   justify-content: center;
   align-items: center;
   height: 100vh;
-  flex-direction: column;
-  text-align: center;
 }
 
 /* Container principal */
@@ -18,8 +16,12 @@ body {
   max-width: 1200px;
   padding: 20px;
   text-align: center; 
-  box-sizing: border-box; 
-  margin: 0 auto; 
+  box-sizing: border-box;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center; /* Ensures child elements are centered */
+  align-items: center;    /* Ensures vertical centering */
+  flex-direction: column; /* Centers content in a stack */
 }
 
 /* Titlu */
@@ -32,36 +34,32 @@ h2 {
   font-weight: bold;
 }
 
-
-input[type="file"] {
-  padding: 10px;
-  font-size: 14px;
-  border: 1px solid #ddd;
-  border-radius: 5px;
-  margin-bottom: 30px; 
-}
-
 /* Grid pentru containere */
 .grid-container {
   display: flex;
-  justify-content: space-between;
-  gap: 40px; 
-  margin-top: 20px;
-  margin-bottom: 25px; 
-  flex-wrap: wrap; 
-  justify-content: center; 
+  justify-content: center; /* Centers the grid horizontally */
+  align-items: center;    /* Centers the grid vertically */
+  flex-wrap: wrap;        /* Ensures proper layout on smaller screens */
+  gap: 20px;
+  margin-bottom: 50px;
 }
 
 /* Fiecare container (box) */
 .box {
   background-color: #ffffff;
   border-radius: 10px;
-  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
-  padding: 25px;
-  flex: 1; 
-  max-width: 45%;
-  text-align: left; 
-  box-sizing: border-box; 
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  padding: 20px;
+  display: flex;
+  flex-direction: column; /* Stack the form elements and button vertically */
+  justify-content: flex-start; /* Aligns items from top to bottom */
+  align-items: center; /* Ensures items are centered horizontally */
+  max-width: 300px; /* Ensures a reasonable width */
+  width: 100%; /* Makes the box take the full available width */
+  text-align: center;
+  margin: 0 auto;   /* Centers the box horizontally */
+  margin-bottom: 100px; /* Adds space below the box */
+  margin-top: 20px;
 }
 
 /* Formulare și câmpuri */
@@ -74,8 +72,7 @@ label {
 }
 
 input[type="text"],
-input[type="email"],
-input[type="password"] {
+input[type="email"] {
   width: 100%;
   padding: 10px;
   font-size: 14px;
@@ -89,18 +86,19 @@ button {
   background-color: #FF7443;
   color: #ffffff;
   border: none;
+  max-height: 50px;
   border-radius: 5px;
-  padding: 13px 25px;
+  padding: 13px 20px;
   font-size: 14px;
   cursor: pointer;
   transition: background-color 0.3s ease;
-  margin-bottom: 20px;
-  margin-top: 15px; 
+  width: auto; /* Button will adjust to content width */
+  margin-top: 20px; /* Adds space between the form and button */
 }
 
-  button:hover {
-    background-color: #8B2E57;
-  }
+button:hover {
+  background-color: #8B2E57;
+}
 
 /* Design responsive */
 @media (max-width: 768px) {

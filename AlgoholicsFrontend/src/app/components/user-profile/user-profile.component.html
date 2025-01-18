@@ -7,39 +7,18 @@
     <img src="/assets/img/userphoto.png" alt="Fotografie de profil">
   </div>
 
-  <!-- grid cu 3 containere -->
-  <div class="grid-container">
-    <!-- Account Information -->
-    <div class="box">
-      <h2>Account Information</h2>
-      <p>First Name: Ion</p>
-      <p>Last Name: Popescu</p>
-      <p>Username: ionpopescu123</p>
-      <p>Email: ion.popescu&#64;example.com</p>
-      <p>Password: parola123</p>
-    </div>
-
-    <!-- Payment Info -->
-    <div class="box">
-      <h2>Payment Info</h2>
-      <p>Card Number: **** **** **** 1234</p>
-      <p>Card Holder Name: Ion Popescu</p>
-      <p>Expiry Date: 12/25</p>
-      <p>CVV: ***</p>
-    </div>
-
-    <!-- Shipping Addresses -->
-    <div class="box">
-      <h2>Shipping Addresses</h2>
-      <p>1. Str. Florilor, Nr. 10, București</p>
-      <p>2. Str. Libertății, Nr. 20, Cluj-Napoca</p>
-    </div>
+  <!-- Account Information -->
+  <div class="box" *ngFor="let user of filteredUsers">
+    <h2>Account Information</h2>
+    <p>Email: {{user.email}}</p>
+    <p>Date created: {{user.dateCreated}} </p>
+    <p>Gender: {{user.userAccountGender}} </p>
+    <p>Alias: {{user.alias}} </p>
   </div>
-
+  
   <!-- butoane -->
   <div class="profile-actions">
     <button class="edit-profile-btn" [routerLink]="['/edit-user-profile']">Edit Profile</button>
     <button class="delete-profile-btn">Delete Account</button>
     <button class="logout-btn" (click)="logOut()">Log Out</button>
   </div>
-</div>

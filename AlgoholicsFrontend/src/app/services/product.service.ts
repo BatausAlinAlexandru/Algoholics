@@ -1,7 +1,6 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
-// import { Product } from './product.model'; // <- adjust path to your actual model file if needed
 
 export interface Product {
   id: string;
@@ -19,6 +18,7 @@ export interface Product {
 @Injectable({
   providedIn: 'root'
 })
+
 export class ProductService {
   /** 
    * Replace with your actual API endpoint.
